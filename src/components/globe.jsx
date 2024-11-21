@@ -7,12 +7,12 @@ const GlobeComponent = () => {
   useEffect(() => {
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
-      globeEl.current.controls().autoRotateSpeed = 0.5;
+      globeEl.current.controls().autoRotateSpeed = 0.2;
     }
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full absolute ">
       <Globe
         ref={globeEl}
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
