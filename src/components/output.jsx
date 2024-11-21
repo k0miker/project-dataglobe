@@ -28,7 +28,7 @@ function output() {
 //   }
 
   return (
-    <div>
+    <div className="w-1/4">
       {/* <h1>Todesdaten Dashboard</h1>
       <ul>
         {data.map((item) => (
@@ -36,7 +36,7 @@ function output() {
             {item.IndicatorName} - {item.Country}: {item.Value}
           </li>
         ))}
-      </ul> */}
+      </ul> */}hallo
     </div>
   );
 }

@@ -14,11 +14,12 @@ const GlobeComponent = () => {
   }, []);
 
   return (
-    <div className="w-full h-full absolute ">
+    <div className=" h-full absolute  ">
       <Globe
         ref={globeEl}
         globeImageUrl={earthMarble}
         backgroundColor="rgba(0,0,0,0)"
+        width="50%"
       />
     </div>
   );
