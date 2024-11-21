@@ -11,8 +11,7 @@ function App() {
     <main className='flex justify-between w-screen h-screen '>
       <Input />
       <Globe />
-      <Output />
-     
+      <Output />     
     </ main>
   )
 }
