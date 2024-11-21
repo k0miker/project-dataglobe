@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
+import Globe from "react-globe.gl";
 
-function globe() {
+const GlobeComponent = () => {
+  const globeEl = useRef();
+
+  useEffect(() => {
+    if (globeEl.current) {
+      globeEl.current.controls().autoRotate = true;
+      globeEl.current.controls().autoRotateSpeed = 0.5;
+    }
+  }, []);
+
   return (
-    <div className="w-1/2" >globe</div>
-  )
-}
+    <div className="w-full h-full">
+      <Globe
+        ref={globeEl}
+        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+        backgroundColor="rgba(0,0,0,0)"
+      />
+    </div>
+  );
+};
 
-export default globe
+export default GlobeComponent;
