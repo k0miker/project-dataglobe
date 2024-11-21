@@ -28,15 +28,15 @@ function output() {
 //   }
 
   return (
-    <div className="w-1/4">
+    <div className="w-1/5 absolute right-0 top-[10%] bottom-[10%] flex justify-center items-center bg-glass rounded-l-3xl ">
       {/* <h1>Todesdaten Dashboard</h1>
       <ul>
         {data.map((item) => (
           <li key={item.IndicatorCode}>
             {item.IndicatorName} - {item.Country}: {item.Value}
           </li>
-        ))}
-      </ul> */}hallo
+        ))} */}
+      hallo
     </div>
   );
 }
