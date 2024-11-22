@@ -4,15 +4,14 @@ import axios from "axios";
 
 function Output({ selectedCountry }) {
   const [data, setData] = useState([]);
+  const [gdp, setGdp] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://restcountries.com/v3.1/all"
-        );
-        setData(response.data);        
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        setData(response.data);
         setLoading(false);
       } catch (error) {
         console.error("Fehler beim Abrufen der Daten:", error);
@@ -22,11 +21,31 @@ function Output({ selectedCountry }) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchGdp = async () => {
+      if (selectedCountry) {
+        try {
+          const response = await axios.get(
+            `https://api.worldbank.org/v2/country//indicator/NY.GDP.MKTP.CD?format=json`
+          );
+          setGdp(response.data[1][0].value);
+          console.log(selectedCountry);
+          
+        } catch (error) {
+          console.error("Fehler beim Abrufen des BIP:", error);
+        }
+      }
+    };
+    fetchGdp();
+  }, [selectedCountry]);
+
   if (loading) {
     return <p>Lädt...</p>;
   }
 
-  const filteredData = selectedCountry ? data.filter(item => item.name.common === selectedCountry) : [];
+  const filteredData = selectedCountry
+    ? data.filter((item) => item.cca3 === selectedCountry.cca3)
+    : [];
 
   return (
     <div className="w-1/5 absolute right-0 top-[10%] bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-l-3xl ">
@@ -36,14 +55,45 @@ function Output({ selectedCountry }) {
           filteredData.map((item) => (
             <React.Fragment key={item.cca3}>
               <li>
-                <img src={item.flags.png} alt={`Flagge von ${item.name.common}`} width="50" />{item.name.common}
+                <img
+                  src={item.flags.png}
+                  alt={`Flagge von ${item.name.common}`}
+                  width="50"
+                />
+                {item.name.common}
               </li>
-              <li>Hauptstadt: {item.capital}</li>
-              <li>Einwohner: {(item.population/1000000).toFixed(2)}Mio</li>
-              <li>Fläche: {item.area} km²</li>
-              <li>Region: {item.region}</li>
-              <li>Sprache: {Object.values(item.languages).join(", ")}</li>
-              <li>Unabhängig: {item.independent ? "Ja" : "Nein"}</li>
+              <li>
+                Hauptstadt: <span>{item.capital}</span>{" "}
+              </li>
+              <li>
+                Einwohner: <span>{(item.population / 1000000).toFixed(2)} Mio</span>
+              </li>
+              <li>
+                Fläche: <span>{item.area} km²</span>
+              </li>
+              <li>
+                Region: <span>{item.region}</span>
+              </li>
+              <li>
+                Sprache: <span>{Object.values(item.languages).join(", ")}</span>
+              </li>
+              <li>
+                Unabhängig: <span>{item.independent ? "Ja" : "Nein"}</span>
+              </li>
+              <li className="flex flex-col">
+                Währung:{" "} <br /> 
+                {Object.values(item.currencies).map(
+                  (currency, index, array) => (
+                    <span key={currency.name}>
+                      {currency.name} <div>({currency.symbol})
+                      {index < array.length - 1 ? ", " : ""}</div>
+                    </span>
+                  )
+                )}
+              </li>
+              <li>
+                BIP: <span>{gdp ? `$${(gdp / 1000000000).toFixed(2)} Mrd` : "Keine Daten verfügbar"}</span>
+              </li>
             </React.Fragment>
           ))
         ) : (

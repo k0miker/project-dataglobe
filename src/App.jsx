@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [selectedWorld, setSelectedWorld] = useState("earthDark.jgp");
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState(null);
   console.log("app:" + selectedWorld);
 
   return (

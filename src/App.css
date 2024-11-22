@@ -9,3 +9,14 @@ option {
 select {
   color: black;
 }
+li{
+display: flex;
+justify-content: space-between;
+width: 100%;
+
+
+span {
+  font-family: 'Courier New', Courier, monospace;
+ 
+}
+}

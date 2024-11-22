@@ -11,6 +11,7 @@ function Input({ onWorldChange, onCountryChange }) {
     ["Wasser Erde", "earthWaterBW.png"],
     ["Topology", "earthTopology.png"],
     ["Ocean", "earthOcean.webp"],
+    ["Tectonic", "earthTectonic.jpg"],
     ["ultra Resolution", "earthUltra_2.jpg"],
   ];
 
@@ -53,11 +54,14 @@ function Input({ onWorldChange, onCountryChange }) {
 
       <select
         id="country-select"
-        onChange={(e) => onCountryChange(e.target.value)}
+        onChange={(e) => {
+          const selectedCountry = countries.find(country => country.cca3 === e.target.value);
+          onCountryChange(selectedCountry);
+        }}
         className="p-2 rounded w-1/3 bg-transparent text-white"
       >
         {countries.map((country) => (
-          <option key={country.cca3} value={country.name.common}>
+          <option key={country.cca3} value={country.cca3}>
             {country.name.common}
           </option>
         ))}
