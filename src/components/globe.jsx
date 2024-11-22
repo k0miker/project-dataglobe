@@ -8,12 +8,12 @@ import * as d3 from "d3";
 const GlobeComponent = ({ selectedWorld }) => {
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
+  const [hoveredCountry, setHoveredCountry] = useState(null);
   const [colorScale, setColorScale] = useState(() =>
     d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
   );
 
   useEffect(() => {
-    // Lade GeoJSON-Daten
     fetch("/ne_110m_admin_0_countries.geojson")
       .then((res) => {
         if (!res.ok) {
@@ -22,15 +22,11 @@ const GlobeComponent = ({ selectedWorld }) => {
         return res.json();
       })
       .then((data) => {
-        console.log("GeoJSON Data fetched:", data);
-
-        // Filtere Antarktis aus und speichere die Daten
         const filteredData = data.features.filter(
           (d) => d.properties.ISO_A2 !== "AQ"
         );
         setCountriesData(filteredData);
 
-        // Erstelle Farbskala basierend auf GDP pro Kopf
         const getVal = (feat) =>
           feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
         const maxVal = Math.max(...filteredData.map(getVal));
@@ -54,7 +50,9 @@ const GlobeComponent = ({ selectedWorld }) => {
         polygonCapColor={(feat) => {
           const getVal = (feat) =>
             feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
-          return colorScale(getVal(feat));
+          return feat === hoveredCountry
+            ? "steelblue"
+            : colorScale(getVal(feat));
         }}
         polygonSideColor={() => "rgba(0, 100, 0, 0.15)"}
         polygonStrokeColor={() => "#111"}
@@ -63,6 +61,10 @@ const GlobeComponent = ({ selectedWorld }) => {
           GDP: <i>${d.GDP_MD_EST}</i> M$<br/>
           Population: <i>${d.POP_EST}</i>
         `}
+        onPolygonHover={(hoverD) => {
+          setHoveredCountry(hoverD);
+        }}
+        polygonsTransitionDuration={300}
       />
     </div>
   );
