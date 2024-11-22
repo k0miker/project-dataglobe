@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useAppContext } from "../context/AppContext";
 
-const dataOptions = [
-  { label: "BIP pro Kopf", value: "gdp" },
-  { label: "Bevölkerungsdichte", value: "density" },
-];
-
-function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
+function Input() {
+  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption } =
+    useAppContext();
   const [countries, setCountries] = useState([]);
-  const images = [
-    ["Dark", "earthDark.jpg"],
-    ["Blue Marbel", "earthMarble.jpg"],
-    ["Night", "earthNight_2.jpg"],
-    ["Rivers", "earthWaterBW.png"],
-    ["Topology", "earthTopology.png"],
-    ["Ocean", "earthOcean.webp"],
-    ["Tectonic", "earthTectonic.jpg"],
-    ["ultra Resolution", "earthUltra_2.jpg"],
-  ];
 
-  const fetchCountries = useEffect(() => {
+  useEffect(() => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
@@ -39,30 +27,39 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
       <label htmlFor="world-select" className="mb-2">
         Wähle ein World-Bild:
       </label>
-
       <select
         id="world-select"
-        onChange={(e) => onWorldChange(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white"
+        value={selectedWorld}
+        onChange={(e) => setSelectedWorld(e.target.value)}
+        className="p-2 rounded w-full bg-gray-700 text-white"
       >
-        {images.map(([name, img], index) => (
-          <option key={index} value={img}>
+        {[
+          ["Dark", "earthDark.jpg"],
+          ["Blue Marble", "earthMarble.jpg"],
+          ["Night", "earthNight_2.jpg"],
+          ["Rivers", "earthWaterBW.png"],
+          ["Topology", "earthTopology.png"],
+          ["Ocean", "earthOcean.webp"],
+          ["Tectonic", "earthTectonic.jpg"],
+          ["Ultra Resolution", "earthUltra_2.jpg"],
+        ].map(([name, img]) => (
+          <option key={img} value={img}>
             {name}
           </option>
         ))}
       </select>
 
       <label htmlFor="country-select" className="mt-4 mb-2">
-        Wählen sie ein Land:
+        Wählen Sie ein Land:
       </label>
-
       <select
         id="country-select"
-        onChange={(e) => {
-          const selectedCountry = countries.find(country => country.cca3 === e.target.value);
-          onCountryChange(selectedCountry);
-        }}
-        className="p-2 rounded w-full bg-transparent text-white"
+        onChange={(e) =>
+          setSelectedCountry(
+            countries.find((country) => country.cca3 === e.target.value)
+          )
+        }
+        className="p-2 rounded w-full bg-gray-700 text-white"
       >
         {countries.map((country) => (
           <option key={country.cca3} value={country.cca3}>
@@ -76,16 +73,12 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
       </label>
       <select
         id="data-option-select"
-        onChange={(e) => onDataOptionChange(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white"
+        onChange={(e) => setDataOption(e.target.value)}
+        className="p-2 rounded w-full bg-gray-700 text-white"
       >
-        {dataOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
+        <option value="gdp">BIP pro Kopf</option>
+        <option value="density">Bevölkerungsdichte</option>
       </select>
-
     </div>
   );
 }
