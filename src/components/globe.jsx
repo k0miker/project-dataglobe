@@ -3,15 +3,17 @@ import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
 import * as d3 from "d3";
 import axios from "axios";
+import { useAppContext } from "../context/AppContext";
 
-const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, rotationSpeed }) => {
+function GlobeComponent() {
+  const { selectedWorld, dataOption } = useAppContext();
   const globeEl = useRef();
-  const [countriesData, setCountriesData] = useState([]);
-  const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [countriesData, setCountriesData] = useState([]); // GeoJSON-Daten für Länder
+  const [hoveredCountry, setHoveredCountry] = useState(null); // Aktuell gehovtes Land
   const [colorScale, setColorScale] = useState(() =>
-    d3.scaleSequentialSqrt(d3.interpolateReds)
-  );
-  const [restCountriesData, setRestCountriesData] = useState([]);
+    d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
+  ); // Farbskala
+  const [restCountriesData, setRestCountriesData] = useState([]); // RestCountries API Daten
 
   useEffect(() => {
     const fetchRestCountriesData = async () => {
@@ -41,9 +43,14 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, 
 
         const getVal = (feat) => {
           if (dataOption === "gdp") {
-            return feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
+            return (
+              feat.properties.GDP_MD_EST /
+              Math.max(1e5, feat.properties.POP_EST)
+            );
           } else if (dataOption === "density") {
-            const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
+            const country = restCountriesData.find(
+              (country) => country.cca3 === feat.properties.ISO_A3
+            );
             if (country) {
               return country.population / Math.max(1, country.area);
             }
@@ -80,9 +87,14 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, 
           if (!showData) return "rgba(0, 0, 0, 0)";
           const getVal = (feat) => {
             if (dataOption === "gdp") {
-              return (feat.properties.GDP_MD_EST) / Math.max(1e5, feat.properties.POP_EST);
+              return (
+                feat.properties.GDP_MD_EST /
+                Math.max(1e5, feat.properties.POP_EST)
+              );
             } else if (dataOption === "density") {
-              const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
+              const country = restCountriesData.find(
+                (country) => country.cca3 === feat.properties.ISO_A3
+              );
               if (country) {
                 return country.population / Math.max(1, country.area);
               }
@@ -92,21 +104,19 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, 
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Reduziere die Transparenz
-          return feat === hoveredCountry ? color.formatRgb() : color.formatRgb();
+          return feat === hoveredCountry
+            ? color.formatRgb()
+            : color.formatRgb();
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
-        polygonStrokeColor={(feat) => {
-          if (selectedWorld === "earthDark.jpg") {
-            return "rgba(131, 130, 130, 0.5)";
-          }
-          return feat === hoveredCountry ? "#FFFFFF" : "#000000";
-        }}
+        polygonStrokeColor={(feat) =>
+          feat === hoveredCountry ? "#FFFFFF" : "#000000"
+        }
         polygonLabel={({ properties: d }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-          GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
-          Population: <i>${(d.POP_EST/1000000).toFixed(2)} Mio</i>
+          GDP: <i>${d.GDP_MD_EST / 1000}M$</i><br/>
+          Population: <i>${(d.POP_EST / 1000000).toFixed(2)} Mio</i>
         `}
-       
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
@@ -121,6 +131,6 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, 
       />
     </div>
   );
-};
+}
 
 export default GlobeComponent;

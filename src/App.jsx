@@ -1,8 +1,6 @@
-import './App.css'
-import GlobeComponent from './components/globe'
-import Input from './components/input'
-import Output from './components/output'
-import { useState, useEffect } from 'react';
+import React, { useState } from "react";
+import { AppProvider } from "./context/AppContext";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const [selectedWorld, setSelectedWorld] = useState("earthDark.jpg");
@@ -39,24 +37,10 @@ function App() {
   }, []);
 
   return (
-    <main className='flex justify-between w-screen h-screen '>
-      <Input 
-        onWorldChange={setSelectedWorld} 
-        onCountryChange={setSelectedCountry} 
-        onDataOptionChange={setDataOption} 
-        onShowDataChange={setShowData} 
-        onRotationSpeedChange={setRotationSpeed}
-      />
-      <GlobeComponent 
-        selectedWorld={images[selectedWorld] || selectedWorld} 
-        dataOption={dataOption} 
-        showData={showData} 
-        onCountrySelect={setSelectedCountry} 
-        rotationSpeed={rotationSpeed}
-      />
-      <Output selectedCountry={selectedCountry} />     
-    </main>
-  )
+    <AppProvider>
+      <HomePage />
+    </AppProvider>
+  );
 }
 
 export default App;
