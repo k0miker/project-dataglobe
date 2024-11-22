@@ -61,6 +61,7 @@ const GlobeComponent = ({ selectedWorld }) => {
           GDP: <i>${d.GDP_MD_EST}</i> M$<br/>
           Population: <i>${d.POP_EST}</i>
         `}
+        polygonAltitude={(feat) => (feat === hoveredCountry ? 0.12 : 0.06)}
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
