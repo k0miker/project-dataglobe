@@ -31,14 +31,14 @@ function Input() {
         className="p-2 rounded w-full bg-gray-700 text-white accent-color"
       >
         {[
-          ["Dark", "earthDark.jpg"],
+          ["Dark", "earthDark_upscayle.png"],
           ["Blue Marble", "earthMarble.jpg"],
-          ["Night", "earthNight_2.jpg"],
-          ["Rivers", "earthWaterBW.png"],
-          ["Topology", "earthTopology.png"],
+          ["Night", "earthNight_2.png"],
+          ["Rivers", "earthWaterBW_upscayle.png"],
+          ["Topology", "earthTopology_upscayle.png"],
           ["Ocean", "earthOcean.webp"],
           ["Tectonic", "earthTectonic.jpg"],
-          ["Ultra Resolution", "earthUltra_2.jpg"],
+          ["Ultra Resolution", "earthUltra_3.jpg"],
         ].map(([name, img]) => (
           <option key={img} value={img}>
             {name}

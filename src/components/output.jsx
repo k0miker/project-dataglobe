@@ -25,48 +25,50 @@ function Output() {
       </div>
       <ul className="text-left mt-4 space-y-2">
         <li>
-          <b>Hauptstadt:</b>{" "}
-          {selectedCountry.capital
+          <b>Hauptstadt:</b>{" "} <span> {selectedCountry.capital
             ? selectedCountry.capital.join(", ")
-            : "Keine Daten"}
+            : "Keine Daten"}</span>
+         
         </li>
         <li>
-          <b>Region:</b> {selectedCountry.region}
+          <b>Region:</b> <span>{selectedCountry.region}</span>
         </li>
         <li>
-          <b>Unterregion:</b> {selectedCountry.subregion || "Keine Daten"}
+          <b>Unterregion:</b> <span>{selectedCountry.subregion || "Keine Daten"}</span>
         </li>
         <li>
-          <b>Einwohner:</b> {(selectedCountry.population / 1e6).toFixed(2)} Mio
+          <b>Einwohner:</b> <span>{(selectedCountry.population / 1e6).toFixed(2)} Mio</span>
         </li>
         <li>
           <b>Fläche:</b>{" "}
-          {selectedCountry.area ? `${selectedCountry.area} km²` : "Keine Daten"}
+          <span>{selectedCountry.area ? `${selectedCountry.area} km²` : "Keine Daten"}</span>
         </li>
         <li>
           <b>Bevölkerungsdichte:</b>{" "}
-          {selectedCountry.area
+          <span>{selectedCountry.area
             ? `${(selectedCountry.population / selectedCountry.area).toFixed(
                 2
               )} Pers./km²`
-            : "Keine Daten"}
+            : "Keine Daten"}</span>
         </li>
         <li>
           <b>Sprachen:</b>{" "}
-          {selectedCountry.languages
+          <span>{selectedCountry.languages
             ? Object.values(selectedCountry.languages).join(", ")
-            : "Keine Daten"}
+            : "Keine Daten"}</span>
+          
         </li>
         <li>
           <b>Währungen:</b>{" "}
-          {selectedCountry.currencies
+          <span>{selectedCountry.currencies
             ? Object.values(selectedCountry.currencies)
                 .map((currency) => `${currency.name} (${currency.symbol})`)
                 .join(", ")
-            : "Keine Daten"}
+            : "Keine Daten"}</span>
+          
         </li>
         <li>
-          <b>Unabhängig:</b> {selectedCountry.independent ? "Ja" : "Nein"}
+          <b>Unabhängig:</b> <span>{selectedCountry.independent ? "Ja" : "Nein"}</span> 
         </li>
       </ul>
     </div>
