@@ -1,19 +1,20 @@
-import { useState } from 'react'
 import './App.css'
-import Globe from './components/globe'
+import GlobeComponent from './components/globe'
 import Input from './components/input'
 import Output from './components/output'
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedWorld, setSelectedWorld] = useState("earthDark.jgp");
+  const [selectedCountry, setSelectedCountry] = useState("");
+  console.log("app:" + selectedWorld);
 
   return (
     <main className='flex justify-between w-screen h-screen '>
-      <Input />
-      <Globe />
-      <Output />
-     
-    </ main>
+      <Input onWorldChange={setSelectedWorld} onCountryChange={setSelectedCountry} />
+      <GlobeComponent selectedWorld={selectedWorld} />
+      <Output selectedCountry={selectedCountry} />     
+    </main>
   )
 }
 
