@@ -34,7 +34,7 @@ const GlobeComponent = ({ selectedWorld }) => {
     [windowWidth],
     [selectedWorld]
   );
-  // console.log("globe:" + globeEl);
+  
   console.log("globe:" + selectedWorld);
   useEffect(() => {
     if (globeEl) {
@@ -43,25 +43,26 @@ const GlobeComponent = ({ selectedWorld }) => {
   }, [selectedWorld]);
 
   //clouds
-  //   useEffect(() => {
-  //     if (globeEl.current) {
-  //       // Wolken
-  //       const CLOUDS_ALT = 0.008;
-  //       const CLOUDS_ROTATION_SPEED = -0.005;
 
-  //       new THREE.TextureLoader().load(cloudsTexture, cloudsTexture => {
-  //         const clouds = new THREE.Mesh(
-  //           new THREE.SphereGeometry(globeEl.current.getGlobeRadius() * (1 + CLOUDS_ALT), 75, 75),
-  //           new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
-  //         );
-  //         globeEl.current.scene().add(clouds);
-  //         (function rotateClouds() {
-  //           clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
-  //           requestAnimationFrame(rotateClouds);
-  //         })();
-  //       });
-  //     }
-  //   }, []);
+    // useEffect(() => {
+    //   if (globeEl.current) {
+    //     // Wolken
+    //     const CLOUDS_ALT = 0.008;
+    //     const CLOUDS_ROTATION_SPEED = -0.005;
+
+    //     new THREE.TextureLoader().load(cloudsTexture, cloudsTexture => {
+    //       const clouds = new THREE.Mesh(
+    //         new THREE.SphereGeometry(globeEl.current.getGlobeRadius() * (1 + CLOUDS_ALT), 75, 75),
+    //         new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
+    //       );
+    //       globeEl.current.scene().add(clouds);
+    //       (function rotateClouds() {
+    //         clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
+    //         requestAnimationFrame(rotateClouds);
+    //       })();
+    //     });
+    //   }
+    // }, [ selectedWorld]);
 
   return (
     <div className="w-full h-full absolute">

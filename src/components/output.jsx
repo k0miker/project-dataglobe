@@ -43,7 +43,6 @@ function Output({ selectedCountry }) {
               <li>Hauptstadt: {item.capital}</li>
               <li>Einwohner: {(item.population/1000000).toFixed(2)}Mio</li>
               <li>Fläche: {item.area} km²</li>
-              <li>Zeitzone: {item.timezones.join(";")}</li>
               <li>Region: {item.region}</li>
               <li>Sprache: {Object.values(item.languages).join(", ")}</li>
               <li>Unabhängig: {item.independent ? "Ja" : "Nein"}</li>
