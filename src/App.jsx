@@ -5,8 +5,9 @@ import Output from './components/output'
 import { useState } from 'react';
 
 function App() {
-  const [selectedWorld, setSelectedWorld] = useState("earthDark");
+  const [selectedWorld, setSelectedWorld] = useState("/earthDark.jgp");
   const [selectedCountry, setSelectedCountry] = useState("");
+  console.log("app:" + selectedWorld);
 
   return (
     <main className='flex justify-between w-screen h-screen '>

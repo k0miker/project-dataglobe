@@ -13,7 +13,7 @@ function Output({ selectedCountry }) {
           "https://restcountries.com/v3.1/all"
         );
         setData(response.data);
-        console.log(response.data);
+
         
         setLoading(false);
       } catch (error) {
