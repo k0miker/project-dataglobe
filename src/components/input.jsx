@@ -6,13 +6,14 @@ const dataOptions = [
   { label: "Bevölkerungsdichte", value: "density" },
 ];
 
-function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataChange }) {
+function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataChange, onRotationSpeedChange }) {
   const [countries, setCountries] = useState([]);
   const images = [
     ["Dark", "earthDark.jpg"],
     ["Blue Marbel", "earthMarble.jpg"],
     ["Night", "earthNight_2.jpg"],
-    ["Rivers", "earthWaterBW.png"],
+    ["Rivers W&B", "earthWaterBW.png"],
+    ["Rivers B&W", "earthWater_upscayle.png"],
     ["Topology", "earthTopology.png"],
     ["Ocean", "earthOcean.webp"],
     ["Tectonic", "earthTectonic.jpg"],
@@ -43,7 +44,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataC
       <select
         id="world-select"
         onChange={(e) => onWorldChange(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         {images.map(([name, img], index) => (
           <option key={index} value={img}>
@@ -62,7 +63,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataC
           const selectedCountry = countries.find(country => country.cca3 === e.target.value);
           onCountryChange(selectedCountry);
         }}
-        className="p-2 rounded w-full bg-transparent text-white"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         {countries.map((country) => (
           <option key={country.cca3} value={country.cca3}>
@@ -77,7 +78,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataC
       <select
         id="data-option-select"
         onChange={(e) => onDataOptionChange(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         {dataOptions.map((option) => (
           <option key={option.value} value={option.value}>
@@ -93,8 +94,21 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataC
         type="checkbox"
         id="show-data-checkbox"
         onChange={(e) => onShowDataChange(e.target.checked)}
-        className="p-2 rounded bg-transparent text-white"
+        className="p-2 rounded bg-transparent text-white accent-color"
         defaultChecked
+      />
+
+      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2">
+        Rotationsgeschwindigkeit:
+      </label>
+      <input
+        type="range"
+        id="rotation-speed-slider"
+        min="0"
+        max="5"
+        step="0.1"
+        onChange={(e) => onRotationSpeedChange(parseFloat(e.target.value))}
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       />
 
     </div>

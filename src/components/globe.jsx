@@ -4,7 +4,7 @@ import background from "../assets/images/background.png";
 import * as d3 from "d3";
 import axios from "axios";
 
-const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect }) => {
+const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect, rotationSpeed }) => {
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -62,9 +62,9 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect }
   useEffect(() => {
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
-      globeEl.current.controls().autoRotateSpeed = 0.2;
+      globeEl.current.controls().autoRotateSpeed = rotationSpeed;
     }
-  }, []);
+  }, [rotationSpeed]);
 
   return (
     <div className="w-full h-full absolute overflow-hidden">

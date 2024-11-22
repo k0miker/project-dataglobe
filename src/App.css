@@ -4,19 +4,23 @@
 
 option {
   color: black;
+  max-width: 100%;
 }
 
 select {
   color: black;
 }
-li{
-display: flex;
-justify-content: space-between;
-width: 100%;
 
+li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
 span {
   font-family: 'Courier New', Courier, monospace;
- 
 }
+
+.accent-color {
+  accent-color: #333;
 }
