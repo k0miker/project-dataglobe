@@ -4,7 +4,7 @@ import background from "../assets/images/background.png";
 import * as d3 from "d3";
 import axios from "axios";
 
-const GlobeComponent = ({ selectedWorld, dataOption }) => {
+const GlobeComponent = ({ selectedWorld, dataOption, showData }) => {
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -77,6 +77,7 @@ const GlobeComponent = ({ selectedWorld, dataOption }) => {
         atmosphereColor={"#fff"}
         polygonsData={countriesData}
         polygonCapColor={(feat) => {
+          if (!showData) return "rgba(0, 0, 0, 0)";
           const getVal = (feat) => {
             if (dataOption === "gdp") {
               return (feat.properties.GDP_MD_EST) / Math.max(1e5, feat.properties.POP_EST);
@@ -94,7 +95,12 @@ const GlobeComponent = ({ selectedWorld, dataOption }) => {
           return feat === hoveredCountry ? color.formatRgb() : color.formatRgb();
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
-        polygonStrokeColor={(feat) => (feat === hoveredCountry ? "#FFFFFF" : "#000000")}
+        polygonStrokeColor={(feat) => {
+          if (selectedWorld === "earthDark.jpg") {
+            return "rgba(131, 130, 130, 0.5)";
+          }
+          return feat === hoveredCountry ? "#FFFFFF" : "#000000";
+        }}
         polygonLabel={({ properties: d }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
           GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>

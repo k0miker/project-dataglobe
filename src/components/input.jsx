@@ -6,7 +6,7 @@ const dataOptions = [
   { label: "Bevölkerungsdichte", value: "density" },
 ];
 
-function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
+function Input({ onWorldChange, onCountryChange, onDataOptionChange, onShowDataChange }) {
   const [countries, setCountries] = useState([]);
   const images = [
     ["Dark", "earthDark.jpg"],
@@ -16,7 +16,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
     ["Topology", "earthTopology.png"],
     ["Ocean", "earthOcean.webp"],
     ["Tectonic", "earthTectonic.jpg"],
-    ["ultra Resolution", "earthUltra_2.jpg"],
+    ["ultra Resolution", "earthUltra_3.jpg"],
   ];
 
   const fetchCountries = useEffect(() => {
@@ -35,7 +35,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl">
+    <div className="flex flex-col justify-center items-center w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl p-4">
       <label htmlFor="world-select" className="mb-2">
         Wähle ein World-Bild:
       </label>
@@ -85,6 +85,17 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
           </option>
         ))}
       </select>
+
+      <label htmlFor="show-data-checkbox" className="mt-4 mb-2">
+        Daten anzeigen:
+      </label>
+      <input
+        type="checkbox"
+        id="show-data-checkbox"
+        onChange={(e) => onShowDataChange(e.target.checked)}
+        className="p-2 rounded bg-transparent text-white"
+        defaultChecked
+      />
 
     </div>
   );

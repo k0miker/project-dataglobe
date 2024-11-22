@@ -8,6 +8,7 @@ function App() {
   const [selectedWorld, setSelectedWorld] = useState("earthDark.jgp");
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [dataOption, setDataOption] = useState("gdp");
+  const [showData, setShowData] = useState(true);
 
   return (
     <main className='flex justify-between w-screen h-screen '>
@@ -15,8 +16,9 @@ function App() {
         onWorldChange={setSelectedWorld} 
         onCountryChange={setSelectedCountry} 
         onDataOptionChange={setDataOption} 
+        onShowDataChange={setShowData} 
       />
-      <GlobeComponent selectedWorld={selectedWorld} dataOption={dataOption} />
+      <GlobeComponent selectedWorld={selectedWorld} dataOption={dataOption} showData={showData} />
       <Output selectedCountry={selectedCountry} />     
     </main>
   )
