@@ -18,7 +18,12 @@ function App() {
         onDataOptionChange={setDataOption} 
         onShowDataChange={setShowData} 
       />
-      <GlobeComponent selectedWorld={selectedWorld} dataOption={dataOption} showData={showData} />
+      <GlobeComponent 
+        selectedWorld={selectedWorld} 
+        dataOption={dataOption} 
+        showData={showData} 
+        onCountrySelect={setSelectedCountry} 
+      />
       <Output selectedCountry={selectedCountry} />     
     </main>
   )

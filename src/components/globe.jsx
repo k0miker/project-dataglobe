@@ -4,7 +4,7 @@ import background from "../assets/images/background.png";
 import * as d3 from "d3";
 import axios from "axios";
 
-const GlobeComponent = ({ selectedWorld, dataOption, showData }) => {
+const GlobeComponent = ({ selectedWorld, dataOption, showData, onCountrySelect }) => {
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -106,9 +106,15 @@ const GlobeComponent = ({ selectedWorld, dataOption, showData }) => {
           GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
           Population: <i>${(d.POP_EST/1000000).toFixed(2)} Mio</i>
         `}
-        polygonAltitude={(feat) => (feat === hoveredCountry ? 0.12 : 0.06)}
+       
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
+        }}
+        onPolygonClick={(clickedCountry) => {
+          const country = restCountriesData.find(country => country.cca3 === clickedCountry.properties.ISO_A3);
+          if (country) {
+            onCountrySelect(country);
+          }
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => (d === hoveredCountry ? 0.1 : 0.006)}
