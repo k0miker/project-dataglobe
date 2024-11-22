@@ -1,7 +1,11 @@
 .bg-glass {
-    background-color: var(--glass);
+  background-color: var(--glass);
+}
 
-  }
-  option {
-    color: black;
-  }
+option {
+  color: black;
+}
+
+select {
+  color: black;
+}

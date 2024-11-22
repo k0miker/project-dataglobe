@@ -6,12 +6,13 @@ import { useState } from 'react';
 
 function App() {
   const [selectedWorld, setSelectedWorld] = useState("earthDark");
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   return (
     <main className='flex justify-between w-screen h-screen '>
-      <Input onSelectChange={setSelectedWorld} />
+      <Input onSelectChange={setSelectedWorld} onCountryChange={setSelectedCountry} />
       <GlobeComponent selectedWorld={selectedWorld} />
-      <Output />     
+      <Output selectedCountry={selectedCountry} />     
     </main>
   )
 }
