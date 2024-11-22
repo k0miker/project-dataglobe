@@ -41,7 +41,7 @@ const GlobeComponent = ({ selectedWorld }) => {
     const getVal = (feat) =>
       feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
 
-    fetch("../datasets/ne_110m_admin_0_countries.geojson")
+    fetch("/assets/data/ne_110m_admin_0_countries.geojson")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok " + res.statusText);
