@@ -1,26 +1,15 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from 'react';
 
 const AppContext = createContext();
 
-export const useAppContext = () => useContext(AppContext);
-
-export const AppProvider = ({ children }) => {
-  const [selectedWorld, setSelectedWorld] = useState("earthDark.jpg");
-  const [selectedCountry, setSelectedCountry] = useState(null);
-  const [dataOption, setDataOption] = useState("gdp");
-
+export const AppProvider = ({ children, value }) => {
   return (
-    <AppContext.Provider
-      value={{
-        selectedWorld,
-        setSelectedWorld,
-        selectedCountry,
-        setSelectedCountry,
-        dataOption,
-        setDataOption,
-      }}
-    >
+    <AppContext.Provider value={value}>
       {children}
     </AppContext.Provider>
   );
+};
+
+export const useAppContext = () => {
+  return useContext(AppContext);
 };

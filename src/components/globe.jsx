@@ -2,40 +2,35 @@ import { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
 import * as d3 from "d3";
-import axios from "axios";
 import { useAppContext } from "../context/AppContext";
+import { fetchCountries, fetchGeoJson } from "../utils/fetches";
 
 function GlobeComponent() {
-  const { selectedWorld, dataOption } = useAppContext();
+  const { selectedWorld, dataOption, showData, rotationSpeed, setSelectedCountry } = useAppContext();
   const globeEl = useRef();
-  const [countriesData, setCountriesData] = useState([]); // GeoJSON-Daten für Länder
-  const [hoveredCountry, setHoveredCountry] = useState(null); // Aktuell gehovtes Land
+  const [countriesData, setCountriesData] = useState([]);
+  const [hoveredCountry, setHoveredCountry] = useState(null);
   const [colorScale, setColorScale] = useState(() =>
-    d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
-  ); // Farbskala
-  const [restCountriesData, setRestCountriesData] = useState([]); // RestCountries API Daten
+    d3.scaleSequentialSqrt(d3.interpolateReds)
+  );
+  const [restCountriesData, setRestCountriesData] = useState([]);
 
   useEffect(() => {
-    const fetchRestCountriesData = async () => {
+    const getRestCountriesData = async () => {
       try {
-        const response = await axios.get("https://restcountries.com/v3.1/all");
-        setRestCountriesData(response.data);
+        const data = await fetchCountries();
+        setRestCountriesData(data);
       } catch (error) {
         console.error("Fehler beim Abrufen der Restcountries-Daten:", error);
       }
     };
-    fetchRestCountriesData();
+    getRestCountriesData();
   }, []);
 
   useEffect(() => {
-    fetch("/ne_110m_admin_0_countries.geojson")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok: " + res.statusText);
-        }
-        return res.json();
-      })
-      .then((data) => {
+    const getGeoJsonData = async () => {
+      try {
+        const data = await fetchGeoJson();
         const filteredData = data.features.filter(
           (d) => d.properties.ISO_A2 !== "AQ"
         );
@@ -43,14 +38,9 @@ function GlobeComponent() {
 
         const getVal = (feat) => {
           if (dataOption === "gdp") {
-            return (
-              feat.properties.GDP_MD_EST /
-              Math.max(1e5, feat.properties.POP_EST)
-            );
+            return feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
           } else if (dataOption === "density") {
-            const country = restCountriesData.find(
-              (country) => country.cca3 === feat.properties.ISO_A3
-            );
+            const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
             if (country) {
               return country.population / Math.max(1, country.area);
             }
@@ -60,10 +50,11 @@ function GlobeComponent() {
 
         const maxVal = Math.max(...filteredData.map(getVal));
         setColorScale((prevScale) => prevScale.domain([0, maxVal]));
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching or processing data:", error);
-      });
+      }
+    };
+    getGeoJsonData();
   }, [dataOption, restCountriesData]);
 
   useEffect(() => {
@@ -87,14 +78,9 @@ function GlobeComponent() {
           if (!showData) return "rgba(0, 0, 0, 0)";
           const getVal = (feat) => {
             if (dataOption === "gdp") {
-              return (
-                feat.properties.GDP_MD_EST /
-                Math.max(1e5, feat.properties.POP_EST)
-              );
+              return (feat.properties.GDP_MD_EST) / Math.max(1e5, feat.properties.POP_EST);
             } else if (dataOption === "density") {
-              const country = restCountriesData.find(
-                (country) => country.cca3 === feat.properties.ISO_A3
-              );
+              const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
               if (country) {
                 return country.population / Math.max(1, country.area);
               }
@@ -104,26 +90,28 @@ function GlobeComponent() {
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Reduziere die Transparenz
-          return feat === hoveredCountry
-            ? color.formatRgb()
-            : color.formatRgb();
+          return feat === hoveredCountry ? color.formatRgb() : color.formatRgb();
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
-        polygonStrokeColor={(feat) =>
-          feat === hoveredCountry ? "#FFFFFF" : "#000000"
-        }
+        polygonStrokeColor={(feat) => {
+          if (selectedWorld === "earthDark.jpg") {
+            return "rgba(131, 130, 130, 0.5)";
+          }
+          return feat === hoveredCountry ? "#FFFFFF" : "#000000";
+        }}
         polygonLabel={({ properties: d }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-          GDP: <i>${d.GDP_MD_EST / 1000}M$</i><br/>
-          Population: <i>${(d.POP_EST / 1000000).toFixed(2)} Mio</i>
+          GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
+          Population: <i>${(d.POP_EST/1000000).toFixed(2)} Mio</i>
         `}
+       
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
         onPolygonClick={(clickedCountry) => {
           const country = restCountriesData.find(country => country.cca3 === clickedCountry.properties.ISO_A3);
           if (country) {
-            onCountrySelect(country);
+            setSelectedCountry(country);
           }
         }}
         polygonsTransitionDuration={300}

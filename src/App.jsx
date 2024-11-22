@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppProvider } from "./context/AppContext";
+import GlobeComponent from './components/globe';
+import Input from './components/input';
+import Output from './components/output';
+import './App.css';
+
 import HomePage from "./pages/HomePage";
 
 function App() {
@@ -37,8 +42,12 @@ function App() {
   }, []);
 
   return (
-    <AppProvider>
-      <HomePage />
+    <AppProvider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed }}>
+      <main className='flex justify-between w-screen h-screen '>
+        <Input />
+        <GlobeComponent />
+        <Output />
+      </main>
     </AppProvider>
   );
 }
