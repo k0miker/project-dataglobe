@@ -7,12 +7,16 @@ import { useState } from 'react';
 function App() {
   const [selectedWorld, setSelectedWorld] = useState("earthDark.jgp");
   const [selectedCountry, setSelectedCountry] = useState(null);
-  console.log("app:" + selectedWorld);
+  const [dataOption, setDataOption] = useState("gdp");
 
   return (
     <main className='flex justify-between w-screen h-screen '>
-      <Input onWorldChange={setSelectedWorld} onCountryChange={setSelectedCountry} />
-      <GlobeComponent selectedWorld={selectedWorld} />
+      <Input 
+        onWorldChange={setSelectedWorld} 
+        onCountryChange={setSelectedCountry} 
+        onDataOptionChange={setDataOption} 
+      />
+      <GlobeComponent selectedWorld={selectedWorld} dataOption={dataOption} />
       <Output selectedCountry={selectedCountry} />     
     </main>
   )

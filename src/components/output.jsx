@@ -26,10 +26,10 @@ function Output({ selectedCountry }) {
       if (selectedCountry) {
         try {
           const response = await axios.get(
-            `https://api.worldbank.org/v2/country//indicator/NY.GDP.MKTP.CD?format=json`
+            `https://api.worldbank.org/v2/country/${selectedCountry.cca3}/indicator/NY.GDP.MKTP.CD?format=json`
           );
           setGdp(response.data[1][0].value);
-          console.log(selectedCountry);
+          console.log(response);
           
         } catch (error) {
           console.error("Fehler beim Abrufen des BIP:", error);
@@ -54,12 +54,14 @@ function Output({ selectedCountry }) {
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
             <React.Fragment key={item.cca3}>
-              <li>
-                <img
+              <li className="flex justify-around">
+              <img
                   src={item.flags.png}
-                  alt={`Flagge von ${item.name.common}`}
-                  width="50"
+                  alt={`Flagge von ${item.name.common}`}                  
+                  className="w-full rounded-lg border-2 border-gray-200"
                 />
+              </li>
+              <li className="flex justify-center text-2xl underline p-2 text-center">               
                 {item.name.common}
               </li>
               <li>
@@ -71,6 +73,7 @@ function Output({ selectedCountry }) {
               <li>
                 Fläche: <span>{item.area} km²</span>
               </li>
+              <li className="flex">Dichte: <br /> <span> {(item.population/item.area).toFixed(2)}Pers/km² </span></li>
               <li>
                 Region: <span>{item.region}</span>
               </li>
@@ -80,12 +83,11 @@ function Output({ selectedCountry }) {
               <li>
                 Unabhängig: <span>{item.independent ? "Ja" : "Nein"}</span>
               </li>
-              <li className="flex flex-col">
-                Währung:{" "} <br /> 
+              <li className="flex ">
+                Währung:{" "}
                 {Object.values(item.currencies).map(
                   (currency, index, array) => (
-                    <span key={currency.name}>
-                      {currency.name} <div>({currency.symbol})
+                    <span key={currency.name}><div>{currency.symbol}
                       {index < array.length - 1 ? ", " : ""}</div>
                     </span>
                   )
