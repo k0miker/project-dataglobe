@@ -11,6 +11,7 @@ function Input({ onWorldChange, onCountryChange }) {
     ["Wasser Erde", "earthWaterBW.png"],
     ["Topology", "earthTopology.png"],
     ["Ocean", "earthOcean.webp"],
+    ["ultra Resolution", "earthUltra_2.jpg"],
   ];
 
   const fetchCountries = useEffect(() => {
