@@ -12,9 +12,7 @@ function Output({ selectedCountry }) {
         const response = await axios.get(
           "https://restcountries.com/v3.1/all"
         );
-        setData(response.data);
-
-        
+        setData(response.data);        
         setLoading(false);
       } catch (error) {
         console.error("Fehler beim Abrufen der Daten:", error);

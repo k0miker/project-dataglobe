@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
-
 import background from "../assets/images/background.png";
 import cloudsTexture from "../assets/images/clouds_transparent.png";
 import * as THREE from "three";
@@ -8,9 +7,10 @@ import * as THREE from "three";
 const GlobeComponent = ({ selectedWorld }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const globeEl = useRef();
+  selectedWorld !== "earthDark.jpg" ? console.log("globe:" + selectedWorld) : console.log("globe: earthDark.jpg");
+  useEffect(() => {
+  
 
-  useEffect(
-    () => {
       const onWindowResize = () => {
         globeEl.current.camera().aspect =
           window.innerWidth / window.innerHeight;
@@ -29,18 +29,15 @@ const GlobeComponent = ({ selectedWorld }) => {
       if (globeEl.current) {
         globeEl.current.controls().autoRotate = true;
         globeEl.current.controls().autoRotateSpeed = -0.3;
+        globeEl.current.controls().enableDamping = true;
       }
     },
     [windowWidth],
     [selectedWorld]
   );
   
-  console.log("globe:" + selectedWorld);
-  useEffect(() => {
-    if (globeEl) {
-      globeEl.current.globeImageUrl = selectedWorld;
-    }
-  }, [selectedWorld]);
+
+
 
   //clouds
 
@@ -65,14 +62,17 @@ const GlobeComponent = ({ selectedWorld }) => {
     // }, [ selectedWorld]);
 
   return (
-    <div className="w-full h-full absolute">
+    <div className="w-full h-full absolute overflow-hidden">
       <Globe
         ref={globeEl}
-        globeImageUrl={selectedWorld}
+        globeImageUrl={ selectedWorld }
         backgroundImageUrl={background}
         showGraticules={true}
         atmosphereAltitude={0.2}
         atmosphereColor={"#fff"}
+
+
+        
       />
     </div>
   );
