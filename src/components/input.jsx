@@ -11,7 +11,7 @@ function Input({ onWorldChange, onCountryChange, onDataOptionChange }) {
   const images = [
     ["Dark", "earthDark.jpg"],
     ["Blue Marbel", "earthMarble.jpg"],
-    ["Night", "earthNight.jpg"],
+    ["Night", "earthNight_2.jpg"],
     ["Rivers", "earthWaterBW.png"],
     ["Topology", "earthTopology.png"],
     ["Ocean", "earthOcean.webp"],
