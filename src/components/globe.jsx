@@ -9,7 +9,7 @@ const GlobeComponent = ({ selectedWorld, dataOption }) => {
   const [countriesData, setCountriesData] = useState([]);
   const [hoveredCountry, setHoveredCountry] = useState(null);
   const [colorScale, setColorScale] = useState(() =>
-    d3.scaleSequentialSqrt(d3.interpolateBlues)
+    d3.scaleSequentialSqrt(d3.interpolateReds)
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
 
@@ -91,10 +91,10 @@ const GlobeComponent = ({ selectedWorld, dataOption }) => {
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Reduziere die Transparenz
-          return feat === hoveredCountry ? "steelblue" : color.formatRgb();
+          return feat === hoveredCountry ? color.formatRgb() : color.formatRgb();
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
-        polygonStrokeColor={() => "#111"}
+        polygonStrokeColor={(feat) => (feat === hoveredCountry ? "#FFFFFF" : "#000000")}
         polygonLabel={({ properties: d }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
           GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
