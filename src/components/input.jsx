@@ -3,7 +3,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 
 function Input() {
-  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption, setRotationSpeed, showData, setShowData, visualizationType, setVisualizationType } = useAppContext();
+  const { selectedWorld, setSelectedWorld, setDataOption, setRotationSpeed, showData, setShowData, visualizationType, setVisualizationType } = useAppContext();
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Input() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-start w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl shadow-lg p-6">
+    <div className="flex flex-col justify-start items-start  absolute left-1 z-50 hover:bottom-[10%] top-[10.5%] bg-glass rounded-br-3xl shadow-lg p-6">
       <label htmlFor="world-select" className="mb-2 font-bold text-sm">
         Karte:
       </label>
@@ -42,25 +42,6 @@ function Input() {
         ].map(([name, img]) => (
           <option key={img} value={img}>
             {name}
-          </option>
-        ))}
-      </select>
-
-      <label htmlFor="country-select" className="mt-4 mb-2 font-bold text-sm">
-        Land:
-      </label>
-      <select
-        id="country-select"
-        onChange={(e) =>
-          setSelectedCountry(
-            countries.find((country) => country.cca3 === e.target.value)
-          )
-        }
-        className="p-2 rounded w-1/2 bg-transparent border text-xs border-gray-300"
-      >
-        {countries.map((country) => (
-          <option key={country.cca3} value={country.cca3}>
-            {country.name.common}
           </option>
         ))}
       </select>

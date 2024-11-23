@@ -6,9 +6,9 @@ function Output() {
 
   if (!selectedCountry) {
     return (
-      <div className="w-1/5 absolute right-0 top-[10%] bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-l-3xl shadow-lg p-6">
+      <div className=" absolute right-1 top-[10.5%] hover:bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
         <h1 className="text-2xl font-bold mb-4">Länderinfo</h1>
-        <p className="text-lg">Bitte wählen Sie ein Land aus.</p>
+        <p className="text-lg">Wähle ein Land.</p>
       </div>
     );
   }

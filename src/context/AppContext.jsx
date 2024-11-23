@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { fetchCountries } from "../utils/fetches";
 
 const AppContext = createContext();
 
@@ -9,9 +10,22 @@ export const AppProvider = ({ children }) => {
   const [showData, setShowData] = useState(true);
   const [rotationSpeed, setRotationSpeed] = useState(0.2);
   const [visualizationType, setVisualizationType] = useState("polygon");
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    const getCountries = async () => {
+      try {
+        const sortedCountries = await fetchCountries();
+        setCountries(sortedCountries);
+      } catch (error) {
+        console.error("Fehler beim Abrufen der Länder:", error);
+      }
+    };
+    getCountries();
+  }, []);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType }}>
+    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries }}>
       {children}
     </AppContext.Provider>
   );
