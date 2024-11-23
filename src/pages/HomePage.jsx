@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../components/input";
-import Output from "../components/output";
+import Input from "../components/Input";
+import Output from "../components/Output";
 import VisualizationRenderer from "../components/VisualizationRenderer";
 
 function HomePage() {
