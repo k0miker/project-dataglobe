@@ -19,26 +19,26 @@ function Input() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl p-4">
-      <label htmlFor="world-select" className="mb-2">
+    <div className="flex flex-col justify-center items-center w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl shadow-lg p-6">
+      <label htmlFor="world-select" className="mb-2 font-bold text-lg">
         Wähle ein World-Bild:
       </label>
       <select
         id="world-select"
         value={selectedWorld}
         onChange={(e) => setSelectedWorld(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white accent-color"
+        className="p-2 rounded w-full bg-transparent border border-gray-300"
       >
         {[
           ["Dark", "earthDark.png"],
           ["Blue Marble", "earthMarble.png"],
           ["Night", "earthNight.jpg"],
           ["Rivers", "earthWater.png"],
-          ["rivers B&W", "earthWaterBW.png"],
+          ["Rivers B&W", "earthWaterBW.png"],
           ["Topology", "earthTopology.png"],
           ["Continets", "earthOcean.webp"],
           ["Tectonic", "earthTectonic.jpg"],
-          ["Ultra Resolution", "earthUltra_3.jpg"],
+          ["Ultra Resolution", "earthUltra.jpg"],
         ].map(([name, img]) => (
           <option key={img} value={img}>
             {name}
@@ -46,7 +46,7 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="country-select" className="mt-4 mb-2 font-bold">
+      <label htmlFor="country-select" className="mt-4 mb-2 font-bold text-lg">
         Wählen Sie ein Land:
       </label>
       <select
@@ -56,7 +56,7 @@ function Input() {
             countries.find((country) => country.cca3 === e.target.value)
           )
         }
-        className="p-2 rounded w-full bg-transparent text-white accent-color"
+        className="p-2 rounded w-full bg-transparent border border-gray-300"
       >
         {countries.map((country) => (
           <option key={country.cca3} value={country.cca3}>
@@ -65,19 +65,19 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold">
+      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold text-lg">
         Wählen Sie eine Datenoption:
       </label>
       <select
         id="data-option-select"
         onChange={(e) => setDataOption(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-white accent-color"
+        className="p-2 rounded w-full bg-transparent  border border-gray-300"
       >
         <option value="gdp">BIP pro Kopf</option>
         <option value="density">Bevölkerungsdichte</option>
       </select>
 
-      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold">
+      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold text-lg">
         Daten anzeigen:
       </label>
       <input
@@ -88,14 +88,14 @@ function Input() {
         className="p-2 rounded bg-gray-700 text-white accent-color"
       />
 
-      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold">
+      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold text-lg">
         Rotationsgeschwindigkeit:
       </label>
       <input
         type="range"
         id="rotation-speed-slider"
         min="0"
-        max="5"
+        max="2"
         step="0.1"
         onChange={(e) => setRotationSpeed(parseFloat(e.target.value))}
         className="p-2 rounded w-full bg-gray-700 text-white accent-color"

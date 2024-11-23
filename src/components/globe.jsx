@@ -64,9 +64,6 @@ function GlobeComponent() {
     }
   }, [rotationSpeed]);
 
-
-
-
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
@@ -97,8 +94,8 @@ function GlobeComponent() {
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
         polygonStrokeColor={(feat) => {
-          if (selectedWorld === "earthDark.jpg"|| selectedWorld === "earthNight.png") {
-            return "rgb(69, 69, 69)";
+          if (selectedWorld === "earthDark.png" || selectedWorld === "earthWater.png") {
+            return "rgba(255, 255, 255, .1)";
           }
           return feat === hoveredCountry ? "#FFFFFF" : "#000000";
         }}
@@ -107,7 +104,6 @@ function GlobeComponent() {
           GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
           Population: <i>${(d.POP_EST/1000000).toFixed(2)} Mio</i>
         `}
-       
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}

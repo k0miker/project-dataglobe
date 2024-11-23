@@ -1,5 +1,7 @@
 .bg-glass {
   background-color: var(--glass);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 option {
@@ -10,27 +12,31 @@ option {
 
 select {
   font-family: monospace;
-  color: black;
+  color: rgb(224, 224, 224);
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
 }
+
 label {
   font-family: monospace;
   color: var(--background);
   font-size: larger;
   text-decoration: underline;
-  
 }
 
 li {
   display: flex;
   justify-content: space-between;
   width: 100%;
-
 }
 
 span {
   font-family: 'Courier New', Courier, monospace;
+  text-align: right;
 }
 
 .accent-color {
   accent-color: #333;
 }
+
