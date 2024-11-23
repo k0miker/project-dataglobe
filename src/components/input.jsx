@@ -3,7 +3,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 
 function Input() {
-  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption, setRotationSpeed, showData, setShowData } = useAppContext();
+  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption, setRotationSpeed, showData, setShowData, visualizationType, setVisualizationType } = useAppContext();
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -19,18 +19,18 @@ function Input() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl shadow-lg p-6">
-      <label htmlFor="world-select" className="mb-2 font-bold text-lg">
-        Wähle ein World-Bild:
+    <div className="flex flex-col justify-start items-start w-1/5 absolute left-0 z-50 bottom-[10%] top-[10%] bg-glass rounded-r-3xl shadow-lg p-6">
+      <label htmlFor="world-select" className="mb-2 font-bold text-sm">
+        Karte:
       </label>
       <select
         id="world-select"
         value={selectedWorld}
         onChange={(e) => setSelectedWorld(e.target.value)}
-        className="p-2 rounded w-full bg-transparent border border-gray-300"
+        className="p-2 rounded w-1/2 bg-transparent text-xs border border-gray-300"
       >
         {[
-          ["Dark", "earthDark.png"],
+          ["Dark", "earthDark.jpg"],
           ["Blue Marble", "earthMarble.png"],
           ["Night", "earthNight.jpg"],
           ["Rivers", "earthWater.png"],
@@ -46,8 +46,8 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="country-select" className="mt-4 mb-2 font-bold text-lg">
-        Wählen Sie ein Land:
+      <label htmlFor="country-select" className="mt-4 mb-2 font-bold text-sm">
+        Land:
       </label>
       <select
         id="country-select"
@@ -56,7 +56,7 @@ function Input() {
             countries.find((country) => country.cca3 === e.target.value)
           )
         }
-        className="p-2 rounded w-full bg-transparent border border-gray-300"
+        className="p-2 rounded w-1/2 bg-transparent border text-xs border-gray-300"
       >
         {countries.map((country) => (
           <option key={country.cca3} value={country.cca3}>
@@ -65,19 +65,19 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold text-lg">
-        Wählen Sie eine Datenoption:
+      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold text-sm">
+        Datenoption:
       </label>
       <select
         id="data-option-select"
         onChange={(e) => setDataOption(e.target.value)}
-        className="p-2 rounded w-full bg-transparent  border border-gray-300"
+        className="p-2 rounded w-1/2 bg-transparent text-xs border border-gray-300"
       >
         <option value="gdp">BIP pro Kopf</option>
         <option value="density">Bevölkerungsdichte</option>
       </select>
 
-      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold text-lg">
+      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold text-sm">
         Daten anzeigen:
       </label>
       <input
@@ -88,8 +88,8 @@ function Input() {
         className="p-2 rounded bg-gray-700 text-white accent-color"
       />
 
-      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold text-lg">
-        Rotationsgeschwindigkeit:
+      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold text-sm">
+        Rotation:
       </label>
       <input
         type="range"
@@ -98,8 +98,22 @@ function Input() {
         max="2"
         step="0.1"
         onChange={(e) => setRotationSpeed(parseFloat(e.target.value))}
-        className="p-2 rounded w-full bg-gray-700 text-white accent-color"
+        className="p-2 rounded w-1/2 bg-gray-700 text-white accent-color"
       />
+
+      <label htmlFor="visualization-type-select" className="mt-4 mb-2 font-bold text-sm">
+        Visualisierungstyp:
+      </label>
+      <select
+        id="visualization-type-select"
+        value={visualizationType}
+        onChange={(e) => setVisualizationType(e.target.value)}
+        className="p-2 rounded w-1/2 bg-transparent text-xs border border-gray-300"
+      >
+        <option value="polygon">Polygon</option>
+        <option value="heatmap">Heatmap</option>
+        {/* Add more options as needed */}
+      </select>
     </div>
   );
 }

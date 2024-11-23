@@ -1,12 +1,20 @@
+
 import { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
 import * as d3 from "d3";
+import * as THREE from "three";
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries, fetchGeoJson } from "../utils/fetches";
 
-function GlobeComponent() {
-  const { selectedWorld, dataOption, showData, rotationSpeed, setSelectedCountry } = useAppContext();
+function PolygonGlobe() {
+  const {
+    selectedWorld,
+    dataOption,
+    showData,
+    rotationSpeed,
+    setSelectedCountry,
+  } = useAppContext();
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -38,9 +46,14 @@ function GlobeComponent() {
 
         const getVal = (feat) => {
           if (dataOption === "gdp") {
-            return feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
+            return (
+              feat.properties.GDP_MD_EST /
+              Math.max(1e5, feat.properties.POP_EST)
+            );
           } else if (dataOption === "density") {
-            const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
+            const country = restCountriesData.find(
+              (country) => country.cca3 === feat.properties.ISO_A3
+            );
             if (country) {
               return country.population / Math.max(1, country.area);
             }
@@ -64,6 +77,15 @@ function GlobeComponent() {
     }
   }, [rotationSpeed]);
 
+  //lights
+  const globeMaterial = new THREE.MeshPhongMaterial();
+  globeMaterial.shininess = 1; // Passen Sie den Glanz an
+  globeMaterial.specular = new THREE.Color("grey"); // Passen Sie die Spiegelung an
+
+  // Position der Lichtquelle anpassen
+  const light = new THREE.DirectionalLight(0xffffff3e, 0);
+  light.position.set(5, 3, 5); // Passen Sie die Position der Lichtquelle an
+
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
@@ -78,9 +100,14 @@ function GlobeComponent() {
           if (!showData) return "rgba(0, 0, 0, 0)";
           const getVal = (feat) => {
             if (dataOption === "gdp") {
-              return (feat.properties.GDP_MD_EST) / Math.max(1e5, feat.properties.POP_EST);
+              return (
+                feat.properties.GDP_MD_EST /
+                Math.max(1e5, feat.properties.POP_EST)
+              );
             } else if (dataOption === "density") {
-              const country = restCountriesData.find(country => country.cca3 === feat.properties.ISO_A3);
+              const country = restCountriesData.find(
+                (country) => country.cca3 === feat.properties.ISO_A3
+              );
               if (country) {
                 return country.population / Math.max(1, country.area);
               }
@@ -90,34 +117,43 @@ function GlobeComponent() {
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Reduziere die Transparenz
-          return feat === hoveredCountry ? color.formatRgb() : color.formatRgb();
+          return feat === hoveredCountry
+            ? color.formatRgb()
+            : color.formatRgb();
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
         polygonStrokeColor={(feat) => {
-          if (selectedWorld === "earthDark.png" || selectedWorld === "earthWater.png") {
+          if (
+            selectedWorld === "earthDark.png" ||
+            selectedWorld === "earthWater.png"
+          ) {
             return "rgba(255, 255, 255, .1)";
           }
           return feat === hoveredCountry ? "#FFFFFF" : "#000000";
         }}
         polygonLabel={({ properties: d }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-          GDP: <i>${d.GDP_MD_EST/1000}M$</i><br/>
-          Population: <i>${(d.POP_EST/1000000).toFixed(2)} Mio</i>
+          GDP: <i>${d.GDP_MD_EST / 1000}M$</i><br/>
+          Population: <i>${(d.POP_EST / 1000000).toFixed(2)} Mio</i>
         `}
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
         onPolygonClick={(clickedCountry) => {
-          const country = restCountriesData.find(country => country.cca3 === clickedCountry.properties.ISO_A3);
+          const country = restCountriesData.find(
+            (country) => country.cca3 === clickedCountry.properties.ISO_A3
+          );
           if (country) {
             setSelectedCountry(country);
           }
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => (d === hoveredCountry ? 0.1 : 0.006)}
+        // globeMaterial={globeMaterial}
+        lights={[light]} // Fügen Sie die Lichtquelle hinzu
       />
     </div>
   );
 }
 
-export default GlobeComponent;
+export default PolygonGlobe;
