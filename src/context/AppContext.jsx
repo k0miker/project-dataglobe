@@ -12,23 +12,28 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const imageUrls = [
-      "earthDark.jpg",
-      "earthMarble.jpg",
-      "earthNight_2.jpg",
+      "earthDark.png",
+      "earthMarble.png",
+      "earthNight.jpg",
       "earthWaterBW.png",
+      "earthWater.png",
       "earthTopology.png",
       "earthOcean.webp",
       "earthTectonic.jpg",
-      "earthUltra_3.jpg",
+      "earthUltra.jpg",
     ];
 
     const loadImages = async () => {
       const loadedImages = {};
       for (const url of imageUrls) {
-        const img = new Image();
-        img.src = url;
-        await img.decode();
-        loadedImages[url] = img.src;
+        try {
+          const img = new Image();
+          img.src = url;
+          await img.decode();
+          loadedImages[url] = img.src;
+        } catch (error) {
+          console.error(`Fehler beim Laden des Bildes ${url}:`, error);
+        }
       }
       setImages(loadedImages);
     };

@@ -27,7 +27,7 @@ function Input() {
         id="world-select"
         value={selectedWorld}
         onChange={(e) => setSelectedWorld(e.target.value)}
-        className="p-2 rounded w-full bg-gray-700 text-white accent-color"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         {[
           ["Dark", "earthDark.png"],
@@ -46,7 +46,7 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="country-select" className="mt-4 mb-2">
+      <label htmlFor="country-select" className="mt-4 mb-2 font-bold">
         Wählen Sie ein Land:
       </label>
       <select
@@ -56,7 +56,7 @@ function Input() {
             countries.find((country) => country.cca3 === e.target.value)
           )
         }
-        className="p-2 rounded w-full bg-gray-700 text-white accent-color"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         {countries.map((country) => (
           <option key={country.cca3} value={country.cca3}>
@@ -65,19 +65,19 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="data-option-select" className="mt-4 mb-2">
+      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold">
         Wählen Sie eine Datenoption:
       </label>
       <select
         id="data-option-select"
         onChange={(e) => setDataOption(e.target.value)}
-        className="p-2 rounded w-full bg-gray-700 text-white accent-color"
+        className="p-2 rounded w-full bg-transparent text-white accent-color"
       >
         <option value="gdp">BIP pro Kopf</option>
         <option value="density">Bevölkerungsdichte</option>
       </select>
 
-      <label htmlFor="show-data-checkbox" className="mt-4 mb-2">
+      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold">
         Daten anzeigen:
       </label>
       <input
@@ -88,7 +88,7 @@ function Input() {
         className="p-2 rounded bg-gray-700 text-white accent-color"
       />
 
-      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2">
+      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold">
         Rotationsgeschwindigkeit:
       </label>
       <input

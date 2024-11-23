@@ -64,6 +64,9 @@ function GlobeComponent() {
     }
   }, [rotationSpeed]);
 
+
+
+
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe

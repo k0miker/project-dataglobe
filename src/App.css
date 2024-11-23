@@ -3,12 +3,21 @@
 }
 
 option {
-  color: white;
+  color: #333;
   max-width: 100%;
+  background-color: transparent;
 }
 
 select {
+  font-family: monospace;
   color: black;
+}
+label {
+  font-family: monospace;
+  color: var(--background);
+  font-size: larger;
+  text-decoration: underline;
+  
 }
 
 li {
