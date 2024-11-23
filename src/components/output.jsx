@@ -70,6 +70,7 @@ function Output() {
         <li>
           <b>Unabhängig:</b> <span>{selectedCountry.independent ? "Ja" : "Nein"}</span> 
         </li>
+        <li>Bruttoinlandsprodukt: <span></span></li>
       </ul>
     </div>
   );

@@ -94,8 +94,8 @@ function GlobeComponent() {
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
         polygonStrokeColor={(feat) => {
-          if (selectedWorld === "earthDark.jpg") {
-            return "rgba(131, 130, 130, 0.5)";
+          if (selectedWorld === "earthDark.jpg"|| selectedWorld === "earthNight.png") {
+            return "rgb(69, 69, 69)";
           }
           return feat === hoveredCountry ? "#FFFFFF" : "#000000";
         }}

@@ -3,8 +3,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 
 function Input() {
-  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption, setRotationSpeed, showData, setShowData } =
-    useAppContext();
+  const { selectedWorld, setSelectedWorld, setSelectedCountry, setDataOption, setRotationSpeed, showData, setShowData } = useAppContext();
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -31,12 +30,13 @@ function Input() {
         className="p-2 rounded w-full bg-gray-700 text-white accent-color"
       >
         {[
-          ["Dark", "earthDark_upscayle.png"],
-          ["Blue Marble", "earthMarble.jpg"],
-          ["Night", "earthNight_2.png"],
-          ["Rivers", "earthWaterBW_upscayle.png"],
-          ["Topology", "earthTopology_upscayle.png"],
-          ["Ocean", "earthOcean.webp"],
+          ["Dark", "earthDark.png"],
+          ["Blue Marble", "earthMarble.png"],
+          ["Night", "earthNight.jpg"],
+          ["Rivers", "earthWater.png"],
+          ["rivers B&W", "earthWaterBW.png"],
+          ["Topology", "earthTopology.png"],
+          ["Continets", "earthOcean.webp"],
           ["Tectonic", "earthTectonic.jpg"],
           ["Ultra Resolution", "earthUltra_3.jpg"],
         ].map(([name, img]) => (
