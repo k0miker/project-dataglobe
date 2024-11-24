@@ -12,7 +12,7 @@ function Output() {
       </div>
     );
   }
-  {console.log(selectedCountry)}
+  // {console.log(selectedCountry)}
   return (
     <div className="w-1/5 absolute right-0 top-[10.5%] bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
       <h1 className="text-2xl font-bold mb-4">{selectedCountry.name.common}</h1>

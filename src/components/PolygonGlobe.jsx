@@ -86,7 +86,7 @@ function PolygonGlobe() {
     if (globeEl.current && country) {
       const { latlng } = country;
       const [lat, lng] = latlng;
-      globeEl.current.pointOfView({ lat, lng, altitude: 2 }, 1500);
+      globeEl.current.pointOfView({ lat, lng, altitude: 2 }, 2500) // Dauer der Animation);
     }
   };
 
@@ -95,7 +95,7 @@ function PolygonGlobe() {
     animateCameraToCountry(selectedCountry);
   }, [selectedCountry]);
 
-console.log(selectedCountry)
+// console.log(selectedCountry)
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
