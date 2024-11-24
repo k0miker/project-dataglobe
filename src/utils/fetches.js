@@ -1,6 +1,6 @@
-
 import axios from "axios";
 
+// Länder abrufen und sortieren
 export const fetchCountries = async () => {
   try {
     const response = await axios.get("https://restcountries.com/v3.1/all");
@@ -11,6 +11,7 @@ export const fetchCountries = async () => {
   }
 };
 
+// GeoJSON Daten abrufen
 export const fetchGeoJson = async () => {
   try {
     const response = await fetch("/ne_110m_admin_0_countries.geojson");

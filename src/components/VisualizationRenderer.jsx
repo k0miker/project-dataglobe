@@ -9,6 +9,7 @@ function VisualizationRenderer() {
   const { visualizationType } = useAppContext();
   const [isGlobeReady, setIsGlobeReady] = useState(false);
 
+  // Überprüfen, ob das Globe-Element bereit ist
   useEffect(() => {
     const checkGlobeElement = () => {
       const globeElement = document.getElementById("globeViz");

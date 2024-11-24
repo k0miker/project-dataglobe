@@ -9,9 +9,9 @@ function HeatmapGlobe() {
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
 
+  // Heatmap-Daten abrufen
   const fetchHeatmapData = async () => {
     try {
-      // console.log("Fetching heatmap data...");
       const response = await fetch("/world_population.csv");
       if (!response.ok) {
         throw new Error(
@@ -37,14 +37,12 @@ function HeatmapGlobe() {
         (d) =>
           d && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
       );
-      // console.log("Parsed Heatmap Data:", validData);
 
       const maxPop = d3.max(validData, (d) => d.pop);
       const normalizedData = validData.map((d) => ({
         ...d,
         pop: d.pop / maxPop, // Normalisierung
       }));
-      // console.log("Normalized Heatmap Data:", normalizedData);
 
       setHeatmapData(normalizedData);
     } catch (error) {

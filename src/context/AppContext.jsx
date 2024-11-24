@@ -13,6 +13,7 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [clouds, setClouds] = useState(false);
 
+  // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
       setSelectedWorld("earthNight.jpg");
@@ -22,6 +23,7 @@ export const AppProvider = ({ children }) => {
     setVisualizationTypeState(type);
   };
 
+  // Länder beim Laden der Komponente abrufen
   useEffect(() => {
     const getCountries = async () => {
       try {

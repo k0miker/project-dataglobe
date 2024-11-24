@@ -7,6 +7,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries, fetchGeoJson } from "../utils/fetches";
 
 function PolygonGlobe() {
+  // Kontext und State-Variablen
   const {
     selectedWorld,
     dataOption,
@@ -22,6 +23,7 @@ function PolygonGlobe() {
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
 
+  // RestCountries Daten abrufen
   useEffect(() => {
     const getRestCountriesData = async () => {
       try {
@@ -34,6 +36,7 @@ function PolygonGlobe() {
     getRestCountriesData();
   }, []);
 
+  // GeoJSON Daten abrufen und verarbeiten
   useEffect(() => {
     const getGeoJsonData = async () => {
       try {
@@ -69,6 +72,7 @@ function PolygonGlobe() {
     getGeoJsonData();
   }, [dataOption, restCountriesData]);
 
+  // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
@@ -139,7 +143,6 @@ function PolygonGlobe() {
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => (d === hoveredCountry ? 0.2 : 0.006)}
-       
       />
     </div>
   );
