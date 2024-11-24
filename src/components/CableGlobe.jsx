@@ -11,14 +11,11 @@ function CableGlobe() {
   useEffect(() => {
     const fetchCableData = async () => {
       try {
-        const response = await fetch(
-          "https://api.allorigins.win/get?url=" +
-            encodeURIComponent(
-              "https://www.submarinecablemap.com/api/v3/cable/cable-geo.json"
-            )
-        );
-        const data = await response.json();
-        const cablesGeo = JSON.parse(data.contents);
+        const response = await fetch("/cables.json");
+        if (!response.ok) {
+          throw new Error("Network response was not ok: " + response.statusText);
+        }
+        const cablesGeo = await response.json();
 
         const paths = cablesGeo.features.flatMap(({ geometry, properties }) => {
           const { type, coordinates } = geometry;

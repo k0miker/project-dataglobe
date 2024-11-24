@@ -12,13 +12,12 @@ function HeatmapGlobe() {
   // Heatmap-Daten abrufen
   const fetchHeatmapData = async () => {
     try {
-      let data;
+      let data = [];
       if (dataOption === "population") {
         const response = await fetch("/world_population.csv");
         const csvText = await response.text();
 
         data = d3.csvParse(csvText, ({ lat, lng, pop }) => {
-   
           const parsedLat = parseFloat(lat.trim());
           const parsedLng = parseFloat(lng.trim());
           const parsedPop = parseFloat(pop.trim());
@@ -30,10 +29,7 @@ function HeatmapGlobe() {
             lng: parsedLng,
             value: parsedPop,
           };
-     
-          
         });
-        
       } else if (dataOption === "gdp") {
         data = worldBankData.map((entry) => {
           const country = geoJsonData.find((feat) => feat.properties.ISO_A3 === entry.country.id);
@@ -59,22 +55,16 @@ function HeatmapGlobe() {
         }));
       }
 
-
-
-      const validData = data.filter(
+      const validData = (data || []).filter(
         (d) =>
           d && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
       );
-
-
 
       const maxVal = d3.max(validData, (d) => d.value);
       const normalizedData = validData.map((d) => ({
         ...d,
         value: d.value / maxVal, // Normalisierung
       }));
-
-
 
       setHeatmapData(normalizedData);
     } catch (error) {

@@ -3,8 +3,12 @@ import axios from "axios";
 // Länder abrufen und sortieren
 export const fetchCountries = async () => {
   try {
-    const response = await axios.get("https://restcountries.com/v3.1/all");
-    return response.data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+    const response = await fetch("/restcountriesData.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.sort((a, b) => a.name.common.localeCompare(b.name.common));
   } catch (error) {
     console.error("Fehler beim Abrufen der Länder:", error);
     throw error;
@@ -31,10 +35,7 @@ export const fetchLocationData = async () => {
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
-    return
-
-      response.text();
-     
+    return response.text();     
   }
 
   catch (error) {
@@ -45,8 +46,12 @@ export const fetchLocationData = async () => {
 
 export const fetchWorldBankData = async () => {
   try {
-    const response = await axios.get("https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json");
-    return response.data[1]; // Die Daten befinden sich im zweiten Element des Arrays
+    const response = await fetch("/gdpWBdata.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data[1]; // Die Daten befinden sich im zweiten Element des Arrays
   } catch (error) {
     console.error("Fehler beim Abrufen der Weltbankdaten:", error);
     throw error;
