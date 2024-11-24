@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: monospace, sans-serif;
   color: white;
   background-image: url("./assets/images/background.png");
   background-size: 500%;

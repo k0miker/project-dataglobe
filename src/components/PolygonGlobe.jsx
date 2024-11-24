@@ -13,6 +13,7 @@ function PolygonGlobe() {
     dataOption,
     showData,
     rotationSpeed,
+    selectedCountry,
     setSelectedCountry,
   } = useAppContext();
   const globeEl = useRef();
@@ -80,6 +81,21 @@ function PolygonGlobe() {
     }
   }, [rotationSpeed]);
 
+  // Funktion zum Animieren der Kamera auf das ausgewählte Land
+  const animateCameraToCountry = (country) => {
+    if (globeEl.current && country) {
+      const { latlng } = country;
+      const [lat, lng] = latlng;
+      globeEl.current.pointOfView({ lat, lng, altitude: 2 }, 1500);
+    }
+  };
+
+  // Überwache Änderungen am ausgewählten Land und animiere die Kamera
+  useEffect(() => {
+    animateCameraToCountry(selectedCountry);
+  }, [selectedCountry]);
+
+console.log(selectedCountry)
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
@@ -125,11 +141,11 @@ function PolygonGlobe() {
           }
           return feat === hoveredCountry ? "#FFFFFF" : "#000000";
         }}
-        polygonLabel={({ properties: d }) => `
+        polygonLabel={({ properties: d,selectedCountry }) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
           GDP: <i>${d.GDP_MD_EST / 1000}M$</i><br/>
           Population: <i>${(d.POP_EST / 1000000).toFixed(2)} Mio</i>
-        `}
+        ` }
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}

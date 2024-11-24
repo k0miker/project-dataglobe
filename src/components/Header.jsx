@@ -15,6 +15,7 @@ function Header() {
     const timer = setTimeout(() => {
       if (filteredCountries.length === 1) {
         setSelectedCountry(filteredCountries[0]);
+        setSearchTerm(""); // Suchfeld leeren
       }
     }, 1000);
 
@@ -38,11 +39,12 @@ function Header() {
         />
         {/* Dropdown zur Länderauswahl */}
         <select
-          onChange={(e) =>
+          onChange={(e) => {
             setSelectedCountry(
               countries.find((country) => country.cca3 === e.target.value)
-            )
-          }
+            );
+            setSearchTerm(""); // Suchfeld leeren
+          }}
           className="p-2 rounded bg-transparent text-white w-60"
         >
           {filteredCountries.map((country) => (
