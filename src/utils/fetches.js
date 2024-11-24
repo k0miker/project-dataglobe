@@ -44,18 +44,27 @@ export const fetchLocationData = async () => {
   }
 }
 
-export const fetchWorldBankData = async () => {
-  try {
-    const response = await fetch("/gdpWBdata.json");
-    if (!response.ok) {
-      throw new Error("Network response was not ok: " + response.statusText);
-    }
-    const data = await response.json();
-    return data[1]; // Die Daten befinden sich im zweiten Element des Arrays
-  } catch (error) {
-    console.error("Fehler beim Abrufen der Weltbankdaten:", error);
-    throw error;
-  }
-};
 
-// bip worldbank data mit den lan log von den den locationdata combieniert in einen state speichern
+
+
+export const fetchGDPDataForCountries = async (countries) => {
+  const gdpData = [];
+  for (const country of countries) {
+    const url = `https://api.worldbank.org/v2/country/${country.cca2}/indicator/NY.GDP.MKTP.CD?format=json&date=2023`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      // console.log("data: ", data);
+      
+      if (Array.isArray(data[1]) && data[1].length > 0) {
+        gdpData.push({
+          country: country.cca2,
+          gdp: data[1][0].value
+        });
+      }
+    } catch (error) {
+      console.error(`Fehler beim Abrufen der GDP-Daten für ${country.cca2}:`, error);
+    }
+  }
+  return gdpData;
+};
