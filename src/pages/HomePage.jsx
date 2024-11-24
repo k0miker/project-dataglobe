@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../components/input";
-import Output from "../components/Output";
+import Output from "../components/output";
 import VisualizationRenderer from "../components/VisualizationRenderer";
 import Header from "../components/Header";
 import CableGlobe from "../components/CableGlobe";
