@@ -23,10 +23,10 @@ function Header() {
   }, [searchTerm, filteredCountries, setSelectedCountry]);
 
   return (
-    <header className="flex justify-between items-center p-4 bg-glass text-white fixed top-1 left-1 right-1 z-50 rounded-t-xl h-[10%] ">
+    <header className="flex justify-between items-center bg-glass text-white fixed top-1 left-1 right-1 z-50 rounded-t-xl h-[10%] ">
       <h1 className="text-xl font-bold w-1/3">DataGlobe</h1>
       <div className="w-1/4 flex justify-center">
-        <img src="/logo_trans.png" alt="" className="h-10 animate-pulse" />
+        <img src="/logo_trans.png" alt="" className="h-14 animate-pulse" />
       </div>
       <div className="flex items-center w-1/3">
         {/* Suchfeld */}
