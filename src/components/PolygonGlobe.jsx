@@ -148,7 +148,7 @@ function PolygonGlobe() {
           }
         }}
         polygonsTransitionDuration={300}
-        polygonAltitude={(d) => (d === hoveredCountry ? 0.1 : 0.006)}
+        polygonAltitude={(d) => (d === hoveredCountry ? 0.2 : 0.006)}
         // globeMaterial={globeMaterial}
         lights={[light]} // Fügen Sie die Lichtquelle hinzu
       />
