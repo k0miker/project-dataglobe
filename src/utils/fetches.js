@@ -24,3 +24,33 @@ export const fetchGeoJson = async () => {
     throw error;
   }
 };
+
+export const fetchLocationData = async () => {
+  try {
+    const response = await fetch("/countries.csv")
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    return
+
+      response.text();
+     
+  }
+
+  catch (error) {
+    console.error("Error fetching or processing data:", error);
+    throw error;
+  }
+}
+
+export const fetchWorldBankData = async () => {
+  try {
+    const response = await axios.get("https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json");
+    return response.data[1]; // Die Daten befinden sich im zweiten Element des Arrays
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Weltbankdaten:", error);
+    throw error;
+  }
+};
+
+// bip worldbank data mit den lan log von den den locationdata combieniert in einen state speichern

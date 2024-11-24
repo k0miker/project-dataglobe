@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, worldBankData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
 
@@ -35,16 +35,20 @@ function HeatmapGlobe() {
         });
         
       } else if (dataOption === "gdp") {
-        data = geoJsonData.map((feat) => {
-          const lat = feat.properties.LAT;
-          const lng = feat.properties.LONG;
-          const gdp = feat.properties.GDP_MD_EST / Math.max( feat.properties.POP_EST);
-          return {
-            lat,
-            lng,
-            value: gdp,
-          };
-        });
+        data = worldBankData.map((entry) => {
+          const country = geoJsonData.find((feat) => feat.properties.ISO_A3 === entry.country.id);
+          if (country) {
+            const lat = country.properties.LAT;
+            const lng = country.properties.LONG;
+            const gdp = entry.value;
+            return {
+              lat,
+              lng,
+              value: gdp,
+            };
+          }
+          return null;
+        }).filter(d => d !== null);
       } else if (dataOption === "volcanoes") {
         const response = await fetch("/world_volcanoes.json");
         const volcanoes = await response.json();

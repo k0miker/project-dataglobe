@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries, fetchGeoJson } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson, fetchWorldBankData } from "../utils/fetches";
 
 const AppContext = createContext();
 
@@ -13,6 +13,7 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [clouds, setClouds] = useState(false);
   const [geoJsonData, setGeoJsonData] = useState([]);
+  const [worldBankData, setWorldBankData] = useState([]);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -26,9 +27,10 @@ export const AppProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const [countriesData, geoJsonData] = await Promise.all([
+      const [countriesData, geoJsonData, worldBankData] = await Promise.all([
         fetchCountries(),
-        fetchGeoJson()
+        fetchGeoJson(),
+        fetchWorldBankData()
       ]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
@@ -37,9 +39,11 @@ export const AppProvider = ({ children }) => {
 
       localStorage.setItem("countries", JSON.stringify(countriesData));
       localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
+      localStorage.setItem("worldBankData", JSON.stringify(worldBankData));
 
       setCountries(countriesData);
       setGeoJsonData(filteredGeoJsonData);
+      setWorldBankData(worldBankData);
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
     }
@@ -49,17 +53,19 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const storedCountries = localStorage.getItem("countries");
     const storedGeoJsonData = localStorage.getItem("geoJsonData");
+    const storedWorldBankData = localStorage.getItem("worldBankData");
 
-    if (storedCountries && storedGeoJsonData) {
+    if (storedCountries && storedGeoJsonData && storedWorldBankData) {
       setCountries(JSON.parse(storedCountries));
       setGeoJsonData(JSON.parse(storedGeoJsonData));
+      setWorldBankData(JSON.parse(storedWorldBankData));
     } else {
       fetchData();
     }
   }, []);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData }}>
+    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData, worldBankData }}>
       {children}
     </AppContext.Provider>
   );
