@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
@@ -77,15 +76,6 @@ function PolygonGlobe() {
     }
   }, [rotationSpeed]);
 
-  //lights
-  const globeMaterial = new THREE.MeshPhongMaterial();
-  globeMaterial.shininess = 1; // Passen Sie den Glanz an
-  globeMaterial.specular = new THREE.Color("grey"); // Passen Sie die Spiegelung an
-
-  // Position der Lichtquelle anpassen
-  const light = new THREE.DirectionalLight(0xffffff3e, 0);
-  light.position.set(5, 3, 5); // Passen Sie die Position der Lichtquelle an
-
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
@@ -149,8 +139,7 @@ function PolygonGlobe() {
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => (d === hoveredCountry ? 0.2 : 0.006)}
-        // globeMaterial={globeMaterial}
-        lights={[light]} // Fügen Sie die Lichtquelle hinzu
+       
       />
     </div>
   );

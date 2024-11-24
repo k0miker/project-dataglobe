@@ -3,7 +3,18 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 
 function Input() {
-  const { selectedWorld, setSelectedWorld, setDataOption, setRotationSpeed, showData, setShowData, visualizationType, setVisualizationType } = useAppContext();
+  const {
+    selectedWorld,
+    setSelectedWorld,
+    setDataOption,
+    setRotationSpeed,
+    showData,
+    setShowData,
+    visualizationType,
+    setVisualizationType,
+    clouds,
+    setClouds,
+  } = useAppContext();
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -46,7 +57,10 @@ function Input() {
         ))}
       </select>
 
-      <label htmlFor="data-option-select" className="mt-4 mb-2 font-bold text-sm">
+      <label
+        htmlFor="data-option-select"
+        className="mt-4 mb-2 font-bold text-sm"
+      >
         Datenoption:
       </label>
       <select
@@ -58,7 +72,10 @@ function Input() {
         <option value="density">Bevölkerungsdichte</option>
       </select>
 
-      <label htmlFor="show-data-checkbox" className="mt-4 mb-2 font-bold text-sm">
+      <label
+        htmlFor="show-data-checkbox"
+        className="mt-4 mb-2 font-bold text-sm"
+      >
         Daten anzeigen:
       </label>
       <input
@@ -69,7 +86,10 @@ function Input() {
         className="p-2 rounded bg-gray-700 text-white accent-color"
       />
 
-      <label htmlFor="rotation-speed-slider" className="mt-4 mb-2 font-bold text-sm">
+      <label
+        htmlFor="rotation-speed-slider"
+        className="mt-4 mb-2 font-bold text-sm"
+      >
         Rotation:
       </label>
       <input
@@ -82,7 +102,10 @@ function Input() {
         className="p-2 rounded w-1/2 bg-gray-700 text-white accent-color"
       />
 
-      <label htmlFor="visualization-type-select" className="mt-4 mb-2 font-bold text-sm">
+      <label
+        htmlFor="visualization-type-select"
+        className="mt-4 mb-2 font-bold text-sm"
+      >
         Visualisierungstyp:
       </label>
       <select
@@ -93,8 +116,20 @@ function Input() {
       >
         <option value="polygon">Polygon</option>
         <option value="heatmap">Heatmap</option>
+        <option value="CableGlobe">CableGlobe</option>
         {/* Add more options as needed */}
       </select>
+
+      {/* <label htmlFor="show-clouds-checkbox" className="mt-4 mb-2 font-bold text-sm">
+        Wolken anzeigen:
+      </label>
+      <input
+        type="checkbox"
+        id="show-clouds-checkbox"
+        checked={clouds}
+        onChange={(e) => setClouds(e.target.checked)}
+        className="p-2 rounded bg-gray-700 text-white accent-color"
+      /> */}
     </div>
   );
 }

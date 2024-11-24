@@ -9,8 +9,18 @@ export const AppProvider = ({ children }) => {
   const [dataOption, setDataOption] = useState("gdp");
   const [showData, setShowData] = useState(true);
   const [rotationSpeed, setRotationSpeed] = useState(0.2);
-  const [visualizationType, setVisualizationType] = useState("polygon");
+  const [visualizationType, setVisualizationTypeState] = useState("polygon");
   const [countries, setCountries] = useState([]);
+  const [clouds, setClouds] = useState(false);
+
+  const setVisualizationType = (type) => {
+    if (type === "heatmap") {
+      setSelectedWorld("earthNight.jpg");
+    } else if (type === "cable" || type === "CableGlobe") {
+      setSelectedWorld("earthDark.png");
+    }
+    setVisualizationTypeState(type);
+  };
 
   useEffect(() => {
     const getCountries = async () => {
@@ -25,7 +35,7 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries }}>
+    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds }}>
       {children}
     </AppContext.Provider>
   );

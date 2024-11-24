@@ -11,17 +11,17 @@ function Header() {
 
   return (
     <header className="flex justify-between items-center p-4 bg-glass text-white fixed top-1 left-1 right-1 z-50 rounded-t-xl h-[10%] ">
-      <h1 className="text-xl font-bold w-1/4">DataGlobe</h1>
+      <h1 className="text-xl font-bold w-1/3">DataGlobe</h1>
       <div className="w-1/4 flex justify-center">
         <img src="/logo_trans.png" alt="" className="h-10 animate-pulse" />
       </div>
-      <div className="flex items-center w-1/4">
+      <div className="flex items-center w-1/3">
         <input
           type="text"
           placeholder="Land suchen..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 rounded border bg-transparent text-white mr-2"
+          className=" p-1 rounded border bg-transparent text-white mr-2"
         />
         <select
           onChange={(e) =>
