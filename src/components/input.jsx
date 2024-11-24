@@ -90,6 +90,9 @@ function Input() {
         {visualizationType === "heatmap" && (
           <option value="volcanoes">Vulkane</option>
         )}
+        {visualizationType === "heatmap" && <option value="earthquakes">Erdbeben</option>}
+        {visualizationType === "heatmap" && <option value="BIP">GDP</option>}
+
       </select>
 
       <label
