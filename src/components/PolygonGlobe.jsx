@@ -5,6 +5,7 @@ import * as d3 from "d3";
 import * as THREE from "three";
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries, fetchGeoJson } from "../utils/fetches";
+import { log } from "three/webgpu";
 
 function PolygonGlobe() {
   // Kontext und State-Variablen
@@ -15,6 +16,7 @@ function PolygonGlobe() {
     rotationSpeed,
     selectedCountry,
     setSelectedCountry,
+    geoJsonData,
   } = useAppContext();
   const globeEl = useRef();
   const [countriesData, setCountriesData] = useState([]);
@@ -35,43 +37,32 @@ function PolygonGlobe() {
       }
     };
     getRestCountriesData();
+    console.log("restCountriesData", restCountriesData);
   }, []);
 
-  // GeoJSON Daten abrufen und verarbeiten
+  // GeoJSON Daten verarbeiten
   useEffect(() => {
-    const getGeoJsonData = async () => {
-      try {
-        const data = await fetchGeoJson();
-        const filteredData = data.features.filter(
-          (d) => d.properties.ISO_A2 !== "AQ"
+    const getVal = (feat) => {
+      if (dataOption === "gdp") {
+        return (
+          feat.properties.GDP_MD_EST /
+          Math.max(1e5, feat.properties.POP_EST)
         );
-        setCountriesData(filteredData);
-
-        const getVal = (feat) => {
-          if (dataOption === "gdp") {
-            return (
-              feat.properties.GDP_MD_EST /
-              Math.max(1e5, feat.properties.POP_EST)
-            );
-          } else if (dataOption === "density") {
-            const country = restCountriesData.find(
-              (country) => country.cca3 === feat.properties.ISO_A3
-            );
-            if (country) {
-              return country.population / Math.max(1, country.area);
-            }
-          }
-          return 0;
-        };
-
-        const maxVal = Math.max(...filteredData.map(getVal));
-        setColorScale((prevScale) => prevScale.domain([0, maxVal]));
-      } catch (error) {
-        console.error("Error fetching or processing data:", error);
+      } else if (dataOption === "density") {
+        const country = restCountriesData.find(
+          (country) => country.cca3 === feat.properties.ISO_A3
+        );
+        if (country) {
+          return country.population / Math.max(1, country.area);
+        }
       }
+      return 0;
     };
-    getGeoJsonData();
-  }, [dataOption, restCountriesData]);
+
+    const maxVal = Math.max(...geoJsonData.map(getVal));
+    setColorScale((prevScale) => prevScale.domain([0, maxVal]));
+    setCountriesData(geoJsonData);
+  }, [dataOption, restCountriesData, geoJsonData]);
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
@@ -80,6 +71,15 @@ function PolygonGlobe() {
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;
     }
   }, [rotationSpeed]);
+
+  //rotation stop wenn land ausgewählt
+  useEffect(() => {
+    if (selectedCountry) {
+      globeEl.current.controls().autoRotate = false;
+      console.log("rotation stop");
+      
+    }
+  }, [selectedCountry]);
 
   // Funktion zum Animieren der Kamera auf das ausgewählte Land
   const animateCameraToCountry = (country) => {

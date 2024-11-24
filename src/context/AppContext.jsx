@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson } from "../utils/fetches";
 
 const AppContext = createContext();
 
@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
   const [visualizationType, setVisualizationTypeState] = useState("polygon");
   const [countries, setCountries] = useState([]);
   const [clouds, setClouds] = useState(false);
+  const [geoJsonData, setGeoJsonData] = useState([]);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -23,21 +24,42 @@ export const AppProvider = ({ children }) => {
     setVisualizationTypeState(type);
   };
 
-  // Länder beim Laden der Komponente abrufen
+  const fetchData = async () => {
+    try {
+      const [countriesData, geoJsonData] = await Promise.all([
+        fetchCountries(),
+        fetchGeoJson()
+      ]);
+
+      const filteredGeoJsonData = geoJsonData.features.filter(
+        (d) => d.properties.ISO_A2 !== "AQ"
+      );
+
+      localStorage.setItem("countries", JSON.stringify(countriesData));
+      localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
+
+      setCountries(countriesData);
+      setGeoJsonData(filteredGeoJsonData);
+    } catch (error) {
+      console.error("Fehler beim Abrufen der Daten:", error);
+    }
+  };
+
+  // Daten beim Laden der Komponente abrufen oder aus dem lokalen Speicher laden
   useEffect(() => {
-    const getCountries = async () => {
-      try {
-        const sortedCountries = await fetchCountries();
-        setCountries(sortedCountries);
-      } catch (error) {
-        console.error("Fehler beim Abrufen der Länder:", error);
-      }
-    };
-    getCountries();
+    const storedCountries = localStorage.getItem("countries");
+    const storedGeoJsonData = localStorage.getItem("geoJsonData");
+
+    if (storedCountries && storedGeoJsonData) {
+      setCountries(JSON.parse(storedCountries));
+      setGeoJsonData(JSON.parse(storedGeoJsonData));
+    } else {
+      fetchData();
+    }
   }, []);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds }}>
+    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData }}>
       {children}
     </AppContext.Provider>
   );

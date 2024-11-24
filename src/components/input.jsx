@@ -14,6 +14,7 @@ function Input() {
     setVisualizationType,
     clouds,
     setClouds,
+    dataOption,
   } = useAppContext();
   const [countries, setCountries] = useState([]);
 
@@ -65,11 +66,22 @@ function Input() {
       </label>
       <select
         id="data-option-select"
+        value={dataOption}
         onChange={(e) => setDataOption(e.target.value)}
         className="p-2 rounded w-1/2 bg-transparent text-xs border border-gray-300"
       >
-        <option value="gdp">BIP pro Kopf</option>
-        <option value="density">Bevölkerungsdichte</option>
+        {visualizationType === "polygon" && (
+          <option value="gdp">BIP pro Kopf</option>
+        )}{" "}
+        {visualizationType === "polygon" && (
+          <option value="density">Bevölkerungsdichte</option>
+        )}
+        {visualizationType === "heatmap" && (
+          <option value="population">Bevölkerung</option>
+        )}
+        {visualizationType === "heatmap" && (
+          <option value="volcanoes">Vulkane</option>
+        )}
       </select>
 
       <label
@@ -119,17 +131,6 @@ function Input() {
         <option value="CableGlobe">CableGlobe</option>
         {/* Add more options as needed */}
       </select>
-
-      {/* <label htmlFor="show-clouds-checkbox" className="mt-4 mb-2 font-bold text-sm">
-        Wolken anzeigen:
-      </label>
-      <input
-        type="checkbox"
-        id="show-clouds-checkbox"
-        checked={clouds}
-        onChange={(e) => setClouds(e.target.checked)}
-        className="p-2 rounded bg-gray-700 text-white accent-color"
-      /> */}
     </div>
   );
 }
