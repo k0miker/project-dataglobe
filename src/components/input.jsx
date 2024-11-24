@@ -30,6 +30,14 @@ function Input() {
     getCountries();
   }, []);
 
+  useEffect(() => {
+    if (visualizationType === "heatmap") {
+      setDataOption("population");
+    } else if (visualizationType === "polygon") {
+      setDataOption("gdp");
+    }
+  }, [visualizationType]);
+
   return (
     <div className="flex flex-col justify-start items-start  absolute left-1 z-50 hover:bottom-[10%] top-[10.5%] bg-glass rounded-br-3xl shadow-lg p-6">
       <label htmlFor="world-select" className="mb-2 font-bold text-sm">

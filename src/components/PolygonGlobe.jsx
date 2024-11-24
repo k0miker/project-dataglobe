@@ -5,7 +5,6 @@ import * as d3 from "d3";
 import * as THREE from "three";
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries, fetchGeoJson } from "../utils/fetches";
-import { log } from "three/webgpu";
 
 function PolygonGlobe() {
   // Kontext und State-Variablen
@@ -37,7 +36,6 @@ function PolygonGlobe() {
       }
     };
     getRestCountriesData();
-    console.log("restCountriesData", restCountriesData);
   }, []);
 
   // GeoJSON Daten verarbeiten
@@ -76,8 +74,6 @@ function PolygonGlobe() {
   useEffect(() => {
     if (selectedCountry) {
       globeEl.current.controls().autoRotate = false;
-      console.log("rotation stop");
-      
     }
   }, [selectedCountry]);
 
@@ -95,7 +91,6 @@ function PolygonGlobe() {
     animateCameraToCountry(selectedCountry);
   }, [selectedCountry]);
 
-// console.log(selectedCountry)
   return (
     <div className="w-full h-full absolute overflow-hidden">
       <Globe
@@ -158,7 +153,11 @@ function PolygonGlobe() {
           }
         }}
         polygonsTransitionDuration={300}
-        polygonAltitude={(d) => (d === hoveredCountry ? 0.2 : 0.006)}
+        polygonAltitude={(d) => {
+          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.2;
+          if (d === hoveredCountry) return 0.2;
+          return 0.006;
+        }}
       />
     </div>
   );
