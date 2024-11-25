@@ -119,7 +119,7 @@ function Input() {
 
       {/* Umschalten der Länderumrisse */}
       <label htmlFor="show-borders-checkbox" className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer">
-        <span className="mr-2 text-xs">Länderumrisse zeigen:</span>
+        <span className="mr-2 text-xs">Umrisse zeigen:</span>
         <div className="relative">
           <input
             type="checkbox"
