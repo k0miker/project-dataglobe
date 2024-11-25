@@ -70,7 +70,7 @@ function Input() {
       </select>
 
       {/* Datenoption */}
-      <label htmlFor="data-option-select" className="mb-2 font-bold text-sm">
+      <label htmlFor="data-option-select" className="mb-2 font-bold text-sm text-left">
         Datenoption:
       </label>
       <select
@@ -98,16 +98,22 @@ function Input() {
       </select>
 
       {/* Umschalten der Datenanzeige */}
-      <label htmlFor="show-data-checkbox" className="mb-2 font-bold text-sm">
-        Daten anzeigen:
+      <label htmlFor="show-data-checkbox" className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer">
+        <span className="mr-2 text-xs">Daten zeigen:</span>
+        <div className="relative">
+          <input
+            type="checkbox"
+            id="show-data-checkbox"
+            checked={showData}
+            onChange={(e) => setShowData(e.target.checked)}
+            className="sr-only"
+          />
+          <div className={`block ${showData ? 'bg-green-600' : 'bg-red-600'} w-7 h-4 rounded-full`}></div>
+          <div
+            className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${showData ? 'translate-x-full bg-red-500' : ''}`}
+          ></div>
+        </div>
       </label>
-      <input
-        type="checkbox"
-        id="show-data-checkbox"
-        checked={showData}
-        onChange={(e) => setShowData(e.target.checked)}
-        className="p-2 rounded bg-gray-700 text-white mb-4"
-      />
 
       {/* Schieberegler für Rotationsgeschwindigkeit */}
       <label htmlFor="rotation-speed-slider" className="mb-2 font-bold text-sm">
@@ -120,7 +126,7 @@ function Input() {
         max=".5"
         step="0.01"
         onChange={(e) => setRotationSpeed(parseFloat(e.target.value))}
-        className="p-2 rounded w-full bg-gray-700 text-white mb-4"
+        className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
       />
 
       {/* Auswahl des Visualisierungstyps */}
