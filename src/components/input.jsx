@@ -147,7 +147,7 @@ function Input() {
       {/* Button für mobile Ansicht */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="md:hidden fixed bottom-5 right-5 bg-glass text-white p-4 rounded-full shadow-lg z-50"
+        className="md:hidden fixed bottom-5 left-5 bg-glass text-white p-4 rounded-full shadow-lg z-50"
       >
         ⚙️ Einstellungen
       </button>
