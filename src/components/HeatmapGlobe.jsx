@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, showBorders } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
 
@@ -108,6 +108,11 @@ function HeatmapGlobe() {
         atmosphereAltitude={0.2} // Atmosphärenhöhe
         showGraticules={true} // Längen- und Breitengrade anzeigen
         heatmapAltitude={(d) => d.value * 100.1} // 3D Höhe der Heatmap-Punkte
+        polygonsData={geoJsonData} // GeoJSON-Daten für Länderumrisse
+        polygonCapColor={() => "rgba(0, 0, 0, 0)"} // Keine Füllfarbe
+        polygonSideColor={() => "rgba(0, 0, 0, 0)"} // Keine Seitenfarbe
+        polygonStrokeColor={() => (showBorders ? "#FFFFFF" : "rgba(0, 0, 0, 0)")} // Stroke-Farbe
+        polygonsTransitionDuration={300}
       />
     </div>
   );

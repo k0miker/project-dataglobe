@@ -13,6 +13,8 @@ function Input() {
     visualizationType,
     setVisualizationType,
     dataOption,
+    showBorders,
+    setShowBorders,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -111,6 +113,24 @@ function Input() {
           <div className={`block ${showData ? 'bg-green-600' : 'bg-red-600'} w-7 h-4 rounded-full`}></div>
           <div
             className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${showData ? 'translate-x-full bg-red-500' : ''}`}
+          ></div>
+        </div>
+      </label>
+
+      {/* Umschalten der Länderumrisse */}
+      <label htmlFor="show-borders-checkbox" className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer">
+        <span className="mr-2 text-xs">Länderumrisse zeigen:</span>
+        <div className="relative">
+          <input
+            type="checkbox"
+            id="show-borders-checkbox"
+            checked={showBorders}
+            onChange={(e) => setShowBorders(e.target.checked)}
+            className="sr-only"
+          />
+          <div className={`block ${showBorders ? 'bg-green-600' : 'bg-red-600'} w-7 h-4 rounded-full`}></div>
+          <div
+            className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${showBorders ? 'translate-x-full bg-red-500' : ''}`}
           ></div>
         </div>
       </label>

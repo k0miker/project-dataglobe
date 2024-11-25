@@ -17,6 +17,7 @@ export const AppProvider = ({ children }) => {
   const [combinedData, setCombinedData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
+  const [showBorders, setShowBorders] = useState(true); // State für Länderumrisse
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -108,7 +109,12 @@ export const AppProvider = ({ children }) => {
   }, [combinedData]);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData, gdpData, combinedData }}>
+    <AppContext.Provider value={{ 
+      selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, 
+      dataOption, setDataOption, showData, setShowData, rotationSpeed, 
+      setRotationSpeed, visualizationType, setVisualizationType, countries, 
+      clouds, setClouds, geoJsonData, gdpData, combinedData, showBorders, setShowBorders 
+    }}>
       {children}
     </AppContext.Provider>
   );
