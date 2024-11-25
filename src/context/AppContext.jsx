@@ -17,6 +17,7 @@ export const AppProvider = ({ children }) => {
   const [worldBankData, setWorldBankData] = useState([]);
   const [combinedData, setCombinedData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
+  const [resize, setResize] = useState(false);
 
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen

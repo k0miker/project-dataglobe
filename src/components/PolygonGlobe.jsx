@@ -154,7 +154,7 @@ function PolygonGlobe() {
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => {
-          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.2;
+          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1;
           if (d === hoveredCountry) return 0.2;
           return 0.006;
         }}
