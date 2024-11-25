@@ -35,10 +35,10 @@ function Header() {
           placeholder="Land suchen..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className=" p-1 rounded border bg-transparent text-white w-full"
+          className=" p-1 rounded border bg-transparent text-white w-full h-8"
         />
         {/* Liste zur Länderauswahl */}
-        <ul className="bg-glass w-full text-black rounded mt-1 max-h-5 hover:max-h-1/2 overflow-y-auto">
+        <ul className="bg-transparent border p-1 w-full text-white rounded mt-1 max-h-8 hover:max-h-1/2 overflow-y-hidden">
           {filteredCountries.map((country) => (
             <li
               key={country.cca3}
