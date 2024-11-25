@@ -1,21 +1,15 @@
-import './App.css'
-import GlobeComponent from './components/globe'
-import Input from './components/input'
-import Output from './components/output'
-import { useState } from 'react';
+import React from "react";
+import { AppProvider } from "./context/AppContext";
+import './App.css';
+import './index.css';
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [selectedWorld, setSelectedWorld] = useState("/earthDark.jgp");
-  const [selectedCountry, setSelectedCountry] = useState("");
-  console.log("app:" + selectedWorld);
-
   return (
-    <main className='flex justify-between w-screen h-screen '>
-      <Input onSelectChange={setSelectedWorld} onCountryChange={setSelectedCountry} />
-      <GlobeComponent selectedWorld={selectedWorld} />
-      <Output selectedCountry={selectedCountry} />     
-    </main>
-  )
+    <AppProvider>
+      <HomePage className='flex justify-between w-screen h-screen ' />    
+    </AppProvider>
+  );
 }
 
-export default App
+export default App;

@@ -1,57 +1,72 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useAppContext } from "../context/AppContext";
 
-function Output({ selectedCountry }) {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+function Output() {
+  const { selectedCountry } = useAppContext();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://restcountries.com/v3.1/all"
-        );
-        setData(response.data);
-
-        
-        setLoading(false);
-      } catch (error) {
-        console.error("Fehler beim Abrufen der Daten:", error);
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <p>Lädt...</p>;
+  if (!selectedCountry) {
+    return (
+      <div className=" absolute right-1 top-[10.5%] hover:bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
+        <h1 className="text-2xl font-bold mb-4">Länderinfo</h1>
+        <p className="text-lg">Wähle ein Land.</p>
+      </div>
+    );
   }
-
-  const filteredData = selectedCountry ? data.filter(item => item.name.common === selectedCountry) : [];
-
+  // {console.log(selectedCountry)}
   return (
-    <div className="w-1/5 absolute right-0 top-[10%] bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-l-3xl ">
-      <h1 className="text-2xl m-2">Länderinfo</h1>
-      <ul className="p-5">
-        {filteredData.length > 0 ? (
-          filteredData.map((item) => (
-            <React.Fragment key={item.cca3}>
-              <li>
-                <img src={item.flags.png} alt={`Flagge von ${item.name.common}`} width="50" />{item.name.common}
-              </li>
-              <li>Hauptstadt: {item.capital}</li>
-              <li>Einwohner: {(item.population/1000000).toFixed(2)}Mio</li>
-              <li>Fläche: {item.area} km²</li>
-              <li>Zeitzone: {item.timezones.join(";")}</li>
-              <li>Region: {item.region}</li>
-              <li>Sprache: {Object.values(item.languages).join(", ")}</li>
-              <li>Unabhängig: {item.independent ? "Ja" : "Nein"}</li>
-            </React.Fragment>
-          ))
-        ) : (
-          <li>Bitte wählen Sie ein Land aus.</li>
-        )}
+    <div className="w-1/5 md:absolute md:right-0 md:top-[10.5%] md:bottom-[10%] flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
+      <h1 className="text-2xl font-bold mb-4">{selectedCountry.name.common}</h1>
+      <div className="flex justify-center mb-4">
+        <img
+          src={selectedCountry.flags.png}
+          alt={`Flagge von ${selectedCountry.name.common}`}
+          className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md"
+        />
+      </div>
+      <ul className="text-left mt-4 space-y-2 w-full">
+        <li className="flex justify-between">
+          <b>Hauptstadt:</b>{" "}
+          <span>{selectedCountry.capital ? selectedCountry.capital.join(", ") : "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Region:</b> <span>{selectedCountry.region}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Unterregion:</b> <span>{selectedCountry.subregion || "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Einwohner:</b> <span>{(selectedCountry.population / 1e6).toFixed(2)} Mio</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Fläche:</b>{" "}
+          <span>{selectedCountry.area ? `${selectedCountry.area} km²` : "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Bevölkerungsdichte:</b>{" "}
+          <span>{selectedCountry.area
+            ? `${(selectedCountry.population / selectedCountry.area).toFixed(2)} Pers./km²`
+            : "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Sprachen:</b>{" "}
+          <span>{selectedCountry.languages
+            ? Object.values(selectedCountry.languages).join(", ")
+            : "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Währungen:</b>{" "}
+          <span>{selectedCountry.currencies
+            ? Object.values(selectedCountry.currencies)
+                .map((currency) => `${currency.name} (${currency.symbol})`)
+                .join(", ")
+            : "Keine Daten"}</span>
+        </li>
+        <li className="flex justify-between">
+          <b>Unabhängig:</b> <span>{selectedCountry.independent ? "Ja" : "Nein"}</span> 
+        </li>
+        <li className="flex justify-between">
+          <b>Bruttoinlandsprodukt:</b> <span></span>
+        </li>
       </ul>
     </div>
   );
