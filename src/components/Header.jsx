@@ -38,7 +38,7 @@ function Header() {
           className=" p-1 rounded border bg-transparent text-white w-1/4 h-8 max-h-8 "
         />
         {/* Liste zur Länderauswahl */}
-                <ul className="bg-transparent border p-1 w-1/3 text-white text-xs rounded md:mt-0 min-h-8 max-h-8 hover:max-h-[50vh] ml-2 overflow-y-scroll absolute top-0 bg-neutral-900 z-[1000] left-1/4 md:hover:h-[1000%]">
+        <ul className={`bg-transparent border p-1 w-1/3 text-white text-xs rounded md:mt-0 min-h-8 max-h-8 ml-2 overflow-y-scroll absolute top-0 bg-neutral-900 z-[1000] left-1/4 ${searchTerm ? 'max-h-[50vh]' : 'md:hover:h-[1000%]'}`}>
           {filteredCountries.map((country) => (
             <li
               key={country.cca3}
