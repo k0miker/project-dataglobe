@@ -51,16 +51,8 @@ export const fetchLocationData = async () => {
 export const fetchGDPDataForCountries = async (countries) => {
   try {
     const response = await fetch("/extendedGdpData.json");
-    const extendedGdpData = await response.json();
-    const gdpData = countries.map(country => {
-      const { gdp, latitude, longitude } = extendedGdpData.country.cca2[gdp, latitude, longitude] || {};
-      return {
-        country: country.cca2,
-        gdp: gdp || null,
-        latitude: latitude ? parseFloat(latitude.replace(',', '.')) : null,
-        longitude: longitude ? parseFloat(longitude.replace(',', '.')) : null
-      };
-    }).filter(data => data.gdp !== null && data.latitude !== null && data.longitude !== null);
+    const gdpData = await response.json();
+ 
     return gdpData;
   } catch (error) {
     console.error("Fehler beim Abrufen der erweiterten GDP-Daten:", error);
