@@ -40,8 +40,9 @@ function Input() {
 
   // Einstellungen-UI-Komponente (wird in Sidebar und Modal verwendet)
   const SettingsContent = () => (
-    <div className="flex flex-col">
+    <>
       {/* Auswahl der Karte */}
+      <div className="p-6">
       <label htmlFor="world-select" className="mb-2 font-bold text-sm">
         Karte:
       </label>
@@ -139,7 +140,10 @@ function Input() {
         <option value="heatmap">Heatmap</option>
         <option value="CableGlobe">CableGlobe</option>
       </select>
-    </div>
+      </div>
+    </>
+      
+ 
   );
 
   return (
@@ -174,7 +178,7 @@ function Input() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden md:flex flex-col justify-start items-start absolute left-1 z-50 top-[10.5%] bg-glass rounded-br-3xl shadow-lg p-6">
+      <div className="hidden md:flex flex-col max-w-48 overflow-hidden   justify-start items-between absolute left-0 z-50 top-[10%] bg-glass rounded-br-3xl shadow-lg ">
         <SettingsContent />
       </div>
     </>

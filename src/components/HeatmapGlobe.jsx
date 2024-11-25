@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, worldBankData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
 
@@ -13,6 +13,7 @@ function HeatmapGlobe() {
   const fetchHeatmapData = async () => {
     try {
       let data = [];
+      console.log("fetchHeatmapData called with dataOption:", dataOption);
       if (dataOption === "population") {
         const response = await fetch("/world_population.csv");
         const csvText = await response.text();
@@ -30,21 +31,13 @@ function HeatmapGlobe() {
             value: parsedPop,
           };
         });
-      } else if (dataOption === "gdp") {
-        data = worldBankData.map((entry) => {
-          const country = geoJsonData.find((feat) => feat.properties.ISO_A3 === entry.country.id);
-          if (country) {
-            const lat = country.properties.LAT;
-            const lng = country.properties.LONG;
-            const gdp = entry.value;
-            return {
-              lat,
-              lng,
-              value: gdp,
-            };
-          }
-          return null;
-        }).filter(d => d !== null);
+      } else if ((dataOption === "gdp" || dataOption === "BIP") && Array.isArray(gdpData)) {
+        console.log("gdpData:", gdpData);
+        data = gdpData.map(entry => ({
+          lat: entry.latitude,
+          lng: entry.longitude,
+          value: entry.gdp
+        }));
       } else if (dataOption === "volcanoes") {
         const response = await fetch("/world_volcanoes.json");
         const volcanoes = await response.json();
@@ -55,16 +48,22 @@ function HeatmapGlobe() {
         }));
       }
 
+      console.log("raw data:", data);
+
       const validData = (data || []).filter(
         (d) =>
-          d && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
+          d && !isNaN(d.lat) && !isNaN(d.lng) && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
       );
+
+      console.log("valid data:", validData);
 
       const maxVal = d3.max(validData, (d) => d.value);
       const normalizedData = validData.map((d) => ({
         ...d,
         value: d.value / maxVal, // Normalisierung
       }));
+
+      console.log("normalized data:", normalizedData);
 
       setHeatmapData(normalizedData);
     } catch (error) {

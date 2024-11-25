@@ -48,27 +48,22 @@ export const fetchLocationData = async () => {
   }
 }
 
-
-
-
 export const fetchGDPDataForCountries = async (countries) => {
-  const gdpData = [];
-  for (const country of countries) {
-    const url = `https://api.worldbank.org/v2/country/${country.cca2}/indicator/NY.GDP.MKTP.CD?format=json&date=2023`;
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      // console.log("data: ", data);
-      
-      if (Array.isArray(data[1]) && data[1].length > 0) {
-        gdpData.push({
-          country: country.cca2,
-          gdp: data[1][0].value
-        });
-      }
-    } catch (error) {
-      console.error(`Fehler beim Abrufen der GDP-Daten für ${country.cca2}:`, error);
-    }
+  try {
+    const response = await fetch("/extendedGdpData.json");
+    const extendedGdpData = await response.json();
+    const gdpData = countries.map(country => {
+      const { gdp, latitude, longitude } = extendedGdpData.country.cca2[gdp, latitude, longitude] || {};
+      return {
+        country: country.cca2,
+        gdp: gdp || null,
+        latitude: latitude ? parseFloat(latitude.replace(',', '.')) : null,
+        longitude: longitude ? parseFloat(longitude.replace(',', '.')) : null
+      };
+    }).filter(data => data.gdp !== null && data.latitude !== null && data.longitude !== null);
+    return gdpData;
+  } catch (error) {
+    console.error("Fehler beim Abrufen der erweiterten GDP-Daten:", error);
+    throw error;
   }
-  return gdpData;
 };

@@ -14,7 +14,6 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [clouds, setClouds] = useState(false);
   const [geoJsonData, setGeoJsonData] = useState([]);
-  const [worldBankData, setWorldBankData] = useState([]);
   const [combinedData, setCombinedData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
@@ -29,26 +28,17 @@ export const AppProvider = ({ children }) => {
     setVisualizationTypeState(type);
   };
 
-  const combineData = (countries, worldBankData, locationData ) => {
-    console.log("gdp:"+ JSON.stringify({}));
-    // console.log("location:"+ {locationData});
-    // console.log("countries:"+ {countries});
-    
-    fetchGDPDataForCountries(countries);
-
-    setWorldBankData(fetchGDPDataForCountries(countries))
-    console.log("worldBankData:"+ {gdpData});
-    
-
+  const combineData = (countries, gdpData, locationData ) => {
+    console.log("gdp:"+ JSON.stringify(gdpData));
     
     const locationCsv = d3.csvParse(locationData);
     const combined = locationCsv.map(location => {
       const country = countries.find(c => c.cca2 === location.cca2);
-      const gdpData = worldBankData.find(data => data.country.id === location.cca2);
+      const gdpEntry = gdpData.find(data => data.country === location.cca2);
       return {
         ...location,
         name: country ? country.name.common : location.name,
-        gdp: gdpData ? gdpData.value : null
+        gdp: gdpEntry ? gdpEntry.gdp : null
       };
     });
     setCombinedData(combined);
@@ -74,16 +64,15 @@ export const AppProvider = ({ children }) => {
         fetchLocationData()
       ]);
 
-      const worldBankData = await fetchGDPDataForCountries(countriesData);
-      setGdpData(worldBankData);
+      const gdpData = await fetchGDPDataForCountries(countriesData);
+      setGdpData(gdpData);
 
       localStorage.setItem("countries", JSON.stringify(countriesData));
-      localStorage.setItem("worldBankData", JSON.stringify(worldBankData));
+      localStorage.setItem("gdpData", JSON.stringify(gdpData));
       localStorage.setItem("locationData", locationData);
 
       setCountries(countriesData);
-      setWorldBankData(worldBankData);
-      combineData(countriesData, worldBankData, locationData);
+      combineData(countriesData, gdpData, locationData);
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
     }
@@ -102,13 +91,13 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const storedCountries = localStorage.getItem("countries");
-    const storedWorldBankData = localStorage.getItem("worldBankData");
+    const storedGdpData = localStorage.getItem("gdpData");
     const storedLocationData = localStorage.getItem("locationData");
 
-    if (storedCountries && storedWorldBankData && storedLocationData) {
+    if (storedCountries && storedGdpData && storedLocationData) {
       setCountries(JSON.parse(storedCountries));
-      setWorldBankData(JSON.parse(storedWorldBankData));
-      combineData(JSON.parse(storedCountries), JSON.parse(storedWorldBankData), storedLocationData);
+      setGdpData(JSON.parse(storedGdpData));
+      combineData(JSON.parse(storedCountries), JSON.parse(storedGdpData), storedLocationData);
     } else {
       fetchData();
     }
@@ -119,7 +108,7 @@ export const AppProvider = ({ children }) => {
   }, [combinedData]);
 
   return (
-    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData, worldBankData, combinedData, gdpData }}>
+    <AppContext.Provider value={{ selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, dataOption, setDataOption, showData, setShowData, rotationSpeed, setRotationSpeed, visualizationType, setVisualizationType, countries, clouds, setClouds, geoJsonData, gdpData, combinedData }}>
       {children}
     </AppContext.Provider>
   );

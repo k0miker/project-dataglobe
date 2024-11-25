@@ -1,0 +1,1106 @@
+{
+  "AD": {
+    "gdp": 3727673593.01922,
+    "latitude": "42,546245",
+    "longitude": "1,601554",
+    "name": "Andorra"
+  },
+  "AE": {
+    "gdp": 504173451327.434,
+    "latitude": "23,424076",
+    "longitude": "53,847818",
+    "name": "Vereinigte Arabische Emirate"
+  },
+  "AG": {
+    "gdp": 2033085185.18518,
+    "latitude": "17,060816",
+    "longitude": "-61,796428",
+    "name": "Antigua und Barbuda"
+  },
+  "AL": {
+    "gdp": 22977677860.7979,
+    "latitude": "41,153332",
+    "longitude": "20,168331",
+    "name": "Albanien"
+  },
+  "AM": {
+    "gdp": 24212134631.064,
+    "latitude": "40,069099",
+    "longitude": "45,038189",
+    "name": "Armenien"
+  },
+  "AO": {
+    "gdp": 84722957642.3757,
+    "latitude": "-11,202692",
+    "longitude": "17,873887",
+    "name": "Angola"
+  },
+  "AR": {
+    "gdp": 640591410663.883,
+    "latitude": "-38,416097",
+    "longitude": "-63,616672",
+    "name": "Argentinien"
+  },
+  "AT": {
+    "gdp": 516034144115.95,
+    "latitude": "47,516231",
+    "longitude": "14,550072",
+    "name": "Österreich"
+  },
+  "AU": {
+    "gdp": 1723827215334.71,
+    "latitude": "-25,274398",
+    "longitude": "133,775136",
+    "name": "Australien"
+  },
+  "AZ": {
+    "gdp": 72356176470.5882,
+    "latitude": "40,143105",
+    "longitude": "47,576927",
+    "name": "Aserbaidschan"
+  },
+  "BA": {
+    "gdp": 27054889362.8852,
+    "latitude": "43,915886",
+    "longitude": "17,679076",
+    "name": "Bosnien und Herzegowina"
+  },
+  "BB": {
+    "gdp": 6393564189.61345,
+    "latitude": "13,193887",
+    "longitude": "-59,543198",
+    "name": "Barbados"
+  },
+  "BD": {
+    "gdp": 437415331040.994,
+    "latitude": "23,684994",
+    "longitude": "90,356331",
+    "name": "Bangladesch"
+  },
+  "BE": {
+    "gdp": 632216577075.109,
+    "latitude": "50,503887",
+    "longitude": "4,469936",
+    "name": "Belgien"
+  },
+  "BF": {
+    "gdp": 20324617838.9676,
+    "latitude": "12,238333",
+    "longitude": "-1,561593",
+    "name": "Burkina Faso"
+  },
+  "BG": {
+    "gdp": 101584384672.786,
+    "latitude": "42,733883",
+    "longitude": "25,48583",
+    "name": "Bulgarien"
+  },
+  "BH": {
+    "gdp": 43205000000,
+    "latitude": "25,930414",
+    "longitude": "50,637772",
+    "name": "Bahrain"
+  },
+  "BI": {
+    "gdp": 2642161668.92754,
+    "latitude": "-3,373056",
+    "longitude": "29,918886",
+    "name": "Burundi"
+  },
+  "BJ": {
+    "gdp": 19673284686.0023,
+    "latitude": "9,30769 ",
+    "longitude": "2,315834",
+    "name": "Benin"
+  },
+  "BN": {
+    "gdp": 15128292953.5098,
+    "latitude": "4,535277",
+    "longitude": "114,727669",
+    "name": "Brunei Darussalam"
+  },
+  "BO": {
+    "gdp": 45849832906.4139,
+    "latitude": "-16,290154",
+    "longitude": "-63,588653",
+    "name": "Bolivien"
+  },
+  "BR": {
+    "gdp": 2173665655937.27,
+    "latitude": "-14,235004",
+    "longitude": "-51,92528",
+    "name": "Brasilien"
+  },
+  "BS": {
+    "gdp": 14338500000,
+    "latitude": "25,03428",
+    "longitude": "-77,39628",
+    "name": "Bahamas"
+  },
+  "BW": {
+    "gdp": 19395765126.3127,
+    "latitude": "-22,328474",
+    "longitude": "24,684866",
+    "name": "Botsuana"
+  },
+  "BY": {
+    "gdp": 71857382745.6066,
+    "latitude": "53,709807",
+    "longitude": "27,953389",
+    "name": "Belarus"
+  },
+  "BZ": {
+    "gdp": 3281500000,
+    "latitude": "17,189877",
+    "longitude": "-88,49765",
+    "name": "Belize"
+  },
+  "CA": {
+    "gdp": 2140085567791.45,
+    "latitude": "56,130366",
+    "longitude": "-106,346771",
+    "name": "Kanada"
+  },
+  "CD": {
+    "gdp": 66383287002.9969,
+    "latitude": "-4,038333",
+    "longitude": "21,758664",
+    "name": "Kongo (Demokratische Republik)"
+  },
+  "CF": {
+    "gdp": 2555492085.24831,
+    "latitude": "6,611111",
+    "longitude": "20,939444",
+    "name": "Zentralafrikanische Republik"
+  },
+  "CG": {
+    "gdp": 15321055818.3263,
+    "latitude": "-0,228021",
+    "longitude": "15,827659",
+    "name": "Kongo (Republik)"
+  },
+  "CH": {
+    "gdp": 884940402230.409,
+    "latitude": "46,818188",
+    "longitude": "8,227512",
+    "name": "Schweiz"
+  },
+  "CI": {
+    "gdp": 78788828906.8634,
+    "latitude": "7,539989",
+    "longitude": "-5,54708",
+    "name": "Côte d'Ivoire"
+  },
+  "CL": {
+    "gdp": 335533331669.219,
+    "latitude": "-35,675147",
+    "longitude": "-71,542969",
+    "name": "Chile"
+  },
+  "CM": {
+    "gdp": 47945510090.0529,
+    "latitude": "7,369722",
+    "longitude": "12,354722",
+    "name": "Kamerun"
+  },
+  "CN": {
+    "gdp": 17794781986104.5,
+    "latitude": "35,86166",
+    "longitude": "104,195397",
+    "name": "China"
+  },
+  "CO": {
+    "gdp": 363540156234.868,
+    "latitude": "4,570868",
+    "longitude": "-74,297333",
+    "name": "Kolumbien"
+  },
+  "CR": {
+    "gdp": 86497941439.0174,
+    "latitude": "9,748917",
+    "longitude": "-83,753428",
+    "name": "Costa Rica"
+  },
+  "CV": {
+    "gdp": 2587252076.3056,
+    "latitude": "16,002082",
+    "longitude": "-24,013197",
+    "name": "Cabo Verde"
+  },
+  "CY": {
+    "gdp": 32229622669.1951,
+    "latitude": "35,126413",
+    "longitude": "33,429859",
+    "name": "Zypern"
+  },
+  "CZ": {
+    "gdp": 330858339871.686,
+    "latitude": "49,817492",
+    "longitude": "15,472962",
+    "name": "Tschechien"
+  },
+  "DE": {
+    "gdp": 4456081016705.96,
+    "latitude": "51,165691",
+    "longitude": "10,451526",
+    "name": "Deutschland"
+  },
+  "DJ": {
+    "gdp": 4098530513.55777,
+    "latitude": "11,825138",
+    "longitude": "42,590275",
+    "name": "Dschibuti"
+  },
+  "DK": {
+    "gdp": 404198757537.974,
+    "latitude": "56,26392",
+    "longitude": "9,501785",
+    "name": "Dänemark"
+  },
+  "DO": {
+    "gdp": 121444279313.931,
+    "latitude": "18,735693",
+    "longitude": "-70,162651",
+    "name": "Dominikanische Republik"
+  },
+  "DZ": {
+    "gdp": 239899491127.742,
+    "latitude": "28,033886",
+    "longitude": "1,659626",
+    "name": "Algerien"
+  },
+  "EC": {
+    "gdp": 118844826000,
+    "latitude": "-1,831239",
+    "longitude": "-78,183406",
+    "name": "Ecuador"
+  },
+  "EE": {
+    "gdp": 40744848827.9537,
+    "latitude": "58,595272",
+    "longitude": "25,013607",
+    "name": "Estland"
+  },
+  "EG": {
+    "gdp": 395926075163.006,
+    "latitude": "26,820553",
+    "longitude": "30,802498",
+    "name": "Ägypten"
+  },
+  "ES": {
+    "gdp": 1580694712515.71,
+    "latitude": "40,463667",
+    "longitude": "-3,74922",
+    "name": "Spanien"
+  },
+  "ET": {
+    "gdp": 163697927593.982,
+    "latitude": "9,145",
+    "longitude": "    40,489673",
+    "name": "Äthiopien"
+  },
+  "FI": {
+    "gdp": 300187202696.084,
+    "latitude": "61,92411",
+    "longitude": "25,748151",
+    "name": "Finnland"
+  },
+  "FJ": {
+    "gdp": 5494797540.73365,
+    "latitude": "-16,578193",
+    "longitude": "179,414413",
+    "name": "Fidschi"
+  },
+  "FM": {
+    "gdp": 460000000,
+    "latitude": "7,425554",
+    "longitude": "150,550812",
+    "name": "Mikronesien"
+  },
+  "FR": {
+    "gdp": 3030904089607.9,
+    "latitude": "46,227638",
+    "longitude": "2,213749",
+    "name": "Frankreich"
+  },
+  "GA": {
+    "gdp": 20516134388.6608,
+    "latitude": "-0,803689",
+    "longitude": "11,609444",
+    "name": "Gabun"
+  },
+  "GB": {
+    "gdp": 3340032380668.04,
+    "latitude": "55,378051",
+    "longitude": "-3,435973",
+    "name": "Vereinigtes Königreich"
+  },
+  "GD": {
+    "gdp": 1320334235.58897,
+    "latitude": "12,262776",
+    "longitude": "-61,604171",
+    "name": "Grenada"
+  },
+  "GE": {
+    "gdp": 30535530479.0227,
+    "latitude": "42,315407",
+    "longitude": "43,356892",
+    "name": "Georgia"
+  },
+  "GH": {
+    "gdp": 76370394412.4163,
+    "latitude": "7,946527",
+    "longitude": "-1,023194",
+    "name": "Ghana"
+  },
+  "GM": {
+    "gdp": 2339904156.79214,
+    "latitude": "13,443182",
+    "longitude": "-15,310139",
+    "name": "Gambia"
+  },
+  "GN": {
+    "gdp": 23612295818.0961,
+    "latitude": "9,945587",
+    "longitude": "-9,696645",
+    "name": "Guinea"
+  },
+  "GQ": {
+    "gdp": 12116922539.4112,
+    "latitude": "1,650801",
+    "longitude": "10,267895",
+    "name": "Äquatorialguinea"
+  },
+  "GR": {
+    "gdp": 238206312632.528,
+    "latitude": "39,074208",
+    "longitude": "21,824312",
+    "name": "Griechenland"
+  },
+  "GT": {
+    "gdp": 102050473863.636,
+    "latitude": "15,783471",
+    "longitude": "-90,230759",
+    "name": "Guatemala"
+  },
+  "GW": {
+    "gdp": 1966461400.35833,
+    "latitude": "11,803749",
+    "longitude": "-15,180413",
+    "name": "Guinea-Bissau"
+  },
+  "GY": {
+    "gdp": 16786302158.2734,
+    "latitude": "4,860416",
+    "longitude": "-58,93018",
+    "name": "Guyana"
+  },
+  "GZ": {
+    "gdp": 17396300000,
+    "latitude": "31,354676",
+    "longitude": "34,308825",
+    "name": "Gazastreifen"
+  },
+  "HK": {
+    "gdp": 382054574298.529,
+    "latitude": "22,396428",
+    "longitude": "114,109497",
+    "name": "Hongkong"
+  },
+  "HN": {
+    "gdp": 34400509852.0436,
+    "latitude": "15,199999",
+    "longitude": "-86,241905",
+    "name": "Honduras"
+  },
+  "HR": {
+    "gdp": 82688842717.3926,
+    "latitude": "45,1",
+    "longitude": "    15.2",
+    "name": "    Kroatien"
+  },
+  "HT": {
+    "gdp": 19850829757.7471,
+    "latitude": "18,971187",
+    "longitude": "-72,285215",
+    "name": "Haiti"
+  },
+  "HU": {
+    "gdp": 212388906458.724,
+    "latitude": "47,162494",
+    "longitude": "19,503304",
+    "name": "Ungarn"
+  },
+  "ID": {
+    "gdp": 1371171152331.16,
+    "latitude": "-0,789275",
+    "longitude": "113,921327",
+    "name": "Indonesien"
+  },
+  "IE": {
+    "gdp": 545629450403.735,
+    "latitude": "53,41291",
+    "longitude": "-8,24389",
+    "name": "Irland"
+  },
+  "IL": {
+    "gdp": 509901495702.103,
+    "latitude": "31,046051",
+    "longitude": "34,851612",
+    "name": "Israel"
+  },
+  "IN": {
+    "gdp": 3549918918777.53,
+    "latitude": "20,593684",
+    "longitude": "78,96288",
+    "name": "Indien"
+  },
+  "IQ": {
+    "gdp": 250842782139.464,
+    "latitude": "33,223191",
+    "longitude": "43,679291",
+    "name": "Irak"
+  },
+  "IR": {
+    "gdp": 401504514718.718,
+    "latitude": "32,427908",
+    "longitude": "53,688046",
+    "name": "Iran"
+  },
+  "IS": {
+    "gdp": 31020032583.1972,
+    "latitude": "64,963051",
+    "longitude": "-19,020835",
+    "name": "Island"
+  },
+  "IT": {
+    "gdp": 2254851212731.8,
+    "latitude": "41,87194",
+    "longitude": "12,56738",
+    "name": "Italien"
+  },
+  "JM": {
+    "gdp": 19423355367.2372,
+    "latitude": "18,109581",
+    "longitude": "-77,297508",
+    "name": "Jamaika"
+  },
+  "JO": {
+    "gdp": 50813642348.6746,
+    "latitude": "30,585164",
+    "longitude": "36,238414",
+    "name": "Jordanien"
+  },
+  "JP": {
+    "gdp": 4212945159781.4,
+    "latitude": "36,204824",
+    "longitude": "138,252924",
+    "name": "Japan"
+  },
+  "KE": {
+    "gdp": 107440575838.048,
+    "latitude": "-0,023559",
+    "longitude": "37,906193",
+    "name": "Kenia"
+  },
+  "KG": {
+    "gdp": 13987627908.8381,
+    "latitude": "41,20438",
+    "longitude": "74,766098",
+    "name": "Kirgisistan"
+  },
+  "KH": {
+    "gdp": 31772759998.8571,
+    "latitude": "12,565679",
+    "longitude": "104,990963",
+    "name": "Kambodscha"
+  },
+  "KI": {
+    "gdp": 279034355.108421,
+    "latitude": "-3,370417",
+    "longitude": "-168,734039",
+    "name": "Kiribati"
+  },
+  "KM": {
+    "gdp": 1352380972.15662,
+    "latitude": "-11,875001",
+    "longitude": "43,872219",
+    "name": "Komoren"
+  },
+  "KN": {
+    "gdp": 1077033111.11111,
+    "latitude": "17,357822",
+    "longitude": "-62,782998",
+    "name": "St. Kitts und Nevis"
+  },
+  "KR": {
+    "gdp": 1712792854202.37,
+    "latitude": "35,907757",
+    "longitude": "127,766922",
+    "name": "Südkorea"
+  },
+  "KW": {
+    "gdp": 161772221950.942,
+    "latitude": "29,31166",
+    "longitude": "47,481766",
+    "name": "Kuwait"
+  },
+  "KZ": {
+    "gdp": 261421121085.572,
+    "latitude": "48,019573",
+    "longitude": "66,923684",
+    "name": "Kasachstan"
+  },
+  "LA": {
+    "gdp": 15843155731.2552,
+    "latitude": "19,85627",
+    "longitude": "102,495496",
+    "name": "Laos"
+  },
+  "LC": {
+    "gdp": 2519925938.52447,
+    "latitude": "13,909444",
+    "longitude": "-60,978893",
+    "name": "St. Lucia"
+  },
+  "LK": {
+    "gdp": 84356860421.13,
+    "latitude": "7,873054",
+    "longitude": "80,771797",
+    "name": "Sri Lanka"
+  },
+  "LR": {
+    "gdp": 4332000000,
+    "latitude": "6,428055",
+    "longitude": "-9,429499",
+    "name": "Liberia"
+  },
+  "LS": {
+    "gdp": 2046039024.45854,
+    "latitude": "-29,609988",
+    "longitude": "28,233608",
+    "name": "Lesotho"
+  },
+  "LT": {
+    "gdp": 77836396962.772,
+    "latitude": "55,169438",
+    "longitude": "23,881275",
+    "name": "Litauen"
+  },
+  "LU": {
+    "gdp": 85755006123.5976,
+    "latitude": "49,815273",
+    "longitude": "6,129583",
+    "name": "Luxemburg"
+  },
+  "LV": {
+    "gdp": 43627078481.287,
+    "latitude": "56,879635",
+    "longitude": "24,603189",
+    "name": "Lettland"
+  },
+  "LY": {
+    "gdp": 50491722445.7773,
+    "latitude": "26,3351",
+    "longitude": "    17,228331",
+    "name": "Libyen"
+  },
+  "MA": {
+    "gdp": 141109373209.414,
+    "latitude": "31,791702",
+    "longitude": "-7,09262",
+    "name": "Marokko"
+  },
+  "MD": {
+    "gdp": 16539436547.295,
+    "latitude": "47,411631",
+    "longitude": "28,369885",
+    "name": "Moldau, Republik"
+  },
+  "ME": {
+    "gdp": 7404541964.50779,
+    "latitude": "42,708678",
+    "longitude": "19,37439",
+    "name": "Montenegro"
+  },
+  "MG": {
+    "gdp": 16031702914.9195,
+    "latitude": "-18,766947",
+    "longitude": "46,869107",
+    "name": "Madagaskar"
+  },
+  "MH": {
+    "gdp": 284000000,
+    "latitude": "7,131474",
+    "longitude": "171,184478",
+    "name": "Marshallinseln"
+  },
+  "MK": {
+    "gdp": 14761237042.2057,
+    "latitude": "41,608635",
+    "longitude": "21,745275",
+    "name": "Nordmazedonien"
+  },
+  "ML": {
+    "gdp": 20904898296.2501,
+    "latitude": "17,570692",
+    "longitude": "-3,996166",
+    "name": "Mali"
+  },
+  "MM": {
+    "gdp": 64815031669.0952,
+    "latitude": "21,913965",
+    "longitude": "95,956223",
+    "name": "Myanmar (Burma)"
+  },
+  "MN": {
+    "gdp": 19872180369.6275,
+    "latitude": "46,862496",
+    "longitude": "103,846656",
+    "name": "Mongolei"
+  },
+  "MO": {
+    "gdp": 47061843715.8565,
+    "latitude": "22,198745",
+    "longitude": "113,543873",
+    "name": "Macau"
+  },
+  "MR": {
+    "gdp": 10452577062.7581,
+    "latitude": "21,00789",
+    "longitude": "-10,940835",
+    "name": "Mauretanien"
+  },
+  "MT": {
+    "gdp": 20956999452.4317,
+    "latitude": "35,937496",
+    "longitude": "14,375416",
+    "name": "Malta"
+  },
+  "MU": {
+    "gdp": 14397127281.3829,
+    "latitude": "-20,348404",
+    "longitude": "57,552152",
+    "name": "Mauritius"
+  },
+  "MV": {
+    "gdp": 6600000000,
+    "latitude": "3,202778",
+    "longitude": "73,22068",
+    "name": "Malediven"
+  },
+  "MW": {
+    "gdp": 14084341062.3675,
+    "latitude": "-13,254308",
+    "longitude": "34,301525",
+    "name": "Malawi"
+  },
+  "MX": {
+    "gdp": 1788886821046.81,
+    "latitude": "23,634501",
+    "longitude": "-102,552784",
+    "name": "Mexiko"
+  },
+  "MY": {
+    "gdp": 399648828546.504,
+    "latitude": "4,210484",
+    "longitude": "101,975766",
+    "name": "Malaysia"
+  },
+  "MZ": {
+    "gdp": 20624597846.5495,
+    "latitude": "-18,665695",
+    "longitude": "35,529562",
+    "name": "Mosambik"
+  },
+  "NA": {
+    "gdp": 12351024843.7467,
+    "latitude": "-22,95764",
+    "longitude": "18,49041",
+    "name": "Namibia"
+  },
+  "NE": {
+    "gdp": 16819170420.5653,
+    "latitude": "17,607789",
+    "longitude": "8,081666",
+    "name": "Niger"
+  },
+  "NG": {
+    "gdp": 362814951696.073,
+    "latitude": "9,081999",
+    "longitude": "8,675277",
+    "name": "Nigeria"
+  },
+  "NI": {
+    "gdp": 17829215283.7997,
+    "latitude": "12,865416",
+    "longitude": "-85,207229",
+    "name": "Nicaragua"
+  },
+  "NL": {
+    "gdp": 1118124749886.29,
+    "latitude": "52,132633",
+    "longitude": "5,291266",
+    "name": "Niederlande"
+  },
+  "NO": {
+    "gdp": 485513316503.63,
+    "latitude": "60,472024",
+    "longitude": "8,468946",
+    "name": "Norwegen"
+  },
+  "NP": {
+    "gdp": 40908073366.8455,
+    "latitude": "28,394857",
+    "longitude": "+84,124008",
+    "name": "Nepal"
+  },
+  "NR": {
+    "gdp": 154127798.193541,
+    "latitude": "-0,522778",
+    "longitude": "166,931503",
+    "name": "Nauru"
+  },
+  "NZ": {
+    "gdp": 253465703232.146,
+    "latitude": "-40,900557",
+    "longitude": "174,885971",
+    "name": "Neuseeland"
+  },
+  "OM": {
+    "gdp": 108192457737.321,
+    "latitude": "21,512583",
+    "longitude": "55,923255",
+    "name": "Oman"
+  },
+  "PA": {
+    "gdp": 83382400000,
+    "latitude": "8,537981",
+    "longitude": "-80,782127",
+    "name": "Panama"
+  },
+  "PE": {
+    "gdp": 267603248655.253,
+    "latitude": "-9,189967",
+    "longitude": "-75,015152",
+    "name": "Peru"
+  },
+  "PG": {
+    "gdp": 30932496249.7917,
+    "latitude": "-6,314993",
+    "longitude": "143,95555",
+    "name": "Papua-Neuguinea"
+  },
+  "PH": {
+    "gdp": 437146372729.942,
+    "latitude": "12,879721",
+    "longitude": "121,774017",
+    "name": "Philippinen"
+  },
+  "PK": {
+    "gdp": 338368455317.876,
+    "latitude": "30,375321",
+    "longitude": "69,345116",
+    "name": "Pakistan"
+  },
+  "PL": {
+    "gdp": 811229100687.566,
+    "latitude": "51,919438",
+    "longitude": "19,145136",
+    "name": "Polen"
+  },
+  "PR": {
+    "gdp": 117902300000,
+    "latitude": "18.220833",
+    "longitude": "-66,590149",
+    "name": "Puerto Rico"
+  },
+  "PS": {
+    "gdp": 17396300000,
+    "latitude": "31,952162",
+    "longitude": "35,233154",
+    "name": "Palästinensische Autonomiegebiete"
+  },
+  "PT": {
+    "gdp": 287080013574.497,
+    "latitude": "39,399872",
+    "longitude": "-8,224454",
+    "name": "Portugal"
+  },
+  "PW": {
+    "gdp": 263020733.717011,
+    "latitude": "7,51498 ",
+    "longitude": "134,58252",
+    "name": "Palau"
+  },
+  "PY": {
+    "gdp": 42956263543.9482,
+    "latitude": "-23,442503",
+    "longitude": "-58,443832",
+    "name": "Paraguay"
+  },
+  "RO": {
+    "gdp": 351002579629.67,
+    "latitude": "45,943161",
+    "longitude": "24,96676",
+    "name": "Rumänien"
+  },
+  "RS": {
+    "gdp": 75187125426.7375,
+    "latitude": "44,016521",
+    "longitude": "21,005859",
+    "name": "Serbien"
+  },
+  "RU": {
+    "gdp": 2021421476035.42,
+    "latitude": "61,52401",
+    "longitude": "105,318756",
+    "name": "Russland"
+  },
+  "RW": {
+    "gdp": 14097768647.6695,
+    "latitude": "-1,940278",
+    "longitude": "29,873888",
+    "name": "Ruanda"
+  },
+  "SA": {
+    "gdp": 1067582933333.33,
+    "latitude": "23,885942",
+    "longitude": "45,079162",
+    "name": "Saudi-Arabien"
+  },
+  "SB": {
+    "gdp": 1631286701.11516,
+    "latitude": "-9,64571",
+    "longitude": "160,156194",
+    "name": "Salomonen"
+  },
+  "SC": {
+    "gdp": 2141450171.13932,
+    "latitude": "-4,679574",
+    "longitude": "55,491977",
+    "name": "Seychellen"
+  },
+  "SD": {
+    "gdp": 109327023588.732,
+    "latitude": "12,862807",
+    "longitude": "30,217636",
+    "name": "Sudan"
+  },
+  "SE": {
+    "gdp": 593267701033.408,
+    "latitude": "60,128161",
+    "longitude": "18,643501",
+    "name": "Schweden"
+  },
+  "SG": {
+    "gdp": 501427500080.059,
+    "latitude": "1,352083",
+    "longitude": "103,819836",
+    "name": "Singapur"
+  },
+  "SI": {
+    "gdp": 68216781410.5228,
+    "latitude": "46,151241",
+    "longitude": "14,995463",
+    "name": "Slowenien"
+  },
+  "SK": {
+    "gdp": 132793622283.071,
+    "latitude": "48,669026",
+    "longitude": "19,699024",
+    "name": "Slowakei"
+  },
+  "SL": {
+    "gdp": 3809832236.95959,
+    "latitude": "8,460555",
+    "longitude": "-11,779889",
+    "name": "Sierra Leone"
+  },
+  "SN": {
+    "gdp": 31013986429.1861,
+    "latitude": "14,497401",
+    "longitude": "-14,452362",
+    "name": "Senegal"
+  },
+  "SO": {
+    "gdp": 11679800110.1523,
+    "latitude": "5,152149",
+    "longitude": "46,199616",
+    "name": "Somalia"
+  },
+  "SR": {
+    "gdp": 3782437296.04323,
+    "latitude": "3,919305",
+    "longitude": "-56,027783",
+    "name": "Suriname"
+  },
+  "ST": {
+    "gdp": 603240748.954207,
+    "latitude": "0,18636 ",
+    "longitude": "6,613081",
+    "name": "São Tomé und Príncipe"
+  },
+  "SV": {
+    "gdp": 34015620000,
+    "latitude": "13,794185",
+    "longitude": "-88,89653",
+    "name": "El Salvador"
+  },
+  "SZ": {
+    "gdp": 4597855845.04276,
+    "latitude": "-26,522503",
+    "longitude": "31,465866",
+    "name": "Swasiland"
+  },
+  "TC": {
+    "gdp": 1402054390.94734,
+    "latitude": "21,694025",
+    "longitude": "-71,797928",
+    "name": "Turks- und Caicosinseln"
+  },
+  "TD": {
+    "gdp": 13149325358.7383,
+    "latitude": "15,454166",
+    "longitude": "18,732207",
+    "name": "Tschad"
+  },
+  "TG": {
+    "gdp": 9171261835.06264,
+    "latitude": "8,619543",
+    "longitude": "0,824782",
+    "name": "Togo"
+  },
+  "TH": {
+    "gdp": 514944993833.578,
+    "latitude": "15,870032",
+    "longitude": "100,992541",
+    "name": "Thailand"
+  },
+  "TJ": {
+    "gdp": 12060602008.8478,
+    "latitude": "38,861034",
+    "longitude": "71,276093",
+    "name": "Tadschikistan"
+  },
+  "TL": {
+    "gdp": 2243142908.46161,
+    "latitude": "-8,874217",
+    "longitude": "125,727539",
+    "name": "Timor-Leste"
+  },
+  "TM": {
+    "gdp": 59887334844.0651,
+    "latitude": "38,969719",
+    "longitude": "59,556278",
+    "name": "Turkmenistan"
+  },
+  "TN": {
+    "gdp": 48529595416.6533,
+    "latitude": "33,886917",
+    "longitude": "9,537499",
+    "name": "Tunesien"
+  },
+  "TR": {
+    "gdp": 1108022373259.51,
+    "latitude": "38,963745",
+    "longitude": "35,243322",
+    "name": "Türkei"
+  },
+  "TT": {
+    "gdp": 28139944790.2911,
+    "latitude": "10,691803",
+    "longitude": "-61,222503",
+    "name": "Trinidad und Tobago"
+  },
+  "TV": {
+    "gdp": 62280311.5852172,
+    "latitude": "-7,109535",
+    "longitude": "177,64933",
+    "name": "Tuvalu"
+  },
+  "TZ": {
+    "gdp": 79158286333.524,
+    "latitude": "-6,369028",
+    "longitude": "34,888822",
+    "name": "Tansania"
+  },
+  "UA": {
+    "gdp": 178757021386.809,
+    "latitude": "48,379433",
+    "longitude": "31,16558",
+    "name": "Ukraine"
+  },
+  "UG": {
+    "gdp": 49272882213.623,
+    "latitude": "1,373333",
+    "longitude": "32,290275",
+    "name": "Uganda"
+  },
+  "USA": {
+    "gdp": 27360935000000,
+    "latitude": "37,09024",
+    "longitude": "-95,712891",
+    "name": "USA"
+  },
+  "UY": {
+    "gdp": 77240831587.167,
+    "latitude": "-32,522779",
+    "longitude": "-55,765835",
+    "name": "Uruguay"
+  },
+  "UZ": {
+    "gdp": 90889149306.7313,
+    "latitude": "41,377491",
+    "longitude": "64,585262",
+    "name": "Usbekistan"
+  },
+  "VC": {
+    "gdp": 1065962962.96296,
+    "latitude": "12,984305",
+    "longitude": "-61,287228",
+    "name": "St. Vincent und die Grenadinen"
+  },
+  "VN": {
+    "gdp": 429716969049.593,
+    "latitude": "14,058324",
+    "longitude": "108,277199",
+    "name": "Vietnam"
+  },
+  "VU": {
+    "gdp": 1126313359.21923,
+    "latitude": "-15,376706",
+    "longitude": "166,959158",
+    "name": "Vanuatu"
+  },
+  "WS": {
+    "gdp": 934100336.275654,
+    "latitude": "-13,759029",
+    "longitude": "-172,104629",
+    "name": "Samoa"
+  },
+  "XK": {
+    "gdp": 10438351483.1677,
+    "latitude": "42,602636",
+    "longitude": "20,902977",
+    "name": "Kosovo"
+  },
+  "ZA": {
+    "gdp": 377781600985.873,
+    "latitude": "-30,559482",
+    "longitude": "22,937506",
+    "name": "Südafrika"
+  },
+  "ZM": {
+    "gdp": 28162630953.9285,
+    "latitude": "-13,133897",
+    "longitude": "27,849332",
+    "name": "Sambia"
+  },
+  "ZW": {
+    "gdp": 26538273498.8461,
+    "latitude": "-19,015438",
+    "longitude": "29,154857",
+    "name": "Simbabwe"
+  }
+}

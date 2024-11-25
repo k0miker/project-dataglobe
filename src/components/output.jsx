@@ -9,7 +9,7 @@ function Output() {
   const CountryDetails = () => {
     if (!selectedCountry) {
       return (
-        <div className="flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
+        <div className="flex flex-col justify-center items-center  rounded-bl-3xl p-6">
           <h1 className="text-2xl font-bold mb-4">Länderinfo</h1>
           <p className="text-lg">Wähle ein Land.</p>
         </div>
@@ -17,7 +17,7 @@ function Output() {
     }
 
     return (
-      <div className="flex flex-col justify-center items-center bg-glass rounded-bl-3xl shadow-lg p-6">
+      <div className="flex flex-col justify-center items-center  rounded-bl-3xl  p-6">
         <h1 className="text-2xl font-bold mb-4">
           {selectedCountry.name.common}
         </h1>
@@ -28,7 +28,7 @@ function Output() {
             className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md"
           />
         </div>
-        <ul className="text-left mt-4 space-y-2 w-full">
+        <ul className="text-left mt-4 space-y-2 w-full text-sm">
           <li className="flex justify-between">
             <b>Hauptstadt:</b>{" "}
             <span>
@@ -124,7 +124,8 @@ function Output() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden md:flex flex-col justify-center items-center md:absolute md:right-0 md:top-[10.5%] md:bottom-[10%] bg-glass rounded-bl-3xl shadow-lg p-6">
+      <div className="hidden md:flex flex- justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl  shadow-lg p-2  ">
+       
         <CountryDetails />
       </div>
     </>
