@@ -82,21 +82,22 @@ function Input() {
         className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
       >
         {visualizationType === "polygon" && (
-          <option value="gdp">BIP pro Kopf</option>
-        )}
-        {visualizationType === "polygon" && (
-          <option value="density">Bevölkerungsdichte</option>
-        )}
-        {visualizationType === "heatmap" && (
-          <option value="population">Bevölkerung</option>
+          <>
+            <option value="gdp">BIP pro Kopf</option>
+            <option value="density">Bevölkerungsdichte</option>
+          </>
         )}
         {visualizationType === "heatmap" && (
-          <option value="volcanoes">Vulkane</option>
+          <>
+            <option value="population">Bevölkerung</option>
+            <option value="volcanoes">Vulkane</option>
+            <option value="earthquakes">Erdbeben</option>
+            <option value="BIP">GDP</option>
+          </>
         )}
-        {visualizationType === "heatmap" && (
-          <option value="earthquakes">Erdbeben</option>
+        {visualizationType === "CableGlobe" && (
+          <option value="cable">Kabel</option>
         )}
-        {visualizationType === "heatmap" && <option value="BIP">GDP</option>}
       </select>
 
       {/* Umschalten der Datenanzeige */}

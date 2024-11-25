@@ -23,8 +23,12 @@ export const AppProvider = ({ children }) => {
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
       setSelectedWorld("earthNight.jpg");
+      setDataOption("population");
     } else if (type === "cable" || type === "CableGlobe") {
       setSelectedWorld("earthDark.png");
+      setDataOption("cable");
+    } else if (type === "polygon") {
+      setDataOption("gdp");
     }
     setVisualizationTypeState(type);
   };
