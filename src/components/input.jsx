@@ -52,7 +52,7 @@ function Input() {
         className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
       >
         {[
-          ["Dark", "earthDark.jpg"],
+          ["Dark", "earthDark.png"],
           ["Blue Marble", "earthMarble.png"],
           ["Night", "earthNight.jpg"],
           ["Rivers", "earthWater.png"],
@@ -115,9 +115,9 @@ function Input() {
       <input
         type="range"
         id="rotation-speed-slider"
-        min="0"
-        max="2"
-        step="0.1"
+        min="-.5"
+        max=".5"
+        step="0.01"
         onChange={(e) => setRotationSpeed(parseFloat(e.target.value))}
         className="p-2 rounded w-full bg-gray-700 text-white mb-4"
       />

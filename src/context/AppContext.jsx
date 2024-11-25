@@ -19,7 +19,6 @@ export const AppProvider = ({ children }) => {
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
 
-
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
@@ -58,26 +57,31 @@ export const AppProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const [countriesData, geoJsonData, locationData] = await Promise.all([
+      const [geoJsonData] = await Promise.all([
+        fetchGeoJson()
+      ]);
+
+      const filteredGeoJsonData = geoJsonData.features.filter(
+        (d) => d.properties.ISO_A2 !== "AQ"
+      );
+
+      localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
+      setGeoJsonData(filteredGeoJsonData);
+
+      // Fetch the rest of the data in the background
+      const [countriesData, locationData] = await Promise.all([
         fetchCountries(),
-        fetchGeoJson(),
         fetchLocationData()
       ]);
 
       const worldBankData = await fetchGDPDataForCountries(countriesData);
       setGdpData(worldBankData);
 
-      const filteredGeoJsonData = geoJsonData.features.filter(
-        (d) => d.properties.ISO_A2 !== "AQ"
-      );
-
       localStorage.setItem("countries", JSON.stringify(countriesData));
-      localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
       localStorage.setItem("worldBankData", JSON.stringify(worldBankData));
       localStorage.setItem("locationData", locationData);
 
       setCountries(countriesData);
-      setGeoJsonData(filteredGeoJsonData);
       setWorldBankData(worldBankData);
       combineData(countriesData, worldBankData, locationData);
     } catch (error) {
@@ -87,14 +91,22 @@ export const AppProvider = ({ children }) => {
 
   // Daten beim Laden der Komponente abrufen oder aus dem lokalen Speicher laden
   useEffect(() => {
-    const storedCountries = localStorage.getItem("countries");
     const storedGeoJsonData = localStorage.getItem("geoJsonData");
+
+    if (storedGeoJsonData) {
+      setGeoJsonData(JSON.parse(storedGeoJsonData));
+    } else {
+      fetchData();
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedCountries = localStorage.getItem("countries");
     const storedWorldBankData = localStorage.getItem("worldBankData");
     const storedLocationData = localStorage.getItem("locationData");
 
-    if (storedCountries && storedGeoJsonData && storedWorldBankData && storedLocationData) {
+    if (storedCountries && storedWorldBankData && storedLocationData) {
       setCountries(JSON.parse(storedCountries));
-      setGeoJsonData(JSON.parse(storedGeoJsonData));
       setWorldBankData(JSON.parse(storedWorldBankData));
       combineData(JSON.parse(storedCountries), JSON.parse(storedWorldBankData), storedLocationData);
     } else {

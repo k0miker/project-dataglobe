@@ -8,6 +8,8 @@ export const fetchCountries = async () => {
       throw new Error("Network response was not ok: " + response.statusText);
     }
     const data = await response.json();
+    // console.log("data: ", data);
+    
     return data.sort((a, b) => a.name.common.localeCompare(b.name.common));
   } catch (error) {
     console.error("Fehler beim Abrufen der Länder:", error);
@@ -19,6 +21,8 @@ export const fetchCountries = async () => {
 export const fetchGeoJson = async () => {
   try {
     const response = await fetch("/ne_110m_admin_0_countries.geojson");
+    console.log("response: ", response);
+    
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }

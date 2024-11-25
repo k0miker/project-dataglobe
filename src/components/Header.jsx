@@ -74,7 +74,7 @@ function Header() {
         </div>
         {/* Liste zur Länderauswahl */}
         <ul
-          className={`absolute top-full mt-2 bg-neutral-900 border p-1 w-[82%] text-white text-xs rounded max-h-[50vh] overflow-y-auto z-[1000] ${
+          className={`absolute top-full mt-2 bg-neutral-900 border p-1 w-[57%] md:[] text-white text-xs rounded max-h-[50vh] overflow-y-auto z-[1000] ${
             isDropdownOpen ? "block" : "hidden"
           }`}
           onMouseLeave={() => setIsDropdownOpen(false)}

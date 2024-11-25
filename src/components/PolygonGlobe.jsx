@@ -91,6 +91,9 @@ function PolygonGlobe() {
   useEffect(() => {
     if (selectedCountry && globeEl.current) {
       globeEl.current.controls().autoRotate = false;
+      setTimeout(() => {
+        globeEl.current.controls().autoRotate = true;
+      }, 5000);
     }
   }, [selectedCountry]);
 
@@ -99,14 +102,41 @@ function PolygonGlobe() {
     if (globeEl.current && country) {
       const { latlng } = country; // Längen- und Breitengrad des Landes
       const [lat, lng] = latlng;
-      globeEl.current.pointOfView({ lat, lng, altitude: 2 }, 2500); // Zoom auf das Land
+      const altitude = 1;
+      globeEl.current.pointOfView({ lat, lng, altitude }, 2500); // Zoom auf das Land
     }
   };
 
   // Reaktion auf Änderungen des ausgewählten Landes
   useEffect(() => {
+    // console.log("selectedCountry: ", selectedCountry);
     animateCameraToCountry(selectedCountry);
-  }, [selectedCountry]);
+  }, [selectedCountry, dimensions.width]);
+
+  useEffect(
+    (country) => {
+      if (globeEl.current && country) {
+        const { latlng } = country; // L��ngen- und Breitengrad des Landes
+        const [lat, lng] = latlng;
+        globeEl.current.pointOfView(
+          { lat, lng, altitude: dimensions.width / 100000 },
+          2500
+        );
+      }
+      if (dimensions.width < 768) {
+        globeEl.current.pointOfView(
+          { lat: 0, lng: 0, altitude: dimensions.width / 100 },
+          2500
+        );
+      } else {
+        globeEl.current.pointOfView(
+          { lat: 0, lng: 0, altitude: dimensions.width / 400 },
+          2500
+        );
+      }
+    },
+    [dimensions.width]
+  );
 
   return (
     <div
@@ -127,7 +157,7 @@ function PolygonGlobe() {
         backgroundImageUrl={background}
         showGraticules={true}
         atmosphereAltitude={0.2}
-        atmosphereColor={"#fff"}
+        atmosphereColor={"#bee7ff"}
         polygonsData={countriesData}
         polygonCapColor={(feat) => {
           if (!showData) return "rgba(0, 0, 0, 0)";
@@ -156,18 +186,25 @@ function PolygonGlobe() {
         }}
         polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
         polygonStrokeColor={(feat) => {
-          return feat === hoveredCountry ? "#FFFFFF" : "#000000";
+          return feat === hoveredCountry ||
+            feat.properties.ISO_A3 === selectedCountry?.cca3
+            ? "#FFFFFF"
+            : "#000000";
         }}
         polygonsTransitionDuration={300}
         polygonAltitude={(d) => {
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben des ausgewählten Landes
-          if (d === hoveredCountry) return 0.2; // Heben des gehovteten Landes
+          if (d === hoveredCountry) return 0.1; // Heben des gehovteten Landes
           return 0.006;
         }}
         polygonLabel={({ properties: d }) => `
-          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-          Bevölkerung: <i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
-          GDP: <i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i>
+        <div class="globe-label">
+          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
+          Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
+          GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
+          Economy: <br /> <i>${d.ECONOMY}</i>
+         <br> <i>${d.INCOME_GRP}</i>
+        </div>
         `}
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
@@ -177,11 +214,36 @@ function PolygonGlobe() {
             (country) => country.cca3 === clickedCountry.properties.ISO_A3
           );
           if (country) {
-            setSelectedCountry(country); // Setze das ausgewählte Land
+            setSelectedCountry((prevCountry) =>
+              prevCountry?.cca3 === country.cca3
+                ? { ...country, altitude: 0.1 }
+                : country
+            ); // Setze das ausgewählte Land und erhöhe die Altitude bei erneutem Klick
           }
         }}
       />
+      <style>
+        {`
+          .globe-label {          
+            font-size: .8rem;
+            color: #fff;
+            background: rgba(65, 65, 65, 0.545);
+            
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            b{
+              font-size: 1rem;
+              color: #ff6e6e;
+            }
+            i{
+              font-size: 0.7rem;
+              font-family: monospace;
+            }
+          }
+        `}
+      </style>
     </div>
+    
   );
 }
 
