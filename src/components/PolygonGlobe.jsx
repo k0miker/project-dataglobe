@@ -4,7 +4,7 @@ import * as d3 from "d3";
 import background from "../assets/images/background.png"; // Hintergrundbild
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
-import Moon from "./moon";
+import Moon from "./Moon";
 import LoadingSpinner from "./LoadingSpinner";
 import Sun from "./Sun";
 
