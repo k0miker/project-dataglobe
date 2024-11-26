@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
-import background from "../assets/images/background.png"; // Hintergrundbild
 import * as d3 from "d3";
+import background from "../assets/images/background.png"; // Hintergrundbild
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
+import Moon from "./moon";
 
 function PolygonGlobe() {
   const {
@@ -132,7 +133,7 @@ function PolygonGlobe() {
       const { latlng } = country; // Längen- und Breitengrad des Landes
       const [lat, lng] = latlng;
       const altitude = 1;
-      globeEl.current.pointOfView({ lat, lng, altitude }, 2500); // Zoom auf das Land
+      globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Land
     }
   };
 
@@ -149,18 +150,18 @@ function PolygonGlobe() {
         const [lat, lng] = latlng;
         globeEl.current.pointOfView(
           { lat, lng, altitude: dimensions.width / 100000 },
-          2500
+          500
         );
       }
       if (dimensions.width < 768) {
         globeEl.current.pointOfView(
           { lat: 0, lng: 0, altitude: dimensions.width / 100 },
-          2500
+          500
         );
       } else {
         globeEl.current.pointOfView(
           { lat: 0, lng: 0, altitude: dimensions.width / 400 },
-          2500
+          500
         );
       }
     },
@@ -230,7 +231,7 @@ function PolygonGlobe() {
         polygonAltitude={(d) => {
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben des ausgewählten Landes
           if (d === hoveredCountry) return 0.1; // Heben des gehovteten Landes
-          return 0.006;
+          return 0.01;
         }}
         polygonLabel={({ properties: d }) => `
         <div class="globe-label">
@@ -257,6 +258,7 @@ function PolygonGlobe() {
           }
         }}
       />
+      <Moon scene={globeEl.current?.scene()} />
       <style>
         {`
           .globe-label {          
@@ -278,7 +280,6 @@ function PolygonGlobe() {
         `}
       </style>
     </div>
-    
   );
 }
 

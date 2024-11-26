@@ -94,7 +94,7 @@ function HeatmapGlobe() {
   // Farbskala
   const colorScale = useMemo(() => {
     console.log("Setting color scale for color scheme:", colorScheme);
-    return d3.scaleSequentialSqrt(d3[`interpolate${colorScheme}`]).domain([0, 0.5]); // Flacherer Verlauf
+    return d3.scaleSequentialSqrt(d3[`interpolate${colorScheme}`]).domain([0, 0.5]); 
   }, [colorScheme]);
 
   return (
@@ -108,17 +108,17 @@ function HeatmapGlobe() {
         heatmapPointLng="lng" // Längengrad
         heatmapPointWeight={d => d.value * (dataOption === "BIP" ? 300 : 0.5)} // Gewicht erhöhen
         heatmapBandwidth={dataOption === "BIP" ? 1.8 : 1.5} // Bandbreite erhöhen
-        heatmapTopAltitude={0.5}
         heatmapSizeAttenuation={dataOption === "BIP" ? 0.1 : 0.5}
+        heatmapTopAltitude={1.5}
+        heatmapAltitude={(d) => d.value * 10} // 3D Höhe der Heatmap-Punkte
         heatmapBaseAltitude={0.01} // Basis-Höhe
         heatmapColorSaturation={1.0} // Weniger kräftige Farben
         enablePointerInteraction={false}
-        heatmapSize={0.7} // Größe der Heatmap-Punkte erhöhen
+        heatmapSize={.7} // Größe der Heatmap-Punkte erhöhen
         heatmapColorScale={(value) => colorScale(value)} // Farbskala
         showAtmosphere={true} // Atmosphäre anzeigen
         atmosphereAltitude={0.2} // Atmosphärenhöhe
         showGraticules={true} // Längen- und Breitengrade anzeigen
-        heatmapAltitude={(d) => d.value * 100.1} // 3D Höhe der Heatmap-Punkte
         polygonsData={geoJsonData} // GeoJSON-Daten für Länderumrisse
         polygonCapColor={() => "rgba(0, 0, 0, 0)"} // Keine Füllfarbe
         polygonSideColor={() => "rgba(0, 0, 0, 0)"} // Keine Seitenfarbe
