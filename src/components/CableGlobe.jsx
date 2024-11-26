@@ -3,6 +3,8 @@ import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
 import { useAppContext } from "../context/AppContext";
 import LoadingSpinner from "./LoadingSpinner";
+import Moon from "./Moon";
+import Sun from "./Sun";
 
 function CableGlobe() {
   const { selectedWorld, rotationSpeed } = useAppContext();
@@ -97,6 +99,8 @@ function CableGlobe() {
         pathDashGap={0.008}
         pathDashAnimateTime={12000}
       />
+      <Moon scene={globeEl.current?.scene()} />
+      <Sun scene={globeEl.current?.scene()} />
     </div>
   );
 }

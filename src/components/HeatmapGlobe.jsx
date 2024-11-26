@@ -4,12 +4,18 @@ import * as d3 from "d3";
 import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
 import LoadingSpinner from "./LoadingSpinner";
+import Moon from "./Moon";
+import Sun from "./Sun";
 
 function HeatmapGlobe() {
   const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   // Heatmap-Daten abrufen
   const fetchHeatmapData = async () => {
@@ -94,6 +100,20 @@ function HeatmapGlobe() {
     fetchHeatmapData();
   }, [dataOption, colorScheme]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   // Farbskala
   const colorScale = useMemo(() => {
     console.log("Setting color scale for color scheme:", colorScheme);
@@ -109,6 +129,8 @@ function HeatmapGlobe() {
       )}
       <Globe
         ref={globeEl}
+        width={dimensions.width}
+        height={dimensions.height}
         globeImageUrl={selectedWorld} // Globus-Hintergrund
         backgroundImageUrl={background} // Hintergrundbild
         heatmapsData={loading || !showData ? [] : [heatmapData]} // Heatmap-Daten (Plural) (Array)
@@ -143,6 +165,8 @@ function HeatmapGlobe() {
           </div>
         ` : null} // Keine Labels, wenn showData aus ist
       />
+      <Moon scene={globeEl.current?.scene()} />
+      <Sun scene={globeEl.current?.scene()} />
     </div>
   );
 }

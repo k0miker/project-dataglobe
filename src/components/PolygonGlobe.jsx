@@ -6,6 +6,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 import Moon from "./moon";
 import LoadingSpinner from "./LoadingSpinner";
+import Sun from "./Sun";
 
 function PolygonGlobe() {
   const {
@@ -17,7 +18,7 @@ function PolygonGlobe() {
     setSelectedCountry,
     geoJsonData,
     showBorders,
-    colorScheme
+    colorScheme,
   } = useAppContext();
 
   const globeEl = useRef(); // Referenz für den Globe
@@ -28,6 +29,7 @@ function PolygonGlobe() {
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
@@ -86,7 +88,12 @@ function PolygonGlobe() {
     };
 
     const maxVal = Math.max(...geoJsonData.map(getVal));
-    setColorScale(() => d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, maxVal * 0.8])); // Intensivere Farben
+    setColorScale(() =>
+      d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([
+        0,
+        maxVal * 0.8,
+      ])
+    ); // Intensivere Farben
     setCountriesData(geoJsonData);
     console.log("GeoJSON data processed successfully.");
   };
@@ -121,7 +128,11 @@ function PolygonGlobe() {
       const { latlng } = country; // Längen- und Breitengrad des Landes
       const [lat, lng] = latlng;
       const altitude = 1;
+      setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
       globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Land
+      setTimeout(() => {
+        globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
+      }, 5000); // Nach 5 Sekunden zurückzoomen
     }
   };
 
@@ -158,7 +169,9 @@ function PolygonGlobe() {
 
   useEffect(() => {
     console.log("Setting color scale for color scheme:", colorScheme);
-    setColorScale(() => d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, 1]));
+    setColorScale(() =>
+      d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, 1])
+    );
     processGeoJsonData(); // Re-parse data when color scheme changes
   }, [colorScheme]);
 
@@ -219,8 +232,10 @@ function PolygonGlobe() {
         atmosphereColor={"#bee7ff"}
         polygonsData={countriesData}
         polygonCapColor={(feat) => {
-          if (!showData && feat !== hoveredCountry && feat !== selectedCountry) return "rgba(0, 0, 0, 0)";
-          if (!showData && (feat === hoveredCountry || feat === selectedCountry)) return d3[`interpolate${colorScheme}`](1);
+          if (!showData && feat !== hoveredCountry && feat !== selectedCountry)
+            return "rgba(0, 0, 0, 4)";
+          if (!showData && feat === hoveredCountry)
+            return "rgba(188, 188, 188, 0.522)";
           const getVal = (feat) => {
             if (dataOption === "gdp") {
               return (
@@ -245,30 +260,43 @@ function PolygonGlobe() {
             : color.formatRgb();
         }}
         polygonSideColor={() => {
-          if (showData || showBorders) return "rgba(0, 0, 0, 0.522)";
-          return "rgba(0, 0, 0, 0.002)";
+          if (showData) return "rgba(0, 0, 0, 0.522)";
+          if (showData && showBorders) return "rgba(0, 0, 0, 0.522)";
+          return null;
         }}
         polygonStrokeColor={(feat) => {
-          if (!showBorders || (!showData && feat !== hoveredCountry && feat !== selectedCountry)) return "rgba(0, 0, 0, 0)";
+          if (
+            !showBorders ||
+            (!showData && feat !== hoveredCountry && feat !== selectedCountry)
+          )
+            return "rgba(0, 0, 0, 0)";
           return feat === hoveredCountry ||
             feat.properties.ISO_A3 === selectedCountry?.cca3
             ? "#FFFFFF"
             : "#000000";
         }}
-        polygonsTransitionDuration={400}
         polygonAltitude={(d) => {
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben des ausgewählten Landes
           if (d === hoveredCountry && showData) return 0.1; // Heben des gehovteten Landes
-          return showData ? 0.01 :0.01; // Keine Höhe, wenn showData aus ist
+          return showData ? 0.0048 : -0.03; // Keine Höhe, wenn showData aus ist
         }}
+        polygonStrokeAltitude={(d) => {
+          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
+          if (d === hoveredCountry && showData) return 0.1; // Heben der Umrandung des gehovteten Landes
+          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
+          if (d === hoveredCountry && showData) return 0.1; // Heben der Umrandung des gehovteten Landes
+          if (showBorders && !showData) return 1; // Höhe der Umrandung
+          return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
+        }}
+        polygonsTransitionDuration={400}
         polygonLabel={({ properties: d }) => `
-          <div class="globe-label">
-            <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
-            Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
-            GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
-            Economy: <br /> <i>${d.ECONOMY}</i>
-           <br> <i>${d.INCOME_GRP}</i>
-          </div>
+        <div class="globe-label">
+        <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
+        Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
+        GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
+        Economy: <br /> <i>${d.ECONOMY}</i>
+        <br> <i>${d.INCOME_GRP}</i>
+        </div>
         `} // Keine Labels, wenn showData aus ist
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
@@ -286,6 +314,7 @@ function PolygonGlobe() {
         }}
       />
       <Moon scene={globeEl.current?.scene()} />
+      <Sun scene={globeEl.current?.scene()} />
       <style>
         {`
           .globe-label {          

@@ -12,15 +12,8 @@ const Moon = ({ scene }) => {
       const moonGeometry = new THREE.SphereGeometry(100, 32, 32); // Noch größere Mond
       const moonMaterial = new THREE.MeshBasicMaterial({ map: moonTexture });
       const moon = new THREE.Mesh(moonGeometry, moonMaterial);
-      moon.position.set(5000, 0, 4000); // Weiter weg positionieren
+      moon.position.set(5000, 50, 4000); // Weiter weg positionieren
       scene.add(moon);
-
-      const light = new THREE.DirectionalLight(0xffffff, 5, );
-      light.position.set(-30000, 0, -1000);
-      scene.add(light);
-
-      // Add ambient light to ensure the globe is lit
-  
 
       moonRef.current = moon;
     }
