@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import background from "../assets/images/background.png";
 import { useAppContext } from "../context/AppContext";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "./LoadingSpinner"; 
 import Moon from "./Moon";
-import Sun from "./Sun";
+import Sun from "./sun";
 
 function CableGlobe() {
   const { selectedWorld, rotationSpeed } = useAppContext();
