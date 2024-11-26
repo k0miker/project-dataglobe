@@ -5,6 +5,7 @@ import background from "../assets/images/background.png"; // Hintergrundbild
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 import Moon from "./moon";
+import LoadingSpinner from "./LoadingSpinner";
 
 function PolygonGlobe() {
   const {
@@ -26,6 +27,7 @@ function PolygonGlobe() {
     d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, 1])
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
@@ -51,11 +53,14 @@ function PolygonGlobe() {
     const getRestCountriesData = async () => {
       try {
         console.log("Fetching RestCountries data...");
+        setLoading(true);
         const data = await fetchCountries();
         setRestCountriesData(data);
+        setLoading(false);
         console.log("RestCountries data fetched successfully.");
       } catch (error) {
         console.error("Fehler beim Abrufen der RestCountries-Daten:", error);
+        setLoading(false);
       }
     };
     getRestCountriesData();
@@ -198,6 +203,11 @@ function PolygonGlobe() {
       }}
       onClick={() => setSelectedCountry(null)} // Deselect country on empty space click
     >
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <LoadingSpinner />
+        </div>
+      )}
       <Globe
         ref={globeEl}
         width={dimensions.width}

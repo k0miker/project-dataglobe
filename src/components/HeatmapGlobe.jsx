@@ -3,9 +3,10 @@ import Globe from "react-globe.gl";
 import * as d3 from "d3";
 import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
+import LoadingSpinner from "./LoadingSpinner";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,9 +69,11 @@ function HeatmapGlobe() {
         value: d.value / maxVal, // Normalisierung
       }));
 
-      setHeatmapData(normalizedData);
-      setLoading(false);
-      console.log("Heatmap data fetched successfully.");
+      setTimeout(() => {
+        setHeatmapData(normalizedData);
+        setLoading(false);
+        console.log("Heatmap data fetched successfully.");
+      }, 1000); // Add delay to loading spinner
     } catch (error) {
       console.error("Fehler beim Abrufen der Heatmap-Daten:", error);
       setLoading(false);
@@ -99,6 +102,11 @@ function HeatmapGlobe() {
 
   return (
     <div className="w-full h-full absolute overflow-hidden">
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <LoadingSpinner />
+        </div>
+      )}
       <Globe
         ref={globeEl}
         globeImageUrl={selectedWorld} // Globus-Hintergrund
@@ -106,10 +114,10 @@ function HeatmapGlobe() {
         heatmapsData={loading || !showData ? [] : [heatmapData]} // Heatmap-Daten (Plural) (Array)
         heatmapPointLat="lat" // Breitengrad
         heatmapPointLng="lng" // Längengrad
-        heatmapPointWeight={d => d.value * (dataOption === "BIP" ? 300 : 0.5)} // Gewicht erhöhen
-        heatmapBandwidth={dataOption === "BIP" ? 1.8 : 1.5} // Bandbreite erhöhen
+        heatmapPointWeight={d => d.value * (dataOption === "BIP" ? 3000 : 0.5)} // Gewicht erhöhen
+        heatmapBandwidth={heatmapBandwidth} // Bandbreite erhöhen
         heatmapSizeAttenuation={dataOption === "BIP" ? 0.1 : 0.5}
-        heatmapTopAltitude={1.5}
+        heatmapTopAltitude={heatmapTopAltitude}
         heatmapAltitude={(d) => d.value * 10} // 3D Höhe der Heatmap-Punkte
         heatmapBaseAltitude={0.01} // Basis-Höhe
         heatmapColorSaturation={1.0} // Weniger kräftige Farben

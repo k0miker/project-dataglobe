@@ -18,6 +18,8 @@ export const AppProvider = ({ children }) => {
   const [resize, setResize] = useState(false);
   const [showBorders, setShowBorders] = useState(true); // State für Länderumrisse
   const [colorScheme, setColorScheme] = useState("Reds");
+  const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.5);
+  const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.0);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -128,7 +130,7 @@ export const AppProvider = ({ children }) => {
       dataOption, setDataOption, showData, setShowData, rotationSpeed, 
       setRotationSpeed, visualizationType, setVisualizationType, countries, 
       clouds, setClouds, geoJsonData, gdpData, showBorders, setShowBorders, 
-      colorScheme, setColorScheme 
+      colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth 
     }}>
       {children}
     </AppContext.Provider>

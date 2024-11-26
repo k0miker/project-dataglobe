@@ -17,6 +17,11 @@ function Input() {
     setShowBorders,
     colorScheme,
     setColorScheme,
+    heatmapTopAltitude,
+    setHeatmapTopAltitude,
+    heatmapBandwidth,
+    setHeatmapBandwidth,
+    rotationSpeed, // Add rotationSpeed to the destructured context
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -108,11 +113,51 @@ function Input() {
             <option value="cable">Kabel</option>
           )}
         </select>
-
+        {/* Auswahl des Visualisierungstyps */}
+        <label
+          htmlFor="visualization-type-select"
+          className="mb-2 font-bold text-sm"
+        >
+          Visualisierungstyp:
+        </label>
+        <select
+          id="visualization-type-select"
+          value={visualizationType}
+          onChange={(e) => {
+            setVisualizationType(e.target.value);
+          }}
+          className="p-2 mb-4 rounded w-full bg-transparent text-xs border border-gray-300"
+        >
+          <option value="polygon">Polygon</option>
+          <option value="heatmap">Heatmap</option>
+          <option value="CableGlobe">CableGlobe</option>
+        </select>
+  {/* Auswahl des Farbschemas */}
+  {visualizationType !== "heatmap" && (
+          <>
+            <label htmlFor="color-scheme-select" className=" mt-4 font-bold text-sm">
+              Farbschema:
+            </label>
+            <select
+              id="color-scheme-select"
+              value={colorScheme}
+              onChange={(e) => {
+                setColorScheme(e.target.value);
+              }}
+              className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
+            >
+              {["Reds", "Blues", "Greens", "Purples", "Oranges"].map((scheme) => (
+                <option key={scheme} value={scheme}>
+                  {scheme}
+                </option>
+              ))}
+            </select>
+          </>
+        )}
         {/* Umschalten der Datenanzeige */}
         <label
           htmlFor="show-data-checkbox"
-          className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
+          className="mb-2 font-bold text-sm flex items-center mt-4 justify-start cursor-pointer"
         >
           <span className="mr-2 text-xs">Daten zeigen:</span>
           <div className="relative">
@@ -180,52 +225,45 @@ function Input() {
           min="-.5"
           max=".5"
           step="0.01"
+          value={rotationSpeed} // Ensure the slider reflects the current state value
           onChange={(e) => {
             setRotationSpeed(parseFloat(e.target.value));
           }}
           className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
         />
 
-        {/* Auswahl des Visualisierungstyps */}
-        <label
-          htmlFor="visualization-type-select"
-          className="mb-2 font-bold text-sm"
-        >
-          Visualisierungstyp:
-        </label>
-        <select
-          id="visualization-type-select"
-          value={visualizationType}
-          onChange={(e) => {
-            setVisualizationType(e.target.value);
-          }}
-          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300"
-        >
-          <option value="polygon">Polygon</option>
-          <option value="heatmap">Heatmap</option>
-          <option value="CableGlobe">CableGlobe</option>
-        </select>
 
-        {/* Auswahl des Farbschemas */}
-        {visualizationType !== "heatmap" && (
+      
+
+        {/* Schieberegler für Heatmap Top Altitude und Bandwidth */}
+        {visualizationType === "heatmap" && (
           <>
-            <label htmlFor="color-scheme-select" className="mb-2 font-bold text-sm">
-              Farbschema:
+            <label htmlFor="heatmap-top-altitude-slider" className="mb-2 font-bold text-sm">
+              Altitude:
             </label>
-            <select
-              id="color-scheme-select"
-              value={colorScheme}
-              onChange={(e) => {
-                setColorScheme(e.target.value);
-              }}
-              className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-            >
-              {["Reds", "Blues", "Greens", "Purples", "Oranges"].map((scheme) => (
-                <option key={scheme} value={scheme}>
-                  {scheme}
-                </option>
-              ))}
-            </select>
+            <input
+              type="range"
+              id="heatmap-top-altitude-slider"
+              min="0.3"
+              max="1.5"
+              step="0.1"
+              value={heatmapTopAltitude}
+              onChange={(e) => setHeatmapTopAltitude(parseFloat(e.target.value))}
+              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+            />
+            <label htmlFor="heatmap-bandwidth-slider" className="mb-2 font-bold text-sm">
+              Bandwidth:
+            </label>
+            <input
+              type="range"
+              id="heatmap-bandwidth-slider"
+              min="0.3"
+              max="1.5"
+              step="0.1"
+              value={heatmapBandwidth}
+              onChange={(e) => setHeatmapBandwidth(parseFloat(e.target.value))}
+              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+            />
           </>
         )}
       </div>

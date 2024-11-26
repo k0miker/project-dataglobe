@@ -1,56 +1,61 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
-import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
+import { useAppContext } from "../context/AppContext";
+import LoadingSpinner from "./LoadingSpinner";
 
 function CableGlobe() {
   const { selectedWorld, rotationSpeed } = useAppContext();
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchCableData = async () => {
-      try {
-        console.log("Fetching cable data...");
-        const response = await fetch("/cables.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok: " + response.statusText);
-        }
-        const cablesGeo = await response.json();
+  const fetchCableData = async () => {
+    try {
+      console.log("Fetching cable data...");
+      setLoading(true);
+      const response = await fetch("/cables.json");
+      if (!response.ok) {
+        throw new Error("Network response was not ok: " + response.statusText);
+      }
+      const cablesGeo = await response.json();
 
-        const paths = cablesGeo.features.flatMap(({ geometry, properties }) => {
-          const { type, coordinates } = geometry;
+      const paths = cablesGeo.features.flatMap(({ geometry, properties }) => {
+        const { type, coordinates } = geometry;
 
-          if (type === "MultiLineString") {
-            return coordinates.map((lineCoords) => ({
-              coords: lineCoords.map(([lng, lat]) => ({
+        if (type === "MultiLineString") {
+          return coordinates.map((lineCoords) => ({
+            coords: lineCoords.map(([lng, lat]) => ({
+              lat,
+              lng,
+            })),
+            properties,
+          }));
+        } else if (type === "LineString") {
+          return [
+            {
+              coords: coordinates.map(([lng, lat]) => ({
                 lat,
                 lng,
               })),
               properties,
-            }));
-          } else if (type === "LineString") {
-            return [
-              {
-                coords: coordinates.map(([lng, lat]) => ({
-                  lat,
-                  lng,
-                })),
-                properties,
-              },
-            ];
-          } else {
-            return [];
-          }
-        });
+            },
+          ];
+        } else {
+          return [];
+        }
+      });
 
-        setCablePaths(paths);
-        console.log("Cable data fetched successfully.");
-      } catch (error) {
-        console.error("Error fetching cable data:", error);
-      }
-    };
+      setCablePaths(paths);
+      setLoading(false);
+      console.log("Cable data fetched successfully.");
+    } catch (error) {
+      console.error("Error fetching cable data:", error);
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchCableData();
   }, []);
 
@@ -73,6 +78,11 @@ function CableGlobe() {
 
   return (
     <div className="w-full h-full absolute overflow-hidden">
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <LoadingSpinner />
+        </div>
+      )}
       <Globe
         ref={globeEl}
         globeImageUrl={selectedWorld}
