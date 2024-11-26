@@ -15,7 +15,7 @@ const Moon = ({ scene }) => {
       moon.position.set(5000, 0, 4000); // Weiter weg positionieren
       scene.add(moon);
 
-      const light = new THREE.DirectionalLight(0xffffff, 5, 0, 1);
+      const light = new THREE.DirectionalLight(0xffffff, 5, );
       light.position.set(-30000, 0, -1000);
       scene.add(light);
 

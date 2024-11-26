@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 import background from "../assets/images/background.png";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -103,7 +103,7 @@ function HeatmapGlobe() {
         ref={globeEl}
         globeImageUrl={selectedWorld} // Globus-Hintergrund
         backgroundImageUrl={background} // Hintergrundbild
-        heatmapsData={loading ? [] : [heatmapData]} // Heatmap-Daten (Plural) (Array)
+        heatmapsData={loading || !showData ? [] : [heatmapData]} // Heatmap-Daten (Plural) (Array)
         heatmapPointLat="lat" // Breitengrad
         heatmapPointLng="lng" // Längengrad
         heatmapPointWeight={d => d.value * (dataOption === "BIP" ? 300 : 0.5)} // Gewicht erhöhen
@@ -124,6 +124,16 @@ function HeatmapGlobe() {
         polygonSideColor={() => "rgba(0, 0, 0, 0)"} // Keine Seitenfarbe
         polygonStrokeColor={() => (showBorders ? "#FFFFFF" : "rgba(0, 0, 0, 0)")} // Stroke-Farbe
         polygonsTransitionDuration={300}
+        polygonAltitude={() => (showData ? 0.01 : 0)} // Keine Höhe, wenn showData aus ist
+        polygonLabel={showData ? ({ properties: d }) => `
+          <div class="globe-label">
+            <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
+            Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
+            GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
+            Economy: <br /> <i>${d.ECONOMY}</i>
+           <br> <i>${d.INCOME_GRP}</i>
+          </div>
+        ` : null} // Keine Labels, wenn showData aus ist
       />
     </div>
   );

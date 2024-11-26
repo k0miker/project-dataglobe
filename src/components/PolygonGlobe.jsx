@@ -62,7 +62,7 @@ function PolygonGlobe() {
   }, []);
 
   // GeoJSON Daten verarbeiten
-  useEffect(() => {
+  const processGeoJsonData = () => {
     console.log("Processing GeoJSON data...");
     const getVal = (feat) => {
       if (dataOption === "gdp") {
@@ -84,28 +84,11 @@ function PolygonGlobe() {
     setColorScale(() => d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, maxVal * 0.8])); // Intensivere Farben
     setCountriesData(geoJsonData);
     console.log("GeoJSON data processed successfully.");
-  }, [dataOption, restCountriesData, geoJsonData, colorScheme]);
+  };
 
   useEffect(() => {
-    const getVal = (feat) => {
-      if (dataOption === "gdp") {
-        return (
-          feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST)
-        );
-      } else if (dataOption === "density") {
-        const country = restCountriesData.find(
-          (country) => country.cca3 === feat.properties.ISO_A3
-        );
-        if (country) {
-          return country.population / Math.max(1, country.area);
-        }
-      }
-      return 0;
-    };
-
-    const maxVal = Math.max(...geoJsonData.map(getVal));
-    setColorScale(() => d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, maxVal * 0.8])); // Intensivere Farben
-  }, [colorScheme]);
+    processGeoJsonData();
+  }, [dataOption, restCountriesData, geoJsonData, colorScheme]);
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
@@ -171,7 +154,37 @@ function PolygonGlobe() {
   useEffect(() => {
     console.log("Setting color scale for color scheme:", colorScheme);
     setColorScale(() => d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, 1]));
+    processGeoJsonData(); // Re-parse data when color scheme changes
   }, [colorScheme]);
+
+  useEffect(() => {
+    const controls = globeEl.current.controls();
+    const handleUserInteraction = () => {
+      if (controls.autoRotate) {
+        controls.autoRotate = false;
+        setTimeout(() => {
+          controls.autoRotate = true;
+        }, 5000);
+      }
+    };
+
+    controls.addEventListener("start", handleUserInteraction);
+    return () => {
+      controls.removeEventListener("start", handleUserInteraction);
+    };
+  }, []);
+
+  useEffect(() => {
+    const controls = globeEl.current.controls();
+    const handleUserInteraction = () => {
+      controls.autoRotate = false;
+    };
+
+    controls.addEventListener("start", handleUserInteraction);
+    return () => {
+      controls.removeEventListener("start", handleUserInteraction);
+    };
+  }, []);
 
   return (
     <div
@@ -183,6 +196,7 @@ function PolygonGlobe() {
         left: 0,
         overflow: "hidden",
       }}
+      onClick={() => setSelectedCountry(null)} // Deselect country on empty space click
     >
       <Globe
         ref={globeEl}
@@ -195,7 +209,8 @@ function PolygonGlobe() {
         atmosphereColor={"#bee7ff"}
         polygonsData={countriesData}
         polygonCapColor={(feat) => {
-          if (!showData) return "rgba(0, 0, 0, 0)";
+          if (!showData && feat !== hoveredCountry && feat !== selectedCountry) return "rgba(0, 0, 0, 0)";
+          if (!showData && (feat === hoveredCountry || feat === selectedCountry)) return d3[`interpolate${colorScheme}`](1);
           const getVal = (feat) => {
             if (dataOption === "gdp") {
               return (
@@ -215,13 +230,16 @@ function PolygonGlobe() {
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Transparenz anpassen
-          return feat === hoveredCountry
+          return feat === hoveredCountry || feat === selectedCountry
             ? color.formatRgb()
             : color.formatRgb();
         }}
-        polygonSideColor={() => "rgba(0, 0, 0, 0.522)"}
+        polygonSideColor={() => {
+          if (showData || showBorders) return "rgba(0, 0, 0, 0.522)";
+          return "rgba(0, 0, 0, 0.002)";
+        }}
         polygonStrokeColor={(feat) => {
-          if (!showBorders) return "rgba(0, 0, 0, 0)";
+          if (!showBorders || (!showData && feat !== hoveredCountry && feat !== selectedCountry)) return "rgba(0, 0, 0, 0)";
           return feat === hoveredCountry ||
             feat.properties.ISO_A3 === selectedCountry?.cca3
             ? "#FFFFFF"
@@ -230,31 +248,30 @@ function PolygonGlobe() {
         polygonsTransitionDuration={400}
         polygonAltitude={(d) => {
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben des ausgewählten Landes
-          if (d === hoveredCountry) return 0.1; // Heben des gehovteten Landes
-          return 0.01;
+          if (d === hoveredCountry && showData) return 0.1; // Heben des gehovteten Landes
+          return showData ? 0.01 :0.01; // Keine Höhe, wenn showData aus ist
         }}
         polygonLabel={({ properties: d }) => `
-        <div class="globe-label">
-          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
-          Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
-          GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
-          Economy: <br /> <i>${d.ECONOMY}</i>
-         <br> <i>${d.INCOME_GRP}</i>
-        </div>
-        `}
+          <div class="globe-label">
+            <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
+            Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
+            GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
+            Economy: <br /> <i>${d.ECONOMY}</i>
+           <br> <i>${d.INCOME_GRP}</i>
+          </div>
+        `} // Keine Labels, wenn showData aus ist
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
-        onPolygonClick={(clickedCountry) => {
+        onPolygonClick={(clickedCountry, event) => {
+          event.stopPropagation(); // Prevent deselecting when clicking on a country
           const country = restCountriesData.find(
             (country) => country.cca3 === clickedCountry.properties.ISO_A3
           );
           if (country) {
             setSelectedCountry((prevCountry) =>
-              prevCountry?.cca3 === country.cca3
-                ? { ...country, altitude: 0.1 }
-                : country
-            ); // Setze das ausgewählte Land und erhöhe die Altitude bei erneutem Klick
+              prevCountry?.cca3 === country.cca3 ? null : country
+            ); // Deselect if clicking on the same country again
           }
         }}
       />
