@@ -15,6 +15,8 @@ function Input() {
     dataOption,
     showBorders,
     setShowBorders,
+    colorScheme,
+    setColorScheme,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -45,132 +47,189 @@ function Input() {
     <>
       {/* Auswahl der Karte */}
       <div className="p-6">
-      <label htmlFor="world-select" className="mb-2 font-bold text-sm">
-        Karte:
-      </label>
-      <select
-        id="world-select"
-        value={selectedWorld}
-        onChange={(e) => setSelectedWorld(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-      >
-        {[
-          ["Dark", "earthDark.png"],
-          ["Blue Marble", "earthMarble.png"],
-          ["Night", "earthNight.jpg"],
-          ["Rivers", "earthWater.png"],
-          ["Rivers B&W", "earthWaterBW.png"],
-          ["Topology", "earthTopology.png"],
-          ["Continets", "earthOcean.webp"],
-          ["Tectonic", "earthTectonic.jpg"],
-          ["Ultra Resolution", "earthUltra.jpg"],
-        ].map(([name, img]) => (
-          <option key={img} value={img}>
-            {name}
-          </option>
-        ))}
-      </select>
+        <label htmlFor="world-select" className="mb-2 font-bold text-sm">
+          Karte:
+        </label>
+        <select
+          id="world-select"
+          value={selectedWorld}
+          onChange={(e) => {
+            setSelectedWorld(e.target.value);
+          }}
+          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
+        >
+          {[
+            ["Dark", "earthDark.png"],
+            ["Blue Marble", "earthMarble.png"],
+            ["Night", "earthNight.jpg"],
+            ["Rivers", "earthWater.png"],
+            ["Rivers B&W", "earthWaterBW.png"],
+            ["Topology", "earthTopology.png"],
+            ["Continets", "earthOcean.webp"],
+            ["Tectonic", "earthTectonic.jpg"],
+            ["Ultra Resolution", "earthUltra.jpg"],
+          ].map(([name, img]) => (
+            <option key={img} value={img}>
+              {name}
+            </option>
+          ))}
+        </select>
 
-      {/* Datenoption */}
-      <label htmlFor="data-option-select" className="mb-2 font-bold text-sm text-left">
-        Datenoption:
-      </label>
-      <select
-        id="data-option-select"
-        value={dataOption}
-        onChange={(e) => setDataOption(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-      >
-        {visualizationType === "polygon" && (
+        {/* Datenoption */}
+        <label
+          htmlFor="data-option-select"
+          className="mb-2 font-bold text-sm text-left"
+        >
+          Datenoption:
+        </label>
+        <select
+          id="data-option-select"
+          value={dataOption}
+          onChange={(e) => {
+            setDataOption(e.target.value);
+          }}
+          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
+        >
+          {visualizationType === "polygon" && (
+            <>
+              <option value="gdp">BIP pro Kopf</option>
+              <option value="density">Bevölkerungsdichte</option>
+            </>
+          )}
+          {visualizationType === "heatmap" && (
+            <>
+              <option value="population">Bevölkerung</option>
+              <option value="volcanoes">Vulkane</option>
+              {/* <option value="earthquakes">Erdbeben</option> */}
+              <option value="BIP">GDP</option>
+            </>
+          )}
+          {visualizationType === "CableGlobe" && (
+            <option value="cable">Kabel</option>
+          )}
+        </select>
+
+        {/* Umschalten der Datenanzeige */}
+        <label
+          htmlFor="show-data-checkbox"
+          className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
+        >
+          <span className="mr-2 text-xs">Daten zeigen:</span>
+          <div className="relative">
+            <input
+              type="checkbox"
+              id="show-data-checkbox"
+              checked={showData}
+              onChange={(e) => {
+                setShowData(e.target.checked);
+              }}
+              className="sr-only"
+            />
+            <div
+              className={`block ${
+                showData ? "bg-green-600" : "bg-red-600"
+              } w-7 h-4 rounded-full`}
+            ></div>
+            <div
+              className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
+                showData ? "translate-x-full bg-red-500" : ""
+              }`}
+            ></div>
+          </div>
+        </label>
+
+        {/* Umschalten der Länderumrisse */}
+        <label
+          htmlFor="show-borders-checkbox"
+          className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
+        >
+          <span className="mr-2 text-xs">Umrisse zeigen:</span>
+          <div className="relative">
+            <input
+              type="checkbox"
+              id="show-borders-checkbox"
+              checked={showBorders}
+              onChange={(e) => {
+                setShowBorders(e.target.checked);
+              }}
+              className="sr-only"
+            />
+            <div
+              className={`block ${
+                showBorders ? "bg-green-600" : "bg-red-600"
+              } w-7 h-4 rounded-full`}
+            ></div>
+            <div
+              className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
+                showBorders ? "translate-x-full bg-red-500" : ""
+              }`}
+            ></div>
+          </div>
+        </label>
+
+        {/* Schieberegler für Rotationsgeschwindigkeit */}
+        <label
+          htmlFor="rotation-speed-slider"
+          className="mb-2 font-bold text-sm"
+        >
+          Rotation:
+        </label>
+        <input
+          type="range"
+          id="rotation-speed-slider"
+          min="-.5"
+          max=".5"
+          step="0.01"
+          onChange={(e) => {
+            setRotationSpeed(parseFloat(e.target.value));
+          }}
+          className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+        />
+
+        {/* Auswahl des Visualisierungstyps */}
+        <label
+          htmlFor="visualization-type-select"
+          className="mb-2 font-bold text-sm"
+        >
+          Visualisierungstyp:
+        </label>
+        <select
+          id="visualization-type-select"
+          value={visualizationType}
+          onChange={(e) => {
+            setVisualizationType(e.target.value);
+          }}
+          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300"
+        >
+          <option value="polygon">Polygon</option>
+          <option value="heatmap">Heatmap</option>
+          <option value="CableGlobe">CableGlobe</option>
+        </select>
+
+        {/* Auswahl des Farbschemas */}
+        {visualizationType !== "heatmap" && (
           <>
-            <option value="gdp">BIP pro Kopf</option>
-            <option value="density">Bevölkerungsdichte</option>
+            <label htmlFor="color-scheme-select" className="mb-2 font-bold text-sm">
+              Farbschema:
+            </label>
+            <select
+              id="color-scheme-select"
+              value={colorScheme}
+              onChange={(e) => {
+                setColorScheme(e.target.value);
+              }}
+              className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
+            >
+              {["Reds", "Blues", "Greens", "Purples", "Oranges"].map((scheme) => (
+                <option key={scheme} value={scheme}>
+                  {scheme}
+                </option>
+              ))}
+            </select>
           </>
         )}
-        {visualizationType === "heatmap" && (
-          <>
-            <option value="population">Bevölkerung</option>
-            <option value="volcanoes">Vulkane</option>
-            <option value="earthquakes">Erdbeben</option>
-            <option value="BIP">GDP</option>
-          </>
-        )}
-        {visualizationType === "CableGlobe" && (
-          <option value="cable">Kabel</option>
-        )}
-      </select>
-
-      {/* Umschalten der Datenanzeige */}
-      <label htmlFor="show-data-checkbox" className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer">
-        <span className="mr-2 text-xs">Daten zeigen:</span>
-        <div className="relative">
-          <input
-            type="checkbox"
-            id="show-data-checkbox"
-            checked={showData}
-            onChange={(e) => setShowData(e.target.checked)}
-            className="sr-only"
-          />
-          <div className={`block ${showData ? 'bg-green-600' : 'bg-red-600'} w-7 h-4 rounded-full`}></div>
-          <div
-            className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${showData ? 'translate-x-full bg-red-500' : ''}`}
-          ></div>
-        </div>
-      </label>
-
-      {/* Umschalten der Länderumrisse */}
-      <label htmlFor="show-borders-checkbox" className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer">
-        <span className="mr-2 text-xs">Umrisse zeigen:</span>
-        <div className="relative">
-          <input
-            type="checkbox"
-            id="show-borders-checkbox"
-            checked={showBorders}
-            onChange={(e) => setShowBorders(e.target.checked)}
-            className="sr-only"
-          />
-          <div className={`block ${showBorders ? 'bg-green-600' : 'bg-red-600'} w-7 h-4 rounded-full`}></div>
-          <div
-            className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${showBorders ? 'translate-x-full bg-red-500' : ''}`}
-          ></div>
-        </div>
-      </label>
-
-      {/* Schieberegler für Rotationsgeschwindigkeit */}
-      <label htmlFor="rotation-speed-slider" className="mb-2 font-bold text-sm">
-        Rotation:
-      </label>
-      <input
-        type="range"
-        id="rotation-speed-slider"
-        min="-.5"
-        max=".5"
-        step="0.01"
-        onChange={(e) => setRotationSpeed(parseFloat(e.target.value))}
-        className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
-      />
-
-      {/* Auswahl des Visualisierungstyps */}
-      <label
-        htmlFor="visualization-type-select"
-        className="mb-2 font-bold text-sm"
-      >
-        Visualisierungstyp:
-      </label>
-      <select
-        id="visualization-type-select"
-        value={visualizationType}
-        onChange={(e) => setVisualizationType(e.target.value)}
-        className="p-2 rounded w-full bg-transparent text-xs border border-gray-300"
-      >
-        <option value="polygon">Polygon</option>
-        <option value="heatmap">Heatmap</option>
-        <option value="CableGlobe">CableGlobe</option>
-      </select>
       </div>
     </>
-      
- 
   );
 
   return (

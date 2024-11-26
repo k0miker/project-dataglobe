@@ -11,6 +11,7 @@ function CableGlobe() {
   useEffect(() => {
     const fetchCableData = async () => {
       try {
+        console.log("Fetching cable data...");
         const response = await fetch("/cables.json");
         if (!response.ok) {
           throw new Error("Network response was not ok: " + response.statusText);
@@ -39,12 +40,12 @@ function CableGlobe() {
               },
             ];
           } else {
-            console.warn(`Unsupported geometry type: ${type}`);
             return [];
           }
         });
 
         setCablePaths(paths);
+        console.log("Cable data fetched successfully.");
       } catch (error) {
         console.error("Error fetching cable data:", error);
       }
@@ -54,6 +55,7 @@ function CableGlobe() {
   }, []);
 
   useEffect(() => {
+    console.log("Setting rotation speed:", rotationSpeed);
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;

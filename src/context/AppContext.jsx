@@ -14,10 +14,10 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [clouds, setClouds] = useState(false);
   const [geoJsonData, setGeoJsonData] = useState([]);
-  const [combinedData, setCombinedData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
   const [showBorders, setShowBorders] = useState(true); // State für Länderumrisse
+  const [colorScheme, setColorScheme] = useState("Reds");
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -33,28 +33,10 @@ export const AppProvider = ({ children }) => {
     setVisualizationTypeState(type);
   };
 
-  const combineData = (countries, gdpData, locationData ) => {
-    console.log("gdp:"+ JSON.stringify(gdpData));
-    
-    const locationCsv = d3.csvParse(locationData);
-    const combined = locationCsv.map(location => {
-      const country = countries.find(c => c.cca2 === location.cca2);
-      const gdpEntry = gdpData.find(data => data.country === location.cca2);
-      return {
-        ...location,
-        name: country ? country.name.common : location.name,
-        gdp: gdpEntry ? gdpEntry.gdp : null
-      };
-    });
-    setCombinedData(combined);
-    localStorage.setItem("combinedData", JSON.stringify(combined));
-  };
-
   const fetchData = async () => {
     try {
-      const [geoJsonData] = await Promise.all([
-        fetchGeoJson()
-      ]);
+      console.log("Fetching initial data...");
+      const [geoJsonData] = await Promise.all([fetchGeoJson()]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
         (d) => d.properties.ISO_A2 !== "AQ"
@@ -66,7 +48,7 @@ export const AppProvider = ({ children }) => {
       // Fetch the rest of the data in the background
       const [countriesData, locationData] = await Promise.all([
         fetchCountries(),
-        fetchLocationData()
+        fetchLocationData(),
       ]);
 
       const gdpData = await fetchGDPDataForCountries(countriesData);
@@ -77,7 +59,36 @@ export const AppProvider = ({ children }) => {
       localStorage.setItem("locationData", locationData);
 
       setCountries(countriesData);
-      combineData(countriesData, gdpData, locationData);
+      console.log("Initial data fetched successfully.");
+    } catch (error) {
+      console.error("Fehler beim Abrufen der Daten:", error);
+    }
+  };
+
+  const fetchAllData = async () => {
+    try {
+      console.log("Fetching all data...");
+      const [geoJsonData, countriesData, locationData, gdpData] = await Promise.all([
+        fetchGeoJson(),
+        fetchCountries(),
+        fetchLocationData(),
+        fetchGDPDataForCountries(),
+      ]);
+
+      const filteredGeoJsonData = geoJsonData.features.filter(
+        (d) => d.properties.ISO_A2 !== "AQ"
+      );
+
+      localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
+      setGeoJsonData(filteredGeoJsonData);
+
+      localStorage.setItem("countries", JSON.stringify(countriesData));
+      localStorage.setItem("gdpData", JSON.stringify(gdpData));
+      localStorage.setItem("locationData", locationData);
+
+      setCountries(countriesData);
+      setGdpData(gdpData);
+      console.log("All data fetched successfully.");
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
     }
@@ -85,6 +96,7 @@ export const AppProvider = ({ children }) => {
 
   // Daten beim Laden der Komponente abrufen oder aus dem lokalen Speicher laden
   useEffect(() => {
+    console.log("Fetching data on component mount...");
     const storedGeoJsonData = localStorage.getItem("geoJsonData");
 
     if (storedGeoJsonData) {
@@ -92,9 +104,12 @@ export const AppProvider = ({ children }) => {
     } else {
       fetchData();
     }
+
+    fetchAllData(); // Abrufen aller Daten beim Laden der Seite
   }, []);
 
   useEffect(() => {
+    console.log("Fetching countries and GDP data from local storage...");
     const storedCountries = localStorage.getItem("countries");
     const storedGdpData = localStorage.getItem("gdpData");
     const storedLocationData = localStorage.getItem("locationData");
@@ -102,22 +117,18 @@ export const AppProvider = ({ children }) => {
     if (storedCountries && storedGdpData && storedLocationData) {
       setCountries(JSON.parse(storedCountries));
       setGdpData(JSON.parse(storedGdpData));
-      combineData(JSON.parse(storedCountries), JSON.parse(storedGdpData), storedLocationData);
     } else {
       fetchData();
     }
   }, []);
-
-  useEffect(() => {
-    // console.log(combinedData);
-  }, [combinedData]);
 
   return (
     <AppContext.Provider value={{ 
       selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, 
       dataOption, setDataOption, showData, setShowData, rotationSpeed, 
       setRotationSpeed, visualizationType, setVisualizationType, countries, 
-      clouds, setClouds, geoJsonData, gdpData, combinedData, showBorders, setShowBorders 
+      clouds, setClouds, geoJsonData, gdpData, showBorders, setShowBorders, 
+      colorScheme, setColorScheme 
     }}>
       {children}
     </AppContext.Provider>
