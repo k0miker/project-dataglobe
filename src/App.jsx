@@ -1,6 +1,7 @@
 import React from "react";
 import { AppProvider } from "./context/AppContext";
 import './App.css';
+import './index.css';
 import HomePage from "./pages/HomePage";
 
 function App() {
