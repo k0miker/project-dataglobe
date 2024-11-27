@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../components/input";
+import Input from "../components/Input";
 import Output from "../components/Output";
 import VisualizationRenderer from "../components/VisualizationRenderer";
 import Header from "../components/Header";

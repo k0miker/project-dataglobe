@@ -3,7 +3,7 @@ import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
 import InputSelect from "./Input_select";
 import InputSlider from "./Input_slider";
-import InputCheckbox from "./input_checkbox";
+import InputCheckbox from "./Input_checkbox";
 import { Tooltip as ReactTooltip } from "react-tooltip"; // Import Tooltip
 
 function Input() {
