@@ -38,13 +38,13 @@ export const AppProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      console.log("Fetching initial data...");
+      // console.log("Fetching initial data...");
       const [geoJsonData] = await Promise.all([fetchGeoJson()]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
         (d) => d.properties.ISO_A2 !== "AQ"
       );
-
+      // console.log("Filtered GeoJSON Data:", filteredGeoJsonData); // Log für gefilterte GeoJSON-Daten
       localStorage.setItem("geoJsonData", JSON.stringify(filteredGeoJsonData));
       setGeoJsonData(filteredGeoJsonData);
 
@@ -55,6 +55,7 @@ export const AppProvider = ({ children }) => {
       ]);
 
       const gdpData = await fetchGDPDataForCountries(countriesData);
+      // console.log("GDP Data:", gdpData); // Log für GDP-Daten
       setGdpData(gdpData);
 
       localStorage.setItem("countries", JSON.stringify(countriesData));
@@ -62,7 +63,7 @@ export const AppProvider = ({ children }) => {
       localStorage.setItem("locationData", locationData);
 
       setCountries(countriesData);
-      console.log("Initial data fetched successfully.");
+      // console.log("Initial data fetched successfully.");
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
     }

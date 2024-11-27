@@ -15,7 +15,7 @@ function CableGlobe() {
 
   const fetchCableData = async () => {
     try {
-      console.log("Fetching cable data...");
+      //console.log("Fetching cable data...");
       setLoading(true);
       const response = await fetch("/cables.json");
       if (!response.ok) {
@@ -51,9 +51,9 @@ function CableGlobe() {
 
       setCablePaths(paths);
       setLoading(false);
-      console.log("Cable data fetched successfully.");
+      //console.log("Cable data fetched successfully.");
     } catch (error) {
-      console.error("Error fetching cable data:", error);
+      //console.error("Error fetching cable data:", error);
       setLoading(false);
     }
   };
@@ -63,7 +63,7 @@ function CableGlobe() {
   }, []);
 
   useEffect(() => {
-    console.log("Setting rotation speed:", rotationSpeed);
+    //console.log("Setting rotation speed:", rotationSpeed);
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;

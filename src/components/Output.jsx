@@ -34,7 +34,7 @@ function Output() {
           <img
             src={selectedCountry.flags.png}
             alt={`Flagge von ${selectedCountry.name.common}`}
-            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-60" // Setzen der Alpha-Transparenz auf 60%
+            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-60"
           />
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
@@ -114,16 +114,22 @@ function Output() {
 
       {/* Modal für mobile Ansicht */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-          <div className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-6">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+          onClick={() => setIsModalOpen(false)} // Schließen des Modals durch Klicken außerhalb
+        >
+          <div
+            className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-6"
+            onClick={(e) => e.stopPropagation()} // Verhindern des Schließens beim Klicken innerhalb des Modals
+          >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-bold">Länderinfo</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-100 hover:text-red-700"
               >
-                ✖️
+                ✖
               </button>
             </div>
             {/* Modal Inhalt */}

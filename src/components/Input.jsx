@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 import { fetchCountries } from "../utils/fetches";
+import InputSelect from "./Input_select";
+import InputSlider from "./Input_slider";
+import InputCheckbox from "./input_checkbox";
+import { Tooltip as ReactTooltip } from "react-tooltip"; // Import Tooltip
 
 function Input() {
+  // Verwendung des AppContext
   const {
     selectedWorld,
     setSelectedWorld,
@@ -21,24 +26,30 @@ function Input() {
     setHeatmapTopAltitude,
     heatmapBandwidth,
     setHeatmapBandwidth,
-    rotationSpeed, // Add rotationSpeed to the destructured context
+    rotationSpeed, 
     maxPolygonAltitude,
     setMaxPolygonAltitude,
+    clouds, setClouds,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
-  const [sliderTimeout, setSliderTimeout] = useState(null);
 
   const handleSliderChange = (setter, value) => {
-    if (sliderTimeout) {
-      clearTimeout(sliderTimeout);
-    }
-    setSliderTimeout(setTimeout(() => {
-      setter(value);
-    }, 300)); // 300ms Verzögerung
+    setter(value);
   };
 
+  const [tooltip, setTooltip] = useState({ visible: false, text: "", x: 0, y: 0 });
+
+  const showTooltip = (text, x, y) => {
+    setTooltip({ visible: true, text, x, y });
+  };
+
+  const hideTooltip = () => {
+    setTooltip({ visible: false, text: "", x: 0, y: 0 });
+  };
+
+  // Länderdaten abrufen
   useEffect(() => {
     const getCountries = async () => {
       try {
@@ -51,6 +62,7 @@ function Input() {
     getCountries();
   }, []);
 
+  // Standarddatenoptionen für Visualisierungstypen festlegen
   useEffect(() => {
     if (visualizationType === "heatmap") {
       setDataOption("population");
@@ -59,23 +71,26 @@ function Input() {
     }
   }, [visualizationType]);
 
+  // Tooltip-Komponente
+  const Tooltip = ({ text, x, y }) => (
+    <div
+      className="absolute bg-gray-700 text-white text-xs rounded py-1 px-2 z-50"
+      style={{ top: y + 10, left: x + 10, maxWidth: '200px', whiteSpace: 'normal' }}
+    >
+      {text}
+    </div>
+  );
+
   // Einstellungen-UI-Komponente (wird in Sidebar und Modal verwendet)
   const SettingsContent = () => (
     <>
-      {/* Auswahl der Karte */}
-      <div className="p-6">
-        <label htmlFor="world-select" className="mb-2 font-bold text-sm">
-          Karte:
-        </label>
-        <select
-          id="world-select"
+      <div className="p-6 relative">
+      <h1 className="mb-2 ">⚙️ Einstellungen</h1>
+        <InputSelect
+          label="Kartentyp:"
           value={selectedWorld}
-          onChange={(e) => {
-            setSelectedWorld(e.target.value);
-          }}
-          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-        >
-          {[
+          onChange={(e) => setSelectedWorld(e.target.value)}
+          options={[
             ["Dark", "earthDark.png"],
             ["Blue Marble", "earthMarble.png"],
             ["Night", "earthNight.jpg"],
@@ -85,275 +100,148 @@ function Input() {
             ["Continets", "earthOcean.webp"],
             ["Tectonic", "earthTectonic.jpg"],
             ["Ultra Resolution", "earthUltra.jpg"],
-          ].map(([name, img]) => (
-            <option key={img} value={img}>
-              {name}
-            </option>
-          ))}
-        </select>
-
-        {/* Datenoption */}
-        <label
-          htmlFor="data-option-select"
-          className="mb-2 font-bold text-sm text-left"
-        >
-          Datenoption:
-        </label>
-        <select
-          id="data-option-select"
-          value={dataOption}
-          onChange={(e) => {
-            setDataOption(e.target.value);
-          }}
-          className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-        >
-          {visualizationType === "polygon" && (
-            <>
-              <option value="gdp">BIP pro Kopf</option>
-              <option value="density">Bevölkerungsdichte</option>
-            </>
-          )}
-          {visualizationType === "heatmap" && (
-            <>
-              <option value="population">Bevölkerung</option>
-              <option value="volcanoes">Vulkane</option>
-              {/* <option value="earthquakes">Erdbeben</option> */}
-              <option value="BIP">GDP</option>
-            </>
-          )}
-          {visualizationType === "CableGlobe" && (
-            <option value="cable">Kabel</option>
-          )}
-        </select>
-        {/* Auswahl des Visualisierungstyps */}
-        <label
-          htmlFor="visualization-type-select"
-          className="mb-2 font-bold text-sm"
-        >
-          Visualisierungstyp:
-        </label>
-        <select
-          id="visualization-type-select"
-          value={visualizationType}
-          onChange={(e) => {
-            setVisualizationType(e.target.value);
-          }}
-          className="p-2 mb-4 rounded w-full bg-transparent text-xs border border-gray-300"
-        >
-          <option value="polygon">Polygon</option>
-          <option value="heatmap">Heatmap</option>
-          <option value="CableGlobe">CableGlobe</option>
-        </select>
-  {/* Auswahl des Farbschemas */}
-  {visualizationType !== "heatmap" && (
-          <>
-            <label htmlFor="color-scheme-select" className=" mt-4 font-bold text-sm">
-              Farbschema:
-            </label>
-            <select
-              id="color-scheme-select"
-              value={colorScheme}
-              onChange={(e) => {
-                setColorScheme(e.target.value);
-              }}
-              className="p-2 rounded w-full bg-transparent text-xs border border-gray-300 mb-4"
-            >
-              {["Reds", "Blues", "Greens", "Purples", "Oranges"].map((scheme) => (
-                <option key={scheme} value={scheme}>
-                  {scheme}
-                </option>
-              ))}
-            </select>
-          </>
-        )}
-        {/* Umschalten der Datenanzeige */}
-        <label
-          htmlFor="show-data-checkbox"
-          className="mb-2 font-bold text-sm flex items-center mt-4 justify-start cursor-pointer"
-        >
-          <span className="mr-2 text-xs">Daten zeigen:</span>
-          <div className="relative">
-            <input
-              type="checkbox"
-              id="show-data-checkbox"
-              checked={showData}
-              onChange={(e) => {
-                setShowData(e.target.checked);
-              }}
-              className="sr-only"
-            />
-            <div
-              className={`block ${
-                showData ? "bg-green-600" : "bg-red-600"
-              } w-7 h-4 rounded-full`}
-            ></div>
-            <div
-              className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
-                showData ? "translate-x-full bg-red-500" : ""
-              }`}
-            ></div>
-          </div>
-        </label>
-
-        {/* Umschalten der Länderumrisse */}
-        <label
-          htmlFor="show-borders-checkbox"
-          className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
-        >
-          <span className="mr-2 text-xs">Umrisse zeigen:</span>
-          <div className="relative">
-            <input
-              type="checkbox"
-              id="show-borders-checkbox"
-              checked={showBorders}
-              onChange={(e) => {
-                setShowBorders(e.target.checked);
-              }}
-              className="sr-only"
-            />
-            <div
-              className={`block ${
-                showBorders ? "bg-green-600" : "bg-red-600"
-              } w-7 h-4 rounded-full`}
-            ></div>
-            <div
-              className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
-                showBorders ? "translate-x-full bg-red-500" : ""
-              }`}
-            ></div>
-          </div>
-        </label>
-
-        {/* Schieberegler für Rotationsgeschwindigkeit */}
-        <label
-          htmlFor="rotation-speed-slider"
-          className="mb-2 font-bold text-sm"
-        >
-          Rotation:
-        </label>
-        <input
-          type="range"
-          id="rotation-speed-slider"
-          min="-.5"
-          max=".5"
-          step="0.01"
-          value={rotationSpeed} // Ensure the slider reflects the current state value
-          onChange={(e) => handleSliderChange(setRotationSpeed, parseFloat(e.target.value))}
-          className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+          ]}
+          tooltip="Wählen Sie den Kartentyp aus, der angezeigt werden soll."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
         />
 
-        {/* Schieberegler für Max Polygon Höhe */}
-        {visualizationType === "polygon" && (
-          <>
-            <label htmlFor="max-polygon-altitude-slider" className="mb-2 font-bold text-sm">
-              Max Polygon Höhe:
-            </label>
-            <input
-              type="range"
-              id="max-polygon-altitude-slider"
-              min="0.006"
-              max="0.5"
-              step="0.01"
-              value={maxPolygonAltitude}
-              onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
-              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
-            />
-          </>
+        <InputSelect
+          label="Datenoption:"
+          value={dataOption}
+          onChange={(e) => setDataOption(e.target.value)}
+          options={
+            visualizationType === "polygon"
+              ? [
+                  ["BIP pro Kopf", "gdp"],
+                  ["Bevölkerungsdichte", "density"],
+                ]
+              : visualizationType === "heatmap"
+              ? [
+                  ["Bevölkerung", "population"],
+                  ["Vulkane", "volcanoes"],
+                  ["GDP", "gdp"],
+                ]
+              : [["Kabel", "cable"]]
+          }
+          tooltip="Wählen Sie die Datenoption aus, die auf der Karte angezeigt werden soll."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
+        <InputSelect
+          label="Darstellungsart:"
+          value={visualizationType}
+          onChange={(e) => setVisualizationType(e.target.value)}
+          options={[
+            ["Polygon", "polygon"],
+            ["Heatmap", "heatmap"],
+            ["CableGlobe", "CableGlobe"],
+          ]}
+          tooltip="Wählen Sie den Visualisierungstyp für die Daten aus, der auf der Karte angezeigt werden soll."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
+        {visualizationType !== "heatmap" && (
+          <InputSelect
+            label="Farbschema:"
+            value={colorScheme}
+            onChange={(e) => setColorScheme(e.target.value)}
+            options={[
+              ["Reds", "Reds"],
+              ["Blues", "Blues"],
+              ["Greens", "Greens"],
+              ["Purples", "Purples"],
+              ["Oranges", "Oranges"],
+            ]}
+            tooltip="Wählen Sie das Farbschema für die Visualisierung aus."
+            showTooltip={showTooltip}
+            hideTooltip={hideTooltip}
+          />
         )}
 
-        {/* Schieberegler für Heatmap Top Altitude und Bandwidth */}
+        <InputCheckbox
+          label="Daten zeigen:"
+          checked={showData}
+          onChange={(e) => setShowData(e.target.checked)}
+          tooltip="Schalten Sie die Anzeige der Daten auf der Karte ein oder aus."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
+        <InputCheckbox
+          label="Umrisse zeigen:"
+          checked={showBorders}
+          onChange={(e) => setShowBorders(e.target.checked)}
+          tooltip="Schalten Sie die Anzeige der Länderumrisse auf der Karte ein oder aus."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
+        {/* <InputCheckbox
+          label="Wolken zeigen:"
+          checked={clouds}
+          onChange={(e) => setClouds(e.target.checked)}
+          tooltip="Schalten Sie die Anzeige der Wolken auf der Karte ein oder aus."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        /> */}
+
+        <InputSlider
+          label="Rotation:"
+          value={rotationSpeed}
+          onChange={(e) => handleSliderChange(setRotationSpeed, parseFloat(e.target.value))}
+          min={0}
+          max={0.5}
+          step={0.01}
+          tooltip="Stellen Sie die Rotations-geschwindigkeit der Karte ein."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
+        {visualizationType === "polygon" && (
+          <InputSlider
+            label="Max Polygon Höhe:"
+            value={maxPolygonAltitude}
+            onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
+            min={0.006}
+            max={0.5}
+            step={0.01}
+            tooltip="Stellen Sie die maximale Höhe der Polygone auf der Karte ein."
+            showTooltip={showTooltip}
+            hideTooltip={hideTooltip}
+          />
+        )}
+
         {visualizationType === "heatmap" && (
           <>
-            <label htmlFor="heatmap-top-altitude-slider" className="mb-2 font-bold text-sm">
-              Altitude:
-            </label>
-            <input
-              type="range"
-              id="heatmap-top-altitude-slider"
-              min="0.3"
-              max="1.5"
-              step="0.1"
+            <InputSlider
+              label="Altitude:"
               value={heatmapTopAltitude}
               onChange={(e) => handleSliderChange(setHeatmapTopAltitude, parseFloat(e.target.value))}
-              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+              min={0.3}
+              max={1.5}
+              step={0.1}
+              tooltip="Stellen Sie die Höhe der Heatmap auf der Karte ein."
+              showTooltip={showTooltip}
+              hideTooltip={hideTooltip}
             />
-            <label htmlFor="heatmap-bandwidth-slider" className="mb-2 font-bold text-sm">
-              Bandwidth:
-            </label>
-            <input
-              type="range"
-              id="heatmap-bandwidth-slider"
-              min="0.3"
-              max="1.5"
-              step="0.1"
+            <InputSlider
+              label="Bandwidth:"
               value={heatmapBandwidth}
               onChange={(e) => handleSliderChange(setHeatmapBandwidth, parseFloat(e.target.value))}
-              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+              min={0.3}
+              max={1.5}
+              step={0.1}
+              tooltip="Stellen Sie die Bandbreite der Heatmap auf der Karte ein."
+              showTooltip={showTooltip}
+              hideTooltip={hideTooltip}
             />
-          </>
-        )}
-        {visualizationType === "CableGlobe" && (
-          <>
-            {/* Umschalten der Datenanzeige */}
-            <label
-              htmlFor="show-data-checkbox"
-              className="mb-2 font-bold text-sm flex items-center mt-4 justify-start cursor-pointer"
-            >
-              <span className="mr-2 text-xs">Daten zeigen:</span>
-              <div className="relative">
-                <input
-                  type="checkbox"
-                  id="show-data-checkbox"
-                  checked={showData}
-                  onChange={(e) => {
-                    setShowData(e.target.checked);
-                  }}
-                  className="sr-only"
-                />
-                <div
-                  className={`block ${
-                    showData ? "bg-green-600" : "bg-red-600"
-                  } w-7 h-4 rounded-full`}
-                ></div>
-                <div
-                  className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
-                    showData ? "translate-x-full bg-red-500" : ""
-                  }`}
-                ></div>
-              </div>
-            </label>
-
-            {/* Umschalten der Länderumrisse */}
-            <label
-              htmlFor="show-borders-checkbox"
-              className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
-            >
-              <span className="mr-2 text-xs">Umrisse zeigen:</span>
-              <div className="relative">
-                <input
-                  type="checkbox"
-                  id="show-borders-checkbox"
-                  checked={showBorders}
-                  onChange={(e) => {
-                    setShowBorders(e.target.checked);
-                  }}
-                  className="sr-only"
-                />
-                <div
-                  className={`block ${
-                    showBorders ? "bg-green-600" : "bg-red-600"
-                  } w-7 h-4 rounded-full`}
-                ></div>
-                <div
-                  className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
-                    showBorders ? "translate-x-full bg-red-500" : ""
-                  }`}
-                ></div>
-              </div>
-            </label>
           </>
         )}
       </div>
+      {tooltip.visible && <Tooltip text={tooltip.text} x={tooltip.x} y={tooltip.y} />}
     </>
   );
 
@@ -369,16 +257,22 @@ function Input() {
 
       {/* Modal für mobile Ansicht */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-          <div className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-6">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+          onClick={() => setIsModalOpen(false)} // Schließen des Modals durch Klicken außerhalb
+        >
+          <div
+            className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-6"
+            onClick={(e) => e.stopPropagation()} // Verhindern des Schließens beim Klicken innerhalb des Modals
+          >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-bold">Einstellungen</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-100 hover:text-red-700"
               >
-                ✖️
+                ✖ 
               </button>
             </div>
 
@@ -389,7 +283,7 @@ function Input() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden md:flex flex-col max-w-48 overflow-hidden   justify-start items-between absolute left-0 z-50 top-[10%] bg-glass rounded-br-3xl shadow-lg ">
+      <div className="hidden h-full  md:flex flex-col max-w-auto absolute  items-between left-0 z-50 top-[10%] bg-glass  shadow-lg">
         <SettingsContent />
       </div>
     </>

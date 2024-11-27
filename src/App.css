@@ -1,10 +1,11 @@
 :root {
 
   --color-primary: #001d34;
-  --color-secondary: #353535;
+  --color-secondary: #d8d8d8;
   --color-tertiary: #333;
   --color-quaternary: #111;  
   --glass: rgba(255, 255, 255, 0.1);
+  --glass2: rgba(58, 57, 57, 0.704);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
 }
@@ -12,6 +13,10 @@
 .bg-glass {
   background-color: var(--glass);
   backdrop-filter: blur(2px);
+}
+.bg-glass2 {
+  background-color: var(--glass2);
+  backdrop-filter: blur(15px);
 }
 
 option {
@@ -22,8 +27,8 @@ option {
 
 select {
   font-family: monospace;
-  color: rgb(224, 224, 224);
-  border: 1px solid rgb(214, 214, 214);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   padding: 0.5rem;
   border-radius: 0.375rem;
 }
@@ -31,8 +36,6 @@ select {
 label {
   font-family: monospace;
   color: var(--background);
-  font-size: larger;
-  text-decoration: underline;
 }
 
 li {
@@ -47,7 +50,7 @@ span {
 }
 
 .accent-color {
-  accent-color: #fdffeb;
+  accent-color: var(--color-secondary);
 }
 
 header {

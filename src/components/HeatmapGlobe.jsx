@@ -20,7 +20,7 @@ function HeatmapGlobe() {
   // Heatmap-Daten abrufen
   const fetchHeatmapData = async () => {
     try {
-      console.log("Fetching heatmap data for option:", dataOption);
+      //console.log("Fetching heatmap data for option:", dataOption);
       setLoading(true);
       let data = [];
       const cachedData = localStorage.getItem(`heatmapData_${dataOption}`);
@@ -78,7 +78,7 @@ function HeatmapGlobe() {
       setTimeout(() => {
         setHeatmapData(normalizedData);
         setLoading(false);
-        console.log("Heatmap data fetched successfully.");
+        //console.log("Heatmap data fetched successfully.");
       }, 1000); // Add delay to loading spinner
     } catch (error) {
       console.error("Fehler beim Abrufen der Heatmap-Daten:", error);
@@ -88,7 +88,7 @@ function HeatmapGlobe() {
 
   // Globus-Rotation steuern
   useEffect(() => {
-    console.log("Setting rotation speed:", rotationSpeed);
+    //console.log("Setting rotation speed:", rotationSpeed);
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;
@@ -96,7 +96,7 @@ function HeatmapGlobe() {
   }, [rotationSpeed]);
 
   useEffect(() => {
-    console.log("Fetching heatmap data for data option:", dataOption);
+    //console.log("Fetching heatmap data for data option:", dataOption);
     fetchHeatmapData();
   }, [dataOption, colorScheme]);
 
@@ -116,7 +116,7 @@ function HeatmapGlobe() {
 
   // Farbskala
   const colorScale = useMemo(() => {
-    console.log("Setting color scale for color scheme:", colorScheme);
+    //console.log("Setting color scale for color scheme:", colorScheme);
     return d3.scaleSequentialSqrt(d3[`interpolate${colorScheme}`]).domain([0, 0.5]); 
   }, [colorScheme]);
 

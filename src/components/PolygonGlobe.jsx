@@ -7,6 +7,7 @@ import { fetchCountries } from "../utils/fetches";
 import Moon from "./Moon";
 import LoadingSpinner from "./LoadingSpinner";
 import Sun from "./Sun";
+import Clouds from "./Clouds";
 
 function PolygonGlobe() {
   const {
@@ -22,7 +23,7 @@ function PolygonGlobe() {
     maxPolygonAltitude,
   } = useAppContext();
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
-  const hoveredPolygonAltitude =  0.2; // Fester Wert für hoveredPolygonAltitude
+  const hoveredPolygonAltitude =  0.05; // Reduzierte Höhe für hoveredPolygonAltitude
 
   const globeEl = useRef(); // Referenz für den Globe
   const [countriesData, setCountriesData] = useState([]);
@@ -57,12 +58,12 @@ function PolygonGlobe() {
   useEffect(() => {
     const getRestCountriesData = async () => {
       try {
-        console.log("Fetching RestCountries data...");
+        // console.log("Fetching RestCountries data...");
         setLoading(true);
         const data = await fetchCountries();
         setRestCountriesData(data);
         setLoading(false);
-        console.log("RestCountries data fetched successfully.");
+        // console.log("RestCountries data fetched successfully.");
       } catch (error) {
         console.error("Fehler beim Abrufen der RestCountries-Daten:", error);
         setLoading(false);
@@ -73,7 +74,7 @@ function PolygonGlobe() {
 
   // GeoJSON Daten verarbeiten
   const processGeoJsonData = () => {
-    console.log("Processing GeoJSON data...");
+    // console.log("Processing GeoJSON data...");
     const getVal = (feat) => {
       if (dataOption === "gdp") {
         return (
@@ -91,6 +92,7 @@ function PolygonGlobe() {
     };
 
     const maxVal = Math.max(...geoJsonData.map(getVal));
+    // console.log("Max Value for Data Option:", maxVal); // Log für Maximalwert
     setColorScale(() =>
       d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([
         0,
@@ -98,7 +100,7 @@ function PolygonGlobe() {
       ])
     ); // Intensivere Farben
     setCountriesData(geoJsonData);
-    console.log("GeoJSON data processed successfully.");
+    // console.log("GeoJSON data processed successfully.");
   };
 
   useEffect(() => {
@@ -107,7 +109,7 @@ function PolygonGlobe() {
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
-    console.log("Setting rotation speed:", rotationSpeed);
+    // console.log("Setting rotation speed:", rotationSpeed);
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;
@@ -117,7 +119,7 @@ function PolygonGlobe() {
 
   // Rotation stoppen, wenn ein Land ausgewählt ist
   useEffect(() => {
-    console.log("Selected country changed:", selectedCountry);
+    // console.log("Selected country changed:", selectedCountry);
     if (selectedCountry && globeEl.current) {
       globeEl.current.controls().autoRotate = false;
       setTimeout(() => {
@@ -151,7 +153,7 @@ function PolygonGlobe() {
 
   // Reaktion auf Änderungen des ausgewählten Landes
   useEffect(() => {
-    console.log("Animating camera to country:", selectedCountry);
+    // console.log("Animating camera to country:", selectedCountry);
     animateCameraToCountry(selectedCountry);
   }, [selectedCountry, dimensions.width]);
 
@@ -181,7 +183,7 @@ function PolygonGlobe() {
   );
 
   useEffect(() => {
-    console.log("Setting color scale for color scheme:", colorScheme);
+    // console.log("Setting color scale for color scheme:", colorScheme);
     setColorScale(() =>
       d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([0, 1])
     );
@@ -207,9 +209,12 @@ function PolygonGlobe() {
 
   const handleCountryClick = (clickedCountry, event) => {
     event.stopPropagation(); // Prevent deselecting when clicking on a country
+    // console.log("Clicked Country:", clickedCountry.properties); // Log für geklicktes Land
+    // console.log("Rest Countries Data:", restCountriesData); // Log für RestCountries-Daten
     const country = restCountriesData.find(
       (country) => country.cca3 === clickedCountry.properties.ISO_A3
     );
+    // console.log("Found Country:", country); // Log für gefundenes Land
     if (country) {
       setSelectedCountry((prevCountry) =>
         prevCountry?.cca3 === country.cca3 ? null : country
@@ -253,7 +258,7 @@ function PolygonGlobe() {
             return "rgba(188, 188, 188, 0.522)";
           if (!showData && feat === selectedCountry)
             return "rgba(255, 255, 255, 0.522)";
-          if(!showData) return null;
+          if (!showData) return null;
           const getVal = (feat) => {
             if (dataOption === "gdp") {
               return (
@@ -273,7 +278,8 @@ function PolygonGlobe() {
           const color = d3.color(colorScale(getVal(feat)));
           const alpha = getVal(feat) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Transparenz anpassen
-          return feat === hoveredCountry || feat === selectedCountry
+          if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.5)"; // Weiß mit 50% Alpha für gehovtetes Land
+          return feat === selectedCountry
             ? color.formatRgb()
             : color.formatRgb();
         }}
@@ -339,6 +345,7 @@ function PolygonGlobe() {
         onPolygonClick={handleCountryClick}
         ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
       />
+      <Clouds />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />
       <style>
