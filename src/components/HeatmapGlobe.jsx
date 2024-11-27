@@ -60,6 +60,18 @@ function HeatmapGlobe() {
             lng: volcano.lon,
             value: volcano.elevation,
           }));
+        } else if (dataOption === "earthquakes") {
+          const response = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson");
+          if (!response.ok) {
+            throw new Error("Network response was not ok: " + response.statusText);
+          }
+          const earthquakeData = await response.json();
+          data = earthquakeData.features.map((quake) => ({
+            lat: quake.geometry.coordinates[1],
+            lng: quake.geometry.coordinates[0],
+            value: quake.properties.mag *10,
+          }));
+          console.log("Mapped Earthquake Data:", data); // Protokollierung der gemappten Erdbebendaten
         }
         localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
       }
@@ -136,11 +148,11 @@ function HeatmapGlobe() {
         heatmapsData={loading || !showData ? [] : [heatmapData]} // Heatmap-Daten (Plural) (Array)
         heatmapPointLat="lat" // Breitengrad
         heatmapPointLng="lng" // Längengrad
-        heatmapPointWeight={d => d.value * (dataOption === "BIP" ? 3000 : 0.5)} // Gewicht erhöhen
+        heatmapPointWeight={d => d.value} // Gewichtung der Punkte
         heatmapBandwidth={heatmapBandwidth} // Bandbreite erhöhen
         heatmapSizeAttenuation={dataOption === "BIP" ? 0.1 : 0.5}
         heatmapTopAltitude={heatmapTopAltitude}
-        heatmapAltitude={(d) => d.value * 10} // 3D Höhe der Heatmap-Punkte
+        heatmapAltitude={(d) => d.value * 0.0025} // Höhe 
         heatmapBaseAltitude={0.01} // Basis-Höhe
         heatmapColorSaturation={1.0} // Weniger kräftige Farben
         enablePointerInteraction={false}
