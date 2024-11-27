@@ -234,19 +234,24 @@ function Input() {
           className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
         />
 
-        <label htmlFor="max-polygon-altitude-slider" className="mb-2 font-bold text-sm">
-          Max Polygon Höhe:
-        </label>
-        <input
-          type="range"
-          id="max-polygon-altitude-slider"
-          min="0.01"
-          max="0.5"
-          step="0.01"
-          value={maxPolygonAltitude}
-          onChange={(e) => setMaxPolygonAltitude(parseFloat(e.target.value))}
-          className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
-        />
+        {/* Schieberegler für Max Polygon Höhe */}
+        {visualizationType === "polygon" && (
+          <>
+            <label htmlFor="max-polygon-altitude-slider" className="mb-2 font-bold text-sm">
+              Max Polygon Höhe:
+            </label>
+            <input
+              type="range"
+              id="max-polygon-altitude-slider"
+              min="0.01"
+              max="0.5"
+              step="0.01"
+              value={maxPolygonAltitude}
+              onChange={(e) => setMaxPolygonAltitude(parseFloat(e.target.value))}
+              className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+            />
+          </>
+        )}
 
         {/* Schieberegler für Heatmap Top Altitude und Bandwidth */}
         {visualizationType === "heatmap" && (
@@ -277,6 +282,67 @@ function Input() {
               onChange={(e) => setHeatmapBandwidth(parseFloat(e.target.value))}
               className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
             />
+          </>
+        )}
+        {visualizationType === "CableGlobe" && (
+          <>
+            {/* Umschalten der Datenanzeige */}
+            <label
+              htmlFor="show-data-checkbox"
+              className="mb-2 font-bold text-sm flex items-center mt-4 justify-start cursor-pointer"
+            >
+              <span className="mr-2 text-xs">Daten zeigen:</span>
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  id="show-data-checkbox"
+                  checked={showData}
+                  onChange={(e) => {
+                    setShowData(e.target.checked);
+                  }}
+                  className="sr-only"
+                />
+                <div
+                  className={`block ${
+                    showData ? "bg-green-600" : "bg-red-600"
+                  } w-7 h-4 rounded-full`}
+                ></div>
+                <div
+                  className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
+                    showData ? "translate-x-full bg-red-500" : ""
+                  }`}
+                ></div>
+              </div>
+            </label>
+
+            {/* Umschalten der Länderumrisse */}
+            <label
+              htmlFor="show-borders-checkbox"
+              className="mb-2 font-bold text-sm flex items-center justify-start cursor-pointer"
+            >
+              <span className="mr-2 text-xs">Umrisse zeigen:</span>
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  id="show-borders-checkbox"
+                  checked={showBorders}
+                  onChange={(e) => {
+                    setShowBorders(e.target.checked);
+                  }}
+                  className="sr-only"
+                />
+                <div
+                  className={`block ${
+                    showBorders ? "bg-green-600" : "bg-red-600"
+                  } w-7 h-4 rounded-full`}
+                ></div>
+                <div
+                  className={`dot absolute left-0.5 top-0.5 bg-white w-3 h-3 rounded-full transition transform ${
+                    showBorders ? "translate-x-full bg-red-500" : ""
+                  }`}
+                ></div>
+              </div>
+            </label>
           </>
         )}
       </div>

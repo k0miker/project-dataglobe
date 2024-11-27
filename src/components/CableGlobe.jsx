@@ -7,7 +7,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function CableGlobe() {
-  const { selectedWorld, rotationSpeed } = useAppContext();
+  const { selectedWorld, rotationSpeed, showData, showBorders } = useAppContext();
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -119,6 +119,10 @@ function CableGlobe() {
         pathDashGap={0.008}
         pathDashAnimateTime={12000}
         onPathClick={handleCableClick}
+        polygonsData={showBorders ? cablePaths : []}
+        polygonCapColor={() => showData ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
+        polygonSideColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
+        polygonStrokeColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />
