@@ -9,10 +9,10 @@ const Moon = ({ scene }) => {
       const textureLoader = new THREE.TextureLoader();
       const moonTexture = textureLoader.load("/moon.jpg");
 
-      const moonGeometry = new THREE.SphereGeometry(100, 32, 32); // Noch größere Mond
+      const moonGeometry = new THREE.SphereGeometry(100, 32, 32); // Größe des Mondes
       const moonMaterial = new THREE.MeshBasicMaterial({ map: moonTexture });
       const moon = new THREE.Mesh(moonGeometry, moonMaterial);
-      moon.position.set(5000, 50, 4000); // Weiter weg positionieren
+      moon.position.set(5000, 50, 4000); // Position des Mondes
       scene.add(moon);
 
       moonRef.current = moon;

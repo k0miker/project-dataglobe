@@ -149,6 +149,7 @@ function CableGlobe() {
         polygonCapColor={() => showData ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         polygonSideColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         polygonStrokeColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
+        ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />

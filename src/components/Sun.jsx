@@ -16,9 +16,6 @@ const Sun = ({ scene }) => {
       const sunlight = new THREE.DirectionalLight(0xffffff, 5);
       sunlight.position.set(-36000, 0, -1000);
       scene.add(sunlight);
-
-      const hemisphereLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-      scene.add(hemisphereLight);
     }
   }, [scene]);
 

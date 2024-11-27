@@ -28,6 +28,16 @@ function Input() {
 
   const [countries, setCountries] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
+  const [sliderTimeout, setSliderTimeout] = useState(null);
+
+  const handleSliderChange = (setter, value) => {
+    if (sliderTimeout) {
+      clearTimeout(sliderTimeout);
+    }
+    setSliderTimeout(setTimeout(() => {
+      setter(value);
+    }, 300)); // 300ms Verzögerung
+  };
 
   useEffect(() => {
     const getCountries = async () => {
@@ -228,9 +238,7 @@ function Input() {
           max=".5"
           step="0.01"
           value={rotationSpeed} // Ensure the slider reflects the current state value
-          onChange={(e) => {
-            setRotationSpeed(parseFloat(e.target.value));
-          }}
+          onChange={(e) => handleSliderChange(setRotationSpeed, parseFloat(e.target.value))}
           className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
         />
 
@@ -243,11 +251,11 @@ function Input() {
             <input
               type="range"
               id="max-polygon-altitude-slider"
-              min="0.01"
+              min="0.006"
               max="0.5"
               step="0.01"
               value={maxPolygonAltitude}
-              onChange={(e) => setMaxPolygonAltitude(parseFloat(e.target.value))}
+              onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
               className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
             />
           </>
@@ -266,7 +274,7 @@ function Input() {
               max="1.5"
               step="0.1"
               value={heatmapTopAltitude}
-              onChange={(e) => setHeatmapTopAltitude(parseFloat(e.target.value))}
+              onChange={(e) => handleSliderChange(setHeatmapTopAltitude, parseFloat(e.target.value))}
               className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
             />
             <label htmlFor="heatmap-bandwidth-slider" className="mb-2 font-bold text-sm">
@@ -279,7 +287,7 @@ function Input() {
               max="1.5"
               step="0.1"
               value={heatmapBandwidth}
-              onChange={(e) => setHeatmapBandwidth(parseFloat(e.target.value))}
+              onChange={(e) => handleSliderChange(setHeatmapBandwidth, parseFloat(e.target.value))}
               className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
             />
           </>

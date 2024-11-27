@@ -34,7 +34,7 @@ function Output() {
           <img
             src={selectedCountry.flags.png}
             alt={`Flagge von ${selectedCountry.name.common}`}
-            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md"
+            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-60" // Setzen der Alpha-Transparenz auf 60%
           />
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
