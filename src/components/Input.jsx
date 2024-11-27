@@ -22,6 +22,8 @@ function Input() {
     heatmapBandwidth,
     setHeatmapBandwidth,
     rotationSpeed, // Add rotationSpeed to the destructured context
+    maxPolygonAltitude,
+    setMaxPolygonAltitude,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -232,8 +234,19 @@ function Input() {
           className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
         />
 
-
-      
+        <label htmlFor="max-polygon-altitude-slider" className="mb-2 font-bold text-sm">
+          Max Polygon Höhe:
+        </label>
+        <input
+          type="range"
+          id="max-polygon-altitude-slider"
+          min="0.01"
+          max="0.5"
+          step="0.01"
+          value={maxPolygonAltitude}
+          onChange={(e) => setMaxPolygonAltitude(parseFloat(e.target.value))}
+          className="p-2 rounded w-full bg-gray-700 text-white mb-4 accent-red-500 focus:ring-2 focus:ring-red-300"
+        />
 
         {/* Schieberegler für Heatmap Top Altitude und Bandwidth */}
         {visualizationType === "heatmap" && (

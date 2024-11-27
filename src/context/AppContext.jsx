@@ -20,6 +20,7 @@ export const AppProvider = ({ children }) => {
   const [colorScheme, setColorScheme] = useState("Reds");
   const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.5);
   const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.0);
+  const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -126,7 +127,8 @@ export const AppProvider = ({ children }) => {
       dataOption, setDataOption, showData, setShowData, rotationSpeed, 
       setRotationSpeed, visualizationType, setVisualizationType, countries, 
       clouds, setClouds, geoJsonData, gdpData, showBorders, setShowBorders, 
-      colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth 
+      colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth, 
+      maxPolygonAltitude, setMaxPolygonAltitude 
     }}>
       {children}
     </AppContext.Provider>
