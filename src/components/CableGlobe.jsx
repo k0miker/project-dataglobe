@@ -70,6 +70,23 @@ function CableGlobe() {
     }
   }, [rotationSpeed]);
 
+  useEffect(() => {
+    const controls = globeEl.current.controls();
+    const handleUserInteraction = () => {
+      if (controls.autoRotate) {
+        controls.autoRotate = false;
+        setTimeout(() => {
+          controls.autoRotate = true;
+        }, 5000);
+      }
+    };
+
+    controls.addEventListener("start", handleUserInteraction);
+    return () => {
+      controls.removeEventListener("start", handleUserInteraction);
+    };
+  }, []);
+
   const getRandomColor = () => {
     const letters = "0123456789ABCDEF";
     let color = "#";
@@ -87,9 +104,18 @@ function CableGlobe() {
       const altitude = 1;
       setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
       globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Kabel
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
       }, 2500); // Nach 2.5 Sekunden zurückzoomen
+
+      // Clear timeout if user interacts with the globe
+      const controls = globeEl.current.controls();
+      const handleUserInteraction = () => {
+        clearTimeout(timeoutId);
+        controls.removeEventListener("start", handleUserInteraction);
+      };
+
+      controls.addEventListener("start", handleUserInteraction);
     }
   };
 

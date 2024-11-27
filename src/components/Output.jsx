@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 
 function Output() {
   const { selectedCountry } = useAppContext();
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
+  const [isExpanded, setIsExpanded] = useState(false); // State für Animation
+
+  useEffect(() => {
+    if (selectedCountry) {
+      setIsExpanded(true);
+    } else {
+      setIsExpanded(false);
+    }
+  }, [selectedCountry]);
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
@@ -124,8 +133,11 @@ function Output() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden md:flex flex- justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl  shadow-lg p-2  ">
-       
+      <div
+        className={`hidden md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 ${
+          isExpanded ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <CountryDetails />
       </div>
     </>

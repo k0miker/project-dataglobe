@@ -7,7 +7,7 @@ import CableGlobe from "../components/CableGlobe";
 
 function HomePage() {
   return (
-    <div className="relative flex w-full h-screen">
+    <div className="relative overflow-hidden flex w-full h-screen">
       <Header />
       <Input />
       <div id="globeViz" className="flex-1 flex flex-col items-center justify-center">

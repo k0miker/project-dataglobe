@@ -22,7 +22,7 @@ function PolygonGlobe() {
     maxPolygonAltitude,
   } = useAppContext();
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
-  const hoveredPolygonAltitude = 0.02; // Fester Wert für hoveredPolygonAltitude
+  const hoveredPolygonAltitude =  0.2; // Fester Wert für hoveredPolygonAltitude
 
   const globeEl = useRef(); // Referenz für den Globe
   const [countriesData, setCountriesData] = useState([]);
@@ -133,9 +133,18 @@ function PolygonGlobe() {
       const altitude = 1;
       setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
       globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Land
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
       }, 5000); // Nach 5 Sekunden zurückzoomen
+
+      // Clear timeout if user interacts with the globe
+      const controls = globeEl.current.controls();
+      const handleUserInteraction = () => {
+        clearTimeout(timeoutId);
+        controls.removeEventListener("start", handleUserInteraction);
+      };
+
+      controls.addEventListener("start", handleUserInteraction);
     }
   };
 
