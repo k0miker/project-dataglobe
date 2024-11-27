@@ -192,17 +192,18 @@ function PolygonGlobe() {
     };
   }, []);
 
-  useEffect(() => {
-    const controls = globeEl.current.controls();
-    const handleUserInteraction = () => {
-      controls.autoRotate = false;
-    };
-
-    controls.addEventListener("start", handleUserInteraction);
-    return () => {
-      controls.removeEventListener("start", handleUserInteraction);
-    };
-  }, []);
+  const handleCountryClick = (clickedCountry, event) => {
+    event.stopPropagation(); // Prevent deselecting when clicking on a country
+    const country = restCountriesData.find(
+      (country) => country.cca3 === clickedCountry.properties.ISO_A3
+    );
+    if (country) {
+      setSelectedCountry((prevCountry) =>
+        prevCountry?.cca3 === country.cca3 ? null : country
+      ); // Deselect if clicking on the same country again
+      animateCameraToCountry(country); // Animate camera to the clicked country
+    }
+  };
 
   return (
     <div
@@ -301,17 +302,7 @@ function PolygonGlobe() {
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}
-        onPolygonClick={(clickedCountry, event) => {
-          event.stopPropagation(); // Prevent deselecting when clicking on a country
-          const country = restCountriesData.find(
-            (country) => country.cca3 === clickedCountry.properties.ISO_A3
-          );
-          if (country) {
-            setSelectedCountry((prevCountry) =>
-              prevCountry?.cca3 === country.cca3 ? null : country
-            ); // Deselect if clicking on the same country again
-          }
-        }}
+        onPolygonClick={handleCountryClick}
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />

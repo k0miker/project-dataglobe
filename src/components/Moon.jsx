@@ -22,7 +22,7 @@ const Moon = ({ scene }) => {
   useEffect(() => {
     const animate = () => {
       if (moonRef.current) {
-        moonRef.current.position.applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.0005); // Rotate around Y-axis
+        moonRef.current.position.applyAxisAngle(new THREE.Vector3(0, 1, 0), -0.0002); // Rotate around Y-axis
       }
       requestAnimationFrame(animate);
     };

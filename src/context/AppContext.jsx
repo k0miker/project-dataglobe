@@ -100,6 +100,9 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     console.log("Fetching data on component mount...");
     const storedGeoJsonData = localStorage.getItem("geoJsonData");
+    const storedCountries = localStorage.getItem("countries");
+    const storedGdpData = localStorage.getItem("gdpData");
+    const storedLocationData = localStorage.getItem("locationData");
 
     if (storedGeoJsonData) {
       setGeoJsonData(JSON.parse(storedGeoJsonData));
@@ -107,21 +110,14 @@ export const AppProvider = ({ children }) => {
       fetchData();
     }
 
-    fetchAllData(); // Abrufen aller Daten beim Laden der Seite
-  }, []);
-
-  useEffect(() => {
-    console.log("Fetching countries and GDP data from local storage...");
-    const storedCountries = localStorage.getItem("countries");
-    const storedGdpData = localStorage.getItem("gdpData");
-    const storedLocationData = localStorage.getItem("locationData");
-
     if (storedCountries && storedGdpData && storedLocationData) {
       setCountries(JSON.parse(storedCountries));
       setGdpData(JSON.parse(storedGdpData));
     } else {
       fetchData();
     }
+
+    fetchAllData(); // Abrufen aller Daten beim Laden der Seite
   }, []);
 
   return (

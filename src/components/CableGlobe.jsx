@@ -11,6 +11,7 @@ function CableGlobe() {
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const fetchCableData = async () => {
     try {
@@ -78,6 +79,25 @@ function CableGlobe() {
     return color;
   };
 
+  const animateCameraToCable = (cable) => {
+    if (globeEl.current && cable) {
+      const { coords } = cable;
+      const [firstCoord] = coords;
+      const { lat, lng } = firstCoord;
+      const altitude = 1;
+      setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
+      globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Kabel
+      setTimeout(() => {
+        globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
+      }, 2500); // Nach 2.5 Sekunden zurückzoomen
+    }
+  };
+
+  const handleCableClick = (cable, event) => {
+    event.stopPropagation(); // Prevent deselecting when clicking on a cable
+    animateCameraToCable(cable); // Animate camera to the clicked cable
+  };
+
   return (
     <div className="w-full h-full absolute overflow-hidden">
       {loading && (
@@ -98,6 +118,7 @@ function CableGlobe() {
         pathDashLength={0.1}
         pathDashGap={0.008}
         pathDashAnimateTime={12000}
+        onPathClick={handleCableClick}
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />
