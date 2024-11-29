@@ -131,3 +131,54 @@ export const fetchMortalityData = async () => {
     throw error;
   }
 };
+
+export const fetchDebtData = async () => {
+  try {
+    const response = await fetch("/schulden.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Schuldendaten:", error);
+    throw error;
+  }
+};
+
+export const fetchInflationData = async () => {
+  try {
+    const response = await fetch("/inflation.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Inflationsdaten:", error);
+    throw error;
+  }
+};
+
+export const fetchEmploymentData = async () => {
+  try {
+    const response = await fetch("/employment.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Beschäftigungsdaten:", error);
+    throw error;
+  }
+};

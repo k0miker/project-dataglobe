@@ -1,0 +1,3768 @@
+[
+    {
+      "cca2": "AD",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AE",
+          "value": "United Arab Emirates"
+        },
+        "countryiso3code": "ARE",
+        "date": "2023",
+        "value": 2.706,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AF",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AF",
+          "value": "Afghanistan"
+        },
+        "countryiso3code": "AFG",
+        "date": "2023",
+        "value": 14.386,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AG",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AL",
+          "value": "Albania"
+        },
+        "countryiso3code": "ALB",
+        "date": "2023",
+        "value": 11.584,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AM",
+          "value": "Armenia"
+        },
+        "countryiso3code": "ARM",
+        "date": "2023",
+        "value": 8.586,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AO",
+          "value": "Angola"
+        },
+        "countryiso3code": "AGO",
+        "date": "2023",
+        "value": 14.62,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AQ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AR",
+          "value": "Argentina"
+        },
+        "countryiso3code": "ARG",
+        "date": "2023",
+        "value": 6.178,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AT",
+          "value": "Austria"
+        },
+        "countryiso3code": "AUT",
+        "date": "2023",
+        "value": 5.243,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AU",
+          "value": "Australia"
+        },
+        "countryiso3code": "AUS",
+        "date": "2023",
+        "value": 3.667,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AW",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "AZ",
+          "value": "Azerbaijan"
+        },
+        "countryiso3code": "AZE",
+        "date": "2023",
+        "value": 5.636,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BA",
+          "value": "Bosnia and Herzegovina"
+        },
+        "countryiso3code": "BIH",
+        "date": "2023",
+        "value": 10.42,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BB",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BB",
+          "value": "Barbados"
+        },
+        "countryiso3code": "BRB",
+        "date": "2023",
+        "value": 7.954,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BD",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BD",
+          "value": "Bangladesh"
+        },
+        "countryiso3code": "BGD",
+        "date": "2023",
+        "value": 5.06,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BE",
+          "value": "Belgium"
+        },
+        "countryiso3code": "BEL",
+        "date": "2023",
+        "value": 5.508,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BF",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BF",
+          "value": "Burkina Faso"
+        },
+        "countryiso3code": "BFA",
+        "date": "2023",
+        "value": 5.293,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BG",
+          "value": "Bulgaria"
+        },
+        "countryiso3code": "BGR",
+        "date": "2023",
+        "value": 4.295,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BH",
+          "value": "Bahrain"
+        },
+        "countryiso3code": "BHR",
+        "date": "2023",
+        "value": 1.16,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BI",
+          "value": "Burundi"
+        },
+        "countryiso3code": "BDI",
+        "date": "2023",
+        "value": 0.93,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BJ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BJ",
+          "value": "Benin"
+        },
+        "countryiso3code": "BEN",
+        "date": "2023",
+        "value": 1.452,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "BN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BN",
+          "value": "Brunei Darussalam"
+        },
+        "countryiso3code": "BRN",
+        "date": "2023",
+        "value": 5.27,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BO",
+          "value": "Bolivia"
+        },
+        "countryiso3code": "BOL",
+        "date": "2023",
+        "value": 3.081,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BR",
+          "value": "Brazil"
+        },
+        "countryiso3code": "BRA",
+        "date": "2023",
+        "value": 7.95,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BS",
+          "value": "Bahamas, The"
+        },
+        "countryiso3code": "BHS",
+        "date": "2023",
+        "value": 9.198,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BT",
+          "value": "Bhutan"
+        },
+        "countryiso3code": "BTN",
+        "date": "2023",
+        "value": 5.653,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BV",
+      "data": "data not available"
+    },
+    {
+      "cca2": "BW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BW",
+          "value": "Botswana"
+        },
+        "countryiso3code": "BWA",
+        "date": "2023",
+        "value": 23.381,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BY",
+          "value": "Belarus"
+        },
+        "countryiso3code": "BLR",
+        "date": "2023",
+        "value": 3.574,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "BZ",
+          "value": "Belize"
+        },
+        "countryiso3code": "BLZ",
+        "date": "2023",
+        "value": 8.262,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CA",
+          "value": "Canada"
+        },
+        "countryiso3code": "CAN",
+        "date": "2023",
+        "value": 5.366,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CD",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CD",
+          "value": "Congo, Dem. Rep."
+        },
+        "countryiso3code": "COD",
+        "date": "2023",
+        "value": 4.544,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CF",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CF",
+          "value": "Central African Republic"
+        },
+        "countryiso3code": "CAF",
+        "date": "2023",
+        "value": 6.286,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CG",
+          "value": "Congo, Rep."
+        },
+        "countryiso3code": "COG",
+        "date": "2023",
+        "value": 20.054,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CH",
+          "value": "Switzerland"
+        },
+        "countryiso3code": "CHE",
+        "date": "2023",
+        "value": 4.05,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CI",
+          "value": "Cote d'Ivoire"
+        },
+        "countryiso3code": "CIV",
+        "date": "2023",
+        "value": 2.403,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CL",
+          "value": "Chile"
+        },
+        "countryiso3code": "CHL",
+        "date": "2023",
+        "value": 9.037,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CM",
+          "value": "Cameroon"
+        },
+        "countryiso3code": "CMR",
+        "date": "2023",
+        "value": 3.646,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CN",
+          "value": "China"
+        },
+        "countryiso3code": "CHN",
+        "date": "2023",
+        "value": 4.67,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CO",
+          "value": "Colombia"
+        },
+        "countryiso3code": "COL",
+        "date": "2023",
+        "value": 9.565,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CR",
+          "value": "Costa Rica"
+        },
+        "countryiso3code": "CRI",
+        "date": "2023",
+        "value": 8.304,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CU",
+          "value": "Cuba"
+        },
+        "countryiso3code": "CUB",
+        "date": "2023",
+        "value": 1.163,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CV",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CV",
+          "value": "Cabo Verde"
+        },
+        "countryiso3code": "CPV",
+        "date": "2023",
+        "value": 11.994,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CX",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CY",
+          "value": "Cyprus"
+        },
+        "countryiso3code": "CYP",
+        "date": "2023",
+        "value": 5.964,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "CZ",
+          "value": "Czechia"
+        },
+        "countryiso3code": "CZE",
+        "date": "2023",
+        "value": 2.593,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "DE",
+          "value": "Germany"
+        },
+        "countryiso3code": "DEU",
+        "date": "2023",
+        "value": 3.045,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DJ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "DJ",
+          "value": "Djibouti"
+        },
+        "countryiso3code": "DJI",
+        "date": "2023",
+        "value": 26.258,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "DK",
+          "value": "Denmark"
+        },
+        "countryiso3code": "DNK",
+        "date": "2023",
+        "value": 5.142,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "DO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "DO",
+          "value": "Dominican Republic"
+        },
+        "countryiso3code": "DOM",
+        "date": "2023",
+        "value": 5.557,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "DZ",
+          "value": "Algeria"
+        },
+        "countryiso3code": "DZA",
+        "date": "2023",
+        "value": 11.814,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EC",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "EC",
+          "value": "Ecuador"
+        },
+        "countryiso3code": "ECU",
+        "date": "2023",
+        "value": 3.367,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "EE",
+          "value": "Estonia"
+        },
+        "countryiso3code": "EST",
+        "date": "2023",
+        "value": 6.345,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "EG",
+          "value": "Egypt, Arab Rep."
+        },
+        "countryiso3code": "EGY",
+        "date": "2023",
+        "value": 7.306,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "ER",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ER",
+          "value": "Eritrea"
+        },
+        "countryiso3code": "ERI",
+        "date": "2023",
+        "value": 5.866,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ES",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ES",
+          "value": "Spain"
+        },
+        "countryiso3code": "ESP",
+        "date": "2023",
+        "value": 12.144,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ET",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ET",
+          "value": "Ethiopia"
+        },
+        "countryiso3code": "ETH",
+        "date": "2023",
+        "value": 3.497,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "FI",
+          "value": "Finland"
+        },
+        "countryiso3code": "FIN",
+        "date": "2023",
+        "value": 7.155,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FJ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "FJ",
+          "value": "Fiji"
+        },
+        "countryiso3code": "FJI",
+        "date": "2023",
+        "value": 4.327,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "FM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "FO",
+      "data": "data not available"
+    },
+    {
+      "cca2": "FR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "FR",
+          "value": "France"
+        },
+        "countryiso3code": "FRA",
+        "date": "2023",
+        "value": 7.323,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GA",
+          "value": "Gabon"
+        },
+        "countryiso3code": "GAB",
+        "date": "2023",
+        "value": 20.361,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GB",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GB",
+          "value": "United Kingdom"
+        },
+        "countryiso3code": "GBR",
+        "date": "2023",
+        "value": 4.055,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GD",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GE",
+          "value": "Georgia"
+        },
+        "countryiso3code": "GEO",
+        "date": "2023",
+        "value": 11.622,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GG",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GH",
+          "value": "Ghana"
+        },
+        "countryiso3code": "GHA",
+        "date": "2023",
+        "value": 3.079,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GL",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GM",
+          "value": "Gambia, The"
+        },
+        "countryiso3code": "GMB",
+        "date": "2023",
+        "value": 6.479,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GN",
+          "value": "Guinea"
+        },
+        "countryiso3code": "GIN",
+        "date": "2023",
+        "value": 5.297,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GP",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GQ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GQ",
+          "value": "Equatorial Guinea"
+        },
+        "countryiso3code": "GNQ",
+        "date": "2023",
+        "value": 8.666,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GR",
+          "value": "Greece"
+        },
+        "countryiso3code": "GRC",
+        "date": "2023",
+        "value": 10.997,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GT",
+          "value": "Guatemala"
+        },
+        "countryiso3code": "GTM",
+        "date": "2023",
+        "value": 2.705,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GU",
+          "value": "Guam"
+        },
+        "countryiso3code": "GUM",
+        "date": "2023",
+        "value": 5.418,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GW",
+          "value": "Guinea-Bissau"
+        },
+        "countryiso3code": "GNB",
+        "date": "2023",
+        "value": 3.183,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "GY",
+          "value": "Guyana"
+        },
+        "countryiso3code": "GUY",
+        "date": "2023",
+        "value": 12.43,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PS",
+          "value": "West Bank and Gaza"
+        },
+        "countryiso3code": "PSE",
+        "date": "2022",
+        "value": 24.42,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "HK",
+          "value": "Hong Kong SAR, China"
+        },
+        "countryiso3code": "HKG",
+        "date": "2023",
+        "value": 3.931,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "HN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "HN",
+          "value": "Honduras"
+        },
+        "countryiso3code": "HND",
+        "date": "2023",
+        "value": 6.062,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "HR",
+          "value": "Croatia"
+        },
+        "countryiso3code": "HRV",
+        "date": "2023",
+        "value": 6.063,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "HT",
+          "value": "Haiti"
+        },
+        "countryiso3code": "HTI",
+        "date": "2023",
+        "value": 14.623,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "HU",
+          "value": "Hungary"
+        },
+        "countryiso3code": "HUN",
+        "date": "2023",
+        "value": 4.126,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ID",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ID",
+          "value": "Indonesia"
+        },
+        "countryiso3code": "IDN",
+        "date": "2023",
+        "value": 3.417,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IE",
+          "value": "Ireland"
+        },
+        "countryiso3code": "IRL",
+        "date": "2023",
+        "value": 4.34,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IL",
+          "value": "Israel"
+        },
+        "countryiso3code": "ISR",
+        "date": "2023",
+        "value": 3.389,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "IN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IN",
+          "value": "India"
+        },
+        "countryiso3code": "IND",
+        "date": "2023",
+        "value": 4.172,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IO",
+      "data": "data not available"
+    },
+    {
+      "cca2": "IQ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IQ",
+          "value": "Iraq"
+        },
+        "countryiso3code": "IRQ",
+        "date": "2023",
+        "value": 15.529,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IR",
+          "value": "Iran, Islamic Rep."
+        },
+        "countryiso3code": "IRN",
+        "date": "2023",
+        "value": 9.103,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IS",
+          "value": "Iceland"
+        },
+        "countryiso3code": "ISL",
+        "date": "2023",
+        "value": 3.562,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "IT",
+          "value": "Italy"
+        },
+        "countryiso3code": "ITA",
+        "date": "2023",
+        "value": 7.618,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "JM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "JM",
+          "value": "Jamaica"
+        },
+        "countryiso3code": "JAM",
+        "date": "2023",
+        "value": 4.417,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "JO",
+          "value": "Jordan"
+        },
+        "countryiso3code": "JOR",
+        "date": "2023",
+        "value": 17.944,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JP",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "JP",
+          "value": "Japan"
+        },
+        "countryiso3code": "JPN",
+        "date": "2023",
+        "value": 2.575,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KE",
+          "value": "Kenya"
+        },
+        "countryiso3code": "KEN",
+        "date": "2023",
+        "value": 5.682,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KG",
+          "value": "Kyrgyz Republic"
+        },
+        "countryiso3code": "KGZ",
+        "date": "2023",
+        "value": 4.038,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KH",
+          "value": "Cambodia"
+        },
+        "countryiso3code": "KHM",
+        "date": "2023",
+        "value": 0.239,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KM",
+          "value": "Comoros"
+        },
+        "countryiso3code": "COM",
+        "date": "2023",
+        "value": 5.795,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KP",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KP",
+          "value": "Korea, Dem. People's Rep."
+        },
+        "countryiso3code": "PRK",
+        "date": "2023",
+        "value": 3.004,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KR",
+          "value": "Korea, Rep."
+        },
+        "countryiso3code": "KOR",
+        "date": "2023",
+        "value": 2.642,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KW",
+          "value": "Kuwait"
+        },
+        "countryiso3code": "KWT",
+        "date": "2023",
+        "value": 2.076,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KY",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "KZ",
+          "value": "Kazakhstan"
+        },
+        "countryiso3code": "KAZ",
+        "date": "2023",
+        "value": 4.847,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LA",
+          "value": "Lao PDR"
+        },
+        "countryiso3code": "LAO",
+        "date": "2023",
+        "value": 1.181,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LB",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LB",
+          "value": "Lebanon"
+        },
+        "countryiso3code": "LBN",
+        "date": "2023",
+        "value": 11.565,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LC",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LC",
+          "value": "St. Lucia"
+        },
+        "countryiso3code": "LCA",
+        "date": "2023",
+        "value": 11.092,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "LK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LK",
+          "value": "Sri Lanka"
+        },
+        "countryiso3code": "LKA",
+        "date": "2023",
+        "value": 6.36,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LR",
+          "value": "Liberia"
+        },
+        "countryiso3code": "LBR",
+        "date": "2023",
+        "value": 2.939,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LS",
+          "value": "Lesotho"
+        },
+        "countryiso3code": "LSO",
+        "date": "2023",
+        "value": 16.46,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LT",
+          "value": "Lithuania"
+        },
+        "countryiso3code": "LTU",
+        "date": "2023",
+        "value": 6.962,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LU",
+          "value": "Luxembourg"
+        },
+        "countryiso3code": "LUX",
+        "date": "2023",
+        "value": 5.188,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LV",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LV",
+          "value": "Latvia"
+        },
+        "countryiso3code": "LVA",
+        "date": "2023",
+        "value": 6.534,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "LY",
+          "value": "Libya"
+        },
+        "countryiso3code": "LBY",
+        "date": "2023",
+        "value": 18.743,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MA",
+          "value": "Morocco"
+        },
+        "countryiso3code": "MAR",
+        "date": "2023",
+        "value": 9.114,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MD",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MD",
+          "value": "Moldova"
+        },
+        "countryiso3code": "MDA",
+        "date": "2023",
+        "value": 1.623,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ME",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ME",
+          "value": "Montenegro"
+        },
+        "countryiso3code": "MNE",
+        "date": "2023",
+        "value": 15.254,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MG",
+          "value": "Madagascar"
+        },
+        "countryiso3code": "MDG",
+        "date": "2023",
+        "value": 3.061,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MK",
+          "value": "North Macedonia"
+        },
+        "countryiso3code": "MKD",
+        "date": "2023",
+        "value": 13.075,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ML",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ML",
+          "value": "Mali"
+        },
+        "countryiso3code": "MLI",
+        "date": "2023",
+        "value": 3.008,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MM",
+          "value": "Myanmar"
+        },
+        "countryiso3code": "MMR",
+        "date": "2023",
+        "value": 2.841,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MN",
+          "value": "Mongolia"
+        },
+        "countryiso3code": "MNG",
+        "date": "2023",
+        "value": 6.134,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MO",
+          "value": "Macao SAR, China"
+        },
+        "countryiso3code": "MAC",
+        "date": "2023",
+        "value": 2.246,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MP",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MQ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MR",
+          "value": "Mauritania"
+        },
+        "countryiso3code": "MRT",
+        "date": "2023",
+        "value": 10.512,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MT",
+          "value": "Malta"
+        },
+        "countryiso3code": "MLT",
+        "date": "2023",
+        "value": 3.125,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MU",
+          "value": "Mauritius"
+        },
+        "countryiso3code": "MUS",
+        "date": "2023",
+        "value": 6.057,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MV",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MV",
+          "value": "Maldives"
+        },
+        "countryiso3code": "MDV",
+        "date": "2023",
+        "value": 4.127,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MW",
+          "value": "Malawi"
+        },
+        "countryiso3code": "MWI",
+        "date": "2023",
+        "value": 5.044,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MX",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MX",
+          "value": "Mexico"
+        },
+        "countryiso3code": "MEX",
+        "date": "2023",
+        "value": 2.812,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MY",
+          "value": "Malaysia"
+        },
+        "countryiso3code": "MYS",
+        "date": "2023",
+        "value": 3.855,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "MZ",
+          "value": "Mozambique"
+        },
+        "countryiso3code": "MOZ",
+        "date": "2023",
+        "value": 3.535,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NA",
+          "value": "Namibia"
+        },
+        "countryiso3code": "NAM",
+        "date": "2023",
+        "value": 19.422,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NC",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NC",
+          "value": "New Caledonia"
+        },
+        "countryiso3code": "NCL",
+        "date": "2023",
+        "value": 11.22,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NE",
+          "value": "Niger"
+        },
+        "countryiso3code": "NER",
+        "date": "2023",
+        "value": 0.55,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NG",
+          "value": "Nigeria"
+        },
+        "countryiso3code": "NGA",
+        "date": "2023",
+        "value": 3.074,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NI",
+          "value": "Nicaragua"
+        },
+        "countryiso3code": "NIC",
+        "date": "2023",
+        "value": 4.795,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NL",
+          "value": "Netherlands"
+        },
+        "countryiso3code": "NLD",
+        "date": "2023",
+        "value": 3.561,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NO",
+          "value": "Norway"
+        },
+        "countryiso3code": "NOR",
+        "date": "2023",
+        "value": 3.581,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NP",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NP",
+          "value": "Nepal"
+        },
+        "countryiso3code": "NPL",
+        "date": "2023",
+        "value": 10.685,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NR",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NU",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "NZ",
+          "value": "New Zealand"
+        },
+        "countryiso3code": "NZL",
+        "date": "2023",
+        "value": 3.737,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "OM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "OM",
+          "value": "Oman"
+        },
+        "countryiso3code": "OMN",
+        "date": "2023",
+        "value": 1.46,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PA",
+          "value": "Panama"
+        },
+        "countryiso3code": "PAN",
+        "date": "2023",
+        "value": 6.701,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PE",
+          "value": "Peru"
+        },
+        "countryiso3code": "PER",
+        "date": "2023",
+        "value": 4.82,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PF",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PF",
+          "value": "French Polynesia"
+        },
+        "countryiso3code": "PYF",
+        "date": "2023",
+        "value": 11.724,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PG",
+          "value": "Papua New Guinea"
+        },
+        "countryiso3code": "PNG",
+        "date": "2023",
+        "value": 2.651,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PH",
+          "value": "Philippines"
+        },
+        "countryiso3code": "PHL",
+        "date": "2023",
+        "value": 2.233,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PK",
+          "value": "Pakistan"
+        },
+        "countryiso3code": "PAK",
+        "date": "2023",
+        "value": 5.499,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PL",
+          "value": "Poland"
+        },
+        "countryiso3code": "POL",
+        "date": "2023",
+        "value": 2.905,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PR",
+          "value": "Puerto Rico"
+        },
+        "countryiso3code": "PRI",
+        "date": "2023",
+        "value": 5.962,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PS",
+          "value": "West Bank and Gaza"
+        },
+        "countryiso3code": "PSE",
+        "date": "2022",
+        "value": 24.42,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PT",
+          "value": "Portugal"
+        },
+        "countryiso3code": "PRT",
+        "date": "2023",
+        "value": 6.491,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PW",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "PY",
+          "value": "Paraguay"
+        },
+        "countryiso3code": "PRY",
+        "date": "2023",
+        "value": 5.779,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "QA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "QA",
+          "value": "Qatar"
+        },
+        "countryiso3code": "QAT",
+        "date": "2023",
+        "value": 0.13,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "RO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "RO",
+          "value": "Romania"
+        },
+        "countryiso3code": "ROU",
+        "date": "2023",
+        "value": 5.595,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "RS",
+          "value": "Serbia"
+        },
+        "countryiso3code": "SRB",
+        "date": "2023",
+        "value": 8.683,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "RU",
+          "value": "Russian Federation"
+        },
+        "countryiso3code": "RUS",
+        "date": "2023",
+        "value": 3.325,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "RW",
+          "value": "Rwanda"
+        },
+        "countryiso3code": "RWA",
+        "date": "2023",
+        "value": 14.932,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SA",
+          "value": "Saudi Arabia"
+        },
+        "countryiso3code": "SAU",
+        "date": "2023",
+        "value": 4.88,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SB",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SB",
+          "value": "Solomon Islands"
+        },
+        "countryiso3code": "SLB",
+        "date": "2023",
+        "value": 1.545,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SD",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SD",
+          "value": "Sudan"
+        },
+        "countryiso3code": "SDN",
+        "date": "2023",
+        "value": 11.449,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SE",
+          "value": "Sweden"
+        },
+        "countryiso3code": "SWE",
+        "date": "2023",
+        "value": 7.587,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SG",
+          "value": "Singapore"
+        },
+        "countryiso3code": "SGP",
+        "date": "2023",
+        "value": 3.472,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SI",
+          "value": "Slovenia"
+        },
+        "countryiso3code": "SVN",
+        "date": "2023",
+        "value": 3.627,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SJ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SK",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SK",
+          "value": "Slovak Republic"
+        },
+        "countryiso3code": "SVK",
+        "date": "2023",
+        "value": 5.84,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SL",
+          "value": "Sierra Leone"
+        },
+        "countryiso3code": "SLE",
+        "date": "2023",
+        "value": 3.174,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SN",
+          "value": "Senegal"
+        },
+        "countryiso3code": "SEN",
+        "date": "2023",
+        "value": 2.93,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SO",
+          "value": "Somalia"
+        },
+        "countryiso3code": "SOM",
+        "date": "2023",
+        "value": 19.027,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SR",
+          "value": "Suriname"
+        },
+        "countryiso3code": "SUR",
+        "date": "2023",
+        "value": 7.704,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ST",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ST",
+          "value": "Sao Tome and Principe"
+        },
+        "countryiso3code": "STP",
+        "date": "2023",
+        "value": 14.208,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SV",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SV",
+          "value": "El Salvador"
+        },
+        "countryiso3code": "SLV",
+        "date": "2023",
+        "value": 2.758,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SY",
+          "value": "Syrian Arab Republic"
+        },
+        "countryiso3code": "SYR",
+        "date": "2023",
+        "value": 13.544,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "SZ",
+          "value": "Eswatini"
+        },
+        "countryiso3code": "SWZ",
+        "date": "2023",
+        "value": 37.636,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TD",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TD",
+          "value": "Chad"
+        },
+        "countryiso3code": "TCD",
+        "date": "2023",
+        "value": 1.082,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TG",
+          "value": "Togo"
+        },
+        "countryiso3code": "TGO",
+        "date": "2023",
+        "value": 2.048,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TH",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TH",
+          "value": "Thailand"
+        },
+        "countryiso3code": "THA",
+        "date": "2023",
+        "value": 0.913,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TJ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TJ",
+          "value": "Tajikistan"
+        },
+        "countryiso3code": "TJK",
+        "date": "2023",
+        "value": 6.981,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TL",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TL",
+          "value": "Timor-Leste"
+        },
+        "countryiso3code": "TLS",
+        "date": "2023",
+        "value": 1.523,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TM",
+          "value": "Turkmenistan"
+        },
+        "countryiso3code": "TKM",
+        "date": "2023",
+        "value": 4.12,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TN",
+          "value": "Tunisia"
+        },
+        "countryiso3code": "TUN",
+        "date": "2023",
+        "value": 15.106,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TO",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TO",
+          "value": "Tonga"
+        },
+        "countryiso3code": "TON",
+        "date": "2023",
+        "value": 2.303,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TR",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2023",
+        "value": 9.412,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TT",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TT",
+          "value": "Trinidad and Tobago"
+        },
+        "countryiso3code": "TTO",
+        "date": "2023",
+        "value": 4.206,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TV",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TW",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "TZ",
+          "value": "Tanzania"
+        },
+        "countryiso3code": "TZA",
+        "date": "2023",
+        "value": 2.607,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "UA",
+          "value": "Ukraine"
+        },
+        "countryiso3code": "UKR",
+        "date": "2021",
+        "value": 9.834,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UG",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "UG",
+          "value": "Uganda"
+        },
+        "countryiso3code": "UGA",
+        "date": "2023",
+        "value": 2.831,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "US",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "US",
+          "value": "United States"
+        },
+        "countryiso3code": "USA",
+        "date": "2023",
+        "value": 3.625,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UY",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "UY",
+          "value": "Uruguay"
+        },
+        "countryiso3code": "URY",
+        "date": "2023",
+        "value": 8.354,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UZ",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "UZ",
+          "value": "Uzbekistan"
+        },
+        "countryiso3code": "UZB",
+        "date": "2023",
+        "value": 4.526,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VA",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VC",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "VC",
+          "value": "St. Vincent and the Grenadines"
+        },
+        "countryiso3code": "VCT",
+        "date": "2023",
+        "value": 18.674,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "VE",
+          "value": "Venezuela, RB"
+        },
+        "countryiso3code": "VEN",
+        "date": "2023",
+        "value": 5.528,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VG",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VI",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "VI",
+          "value": "Virgin Islands (U.S.)"
+        },
+        "countryiso3code": "VIR",
+        "date": "2023",
+        "value": 12.087,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VN",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "VN",
+          "value": "Viet Nam"
+        },
+        "countryiso3code": "VNM",
+        "date": "2023",
+        "value": 1.602,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VU",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "VU",
+          "value": "Vanuatu"
+        },
+        "countryiso3code": "VUT",
+        "date": "2023",
+        "value": 5.099,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "WF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "WS",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "WS",
+          "value": "Samoa"
+        },
+        "countryiso3code": "WSM",
+        "date": "2023",
+        "value": 9.747,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "XK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "YE",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "YE",
+          "value": "Yemen, Rep."
+        },
+        "countryiso3code": "YEM",
+        "date": "2023",
+        "value": 17.215,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "YT",
+      "data": "data not available"
+    },
+    {
+      "cca2": "ZA",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ZA",
+          "value": "South Africa"
+        },
+        "countryiso3code": "ZAF",
+        "date": "2023",
+        "value": 27.988,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ZM",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ZM",
+          "value": "Zambia"
+        },
+        "countryiso3code": "ZMB",
+        "date": "2023",
+        "value": 5.913,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ZW",
+      "data": {
+        "indicator": {
+          "id": "SL.UEM.TOTL.ZS",
+          "value": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+        },
+        "country": {
+          "id": "ZW",
+          "value": "Zimbabwe"
+        },
+        "countryiso3code": "ZWE",
+        "date": "2023",
+        "value": 8.759,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    }
+  ]

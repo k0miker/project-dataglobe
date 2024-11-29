@@ -1,0 +1,3543 @@
+[
+    {
+      "cca2": "AD",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AE",
+          "value": "United Arab Emirates"
+        },
+        "countryiso3code": "ARE",
+        "date": "2022",
+        "value": 117.541087977731,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AG",
+          "value": "Antigua and Barbuda"
+        },
+        "countryiso3code": "ATG",
+        "date": "2023",
+        "value": 133.943906030246,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AL",
+          "value": "Albania"
+        },
+        "countryiso3code": "ALB",
+        "date": "2022",
+        "value": 131.750834819418,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AM",
+          "value": "Armenia"
+        },
+        "countryiso3code": "ARM",
+        "date": "2023",
+        "value": 155.258355482585,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AO",
+          "value": "Angola"
+        },
+        "countryiso3code": "AGO",
+        "date": "2023",
+        "value": 804.965533144132,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AQ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AR",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AT",
+          "value": "Austria"
+        },
+        "countryiso3code": "AUT",
+        "date": "2023",
+        "value": 143.946494832533,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AU",
+          "value": "Australia"
+        },
+        "countryiso3code": "AUS",
+        "date": "2023",
+        "value": 139.880332986472,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "AW",
+      "data": "data not available"
+    },
+    {
+      "cca2": "AZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "AZ",
+          "value": "Azerbaijan"
+        },
+        "countryiso3code": "AZE",
+        "date": "2023",
+        "value": 212.959661766667,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BA",
+      "data": "data not available"
+    },
+    {
+      "cca2": "BB",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BB",
+          "value": "Barbados"
+        },
+        "countryiso3code": "BRB",
+        "date": "2023",
+        "value": 170.890071679653,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BD",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BD",
+          "value": "Bangladesh"
+        },
+        "countryiso3code": "BGD",
+        "date": "2023",
+        "value": 237.199569600947,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BE",
+          "value": "Belgium"
+        },
+        "countryiso3code": "BEL",
+        "date": "2023",
+        "value": 137.819385631235,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BF",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BF",
+          "value": "Burkina Faso"
+        },
+        "countryiso3code": "BFA",
+        "date": "2023",
+        "value": 131.759116014267,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BG",
+          "value": "Bulgaria"
+        },
+        "countryiso3code": "BGR",
+        "date": "2023",
+        "value": 151.670713970091,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BH",
+          "value": "Bahrain"
+        },
+        "countryiso3code": "BHR",
+        "date": "2023",
+        "value": 119.586099949687,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BI",
+          "value": "Burundi"
+        },
+        "countryiso3code": "BDI",
+        "date": "2023",
+        "value": 319.517907407394,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BJ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BJ",
+          "value": "Benin"
+        },
+        "countryiso3code": "BEN",
+        "date": "2023",
+        "value": 120.823695911462,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "BN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BN",
+          "value": "Brunei Darussalam"
+        },
+        "countryiso3code": "BRN",
+        "date": "2023",
+        "value": 106.859907015157,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BO",
+          "value": "Bolivia"
+        },
+        "countryiso3code": "BOL",
+        "date": "2023",
+        "value": 157.40476617273,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BR",
+          "value": "Brazil"
+        },
+        "countryiso3code": "BRA",
+        "date": "2023",
+        "value": 213.87513528772,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BS",
+          "value": "Bahamas, The"
+        },
+        "countryiso3code": "BHS",
+        "date": "2023",
+        "value": 130.204684513872,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BT",
+          "value": "Bhutan"
+        },
+        "countryiso3code": "BTN",
+        "date": "2023",
+        "value": 212.180694578194,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BV",
+      "data": "data not available"
+    },
+    {
+      "cca2": "BW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BW",
+          "value": "Botswana"
+        },
+        "countryiso3code": "BWA",
+        "date": "2023",
+        "value": 191.981583240697,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BY",
+          "value": "Belarus"
+        },
+        "countryiso3code": "BLR",
+        "date": "2023",
+        "value": 710.463188170058,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "BZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "BZ",
+          "value": "Belize"
+        },
+        "countryiso3code": "BLZ",
+        "date": "2023",
+        "value": 121.734880395108,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CA",
+          "value": "Canada"
+        },
+        "countryiso3code": "CAN",
+        "date": "2023",
+        "value": 134.895535203205,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CD",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CF",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CF",
+          "value": "Central African Republic"
+        },
+        "countryiso3code": "CAF",
+        "date": "2023",
+        "value": 175.005796934209,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CG",
+          "value": "Congo, Rep."
+        },
+        "countryiso3code": "COG",
+        "date": "2023",
+        "value": 138.814612802413,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CH",
+          "value": "Switzerland"
+        },
+        "countryiso3code": "CHE",
+        "date": "2023",
+        "value": 104.400030506506,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CI",
+          "value": "Cote d'Ivoire"
+        },
+        "countryiso3code": "CIV",
+        "date": "2023",
+        "value": 130.764985523184,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CL",
+          "value": "Chile"
+        },
+        "countryiso3code": "CHL",
+        "date": "2023",
+        "value": 170.651472801548,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CM",
+          "value": "Cameroon"
+        },
+        "countryiso3code": "CMR",
+        "date": "2023",
+        "value": 141.818332882446,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CN",
+          "value": "China"
+        },
+        "countryiso3code": "CHN",
+        "date": "2023",
+        "value": 132.229151902431,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CO",
+          "value": "Colombia"
+        },
+        "countryiso3code": "COL",
+        "date": "2023",
+        "value": 184.119324369034,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CR",
+          "value": "Costa Rica"
+        },
+        "countryiso3code": "CRI",
+        "date": "2023",
+        "value": 143.695505220117,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CU",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CV",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CV",
+          "value": "Cabo Verde"
+        },
+        "countryiso3code": "CPV",
+        "date": "2022",
+        "value": 122.222274152969,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CX",
+      "data": "data not available"
+    },
+    {
+      "cca2": "CY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CY",
+          "value": "Cyprus"
+        },
+        "countryiso3code": "CYP",
+        "date": "2023",
+        "value": 117.114122395083,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "CZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "CZ",
+          "value": "Czechia"
+        },
+        "countryiso3code": "CZE",
+        "date": "2023",
+        "value": 158.923132055187,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "DE",
+          "value": "Germany"
+        },
+        "countryiso3code": "DEU",
+        "date": "2023",
+        "value": 131.892448207044,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DJ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "DJ",
+          "value": "Djibouti"
+        },
+        "countryiso3code": "DJI",
+        "date": "2023",
+        "value": 132.196520309031,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "DK",
+          "value": "Denmark"
+        },
+        "countryiso3code": "DNK",
+        "date": "2023",
+        "value": 125.569145611999,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "DO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "DO",
+          "value": "Dominican Republic"
+        },
+        "countryiso3code": "DOM",
+        "date": "2023",
+        "value": 169.2906134919,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "DZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "DZ",
+          "value": "Algeria"
+        },
+        "countryiso3code": "DZA",
+        "date": "2023",
+        "value": 198.550857618244,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EC",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "EC",
+          "value": "Ecuador"
+        },
+        "countryiso3code": "ECU",
+        "date": "2023",
+        "value": 131.021069370666,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "EE",
+          "value": "Estonia"
+        },
+        "countryiso3code": "EST",
+        "date": "2023",
+        "value": 165.860163840732,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "EG",
+          "value": "Egypt, Arab Rep."
+        },
+        "countryiso3code": "EGY",
+        "date": "2023",
+        "value": 486.342894474661,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "EH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "ER",
+      "data": "data not available"
+    },
+    {
+      "cca2": "ES",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ES",
+          "value": "Spain"
+        },
+        "countryiso3code": "ESP",
+        "date": "2023",
+        "value": 127.957434718697,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ET",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ET",
+          "value": "Ethiopia"
+        },
+        "countryiso3code": "ETH",
+        "date": "2023",
+        "value": 858.423451765946,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "FI",
+          "value": "Finland"
+        },
+        "countryiso3code": "FIN",
+        "date": "2023",
+        "value": 131.040820253141,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FJ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "FJ",
+          "value": "Fiji"
+        },
+        "countryiso3code": "FJI",
+        "date": "2022",
+        "value": 134.898622800306,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "FM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "FM",
+          "value": "Micronesia, Fed. Sts."
+        },
+        "countryiso3code": "FSM",
+        "date": "2022",
+        "value": 126.9135800956,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "FO",
+      "data": "data not available"
+    },
+    {
+      "cca2": "FR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "FR",
+          "value": "France"
+        },
+        "countryiso3code": "FRA",
+        "date": "2023",
+        "value": 124.027345193475,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GA",
+          "value": "Gabon"
+        },
+        "countryiso3code": "GAB",
+        "date": "2023",
+        "value": 135.70604334892,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GB",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GB",
+          "value": "United Kingdom"
+        },
+        "countryiso3code": "GBR",
+        "date": "2023",
+        "value": 142.740891437026,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GD",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GD",
+          "value": "Grenada"
+        },
+        "countryiso3code": "GRD",
+        "date": "2023",
+        "value": 114.381235918893,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GE",
+          "value": "Georgia"
+        },
+        "countryiso3code": "GEO",
+        "date": "2023",
+        "value": 176.623016666667,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GG",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GH",
+          "value": "Ghana"
+        },
+        "countryiso3code": "GHA",
+        "date": "2023",
+        "value": 609.972588583069,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GL",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GM",
+          "value": "Gambia, The"
+        },
+        "countryiso3code": "GMB",
+        "date": "2023",
+        "value": 256.267499051756,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GN",
+          "value": "Guinea"
+        },
+        "countryiso3code": "GIN",
+        "date": "2023",
+        "value": 389.954566905293,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GP",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GQ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GQ",
+          "value": "Equatorial Guinea"
+        },
+        "countryiso3code": "GNQ",
+        "date": "2022",
+        "value": 136.377245508982,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GR",
+          "value": "Greece"
+        },
+        "countryiso3code": "GRC",
+        "date": "2023",
+        "value": 115.61014338928,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GT",
+          "value": "Guatemala"
+        },
+        "countryiso3code": "GTM",
+        "date": "2023",
+        "value": 174.59367205225,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GU",
+      "data": "data not available"
+    },
+    {
+      "cca2": "GW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GW",
+          "value": "Guinea-Bissau"
+        },
+        "countryiso3code": "GNB",
+        "date": "2022",
+        "value": 127.508994091945,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "GY",
+          "value": "Guyana"
+        },
+        "countryiso3code": "GUY",
+        "date": "2023",
+        "value": 134.478057859335,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "GZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PS",
+          "value": "West Bank and Gaza"
+        },
+        "countryiso3code": "PSE",
+        "date": "2023",
+        "value": 124.18798049845,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "HK",
+          "value": "Hong Kong SAR, China"
+        },
+        "countryiso3code": "HKG",
+        "date": "2023",
+        "value": 142.610948411804,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "HN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "HN",
+          "value": "Honduras"
+        },
+        "countryiso3code": "HND",
+        "date": "2023",
+        "value": 189.116778929842,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "HR",
+          "value": "Croatia"
+        },
+        "countryiso3code": "HRV",
+        "date": "2023",
+        "value": 134.878310665712,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "HT",
+          "value": "Haiti"
+        },
+        "countryiso3code": "HTI",
+        "date": "2023",
+        "value": 559.741538412178,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "HU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "HU",
+          "value": "Hungary"
+        },
+        "countryiso3code": "HUN",
+        "date": "2023",
+        "value": 177.341119890072,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ID",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ID",
+          "value": "Indonesia"
+        },
+        "countryiso3code": "IDN",
+        "date": "2023",
+        "value": 169.056700046911,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IE",
+          "value": "Ireland"
+        },
+        "countryiso3code": "IRL",
+        "date": "2023",
+        "value": 124.594480724668,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IL",
+          "value": "Israel"
+        },
+        "countryiso3code": "ISR",
+        "date": "2023",
+        "value": 118.754154401291,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "IN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IN",
+          "value": "India"
+        },
+        "countryiso3code": "IND",
+        "date": "2023",
+        "value": 216.862025027426,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IO",
+      "data": "data not available"
+    },
+    {
+      "cca2": "IQ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IQ",
+          "value": "Iraq"
+        },
+        "countryiso3code": "IRQ",
+        "date": "2022",
+        "value": 133.946234405587,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IR",
+          "value": "Iran, Islamic Rep."
+        },
+        "countryiso3code": "IRN",
+        "date": "2023",
+        "value": 2140.21942916994,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IS",
+          "value": "Iceland"
+        },
+        "countryiso3code": "ISL",
+        "date": "2023",
+        "value": 163.199594369605,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "IT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "IT",
+          "value": "Italy"
+        },
+        "countryiso3code": "ITA",
+        "date": "2023",
+        "value": 128.617291886527,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "JM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "JM",
+          "value": "Jamaica"
+        },
+        "countryiso3code": "JAM",
+        "date": "2023",
+        "value": 212.674339878131,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "JO",
+          "value": "Jordan"
+        },
+        "countryiso3code": "JOR",
+        "date": "2023",
+        "value": 135.895840722819,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "JP",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "JP",
+          "value": "Japan"
+        },
+        "countryiso3code": "JPN",
+        "date": "2023",
+        "value": 111.364035858675,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KE",
+          "value": "Kenya"
+        },
+        "countryiso3code": "KEN",
+        "date": "2023",
+        "value": 246.295256788022,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KG",
+          "value": "Kyrgyz Republic"
+        },
+        "countryiso3code": "KGZ",
+        "date": "2023",
+        "value": 233.709575724236,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KH",
+          "value": "Cambodia"
+        },
+        "countryiso3code": "KHM",
+        "date": "2023",
+        "value": 148.306623905508,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KI",
+          "value": "Kiribati"
+        },
+        "countryiso3code": "KIR",
+        "date": "2021",
+        "value": 105.218806716601,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KN",
+          "value": "St. Kitts and Nevis"
+        },
+        "countryiso3code": "KNA",
+        "date": "2023",
+        "value": 110.823845926704,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KP",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KR",
+          "value": "Korea, Rep."
+        },
+        "countryiso3code": "KOR",
+        "date": "2023",
+        "value": 129.195964772806,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KW",
+          "value": "Kuwait"
+        },
+        "countryiso3code": "KWT",
+        "date": "2023",
+        "value": 144.072391440901,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "KY",
+      "data": "data not available"
+    },
+    {
+      "cca2": "KZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "KZ",
+          "value": "Kazakhstan"
+        },
+        "countryiso3code": "KAZ",
+        "date": "2023",
+        "value": 288.035913621386,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LA",
+          "value": "Lao PDR"
+        },
+        "countryiso3code": "LAO",
+        "date": "2023",
+        "value": 239.071544726127,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LB",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LB",
+          "value": "Lebanon"
+        },
+        "countryiso3code": "LBN",
+        "date": "2023",
+        "value": 5336.65059176616,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LC",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LC",
+          "value": "St. Lucia"
+        },
+        "countryiso3code": "LCA",
+        "date": "2023",
+        "value": 123.326412840445,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "LK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LK",
+          "value": "Sri Lanka"
+        },
+        "countryiso3code": "LKA",
+        "date": "2023",
+        "value": 308.285687553672,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LR",
+      "data": "data not available"
+    },
+    {
+      "cca2": "LS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LS",
+          "value": "Lesotho"
+        },
+        "countryiso3code": "LSO",
+        "date": "2023",
+        "value": 199.779473243937,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LT",
+          "value": "Lithuania"
+        },
+        "countryiso3code": "LTU",
+        "date": "2023",
+        "value": 163.813865619739,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LU",
+          "value": "Luxembourg"
+        },
+        "countryiso3code": "LUX",
+        "date": "2023",
+        "value": 131.233961233961,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LV",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LV",
+          "value": "Latvia"
+        },
+        "countryiso3code": "LVA",
+        "date": "2023",
+        "value": 154.567925394545,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "LY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "LY",
+          "value": "Libya"
+        },
+        "countryiso3code": "LBY",
+        "date": "2023",
+        "value": 278.263946612131,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MA",
+          "value": "Morocco"
+        },
+        "countryiso3code": "MAR",
+        "date": "2023",
+        "value": 128.338641341941,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MD",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MD",
+          "value": "Moldova"
+        },
+        "countryiso3code": "MDA",
+        "date": "2023",
+        "value": 264.659839713206,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ME",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ME",
+          "value": "Montenegro"
+        },
+        "countryiso3code": "MNE",
+        "date": "2023",
+        "value": 146.372185064342,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MG",
+          "value": "Madagascar"
+        },
+        "countryiso3code": "MDG",
+        "date": "2023",
+        "value": 241.510481738622,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MK",
+          "value": "North Macedonia"
+        },
+        "countryiso3code": "MKD",
+        "date": "2023",
+        "value": 147.9575,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ML",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ML",
+          "value": "Mali"
+        },
+        "countryiso3code": "MLI",
+        "date": "2023",
+        "value": 126.969916905327,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MN",
+          "value": "Mongolia"
+        },
+        "countryiso3code": "MNG",
+        "date": "2023",
+        "value": 277.162801529648,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MO",
+          "value": "Macao SAR, China"
+        },
+        "countryiso3code": "MAC",
+        "date": "2022",
+        "value": 146.770288671746,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MP",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MQ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MR",
+          "value": "Mauritania"
+        },
+        "countryiso3code": "MRT",
+        "date": "2023",
+        "value": 164.572369168803,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MS",
+      "data": "data not available"
+    },
+    {
+      "cca2": "MT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MT",
+          "value": "Malta"
+        },
+        "countryiso3code": "MLT",
+        "date": "2023",
+        "value": 129.28510661979,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MU",
+          "value": "Mauritius"
+        },
+        "countryiso3code": "MUS",
+        "date": "2023",
+        "value": 164.403192624939,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MV",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MV",
+          "value": "Maldives"
+        },
+        "countryiso3code": "MDV",
+        "date": "2023",
+        "value": 142.64078208493,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MW",
+          "value": "Malawi"
+        },
+        "countryiso3code": "MWI",
+        "date": "2023",
+        "value": 773.939571837271,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MX",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MX",
+          "value": "Mexico"
+        },
+        "countryiso3code": "MEX",
+        "date": "2023",
+        "value": 176.116003638578,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MY",
+          "value": "Malaysia"
+        },
+        "countryiso3code": "MYS",
+        "date": "2023",
+        "value": 130.378270288285,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "MZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "MZ",
+          "value": "Mozambique"
+        },
+        "countryiso3code": "MOZ",
+        "date": "2023",
+        "value": 237.222313580234,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NA",
+          "value": "Namibia"
+        },
+        "countryiso3code": "NAM",
+        "date": "2023",
+        "value": 187.907421438975,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NE",
+          "value": "Niger"
+        },
+        "countryiso3code": "NER",
+        "date": "2023",
+        "value": 126.251804508777,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NG",
+          "value": "Nigeria"
+        },
+        "countryiso3code": "NGA",
+        "date": "2023",
+        "value": 524.90536465723,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NI",
+          "value": "Nicaragua"
+        },
+        "countryiso3code": "NIC",
+        "date": "2023",
+        "value": 211.983969101511,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NL",
+          "value": "Netherlands"
+        },
+        "countryiso3code": "NLD",
+        "date": "2023",
+        "value": 137.666390675753,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NO",
+          "value": "Norway"
+        },
+        "countryiso3code": "NOR",
+        "date": "2023",
+        "value": 140.684100986336,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NP",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NP",
+          "value": "Nepal"
+        },
+        "countryiso3code": "NPL",
+        "date": "2023",
+        "value": 238.106479175293,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "NR",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NU",
+      "data": "data not available"
+    },
+    {
+      "cca2": "NZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "NZ",
+          "value": "New Zealand"
+        },
+        "countryiso3code": "NZL",
+        "date": "2023",
+        "value": 136.86287449004,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "OM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "OM",
+          "value": "Oman"
+        },
+        "countryiso3code": "OMN",
+        "date": "2023",
+        "value": 119.386129959338,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PA",
+          "value": "Panama"
+        },
+        "countryiso3code": "PAN",
+        "date": "2023",
+        "value": 127.496057864854,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PE",
+          "value": "Peru"
+        },
+        "countryiso3code": "PER",
+        "date": "2023",
+        "value": 159.8164418433,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PG",
+          "value": "Papua New Guinea"
+        },
+        "countryiso3code": "PNG",
+        "date": "2023",
+        "value": 183.94721776434,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PH",
+          "value": "Philippines"
+        },
+        "countryiso3code": "PHL",
+        "date": "2023",
+        "value": 154.691744685736,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PK",
+          "value": "Pakistan"
+        },
+        "countryiso3code": "PAK",
+        "date": "2023",
+        "value": 343.42107928414,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PL",
+          "value": "Poland"
+        },
+        "countryiso3code": "POL",
+        "date": "2023",
+        "value": 158.156080387267,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PN",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PR",
+      "data": "data not available"
+    },
+    {
+      "cca2": "PS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PS",
+          "value": "West Bank and Gaza"
+        },
+        "countryiso3code": "PSE",
+        "date": "2023",
+        "value": 124.18798049845,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PT",
+          "value": "Portugal"
+        },
+        "countryiso3code": "PRT",
+        "date": "2023",
+        "value": 125.991328648484,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PW",
+          "value": "Palau"
+        },
+        "countryiso3code": "PLW",
+        "date": "2023",
+        "value": 157.889653757745,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "PY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "PY",
+          "value": "Paraguay"
+        },
+        "countryiso3code": "PRY",
+        "date": "2023",
+        "value": 176.14642303433,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "QA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "QA",
+          "value": "Qatar"
+        },
+        "countryiso3code": "QAT",
+        "date": "2023",
+        "value": 124.444834716253,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "RO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "RO",
+          "value": "Romania"
+        },
+        "countryiso3code": "ROU",
+        "date": "2023",
+        "value": 167.656128062128,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "RS",
+          "value": "Serbia"
+        },
+        "countryiso3code": "SRB",
+        "date": "2023",
+        "value": 191.574158325751,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "RU",
+          "value": "Russian Federation"
+        },
+        "countryiso3code": "RUS",
+        "date": "2021",
+        "value": 199.372063343799,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "RW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "RW",
+          "value": "Rwanda"
+        },
+        "countryiso3code": "RWA",
+        "date": "2023",
+        "value": 233.035926477338,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SA",
+          "value": "Saudi Arabia"
+        },
+        "countryiso3code": "SAU",
+        "date": "2023",
+        "value": 132.364369779118,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SB",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SB",
+          "value": "Solomon Islands"
+        },
+        "countryiso3code": "SLB",
+        "date": "2023",
+        "value": 152.897744832961,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SC",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SC",
+          "value": "Seychelles"
+        },
+        "countryiso3code": "SYC",
+        "date": "2023",
+        "value": 146.628294313518,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SD",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SD",
+          "value": "Sudan"
+        },
+        "countryiso3code": "SDN",
+        "date": "2022",
+        "value": 38796.5572974048,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SE",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SE",
+          "value": "Sweden"
+        },
+        "countryiso3code": "SWE",
+        "date": "2023",
+        "value": 133.468331831819,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SG",
+          "value": "Singapore"
+        },
+        "countryiso3code": "SGP",
+        "date": "2023",
+        "value": 129.958680443666,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SH",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SI",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SI",
+          "value": "Slovenia"
+        },
+        "countryiso3code": "SVN",
+        "date": "2023",
+        "value": 132.278285436807,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SJ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SK",
+          "value": "Slovak Republic"
+        },
+        "countryiso3code": "SVK",
+        "date": "2023",
+        "value": 151.172459670713,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SL",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SL",
+          "value": "Sierra Leone"
+        },
+        "countryiso3code": "SLE",
+        "date": "2023",
+        "value": 558.166662231195,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SN",
+          "value": "Senegal"
+        },
+        "countryiso3code": "SEN",
+        "date": "2022",
+        "value": 125.574379147807,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SO",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SR",
+          "value": "Suriname"
+        },
+        "countryiso3code": "SUR",
+        "date": "2022",
+        "value": 964.212982746744,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ST",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ST",
+          "value": "Sao Tome and Principe"
+        },
+        "countryiso3code": "STP",
+        "date": "2023",
+        "value": 338.806590676412,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SV",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "SV",
+          "value": "El Salvador"
+        },
+        "countryiso3code": "SLV",
+        "date": "2023",
+        "value": 127.883032020654,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "SY",
+      "data": "data not available"
+    },
+    {
+      "cca2": "SZ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TC",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TD",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TD",
+          "value": "Chad"
+        },
+        "countryiso3code": "TCD",
+        "date": "2023",
+        "value": 143.049515597449,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TG",
+          "value": "Togo"
+        },
+        "countryiso3code": "TGO",
+        "date": "2022",
+        "value": 129.610336993973,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TH",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TH",
+          "value": "Thailand"
+        },
+        "countryiso3code": "THA",
+        "date": "2023",
+        "value": 122.079672279536,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TJ",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TK",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TL",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TM",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TN",
+          "value": "Tunisia"
+        },
+        "countryiso3code": "TUN",
+        "date": "2023",
+        "value": 205.370262060998,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TO",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TO",
+          "value": "Tonga"
+        },
+        "countryiso3code": "TON",
+        "date": "2023",
+        "value": 159.993300024419,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TR",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TR",
+          "value": "Turkiye"
+        },
+        "countryiso3code": "TUR",
+        "date": "2023",
+        "value": 834.593142750374,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TT",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TT",
+          "value": "Trinidad and Tobago"
+        },
+        "countryiso3code": "TTO",
+        "date": "2023",
+        "value": 162.763941221304,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "TV",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TW",
+      "data": "data not available"
+    },
+    {
+      "cca2": "TZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "TZ",
+          "value": "Tanzania"
+        },
+        "countryiso3code": "TZA",
+        "date": "2023",
+        "value": 217.433986576543,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "UA",
+          "value": "Ukraine"
+        },
+        "countryiso3code": "UKR",
+        "date": "2023",
+        "value": 429.185402974749,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UG",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "UG",
+          "value": "Uganda"
+        },
+        "countryiso3code": "UGA",
+        "date": "2023",
+        "value": 209.931348222214,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "US",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "US",
+          "value": "United States"
+        },
+        "countryiso3code": "USA",
+        "date": "2023",
+        "value": 139.73579356326,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UY",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "UY",
+          "value": "Uruguay"
+        },
+        "countryiso3code": "URY",
+        "date": "2023",
+        "value": 277.191092046658,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "UZ",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "UZ",
+          "value": "Uzbekistan"
+        },
+        "countryiso3code": "UZB",
+        "date": "2022",
+        "value": 395.656628724736,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VA",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VC",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "VC",
+          "value": "St. Vincent and the Grenadines"
+        },
+        "countryiso3code": "VCT",
+        "date": "2023",
+        "value": 123.411122144985,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VG",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VI",
+      "data": "data not available"
+    },
+    {
+      "cca2": "VN",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "VN",
+          "value": "Viet Nam"
+        },
+        "countryiso3code": "VNM",
+        "date": "2023",
+        "value": 183.073410082137,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "VU",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "VU",
+          "value": "Vanuatu"
+        },
+        "countryiso3code": "VUT",
+        "date": "2022",
+        "value": 134.696357601727,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "WF",
+      "data": "data not available"
+    },
+    {
+      "cca2": "WS",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "WS",
+          "value": "Samoa"
+        },
+        "countryiso3code": "WSM",
+        "date": "2023",
+        "value": 143.168822820284,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "XK",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "XK",
+          "value": "Kosovo"
+        },
+        "countryiso3code": "XKX",
+        "date": "2023",
+        "value": 143.171468634735,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "YE",
+      "data": "data not available"
+    },
+    {
+      "cca2": "YT",
+      "data": "data not available"
+    },
+    {
+      "cca2": "ZA",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ZA",
+          "value": "South Africa"
+        },
+        "countryiso3code": "ZAF",
+        "date": "2023",
+        "value": 194.839466353907,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ZM",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ZM",
+          "value": "Zambia"
+        },
+        "countryiso3code": "ZMB",
+        "date": "2023",
+        "value": 369.000077035667,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    },
+    {
+      "cca2": "ZW",
+      "data": {
+        "indicator": {
+          "id": "FP.CPI.TOTL",
+          "value": "Consumer price index (2010 = 100)"
+        },
+        "country": {
+          "id": "ZW",
+          "value": "Zimbabwe"
+        },
+        "countryiso3code": "ZWE",
+        "date": "2022",
+        "value": 11076.6017877336,
+        "unit": "",
+        "obs_status": "",
+        "decimal": 1
+      }
+    }
+  ]

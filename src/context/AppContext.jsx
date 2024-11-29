@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes, fetchMortalityData } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes, fetchMortalityData, fetchDebtData, fetchInflationData, fetchEmploymentData } from "../utils/fetches";
 import * as d3 from "d3";
 
 const AppContext = createContext();
@@ -24,6 +24,9 @@ export const AppProvider = ({ children }) => {
   const [earthquakes, setEarthquakes] = useState([]); // Neuer State für die Erdbebendaten
   const [earthQuakeData, setEarthQuakeData] = useState([]);
   const [mortalityData, setMortalityData] = useState([]); // Neuer State für die Sterblichkeitsdaten
+  const [debtData, setDebtData] = useState([]); // Neuer State für die Schuldendaten
+  const [inflationData, setInflationData] = useState([]); // Neuer State für die Inflationsdaten
+  const [employmentData, setEmploymentData] = useState([]); // Neuer State für die Beschäftigungsdaten
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -75,12 +78,15 @@ export const AppProvider = ({ children }) => {
   const fetchAllData = async () => {
     try {
       // console.log("Fetching all data...");
-      const [geoJsonData, countriesData, locationData, gdpData, mortalityData] = await Promise.all([
+      const [geoJsonData, countriesData, locationData, gdpData, mortalityData, debtData, inflationData, employmentData] = await Promise.all([
         fetchGeoJson(),
         fetchCountries(),
         fetchLocationData(),
         fetchGDPDataForCountries(),
         fetchMortalityData(), // Sterblichkeitsdaten abrufen
+        fetchDebtData(), // Schuldendaten abrufen
+        fetchInflationData(), // Inflationsdaten abrufen
+        fetchEmploymentData(), // Beschäftigungsdaten abrufen
       ]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
@@ -103,6 +109,15 @@ export const AppProvider = ({ children }) => {
       
       setMortalityData(mortalityData); // Sterblichkeitsdaten setzen
       localStorage.setItem("mortalityData", JSON.stringify(mortalityData)); // Sterblichkeitsdaten im lokalen Speicher speichern
+      
+      setDebtData(debtData); // Schuldendaten setzen
+      localStorage.setItem("debtData", JSON.stringify(debtData)); // Schuldendaten im lokalen Speicher speichern
+
+      setInflationData(inflationData); // Inflationsdaten setzen
+      localStorage.setItem("inflationData", JSON.stringify(inflationData)); // Inflationsdaten im lokalen Speicher speichern
+
+      setEmploymentData(employmentData); // Beschäftigungsdaten setzen
+      localStorage.setItem("employmentData", JSON.stringify(employmentData)); // Beschäftigungsdaten im lokalen Speicher speichern
 
       console.log("All data fetched successfully.");
     } catch (error) {
@@ -131,35 +146,73 @@ export const AppProvider = ({ children }) => {
     const storedEarthquakes = localStorage.getItem("earthquakes");
     const cachedData = localStorage.getItem('earthQuakeData');
     const storedMortalityData = localStorage.getItem("mortalityData");
+    const storedDebtData = localStorage.getItem("debtData");
+    const storedInflationData = localStorage.getItem("inflationData");
+    const storedEmploymentData = localStorage.getItem("employmentData");
+
+    const parseJSON = (data) => {
+      try {
+        return JSON.parse(data);
+      } catch (e) {
+        console.error("Invalid JSON data:", e);
+        return null;
+      }
+    };
 
     if (storedGeoJsonData) {
-      setGeoJsonData(JSON.parse(storedGeoJsonData));
+      const parsedGeoJsonData = parseJSON(storedGeoJsonData);
+      if (parsedGeoJsonData) setGeoJsonData(parsedGeoJsonData);
     } else {
       fetchData();
     }
 
     if (storedCountries && storedGdpData && storedLocationData) {
-      setCountries(JSON.parse(storedCountries));
-      setGdpData(JSON.parse(storedGdpData));
+      const parsedCountries = parseJSON(storedCountries);
+      const parsedGdpData = parseJSON(storedGdpData);
+      if (parsedCountries) setCountries(parsedCountries);
+      if (parsedGdpData) setGdpData(parsedGdpData);
     } else {
       fetchData();
     }
 
     if (storedEarthquakes) {
-      setEarthquakes(JSON.parse(storedEarthquakes));
+      const parsedEarthquakes = parseJSON(storedEarthquakes);
+      if (parsedEarthquakes) setEarthquakes(parsedEarthquakes);
     } else {
       fetchAllData();
     }
 
     if (cachedData) {
-      // console.log("Using cached earthquake data:", JSON.parse(cachedData));
-      setEarthQuakeData(JSON.parse(cachedData));
+      const parsedCachedData = parseJSON(cachedData);
+      if (parsedCachedData) setEarthQuakeData(parsedCachedData);
     } else {
       fetchAndStoreEarthQuakeData();
     }
 
     if (storedMortalityData) {
-      setMortalityData(JSON.parse(storedMortalityData));
+      const parsedMortalityData = parseJSON(storedMortalityData);
+      if (parsedMortalityData) setMortalityData(parsedMortalityData);
+    } else {
+      fetchAllData();
+    }
+
+    if (storedDebtData) {
+      const parsedDebtData = parseJSON(storedDebtData);
+      if (parsedDebtData) setDebtData(parsedDebtData);
+    } else {
+      fetchAllData();
+    }
+
+    if (storedInflationData) {
+      const parsedInflationData = parseJSON(storedInflationData);
+      if (parsedInflationData) setInflationData(parsedInflationData);
+    } else {
+      fetchAllData();
+    }
+
+    if (storedEmploymentData) {
+      const parsedEmploymentData = parseJSON(storedEmploymentData);
+      if (parsedEmploymentData) setEmploymentData(parsedEmploymentData);
     } else {
       fetchAllData();
     }
@@ -178,6 +231,9 @@ export const AppProvider = ({ children }) => {
       earthquakes, // Erdbebendaten im Kontext bereitstellen
       earthQuakeData, fetchAndStoreEarthQuakeData,
       mortalityData, // Sterblichkeitsdaten im Kontext bereitstellen
+      debtData, // Schuldendaten im Kontext bereitstellen
+      inflationData, // Inflationsdaten im Kontext bereitstellen
+      employmentData, // Beschäftigungsdaten im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>

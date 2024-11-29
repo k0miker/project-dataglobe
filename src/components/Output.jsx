@@ -16,7 +16,7 @@ function Output() {
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
-    const { mortalityData, geoJsonData } = useAppContext(); // Sterblichkeitsdaten und GeoJSON-Daten aus dem Kontext
+    const { mortalityData, geoJsonData, debtData, inflationData, employmentData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten und Beschäftigungsdaten aus dem Kontext
 
     if (!selectedCountry) {
       return (
@@ -33,6 +33,18 @@ function Output() {
 
     const geoJsonCountry = geoJsonData.find(
       (country) => country.properties.ISO_A2 === selectedCountry.cca2
+    );
+
+    const debtInfo = debtData.find(
+      (country) => country.cca2 === selectedCountry.cca2
+    );
+
+    const inflationInfo = inflationData.find(
+      (country) => country.cca2 === selectedCountry.cca2
+    );
+
+    const employmentInfo = employmentData.find(
+      (country) => country.cca2 === selectedCountry.cca2
     );
 
     return (
@@ -115,6 +127,18 @@ function Output() {
             <b>Wirtschaft:</b>{" "}
             <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "Keine Daten"}</span>
           </li>
+          <li className="flex justify-between">
+            <b>Schulden (% des BIP):</b>{" "}
+            <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Inflation:</b>{" "}
+            <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Beschäftigungsrate:</b>{" "}
+            <span>{employmentInfo ? `${employmentInfo.value}%` : "Keine Daten"}</span>
+          </li>
         </ul>
       </div>
     );
@@ -158,8 +182,7 @@ function Output() {
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
       <div
-        className={`hidden md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 ${
-          isExpanded ? "translate-x-0" : "translate-x-full"
+        className={` md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 
         }`}
       >
         <CountryDetails />

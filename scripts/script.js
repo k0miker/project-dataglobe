@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import fetch from 'node-fetch';
 
 const data = await fs.readFile("../public/countries.csv", "utf-8");
+const data2 = await fs.readFile("../public/länder.csv", "utf-8");
 
 const indicators = {
     schulden: "GC.DOD.TOTL.GD.ZS",
@@ -21,20 +22,38 @@ const indicators = {
 };
 
 const countries = data.split("\n").slice(1).map(row => row.split("\t")[0]);
+const countryCodes = data2.split("\n").reduce((acc, row) => {
+    const [name, iso2, iso3] = row.split(",");
+    acc[iso2] = iso3;
+    return acc;
+}, {});
 
 const fetchCountryData = async (cca2, indicator) => {
-    const url2023 = `https://api.worldbank.org/v2/country/${cca2}/indicator/${indicator}?date=2023&format=json`;
-    const url2022 = `https://api.worldbank.org/v2/country/${cca2}/indicator/${indicator}?date=2022&format=json`;
+    for (let year = 2023; year >= 2020; year--) {
+        const url = `https://api.worldbank.org/v2/country/${cca2}/indicator/${indicator}?date=${year}&format=json`;
+        let response = await fetch(url);
+        let result = await response.json();
 
-    let response = await fetch(url2023);
-    let result = await response.json();
-
-    if (!result[1] || !result[1][0] || result[1][0].value === null) {
-        response = await fetch(url2022);
-        result = await response.json();
+        if (result[1] && result[1][0] && result[1][0].value !== null) {
+            return { cca2, data: result };
+        }
     }
 
-    return { cca2, data: result };
+    // Try with iso3 code if iso2 code fails
+    const cca3 = countryCodes[cca2];
+    if (cca3) {
+        for (let year = 2023; year >= 2020; year--) {
+            const url3 = `https://api.worldbank.org/v2/country/${cca3}/indicator/${indicator}?date=${year}&format=json`;
+            let response = await fetch(url3);
+            let result = await response.json();
+
+            if (result[1] && result[1][0] && result[1][0].value !== null) {
+                return { cca2: cca3, data: result };
+            }
+        }
+    }
+
+    return { cca2, data: "data not available" };
 };
 
 const fetchAllCountriesData = async () => {
@@ -42,9 +61,9 @@ const fetchAllCountriesData = async () => {
     for (let i = 0; i < countries.length; i++) {
         const country = countries[i];
         console.log(`Fetching data for ${country} (${i + 1}/${countries.length})`);
-        const countryData = await fetchCountryData(country, indicators.schulden);
+        const countryData = await fetchCountryData(country, indicators.gesundheit);
         let countryInfo;
-        if (countryData.data && countryData.data[1] && countryData.data[1][0] && countryData.data[1][0].value) {
+        if (countryData.data !== "data not available") {
             countryInfo = {
                 cca2: countryData.cca2,
                 data: countryData.data[1][0]

@@ -22,6 +22,9 @@ function PolygonGlobe() {
     colorScheme,
     maxPolygonAltitude,
     mortalityData,
+    debtData,
+    inflationData,
+    employmentData,
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
@@ -96,6 +99,27 @@ function PolygonGlobe() {
         if (country) {
           return country.value;
         }
+      } else if (dataOption === "debt") {
+        const country = debtData.find(
+          (country) => country.cca2 === feat.properties.ISO_A2
+        );
+        if (country) {
+          return country.value;
+        }
+      } else if (dataOption === "inflation") {
+        const country = inflationData.find(
+          (country) => country.cca2 === feat.properties.ISO_A2
+        );
+        if (country) {
+          return Math.min(country.value, 1000)*10;
+        }
+      } else if (dataOption === "employment") {
+        const country = employmentData.find(
+          (country) => country.cca2 === feat.properties.ISO_A2
+        );
+        if (country) {
+          return country.value;
+        }
       }
       return 0;
     };
@@ -114,7 +138,7 @@ function PolygonGlobe() {
 
   useEffect(() => {
     processGeoJsonData();
-  }, [dataOption, restCountriesData, geoJsonData, colorScheme]);
+  }, [dataOption, restCountriesData, geoJsonData, colorScheme, debtData, inflationData, employmentData]);
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
@@ -218,12 +242,9 @@ function PolygonGlobe() {
 
   const handleCountryClick = (clickedCountry, event) => {
     event.stopPropagation(); // Prevent deselecting when clicking on a country
-    // console.log("Clicked Country:", clickedCountry.properties); // Log für geklicktes Land
-    // console.log("Rest Countries Data:", restCountriesData); // Log für RestCountries-Daten
     const country = restCountriesData.find(
       (country) => country.cca3 === clickedCountry.properties.ISO_A3
     );
-    // console.log("Found Country:", country); // Log für gefundenes Land
     if (country) {
       setSelectedCountry((prevCountry) =>
         prevCountry?.cca3 === country.cca3 ? null : country
@@ -288,6 +309,27 @@ function PolygonGlobe() {
               if (country) {
                 return country.value;
               }
+            } else if (dataOption === "debt") {
+              const country = debtData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value/2;
+              }
+            } else if (dataOption === "inflation") {
+              const country = inflationData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+                if (country) {
+                return Math.min(country.value, 1000)*10;
+                }
+            } else if (dataOption === "employment") {
+              const country = employmentData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value;
+              }
             }
             return 0;
           };
@@ -330,6 +372,27 @@ function PolygonGlobe() {
               }
             } else if (dataOption === "mortality") {
               const country = mortalityData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value;
+              }
+            } else if (dataOption === "debt") {
+              const country = debtData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value / 2;
+              }
+            } else if (dataOption === "inflation") {
+              const country = inflationData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return Math.min(country.value, 1000) * 10;
+              }
+            } else if (dataOption === "employment") {
+              const country = employmentData.find(
                 (country) => country.cca2 === feat.properties.ISO_A2
               );
               if (country) {
@@ -378,6 +441,33 @@ function PolygonGlobe() {
               label += `Sterblichkeitsrate: <br /><i>${country.value}%</i>`;
             } else {
               label += `Sterblichkeitsrate: <br /><i>Keine Daten</i>`;
+            }
+          } else if (dataOption === "debt") {
+            const country = debtData.find(
+              (country) => country.cca2 === d.ISO_A2
+            );
+            if (country) {
+              label += `Schulden (% des BIP): <br /><i>${country.value.toFixed(2)}%</i>`;
+            } else {
+              label += `Schulden (% des BIP): <br /><i>Keine Daten</i>`;
+            }
+          } else if (dataOption === "inflation") {
+            const country = inflationData.find(
+              (country) => country.cca2 === d.ISO_A2
+            );
+            if (country) {
+              label += `Inflation seit 2010: <br /><i>${country.value.toFixed()}%</i>`;
+            } else {
+              label += `Inflation seit 2010: <br /><i>Keine Daten</i>`;
+            }
+          } else if (dataOption === "employment") {
+            const country = employmentData.find(
+              (country) => country.cca2 === d.ISO_A2
+            );
+            if (country) {
+              label += `Beschäftigungsrate: <br /><i>${country.value}%</i>`;
+            } else {
+              label += `Beschäftigungsrate: <br /><i>Keine Daten</i>`;
             }
           }
           label += `</div>`;
