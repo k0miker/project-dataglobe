@@ -43,7 +43,7 @@ function PolygonGlobe() {
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [animationTime, setAnimationTime] = useState(2800);
+  const [animationTime, setAnimationTime] = useState(1900);
   const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const [dimensions, setDimensions] = useState({
@@ -218,16 +218,18 @@ function PolygonGlobe() {
   };
 
   const simulateMaxPolygonAltitude = () => {
-    setMaxPolygonAltitude(2);
-    setTimeout(() => {
+    setMaxPolygonAltitude(.3);
+    setTimeout(() => {      
       setMaxPolygonAltitude(0.008);
+    }, 2000);
+    setTimeout(() => {
       setAnimationTime(500);
-    }, 1000);
+    }, 5000);
   };
 
   useEffect(() => {
     simulateMaxPolygonAltitude();
-  }, [ dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData]);
+  }, [ dataOption]);
 
   return (
     <div
