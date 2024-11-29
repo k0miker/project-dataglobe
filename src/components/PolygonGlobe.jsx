@@ -217,7 +217,7 @@ function PolygonGlobe() {
   };
 
   const simulateMaxPolygonAltitude = () => {
-    setMaxPolygonAltitude(2);
+    setMaxPolygonAltitude(1);
     setTimeout(() => {
       setMaxPolygonAltitude(0.008);
     }, 1000);
@@ -225,7 +225,7 @@ function PolygonGlobe() {
 
   useEffect(() => {
     simulateMaxPolygonAltitude();
-  }, []);
+  }, [ dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData]);
 
   return (
     <div
