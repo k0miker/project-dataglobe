@@ -43,6 +43,7 @@ function PolygonGlobe() {
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [animationTime, setAnimationTime] = useState(2800);
   const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const [dimensions, setDimensions] = useState({
@@ -220,7 +221,8 @@ function PolygonGlobe() {
     setMaxPolygonAltitude(2);
     setTimeout(() => {
       setMaxPolygonAltitude(0.008);
-    }, 3000);
+      setAnimationTime(500);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -266,7 +268,7 @@ function PolygonGlobe() {
           const color = d3.color(colorScale(getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
           const alpha = getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Transparenz anpassen
-          if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.5)"; // Weiß mit 50% Alpha für gehovtetes Land
+          if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.677)"; // Weiß mit 50% Alpha für gehovtetes Land
           return feat === selectedCountry
             ? color.formatRgb()
             : color.formatRgb();
@@ -304,7 +306,7 @@ function PolygonGlobe() {
           if (showBorders && !showData) return 1; // Höhe der Umrandung
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
-        polygonsTransitionDuration={2800}
+        polygonsTransitionDuration={animationTime}
         polygonLabel={(d) => polygonLabel(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)}
         
         onPolygonHover={(hoverD) => {
