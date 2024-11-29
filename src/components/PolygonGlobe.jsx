@@ -23,6 +23,7 @@ function PolygonGlobe() {
     showBorders,
     colorScheme,
     maxPolygonAltitude,
+    setMaxPolygonAltitude,
     mortalityData,
     debtData,
     inflationData,
@@ -215,6 +216,17 @@ function PolygonGlobe() {
     }
   };
 
+  const simulateMaxPolygonAltitude = () => {
+    setMaxPolygonAltitude(1);
+    setTimeout(() => {
+      setMaxPolygonAltitude(0.008);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    simulateMaxPolygonAltitude();
+  }, []);
+
   return (
     <div
       style={{
@@ -280,7 +292,7 @@ function PolygonGlobe() {
           if (!showBorders && !showData) return -1;
           const baseAltitude = getVal(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1] * (maxPolygonAltitude - minPolygonAltitude) + minPolygonAltitude;
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2
-          if (d === hoveredCountry && showData) return hoveredPolygonAltitude; // Heben des gehovteten Landes
+          if (d === hoveredCountry && showData) return hoveredPolygonAltitude+baseAltitude; // Heben des gehovteten Landes
           if (showData) return baseAltitude; // Höhe im Verhältnis zum Wert
           return minPolygonAltitude; // Standardhöhe
         }}
@@ -292,7 +304,7 @@ function PolygonGlobe() {
           if (showBorders && !showData) return 1; // Höhe der Umrandung
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
-        polygonsTransitionDuration={400}
+        polygonsTransitionDuration={2800}
         polygonLabel={(d) => polygonLabel(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)}
         
         onPolygonHover={(hoverD) => {

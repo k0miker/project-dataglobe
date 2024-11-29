@@ -17,6 +17,7 @@ function Output() {
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
     const { mortalityData, geoJsonData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten, Beschäftigungsdaten, Gesundheitsdaten und Wirtschaftswachstumsdaten aus dem Kontext
+    const [isExpanded, setIsExpanded] = useState(false); // State für das Ausklappen
 
     if (!selectedCountry) {
       return (
@@ -80,10 +81,6 @@ function Output() {
             <b>Region:</b> <span>{selectedCountry.region}</span>
           </li>
           <li className="flex justify-between">
-            <b>Unterregion:</b>{" "}
-            <span>{selectedCountry.subregion || "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
             <b>Einwohner:</b>{" "}
             <span>{(selectedCountry.population / 1e6).toFixed(2)} Mio</span>
           </li>
@@ -92,16 +89,6 @@ function Output() {
             <span>
               {selectedCountry.area
                 ? `${selectedCountry.area} km²`
-                : "Keine Daten"}
-            </span>
-          </li>
-          <li className="flex justify-between">
-            <b>Bevölkerungs-<br />dichte:</b>{" "}
-            <span className="self-end">
-              {selectedCountry.area
-                ? `${(
-                    selectedCountry.population / selectedCountry.area
-                  ).toFixed(2)} Pers./km²`
                 : "Keine Daten"}
             </span>
           </li>
@@ -123,39 +110,45 @@ function Output() {
                 : "Keine Daten"}
             </span>
           </li>
-          <li className="flex justify-between">
-            <b>Unabhängig:</b>{" "}
-            <span>{selectedCountry.independent ? "Ja" : "Nein"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Sterblichkeitsrate:</b>{" "}
-            <span>{mortalityInfo ? `${mortalityInfo.value}%` : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Wirtschaft:</b>{" "}
-            <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Schulden (% des BIP):</b>{" "}
-            <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Inflation:</b>{" "}
-            <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Beschäftigungsrate:</b>{" "}
-            <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Gesundheitsausgaben (% des BIP):</b>{" "}
-            <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
-          </li>
-          <li className="flex justify-between">
-            <b>Wirtschaftswachstum:</b>{" "}
-            <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
-          </li>
         </ul>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-4 text-blue-500 hover:underline"
+        >
+          {isExpanded ? "Weniger anzeigen" : "Mehr anzeigen"}
+        </button>
+        {isExpanded && (
+          <ul className="text-left mt-4 space-y-2 w-full text-sm">
+            <li className="flex justify-between">
+              <b>Sterblichkeitsrate:</b>{" "}
+              <span>{mortalityInfo ? `${mortalityInfo.value}%` : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Wirtschaft:</b>{" "}
+              <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Schulden (% des BIP):</b>{" "}
+              <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Inflation:</b>{" "}
+              <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Beschäftigungsrate:</b>{" "}
+              <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Gesundheitsausgaben (% des BIP):</b>{" "}
+              <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+            </li>
+            <li className="flex justify-between">
+              <b>Wirtschaftswachstum:</b>{" "}
+              <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+            </li>
+          </ul>
+        )}
       </div>
     );
   };
