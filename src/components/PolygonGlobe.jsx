@@ -222,6 +222,7 @@ function PolygonGlobe() {
     setTimeout(() => {      
       setMaxPolygonAltitude(0.008);
     }, 2000);
+    
     setTimeout(() => {
       setAnimationTime(500);
     }, 5000);

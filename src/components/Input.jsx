@@ -85,9 +85,9 @@ function Input() {
   const SettingsContent = () => (
     <>
       <div className="p-6 relative">
-      <h1 className="mb-2 ">⚙️ Einstellungen</h1>
+      <h1 className="mb-2 ">⚙️ Settings</h1>
         <InputSelect
-          label="Kartentyp:"
+          label="Map Type:"
           value={selectedWorld}
           onChange={(e) => setSelectedWorld(e.target.value)}
           options={[
@@ -101,49 +101,43 @@ function Input() {
             ["Tectonic", "earthTectonic.jpg"],
             ["Ultra Resolution", "earthUltra.jpg"],
           ]}
-          tooltip="Wählen Sie den Kartentyp aus, der angezeigt werden soll."
+          tooltip="Select the map type to display."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         <InputSelect
-          label="Datenoption:"
+          label="Data Option:"
           value={dataOption}
           onChange={(e) => setDataOption(e.target.value)}
           options={
             visualizationType === "polygon"
               ? [
-                  ["BIP pro Kopf", "gdp"],
-                  ["Bevölkerungsdichte", "density"],
-                  ["Sterblichkeit", "mortality"],
-                  ["Schulden", "debt"],
+                  ["GDP per Capita", "gdp"],
+                  ["Population Density", "density"],
+                  ["Mortality", "mortality"],
+                  ["Debt", "debt"],
                   ["Inflation", "inflation"],
-                  ["Beschäftigungsrate", "employment"],
-                  ["Gesundheitsausgaben", "health"], // Neue Datenoption
-                  ["Wirtschaftswachstum", "growth"], // Neue Datenoption
+                  ["Employment Rate", "employment"],
+                  ["Health Expenditure", "health"],
+                  ["Economic Growth", "growth"],
                 ]
               : visualizationType === "heatmap"
               ? [
-                  ["Bevölkerung", "population"],
-                  ["Vulkane", "volcanoes"],
+                  ["Population", "population"],
+                  ["Volcanoes", "volcanoes"],
                   ["GDP", "gdp"],
-                  ["Erdbeben", "earthquakes"], 
-                  ["Sterblichkeit", "mortality"], // Neue Datenoption
-                  ["Schulden", "debt"], // Neue Datenoption
-                  ["Inflation", "inflation"], // Neue Datenoption
-                  ["Beschäftigungsrate", "employment"], // Neue Datenoption
-                  ["Gesundheitsausgaben", "health"], // Neue Datenoption
-                  ["Wirtschaftswachstum", "growth"], // Neue Datenoption
+                  ["Earthquakes", "earthquakes"], 
                 ]
               : [["Kabel", "cable"]]
           }
-          tooltip="Wählen Sie die Datenoption aus, die auf der Karte angezeigt werden soll."
+          tooltip="Select the data option to display on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         <InputSelect
-          label="Darstellungsart:"
+          label="Visualization Type:"
           value={visualizationType}
           onChange={(e) => setVisualizationType(e.target.value)}
           options={[
@@ -151,14 +145,14 @@ function Input() {
             ["Heatmap", "heatmap"],
             ["CableGlobe", "CableGlobe"],
           ]}
-          tooltip="Wählen Sie den Visualisierungstyp für die Daten aus, der auf der Karte angezeigt werden soll."
+          tooltip="Select the visualization type for the data to display on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         {visualizationType !== "heatmap" && (
           <InputSelect
-            label="Farbschema:"
+            label="Color Scheme:"
             value={colorScheme}
             onChange={(e) => setColorScheme(e.target.value)}
             options={[
@@ -168,38 +162,29 @@ function Input() {
               ["Purples", "Purples"],
               ["Oranges", "Oranges"],
             ]}
-            tooltip="Wählen Sie das Farbschema für die Visualisierung aus."
+            tooltip="Select the color scheme for the visualization."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
           />
         )}
 
         <InputCheckbox
-          label="Daten zeigen:"
+          label="Show Data:"
           checked={showData}
           onChange={(e) => setShowData(e.target.checked)}
-          tooltip="Schalten Sie die Anzeige der Daten auf der Karte ein oder aus."
+          tooltip="Toggle the display of data on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         <InputCheckbox
-          label="Umrisse zeigen:"
+          label="Show Borders:"
           checked={showBorders}
           onChange={(e) => setShowBorders(e.target.checked)}
-          tooltip="Schalten Sie die Anzeige der Länderumrisse auf der Karte ein oder aus."
+          tooltip="Toggle the display of country borders on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
-
-        {/* <InputCheckbox
-          label="Wolken zeigen:"
-          checked={clouds}
-          onChange={(e) => setClouds(e.target.checked)}
-          tooltip="Schalten Sie die Anzeige der Wolken auf der Karte ein oder aus."
-          showTooltip={showTooltip}
-          hideTooltip={hideTooltip}
-        /> */}
 
         <InputSlider
           label="Rotation:"
@@ -208,20 +193,20 @@ function Input() {
           min={0}
           max={0.5}
           step={0.01}
-          tooltip="Stellen Sie die Rotations-geschwindigkeit der Karte ein."
+          tooltip="Adjust the rotation speed of the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         {visualizationType === "polygon" && (
           <InputSlider
-            label="Max Polygon Höhe:"
+            label="Max Polygon Height:"
             value={maxPolygonAltitude}
             onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
             min={0.006}
             max={0.5}
             step={0.01}
-            tooltip="Stellen Sie die maximale Höhe der Polygone auf der Karte ein."
+            tooltip="Adjust the maximum height of the polygons on the map."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
           />
@@ -236,7 +221,7 @@ function Input() {
               min={0.3}
               max={1.5}
               step={0.1}
-              tooltip="Stellen Sie die Höhe der Heatmap auf der Karte ein."
+              tooltip="Adjust the altitude of the heatmap on the map."
               showTooltip={showTooltip}
               hideTooltip={hideTooltip}
             />
@@ -247,7 +232,7 @@ function Input() {
               min={0.3}
               max={1.5}
               step={0.1}
-              tooltip="Stellen Sie die Bandbreite der Heatmap auf der Karte ein."
+              tooltip="Adjust the bandwidth of the heatmap on the map."
               showTooltip={showTooltip}
               hideTooltip={hideTooltip}
             />
@@ -265,7 +250,7 @@ function Input() {
         onClick={() => setIsModalOpen(true)}
         className="md:hidden fixed bottom-5 left-5 bg-glass text-white p-4 rounded-full shadow-lg z-50"
       >
-        ⚙️ Einstellungen
+        ⚙️ Settings
       </button>
 
       {/* Modal für mobile Ansicht */}
@@ -280,7 +265,7 @@ function Input() {
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">Einstellungen</h2>
+              <h2 className="text-lg font-bold">Settings</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-100 hover:text-red-700"

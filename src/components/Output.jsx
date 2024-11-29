@@ -22,8 +22,8 @@ function Output() {
     if (!selectedCountry) {
       return (
         <div className="flex flex-col justify-center items-center  rounded-bl-3xl p-6">
-          <h1 className="text-2xl font-bold mb-4">Länderinfo</h1>
-          <p className="text-lg">Wähle ein Land.</p>
+          <h1 className="text-2xl font-bold mb-4">Country Info</h1>
+          <p className="text-lg">Select a country.</p>
         </div>
       );
     }
@@ -70,44 +70,44 @@ function Output() {
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
           <li className="flex justify-between">
-            <b>Hauptstadt:</b>{" "}
+            <b>Capital:</b>{" "}
             <span>
               {selectedCountry.capital
                 ? selectedCountry.capital.join(", ")
-                : "Keine Daten"}
+                : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
             <b>Region:</b> <span>{selectedCountry.region}</span>
           </li>
           <li className="flex justify-between">
-            <b>Einwohner:</b>{" "}
-            <span>{(selectedCountry.population / 1e6).toFixed(2)} Mio</span>
+            <b>Population:</b>{" "}
+            <span>{(selectedCountry.population / 1e6).toFixed(2)} million</span>
           </li>
           <li className="flex justify-between">
-            <b>Fläche:</b>{" "}
+            <b>Area:</b>{" "}
             <span>
               {selectedCountry.area
                 ? `${selectedCountry.area} km²`
-                : "Keine Daten"}
+                : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Sprachen:</b>{" "}
+            <b>Languages:</b>{" "}
             <span>
               {selectedCountry.languages
                 ? selectedCountry.languages[0]
-                : "Keine Daten"}
+                : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Währung:</b>{" "}
+            <b>Currency:</b>{" "}
             <span>
               {selectedCountry.currencies
                 ? Object.values(selectedCountry.currencies)
                     .map((currency) => `${currency.name} (${currency.symbol})`)
                     .join(", ")
-                : "Keine Daten"}
+                : "No data"}
             </span>
           </li>
         </ul>
@@ -115,37 +115,37 @@ function Output() {
           onClick={() => setIsExpanded(!isExpanded)}
           className="mt-4 text-blue-500 hover:underline"
         >
-          {isExpanded ? "Weniger anzeigen" : "Mehr anzeigen"}
+          {isExpanded ? "Show less" : "Show more"}
         </button>
         {isExpanded && (
           <ul className="text-left mt-4 space-y-2 w-full text-sm">
             <li className="flex justify-between">
-              <b>Sterblichkeitsrate:</b>{" "}
-              <span>{mortalityInfo ? `${mortalityInfo.value}%` : "Keine Daten"}</span>
+              <b>Mortality Rate:</b>{" "}
+              <span>{mortalityInfo ? `${mortalityInfo.value}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Wirtschaft:</b>{" "}
-              <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "Keine Daten"}</span>
+              <b>Economy:</b>{" "}
+              <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Schulden (% des BIP):</b>{" "}
-              <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+              <b>Debt (% of GDP):</b>{" "}
+              <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b>Inflation:</b>{" "}
-              <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+              <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Beschäftigungsrate:</b>{" "}
-              <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+              <b>Employment Rate:</b>{" "}
+              <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Gesundheitsausgaben (% des BIP):</b>{" "}
-              <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+              <b>Health Expenditure (% of GDP):</b>{" "}
+              <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Wirtschaftswachstum:</b>{" "}
-              <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+              <b>Economic Growth:</b>{" "}
+              <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
           </ul>
         )}
@@ -160,7 +160,7 @@ function Output() {
         onClick={() => setIsModalOpen(true)}
         className="md:hidden fixed bottom-5 right-5 bg-glass text-white p-4 rounded-full shadow-lg z-50"
       >
-        🌍 Länderinfo
+        🌍 Country Info
       </button>
 
       {/* Modal für mobile Ansicht */}
@@ -175,7 +175,7 @@ function Output() {
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">Länderinfo</h2>
+              <h2 className="text-lg font-bold">Country Info</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-100 hover:text-red-700"
