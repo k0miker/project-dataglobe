@@ -220,7 +220,7 @@ function PolygonGlobe() {
     setMaxPolygonAltitude(2);
     setTimeout(() => {
       setMaxPolygonAltitude(0.008);
-    }, 1000);
+    }, 3000);
   };
 
   useEffect(() => {
