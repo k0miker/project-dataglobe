@@ -16,6 +16,8 @@ function Output() {
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
+    const { mortalityData, geoJsonData } = useAppContext(); // Sterblichkeitsdaten und GeoJSON-Daten aus dem Kontext
+
     if (!selectedCountry) {
       return (
         <div className="flex flex-col justify-center items-center  rounded-bl-3xl p-6">
@@ -24,6 +26,14 @@ function Output() {
         </div>
       );
     }
+
+    const mortalityInfo = mortalityData.find(
+      (country) => country.cca2 === selectedCountry.cca2
+    );
+
+    const geoJsonCountry = geoJsonData.find(
+      (country) => country.properties.ISO_A2 === selectedCountry.cca2
+    );
 
     return (
       <div className="flex flex-col justify-center items-center  rounded-bl-3xl  p-6">
@@ -96,6 +106,14 @@ function Output() {
           <li className="flex justify-between">
             <b>Unabhängig:</b>{" "}
             <span>{selectedCountry.independent ? "Ja" : "Nein"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Sterblichkeitsrate:</b>{" "}
+            <span>{mortalityInfo ? `${mortalityInfo.value}%` : "Keine Daten"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Wirtschaft:</b>{" "}
+            <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "Keine Daten"}</span>
           </li>
         </ul>
       </div>

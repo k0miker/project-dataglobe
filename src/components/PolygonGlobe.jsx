@@ -21,7 +21,9 @@ function PolygonGlobe() {
     showBorders,
     colorScheme,
     maxPolygonAltitude,
+    mortalityData,
   } = useAppContext();
+
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
   const hoveredPolygonAltitude =  0.05; // Reduzierte Höhe für hoveredPolygonAltitude
 
@@ -86,6 +88,13 @@ function PolygonGlobe() {
         );
         if (country) {
           return country.population / Math.max(1, country.area);
+        }
+      } else if (dataOption === "mortality") {
+        const country = mortalityData.find(
+          (country) => country.cca2 === feat.properties.ISO_A2
+        );
+        if (country) {
+          return country.value;
         }
       }
       return 0;
@@ -272,6 +281,13 @@ function PolygonGlobe() {
               if (country) {
                 return country.population / Math.max(1, country.area);
               }
+            } else if (dataOption === "mortality") {
+              const country = mortalityData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value;
+              }
             }
             return 0;
           };
@@ -312,6 +328,13 @@ function PolygonGlobe() {
               if (country) {
                 return country.population / Math.max(1, country.area);
               }
+            } else if (dataOption === "mortality") {
+              const country = mortalityData.find(
+                (country) => country.cca2 === feat.properties.ISO_A2
+              );
+              if (country) {
+                return country.value;
+              }
             }
             return 0;
           };
@@ -330,15 +353,36 @@ function PolygonGlobe() {
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
         polygonsTransitionDuration={400}
-        polygonLabel={({ properties: d }) => `
-        <div class="globe-label">
-        <b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />
-        Bevölkerung:  <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>
-        GDP:  <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>
-        Economy: <br /> <i>${d.ECONOMY}</i>
-        <br> <i>${d.INCOME_GRP}</i>
-        </div>
-        `} // Keine Labels, wenn showData aus ist
+        polygonLabel={({ properties: d }) => {
+          let label = `<div class="globe-label"><b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />`;
+          if (dataOption === "gdp") {
+            label += `Bevölkerung: <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>`;
+            label += `GDP: <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>`;
+            label += `Economy: <br /> <i>${d.ECONOMY}</i><br>`;
+            label += `<i>${d.INCOME_GRP}</i>`;
+          } else if (dataOption === "density") {
+            const country = restCountriesData.find(
+              (country) => country.cca3 === d.ISO_A3
+            );
+            if (country) {
+              label += `Bevölkerung: <br /><i>${(country.population / 1e6).toFixed(2)} Mio</i><br/>`;
+              label += `Bevölkerungsdichte: <br /><i>${(country.population / country.area).toFixed(2)} Pers./km²</i>`;
+            } else {
+              label += `Bevölkerungsdichte: <br /><i>Keine Daten</i>`;
+            }
+          } else if (dataOption === "mortality") {
+            const country = mortalityData.find(
+              (country) => country.cca2 === d.ISO_A2
+            );
+            if (country) {
+              label += `Sterblichkeitsrate: <br /><i>${country.value}%</i>`;
+            } else {
+              label += `Sterblichkeitsrate: <br /><i>Keine Daten</i>`;
+            }
+          }
+          label += `</div>`;
+          return label;
+        }}
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}

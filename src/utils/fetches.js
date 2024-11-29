@@ -58,7 +58,7 @@ export const fetchGDPDataForCountries = async () => {
     //console.log("Fetching GDP data...");
     const response = await fetch("/extendedGdpData.json");
     const gdpData = await response.json();
-    console.log("GDP data fetched successfully.", gdpData);
+  //  console.log("GDP data fetched successfully.", gdpData);
     return gdpData;
   } catch (error) {
     console.error("Fehler beim Abrufen der erweiterten GDP-Daten:", error);
@@ -74,7 +74,7 @@ export const fetchEarthQuakes = async () => {
       throw new Error("Network response was not ok: " + response.statusText);
     }
     const earthQuakes = await response.json();
-    console.log("Earthquake data fetched successfully.", earthQuakes);
+   // console.log("Earthquake data fetched successfully.", earthQuakes);
 
     const mappedData = earthQuakes.map((quake) => ({
       magnitude: Number((quake.magnitude * 1000000000).toFixed(2)),
@@ -82,7 +82,7 @@ export const fetchEarthQuakes = async () => {
       longitude: Number(quake.longitude.toFixed(2)),
     }));
 
-    console.log("Mapped Earthquake Data:", mappedData); // Protokollierung der gemappten Erdbebendaten
+    // console.log("Mapped Earthquake Data:", mappedData); 
     
     return mappedData;
   } catch (error) {
@@ -99,7 +99,7 @@ export const fetchVolcanoes = async () => {
       throw new Error("Network response was not ok: " + response.statusText);
     }
     const volcanoes = await response.json();
-    console.log("Volcano data fetched successfully.", volcanoes);
+    // console.log("Volcano data fetched successfully.", volcanoes);
     return volcanoes.map((volcano) => ({
       lat: volcano.lat,
       lng: volcano.lon,
@@ -110,3 +110,24 @@ export const fetchVolcanoes = async () => {
     throw error;
   }
 }
+
+export const fetchMortalityData = async () => {
+  try {
+    const response = await fetch("/sterblichkeit.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new TypeError("Received non-JSON response");
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value*.5 : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Sterblichkeitsdaten:", error);
+    throw error;
+  }
+};

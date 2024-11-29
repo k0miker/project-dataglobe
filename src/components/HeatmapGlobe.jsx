@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, useMemo } from "react";
 import Globe from "react-globe.gl";
 import * as d3 from "d3";
 import { useAppContext } from "../context/AppContext";
+import { fetchGDPDataForCountries, fetchVolcanoes } from "../utils/fetches"; // Importieren der fehlenden Funktionen
 import background from "../assets/images/background.png";
 import LoadingSpinner from "./LoadingSpinner";
 import Moon from "./Moon";
@@ -27,6 +28,7 @@ function HeatmapGlobe() {
       if (cachedData) {
         data = JSON.parse(cachedData);
       } else {
+        // console.log("Selected data option:", dataOption);
         if (dataOption === "population") {
           const response = await fetch("/world_population.csv");
           const csvText = await response.text();
@@ -54,11 +56,18 @@ function HeatmapGlobe() {
         } else if (dataOption === "volcanoes") {
           data = await fetchVolcanoes();
         } else if (dataOption === "earthquakes") {
-          data = earthQuakeData.map((quake) => ({
-            lat: quake.latitude,
-            lng: quake.longitude,
-            value: quake.magnitude*10000000,
-          }));
+          //console.log("Fetching earthquake data...");
+          //console.log("Earthquake data from context:", earthQuakeData);
+          if (earthQuakeData && earthQuakeData.length > 0) {
+            data = earthQuakeData.map((quake) => ({
+              lat: quake.latitude,
+              lng: quake.longitude,
+              value: quake.magnitude * 1000000000,
+            }));
+            //console.log("Processed earthquake data:", data);
+          } else {
+            console.log("No earthquake data available.");
+          }
         }
         localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
       }

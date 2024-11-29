@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes, fetchMortalityData } from "../utils/fetches";
 import * as d3 from "d3";
 
 const AppContext = createContext();
@@ -23,6 +23,7 @@ export const AppProvider = ({ children }) => {
   const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
   const [earthquakes, setEarthquakes] = useState([]); // Neuer State für die Erdbebendaten
   const [earthQuakeData, setEarthQuakeData] = useState([]);
+  const [mortalityData, setMortalityData] = useState([]); // Neuer State für die Sterblichkeitsdaten
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -73,12 +74,13 @@ export const AppProvider = ({ children }) => {
 
   const fetchAllData = async () => {
     try {
-      console.log("Fetching all data...");
-      const [geoJsonData, countriesData, locationData, gdpData] = await Promise.all([
+      // console.log("Fetching all data...");
+      const [geoJsonData, countriesData, locationData, gdpData, mortalityData] = await Promise.all([
         fetchGeoJson(),
         fetchCountries(),
         fetchLocationData(),
         fetchGDPDataForCountries(),
+        fetchMortalityData(), // Sterblichkeitsdaten abrufen
       ]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
@@ -99,6 +101,9 @@ export const AppProvider = ({ children }) => {
       setEarthquakes(earthquakes); // Erdbebendaten setzen
       localStorage.setItem("earthquakes", JSON.stringify(earthquakes)); // Erdbebendaten im lokalen Speicher speichern
       
+      setMortalityData(mortalityData); // Sterblichkeitsdaten setzen
+      localStorage.setItem("mortalityData", JSON.stringify(mortalityData)); // Sterblichkeitsdaten im lokalen Speicher speichern
+
       console.log("All data fetched successfully.");
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
@@ -108,6 +113,7 @@ export const AppProvider = ({ children }) => {
   const fetchAndStoreEarthQuakeData = async () => {
     try {
       const data = await fetchEarthQuakes();
+      // console.log("Fetched earthquake data:", data);
       setEarthQuakeData(data);
       localStorage.setItem('earthQuakeData', JSON.stringify(data));
     } catch (error) {
@@ -117,13 +123,14 @@ export const AppProvider = ({ children }) => {
 
   // Daten beim Laden der Komponente abrufen oder aus dem lokalen Speicher laden
   useEffect(() => {
-    console.log("Fetching data on component mount...");
+    // console.log("Fetching data on component mount...");
     const storedGeoJsonData = localStorage.getItem("geoJsonData");
     const storedCountries = localStorage.getItem("countries");
     const storedGdpData = localStorage.getItem("gdpData");
     const storedLocationData = localStorage.getItem("locationData");
     const storedEarthquakes = localStorage.getItem("earthquakes");
     const cachedData = localStorage.getItem('earthQuakeData');
+    const storedMortalityData = localStorage.getItem("mortalityData");
 
     if (storedGeoJsonData) {
       setGeoJsonData(JSON.parse(storedGeoJsonData));
@@ -145,9 +152,16 @@ export const AppProvider = ({ children }) => {
     }
 
     if (cachedData) {
+      // console.log("Using cached earthquake data:", JSON.parse(cachedData));
       setEarthQuakeData(JSON.parse(cachedData));
     } else {
       fetchAndStoreEarthQuakeData();
+    }
+
+    if (storedMortalityData) {
+      setMortalityData(JSON.parse(storedMortalityData));
+    } else {
+      fetchAllData();
     }
 
     fetchAllData(); // Abrufen aller Daten beim Laden der Seite
@@ -162,7 +176,8 @@ export const AppProvider = ({ children }) => {
       colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth, 
       maxPolygonAltitude, setMaxPolygonAltitude, 
       earthquakes, // Erdbebendaten im Kontext bereitstellen
-      earthQuakeData, fetchAndStoreEarthQuakeData
+      earthQuakeData, fetchAndStoreEarthQuakeData,
+      mortalityData, // Sterblichkeitsdaten im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>
