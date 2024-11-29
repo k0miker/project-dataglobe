@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes, fetchMortalityData, fetchDebtData, fetchInflationData, fetchEmploymentData } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes, fetchMortalityData, fetchDebtData, fetchInflationData, fetchEmploymentData, fetchHealthData, fetchGrowthData } from "../utils/fetches";
 import * as d3 from "d3";
 
 const AppContext = createContext();
@@ -27,6 +27,8 @@ export const AppProvider = ({ children }) => {
   const [debtData, setDebtData] = useState([]); // Neuer State für die Schuldendaten
   const [inflationData, setInflationData] = useState([]); // Neuer State für die Inflationsdaten
   const [employmentData, setEmploymentData] = useState([]); // Neuer State für die Beschäftigungsdaten
+  const [healthData, setHealthData] = useState([]); // Neuer State für die Gesundheitsdaten
+  const [growthData, setGrowthData] = useState([]); // Neuer State für die Wirtschaftswachstumsdaten
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -78,7 +80,7 @@ export const AppProvider = ({ children }) => {
   const fetchAllData = async () => {
     try {
       // console.log("Fetching all data...");
-      const [geoJsonData, countriesData, locationData, gdpData, mortalityData, debtData, inflationData, employmentData] = await Promise.all([
+      const [geoJsonData, countriesData, locationData, gdpData, mortalityData, debtData, inflationData, employmentData, healthData, growthData] = await Promise.all([
         fetchGeoJson(),
         fetchCountries(),
         fetchLocationData(),
@@ -87,6 +89,8 @@ export const AppProvider = ({ children }) => {
         fetchDebtData(), // Schuldendaten abrufen
         fetchInflationData(), // Inflationsdaten abrufen
         fetchEmploymentData(), // Beschäftigungsdaten abrufen
+        fetchHealthData(), // Gesundheitsdaten abrufen
+        fetchGrowthData(), // Wirtschaftswachstumsdaten abrufen
       ]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
@@ -119,6 +123,12 @@ export const AppProvider = ({ children }) => {
       setEmploymentData(employmentData); // Beschäftigungsdaten setzen
       localStorage.setItem("employmentData", JSON.stringify(employmentData)); // Beschäftigungsdaten im lokalen Speicher speichern
 
+      setHealthData(healthData); // Gesundheitsdaten setzen
+      localStorage.setItem("healthData", JSON.stringify(healthData)); // Gesundheitsdaten im lokalen Speicher speichern
+
+      setGrowthData(growthData); // Wirtschaftswachstumsdaten setzen
+      localStorage.setItem("growthData", JSON.stringify(growthData)); // Wirtschaftswachstumsdaten im lokalen Speicher speichern
+
       console.log("All data fetched successfully.");
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
@@ -136,6 +146,15 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  const parseJSON = (data) => {
+    try {
+      return JSON.parse(data);
+    } catch (e) {
+      console.error("Invalid JSON data:", e, data);
+      return null;
+    }
+  };
+
   // Daten beim Laden der Komponente abrufen oder aus dem lokalen Speicher laden
   useEffect(() => {
     // console.log("Fetching data on component mount...");
@@ -149,6 +168,8 @@ export const AppProvider = ({ children }) => {
     const storedDebtData = localStorage.getItem("debtData");
     const storedInflationData = localStorage.getItem("inflationData");
     const storedEmploymentData = localStorage.getItem("employmentData");
+    const storedHealthData = localStorage.getItem("healthData");
+    const storedGrowthData = localStorage.getItem("growthData");
 
     const parseJSON = (data) => {
       try {
@@ -217,6 +238,20 @@ export const AppProvider = ({ children }) => {
       fetchAllData();
     }
 
+    if (storedHealthData) {
+      const parsedHealthData = parseJSON(storedHealthData);
+      if (parsedHealthData) setHealthData(parsedHealthData);
+    } else {
+      fetchAllData();
+    }
+
+    if (storedGrowthData) {
+      const parsedGrowthData = parseJSON(storedGrowthData);
+      if (parsedGrowthData) setGrowthData(parsedGrowthData);
+    } else {
+      fetchAllData();
+    }
+
     fetchAllData(); // Abrufen aller Daten beim Laden der Seite
   }, []);
 
@@ -234,6 +269,8 @@ export const AppProvider = ({ children }) => {
       debtData, // Schuldendaten im Kontext bereitstellen
       inflationData, // Inflationsdaten im Kontext bereitstellen
       employmentData, // Beschäftigungsdaten im Kontext bereitstellen
+      healthData, // Gesundheitsdaten im Kontext bereitstellen
+      growthData, // Wirtschaftswachstumsdaten im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>

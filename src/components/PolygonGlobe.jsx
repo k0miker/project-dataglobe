@@ -8,6 +8,8 @@ import Moon from "./Moon";
 import LoadingSpinner from "./LoadingSpinner";
 import Sun from "./Sun";
 import Clouds from "./Clouds";
+import polygonLabel from "../utils/polygonLabel";
+import getVal from "../utils/geoJsonUtils";
 
 function PolygonGlobe() {
   const {
@@ -25,6 +27,8 @@ function PolygonGlobe() {
     debtData,
     inflationData,
     employmentData,
+    healthData,
+    growthData,
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
@@ -80,51 +84,9 @@ function PolygonGlobe() {
   // GeoJSON Daten verarbeiten
   const processGeoJsonData = () => {
     // console.log("Processing GeoJSON data...");
-    const getVal = (feat) => {
-      if (dataOption === "gdp") {
-        return (
-          feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST)
-        );
-      } else if (dataOption === "density") {
-        const country = restCountriesData.find(
-          (country) => country.cca3 === feat.properties.ISO_A3
-        );
-        if (country) {
-          return country.population / Math.max(1, country.area);
-        }
-      } else if (dataOption === "mortality") {
-        const country = mortalityData.find(
-          (country) => country.cca2 === feat.properties.ISO_A2
-        );
-        if (country) {
-          return country.value;
-        }
-      } else if (dataOption === "debt") {
-        const country = debtData.find(
-          (country) => country.cca2 === feat.properties.ISO_A2
-        );
-        if (country) {
-          return country.value;
-        }
-      } else if (dataOption === "inflation") {
-        const country = inflationData.find(
-          (country) => country.cca2 === feat.properties.ISO_A2
-        );
-        if (country) {
-          return Math.min(country.value, 1000)*10;
-        }
-      } else if (dataOption === "employment") {
-        const country = employmentData.find(
-          (country) => country.cca2 === feat.properties.ISO_A2
-        );
-        if (country) {
-          return country.value;
-        }
-      }
-      return 0;
-    };
 
-    const maxVal = Math.max(...geoJsonData.map(getVal));
+
+    const maxVal = Math.max(...geoJsonData.map(feat => getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
     // console.log("Max Value for Data Option:", maxVal); // Log für Maximalwert
     setColorScale(() =>
       d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([
@@ -138,7 +100,7 @@ function PolygonGlobe() {
 
   useEffect(() => {
     processGeoJsonData();
-  }, [dataOption, restCountriesData, geoJsonData, colorScheme, debtData, inflationData, employmentData]);
+  }, [dataOption, restCountriesData, geoJsonData, colorScheme, debtData, inflationData, employmentData, healthData, growthData]);
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
@@ -289,52 +251,8 @@ function PolygonGlobe() {
           if (!showData && feat === selectedCountry)
             return "rgba(255, 255, 255, 0.522)";
           if (!showData) return null;
-          const getVal = (feat) => {
-            if (dataOption === "gdp") {
-              return (
-                feat.properties.GDP_MD_EST /
-                Math.max(1e5, feat.properties.POP_EST)
-              );
-            } else if (dataOption === "density") {
-              const country = restCountriesData.find(
-                (country) => country.cca3 === feat.properties.ISO_A3
-              );
-              if (country) {
-                return country.population / Math.max(1, country.area);
-              }
-            } else if (dataOption === "mortality") {
-              const country = mortalityData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value;
-              }
-            } else if (dataOption === "debt") {
-              const country = debtData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value/2;
-              }
-            } else if (dataOption === "inflation") {
-              const country = inflationData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-                if (country) {
-                return Math.min(country.value, 1000)*10;
-                }
-            } else if (dataOption === "employment") {
-              const country = employmentData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value;
-              }
-            }
-            return 0;
-          };
-          const color = d3.color(colorScale(getVal(feat)));
-          const alpha = getVal(feat) / colorScale.domain()[1];
+          const color = d3.color(colorScale(getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
+          const alpha = getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1];
           color.opacity = alpha * 3; // Transparenz anpassen
           if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.5)"; // Weiß mit 50% Alpha für gehovtetes Land
           return feat === selectedCountry
@@ -360,48 +278,7 @@ function PolygonGlobe() {
         }}
         polygonAltitude={(d) => {
           if (!showBorders && !showData) return -1;
-          const getVal = (feat) => {
-            if (dataOption === "gdp") {
-              return feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
-            } else if (dataOption === "density") {
-              const country = restCountriesData.find(
-                (country) => country.cca3 === feat.properties.ISO_A3
-              );
-              if (country) {
-                return country.population / Math.max(1, country.area);
-              }
-            } else if (dataOption === "mortality") {
-              const country = mortalityData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value;
-              }
-            } else if (dataOption === "debt") {
-              const country = debtData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value / 2;
-              }
-            } else if (dataOption === "inflation") {
-              const country = inflationData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return Math.min(country.value, 1000) * 10;
-              }
-            } else if (dataOption === "employment") {
-              const country = employmentData.find(
-                (country) => country.cca2 === feat.properties.ISO_A2
-              );
-              if (country) {
-                return country.value;
-              }
-            }
-            return 0;
-          };
-          const baseAltitude = getVal(d) / colorScale.domain()[1] * (maxPolygonAltitude - minPolygonAltitude) + minPolygonAltitude;
+          const baseAltitude = getVal(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1] * (maxPolygonAltitude - minPolygonAltitude) + minPolygonAltitude;
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2
           if (d === hoveredCountry && showData) return hoveredPolygonAltitude; // Heben des gehovteten Landes
           if (showData) return baseAltitude; // Höhe im Verhältnis zum Wert
@@ -416,63 +293,8 @@ function PolygonGlobe() {
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
         polygonsTransitionDuration={400}
-        polygonLabel={({ properties: d }) => {
-          let label = `<div class="globe-label"><b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />`;
-          if (dataOption === "gdp") {
-            label += `Bevölkerung: <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>`;
-            label += `GDP: <br /><i>${(d.GDP_MD_EST / 1e3).toFixed(2)} Mrd. $</i><br>`;
-            label += `Economy: <br /> <i>${d.ECONOMY}</i><br>`;
-            label += `<i>${d.INCOME_GRP}</i>`;
-          } else if (dataOption === "density") {
-            const country = restCountriesData.find(
-              (country) => country.cca3 === d.ISO_A3
-            );
-            if (country) {
-              label += `Bevölkerung: <br /><i>${(country.population / 1e6).toFixed(2)} Mio</i><br/>`;
-              label += `Bevölkerungsdichte: <br /><i>${(country.population / country.area).toFixed(2)} Pers./km²</i>`;
-            } else {
-              label += `Bevölkerungsdichte: <br /><i>Keine Daten</i>`;
-            }
-          } else if (dataOption === "mortality") {
-            const country = mortalityData.find(
-              (country) => country.cca2 === d.ISO_A2
-            );
-            if (country) {
-              label += `Sterblichkeitsrate: <br /><i>${country.value}%</i>`;
-            } else {
-              label += `Sterblichkeitsrate: <br /><i>Keine Daten</i>`;
-            }
-          } else if (dataOption === "debt") {
-            const country = debtData.find(
-              (country) => country.cca2 === d.ISO_A2
-            );
-            if (country) {
-              label += `Schulden (% des BIP): <br /><i>${country.value.toFixed(2)}%</i>`;
-            } else {
-              label += `Schulden (% des BIP): <br /><i>Keine Daten</i>`;
-            }
-          } else if (dataOption === "inflation") {
-            const country = inflationData.find(
-              (country) => country.cca2 === d.ISO_A2
-            );
-            if (country) {
-              label += `Inflation seit 2010: <br /><i>${country.value.toFixed()}%</i>`;
-            } else {
-              label += `Inflation seit 2010: <br /><i>Keine Daten</i>`;
-            }
-          } else if (dataOption === "employment") {
-            const country = employmentData.find(
-              (country) => country.cca2 === d.ISO_A2
-            );
-            if (country) {
-              label += `Beschäftigungsrate: <br /><i>${country.value}%</i>`;
-            } else {
-              label += `Beschäftigungsrate: <br /><i>Keine Daten</i>`;
-            }
-          }
-          label += `</div>`;
-          return label;
-        }}
+        
+        
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}

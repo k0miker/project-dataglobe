@@ -182,3 +182,37 @@ export const fetchEmploymentData = async () => {
     throw error;
   }
 };
+
+export const fetchHealthData = async () => {
+  try {
+    const response = await fetch("/health.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Gesundheitsdaten:", error);
+    throw error;
+  }
+};
+
+export const fetchGrowthData = async () => {
+  try {
+    const response = await fetch("/wachstum.json");
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+    const data = await response.json();
+    return data.map(item => ({
+      cca2: item.cca2,
+      value: item.data && typeof item.data === 'object' ? item.data.value : null
+    })).filter(item => item.value !== null);
+  } catch (error) {
+    console.error("Fehler beim Abrufen der Wirtschaftswachstumsdaten:", error);
+    throw error;
+  }
+};

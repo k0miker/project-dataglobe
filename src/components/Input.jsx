@@ -115,10 +115,12 @@ function Input() {
               ? [
                   ["BIP pro Kopf", "gdp"],
                   ["Bevölkerungsdichte", "density"],
-                  ["Sterblichkeit", "mortality"], // Neue Datenoption
-                  ["Schulden", "debt"], // Neue Datenoption
-                  ["Inflation", "inflation"], // Neue Datenoption
-                  ["Arbeitslose", "employment"], // Neue Datenoption
+                  ["Sterblichkeit", "mortality"],
+                  ["Schulden", "debt"],
+                  ["Inflation", "inflation"],
+                  ["Beschäftigungsrate", "employment"],
+                  ["Gesundheitsausgaben", "health"], // Neue Datenoption
+                  ["Wirtschaftswachstum", "growth"], // Neue Datenoption
                 ]
               : visualizationType === "heatmap"
               ? [

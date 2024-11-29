@@ -61,7 +61,7 @@ const fetchAllCountriesData = async () => {
     for (let i = 0; i < countries.length; i++) {
         const country = countries[i];
         console.log(`Fetching data for ${country} (${i + 1}/${countries.length})`);
-        const countryData = await fetchCountryData(country, indicators.gesundheit);
+        const countryData = await fetchCountryData(country, indicators.wirtschaftswachstum);
         let countryInfo;
         if (countryData.data !== "data not available") {
             countryInfo = {

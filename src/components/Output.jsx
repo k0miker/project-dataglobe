@@ -16,7 +16,7 @@ function Output() {
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
-    const { mortalityData, geoJsonData, debtData, inflationData, employmentData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten und Beschäftigungsdaten aus dem Kontext
+    const { mortalityData, geoJsonData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten, Beschäftigungsdaten, Gesundheitsdaten und Wirtschaftswachstumsdaten aus dem Kontext
 
     if (!selectedCountry) {
       return (
@@ -44,6 +44,14 @@ function Output() {
     );
 
     const employmentInfo = employmentData.find(
+      (country) => country.cca2 === selectedCountry.cca2
+    );
+
+    const healthInfo = healthData.find(
+      (country) => country.cca2 === selectedCountry.cca2
+    );
+
+    const growthInfo = growthData.find(
       (country) => country.cca2 === selectedCountry.cca2
     );
 
@@ -137,7 +145,15 @@ function Output() {
           </li>
           <li className="flex justify-between">
             <b>Beschäftigungsrate:</b>{" "}
-            <span>{employmentInfo ? `${employmentInfo.value}%` : "Keine Daten"}</span>
+            <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Gesundheitsausgaben (% des BIP):</b>{" "}
+            <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
+          </li>
+          <li className="flex justify-between">
+            <b>Wirtschaftswachstum:</b>{" "}
+            <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "Keine Daten"}</span>
           </li>
         </ul>
       </div>
