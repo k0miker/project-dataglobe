@@ -1,6 +1,6 @@
 import { useAppContext } from '../context/AppContext';
 
-const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) => {
+const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData, ) => {
     let label = `<div class="globe-label"><b>${d.ADMIN} (${d.ISO_A2}):</b> <br /> <br />`;
     if (dataOption === "gdp") {
       label += `Bevölkerung: <br /><i>${(d.POP_EST / 1e6).toFixed(2)} Mio</i><br/>`;
@@ -74,7 +74,6 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
     }
     label += `</div>`;
     return label;
-    }
-        
-    
-    export default polygonLabel;
+};
+
+export default polygonLabel;

@@ -293,7 +293,7 @@ function PolygonGlobe() {
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
         polygonsTransitionDuration={400}
-        
+        polygonLabel={(d) => polygonLabel(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)}
         
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);

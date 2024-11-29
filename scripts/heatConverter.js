@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const countriesFilePath = path.join(__dirname, 'countries.csv');
-const gdpDataFilePath = path.join(__dirname, 'gdpData.json');
-const outputFilePath = path.join(__dirname, 'extendedGdpData.json');
+const mortalityDataFilePath = path.join(__dirname, 'sterblichkeit.json');
+const outputFilePath = path.join(__dirname, 'sterblichkeit_ext.json');
 
 const countries = {};
 
@@ -22,19 +22,20 @@ fs.createReadStream(countriesFilePath)
         };
     })
     .on('end', () => {
-        fs.readFile(gdpDataFilePath, 'utf8', (err, data) => {
+        fs.readFile(mortalityDataFilePath, 'utf8', (err, data) => {
             if (err) {
-                console.error('Fehler beim Lesen der GDP-Daten:', err);
+                console.error('Fehler beim Lesen der Sterblichkeitsdaten:', err);
                 return;
             }
 
-            const gdpData = JSON.parse(data);
-            const extendedGdpData = {};
+            const mortalityData = JSON.parse(data);
+            const extendedMortalityData = {};
 
-            for (const [countryCode, gdpValue] of Object.entries(gdpData)) {
+            for (const entry of mortalityData) {
+                const countryCode = entry.cca2;
                 if (countries[countryCode]) {
-                    extendedGdpData[countryCode] = {
-                        gdp: gdpValue,
+                    extendedMortalityData[countryCode] = {
+                        value_: entry.data.value || "no data",
                         latitude: countries[countryCode].latitude,
                         longitude: countries[countryCode].longitude,
                         name: countries[countryCode].name
@@ -44,12 +45,12 @@ fs.createReadStream(countriesFilePath)
                 }
             }
 
-            fs.writeFile(outputFilePath, JSON.stringify(extendedGdpData, null, 2), 'utf8', err => {
+            fs.writeFile(outputFilePath, JSON.stringify(extendedMortalityData, null, 2), 'utf8', err => {
                 if (err) {
-                    console.error('Fehler beim Schreiben der erweiterten GDP-Daten:', err);
+                    console.error('Fehler beim Schreiben der erweiterten Sterblichkeitsdaten:', err);
                     return;
                 }
-                console.log('Erweiterte GDP-Daten erfolgreich gespeichert.');
+                console.log('Erweiterte Sterblichkeitsdaten erfolgreich gespeichert.');
             });
         });
     });

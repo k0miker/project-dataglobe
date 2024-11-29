@@ -9,7 +9,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData, mortalityData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,6 +68,42 @@ function HeatmapGlobe() {
           } else {
             console.log("No earthquake data available.");
           }
+        } else if (dataOption === "mortality") {
+          data = mortalityData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: country.value*10000000,
+          }));
+        } else if (dataOption === "debt") {
+          data = debtData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: country.value,
+          }));
+        } else if (dataOption === "inflation") {
+          data = inflationData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: Math.min(country.value, 1000) * 10,
+          }));
+        } else if (dataOption === "employment") {
+          data = employmentData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: country.value,
+          }));
+        } else if (dataOption === "health") {
+          data = healthData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: country.value,
+          }));
+        } else if (dataOption === "growth") {
+          data = growthData.map((country) => ({
+            lat: country.latitude,
+            lng: country.longitude,
+            value: country.value,
+          }));
         }
         localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
       }

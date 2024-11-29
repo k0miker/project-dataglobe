@@ -128,6 +128,12 @@ function Input() {
                   ["Vulkane", "volcanoes"],
                   ["GDP", "gdp"],
                   ["Erdbeben", "earthquakes"], 
+                  ["Sterblichkeit", "mortality"], // Neue Datenoption
+                  ["Schulden", "debt"], // Neue Datenoption
+                  ["Inflation", "inflation"], // Neue Datenoption
+                  ["Beschäftigungsrate", "employment"], // Neue Datenoption
+                  ["Gesundheitsausgaben", "health"], // Neue Datenoption
+                  ["Wirtschaftswachstum", "growth"], // Neue Datenoption
                 ]
               : [["Kabel", "cable"]]
           }
