@@ -217,7 +217,7 @@ function PolygonGlobe() {
   };
 
   const simulateMaxPolygonAltitude = () => {
-    setMaxPolygonAltitude(1);
+    setMaxPolygonAltitude(2);
     setTimeout(() => {
       setMaxPolygonAltitude(0.008);
     }, 1000);
