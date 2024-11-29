@@ -34,7 +34,7 @@ function Output() {
           <img
             src={selectedCountry.flags.png}
             alt={`Flagge von ${selectedCountry.name.common}`}
-            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-60"
+            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-70 hover:opacity-100 transition-opacity duration-300"
           />
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
@@ -66,8 +66,8 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Bevölkerungsdichte:</b>{" "}
-            <span>
+            <b>Bevölkerungs-<br />dichte:</b>{" "}
+            <span className="self-end">
               {selectedCountry.area
                 ? `${(
                     selectedCountry.population / selectedCountry.area
@@ -79,12 +79,12 @@ function Output() {
             <b>Sprachen:</b>{" "}
             <span>
               {selectedCountry.languages
-                ? Object.values(selectedCountry.languages).join(", ")
+                ? selectedCountry.languages[0]
                 : "Keine Daten"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Währungen:</b>{" "}
+            <b>Währung:</b>{" "}
             <span>
               {selectedCountry.currencies
                 ? Object.values(selectedCountry.currencies)

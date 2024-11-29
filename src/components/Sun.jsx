@@ -8,13 +8,17 @@ const Sun = ({ scene }) => {
       const sunTexture = textureLoader.load("/sun.jpg");
 
       const sunGeometry = new THREE.SphereGeometry(350, 32, 32);
-      const sunMaterial = new THREE.MeshBasicMaterial({ map: sunTexture, emissive: 0xffffff, emissiveIntensity: 1 });
+      const sunMaterial = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        emissive: 0xffff00,
+        emissiveIntensity: 1,
+      });
       const sun = new THREE.Mesh(sunGeometry, sunMaterial);
       sun.position.set(-40800, 0, 100);
       scene.add(sun);
 
-      const sunlight = new THREE.DirectionalLight(0xffffff, 5);
-      sunlight.position.set(-36000, 0, -1000);
+      const sunlight = new THREE.DirectionalLight(0xffffe4, 5);
+      sunlight.position.set(-36000, 0, -100);
       scene.add(sunlight);
     }
   }, [scene]);

@@ -8,7 +8,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ function HeatmapGlobe() {
     height: window.innerHeight,
   });
 
-  // Heatmap-Daten abrufen
+  // Heatmap-data abrufen
   const fetchHeatmapData = async () => {
     try {
       //console.log("Fetching heatmap data for option:", dataOption);
@@ -44,34 +44,21 @@ function HeatmapGlobe() {
               value: parsedPop,
             };
           });
-        } else if ((dataOption === "gdp" || dataOption === "BIP") && Array.isArray(gdpData)) {        
-          const response = await fetch("/extendedGdpData.json");
-          const gdpData = await response.json();
+        } else if ((dataOption === "gdp" || dataOption === "BIP") && (gdpData)) {        
+          const gdpData = await fetchGDPDataForCountries();
           data = gdpData.map((country) => ({
             lat: country.latitude,
             lng: country.longitude,
             value: Math.max(Number((country.gdp / 5000000).toFixed(0)), 1), // Minimalwert weiter anheben
           }));
         } else if (dataOption === "volcanoes") {
-          const response = await fetch("/world_volcanoes.json");
-          const volcanoes = await response.json();
-          data = volcanoes.map((volcano) => ({
-            lat: volcano.lat,
-            lng: volcano.lon,
-            value: volcano.elevation,
-          }));
+          data = await fetchVolcanoes();
         } else if (dataOption === "earthquakes") {
-          const response = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson");
-          if (!response.ok) {
-            throw new Error("Network response was not ok: " + response.statusText);
-          }
-          const earthquakeData = await response.json();
-          data = earthquakeData.features.map((quake) => ({
-            lat: quake.geometry.coordinates[1],
-            lng: quake.geometry.coordinates[0],
-            value: quake.properties.mag *10,
+          data = earthQuakeData.map((quake) => ({
+            lat: quake.latitude,
+            lng: quake.longitude,
+            value: quake.magnitude*10000000,
           }));
-          console.log("Mapped Earthquake Data:", data); // Protokollierung der gemappten Erdbebendaten
         }
         localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
       }

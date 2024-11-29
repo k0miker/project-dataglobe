@@ -121,7 +121,7 @@ function Input() {
                   ["Bevölkerung", "population"],
                   ["Vulkane", "volcanoes"],
                   ["GDP", "gdp"],
-                  ["Erdbeben", "earthquakes"], // Neue Option hinzugefügt
+                  ["Erdbeben", "earthquakes"], 
                 ]
               : [["Kabel", "cable"]]
           }

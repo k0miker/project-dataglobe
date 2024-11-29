@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries } from "../utils/fetches";
+import { fetchCountries, fetchGeoJson, fetchLocationData, fetchGDPDataForCountries, fetchEarthQuakes } from "../utils/fetches";
 import * as d3 from "d3";
 
 const AppContext = createContext();
@@ -16,11 +16,13 @@ export const AppProvider = ({ children }) => {
   const [geoJsonData, setGeoJsonData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
-  const [showBorders, setShowBorders] = useState(true); // State für Länderumrisse
+  const [showBorders, setShowBorders] = useState(false); // State für Länderumrisse
   const [colorScheme, setColorScheme] = useState("Reds");
   const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.5);
   const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.0);
   const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
+  const [earthquakes, setEarthquakes] = useState([]); // Neuer State für die Erdbebendaten
+  const [earthQuakeData, setEarthQuakeData] = useState([]);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -92,9 +94,24 @@ export const AppProvider = ({ children }) => {
 
       setCountries(countriesData);
       setGdpData(gdpData);
+      
+      const earthquakes = await fetchEarthQuakes(); // Erdbebendaten abrufen
+      setEarthquakes(earthquakes); // Erdbebendaten setzen
+      localStorage.setItem("earthquakes", JSON.stringify(earthquakes)); // Erdbebendaten im lokalen Speicher speichern
+      
       console.log("All data fetched successfully.");
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
+    }
+  };
+
+  const fetchAndStoreEarthQuakeData = async () => {
+    try {
+      const data = await fetchEarthQuakes();
+      setEarthQuakeData(data);
+      localStorage.setItem('earthQuakeData', JSON.stringify(data));
+    } catch (error) {
+      console.error("Fehler beim Abrufen der Erdbebendaten:", error);
     }
   };
 
@@ -105,6 +122,8 @@ export const AppProvider = ({ children }) => {
     const storedCountries = localStorage.getItem("countries");
     const storedGdpData = localStorage.getItem("gdpData");
     const storedLocationData = localStorage.getItem("locationData");
+    const storedEarthquakes = localStorage.getItem("earthquakes");
+    const cachedData = localStorage.getItem('earthQuakeData');
 
     if (storedGeoJsonData) {
       setGeoJsonData(JSON.parse(storedGeoJsonData));
@@ -119,6 +138,18 @@ export const AppProvider = ({ children }) => {
       fetchData();
     }
 
+    if (storedEarthquakes) {
+      setEarthquakes(JSON.parse(storedEarthquakes));
+    } else {
+      fetchAllData();
+    }
+
+    if (cachedData) {
+      setEarthQuakeData(JSON.parse(cachedData));
+    } else {
+      fetchAndStoreEarthQuakeData();
+    }
+
     fetchAllData(); // Abrufen aller Daten beim Laden der Seite
   }, []);
 
@@ -129,7 +160,9 @@ export const AppProvider = ({ children }) => {
       setRotationSpeed, visualizationType, setVisualizationType, countries, 
       clouds, setClouds, geoJsonData, gdpData, showBorders, setShowBorders, 
       colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth, 
-      maxPolygonAltitude, setMaxPolygonAltitude 
+      maxPolygonAltitude, setMaxPolygonAltitude, 
+      earthquakes, // Erdbebendaten im Kontext bereitstellen
+      earthQuakeData, fetchAndStoreEarthQuakeData
     }}>
       {children}
     </AppContext.Provider>
