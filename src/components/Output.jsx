@@ -191,7 +191,7 @@ function Output() {
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
       <div
-        className={` md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 
+        className={`hidden md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 
         }`}
       >
         <CountryDetails />

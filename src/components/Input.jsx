@@ -281,7 +281,7 @@ function Input() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden h-full  md:flex flex-col max-w-auto absolute  items-between left-0 z-50 top-[10%] bg-glass  shadow-lg">
+      <div className="hidden h-full md:flex flex-col max-w-auto absolute  items-between left-0 z-50 top-[10%] bg-glass shadow-lg">
         <SettingsContent />
       </div>
     </>
