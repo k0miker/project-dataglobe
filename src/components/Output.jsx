@@ -21,9 +21,9 @@ function Output() {
 
     if (!selectedCountry) {
       return (
-        <div className="flex flex-col justify-center items-center  rounded-bl-3xl p-6">
-          <h1 className="text-2xl font-bold mb-4">Country Info</h1>
-          <p className="text-lg">Select a country.</p>
+        <div className="flex flex-col justify-center items-center p-4">
+          <h1 className=" minishadow font-bold mb-4">Country Info</h1>
+          <p className="text-sm">Select a country.</p>
         </div>
       );
     }
@@ -57,52 +57,52 @@ function Output() {
     );
 
     return (
-      <div className="flex flex-col justify-center items-center  rounded-bl-3xl  p-6">
-        <h1 className="text-2xl font-bold mb-4">
-          {selectedCountry.name.common}
-        </h1>
-        <div className="flex justify-center mb-4">
+      <div className="flex max-w-[250px]  flex-col justify-center items-center rounded-bl-3xl p-4">
+        <div className="flex flex-col justify-center ">
           <img
             src={selectedCountry.flags.png}
             alt={`Flagge von ${selectedCountry.name.common}`}
-            className="w-32 h-auto rounded-lg border-2 border-gray-200 shadow-md opacity-70 hover:opacity-100 transition-opacity duration-300"
+            className="w-28 rounded-lg border-2 border-gray-200 shadow-md opacity-70 hover:opacity-100 transition-opacity duration-300"
           />
+          <h1 className="text-2xl text-center font-bold ">
+            {selectedCountry.name.common}
+          </h1>
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
           <li className="flex justify-between">
-            <b>Capital:</b>{" "}
-            <span>
+            <b className="decoration-red-800 underline">Capital:</b>{" "}
+            <span className="text-xs p-1">
               {selectedCountry.capital
                 ? selectedCountry.capital.join(", ")
                 : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Region:</b> <span>{selectedCountry.region}</span>
+            <b className="decoration-red-800 underline">Region:</b> <span className="text-xs p-1">{selectedCountry.region}</span>
           </li>
           <li className="flex justify-between">
-            <b>Population:</b>{" "}
-            <span>{(selectedCountry.population / 1e6).toFixed(2)} million</span>
+            <b className="decoration-red-800 underline">Population:</b>{" "}
+            <span className="text-xs p-1">{(selectedCountry.population / 1e6).toFixed(2)} million</span>
           </li>
           <li className="flex justify-between">
-            <b>Area:</b>{" "}
-            <span>
+            <b className="decoration-red-800 underline">Area:</b>{" "}
+            <span className="text-xs p-1">
               {selectedCountry.area
                 ? `${selectedCountry.area} km²`
                 : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Languages:</b>{" "}
-            <span>
+            <b className="decoration-red-800 underline">Languages:</b>{" "}
+            <span className="text-xs p-1">
               {selectedCountry.languages
                 ? selectedCountry.languages[0]
                 : "No data"}
             </span>
           </li>
           <li className="flex justify-between">
-            <b>Currency:</b>{" "}
-            <span>
+            <b className="decoration-red-800 underline">Currency:</b>{" "}
+            <span className="text-xs p-1">
               {selectedCountry.currencies
                 ? Object.values(selectedCountry.currencies)
                     .map((currency) => `${currency.name} (${currency.symbol})`)
@@ -120,32 +120,32 @@ function Output() {
         {isExpanded && (
           <ul className="text-left mt-4 space-y-2 w-full text-sm">
             <li className="flex justify-between">
-              <b>Mortality Rate:</b>{" "}
-              <span>{mortalityInfo ? `${mortalityInfo.value}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Mortality Rate:</b>{" "}
+              <span className="text-xs p-1">{mortalityInfo ? `${mortalityInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Economy:</b>{" "}
-              <span>{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
+              <b className="decoration-red-800 underline">Economy:</b>{" "}
+              <span className="text-xs p-1">{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Debt (% of GDP):</b>{" "}
-              <span>{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <span className="text-xs p-1">{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Inflation:</b>{" "}
-              <span>{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Inflation:</b>{" "}
+              <span className="text-xs p-1">{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Employment Rate:</b>{" "}
-              <span>{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Unemployment Rate:</b>{" "}
+              <span className="text-xs p-1">{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Health Expenditure (% of GDP):</b>{" "}
-              <span>{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <span className="text-xs p-1">{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b>Economic Growth:</b>{" "}
-              <span>{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
+              <b className="decoration-red-800 underline">Economic Growth:</b>{" "}
+              <span className="text-xs p-1">{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
           </ul>
         )}
@@ -170,7 +170,7 @@ function Output() {
           onClick={() => setIsModalOpen(false)} // Schließen des Modals durch Klicken außerhalb
         >
           <div
-            className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-6"
+            className="bg-glass rounded-lg shadow-lg w-11/12 max-w-md p-4"
             onClick={(e) => e.stopPropagation()} // Verhindern des Schließens beim Klicken innerhalb des Modals
           >
             {/* Modal Header */}

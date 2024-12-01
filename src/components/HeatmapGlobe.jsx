@@ -72,7 +72,7 @@ function HeatmapGlobe() {
           data = mortalityData.map((country) => ({
             lat: country.latitude,
             lng: country.longitude,
-            value: country.value*10000000,
+            value: country.value*10,
           }));
         } else if (dataOption === "debt") {
           data = debtData.map((country) => ({

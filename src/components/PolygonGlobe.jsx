@@ -7,7 +7,6 @@ import { fetchCountries } from "../utils/fetches";
 import Moon from "./Moon";
 import LoadingSpinner from "./LoadingSpinner";
 import Sun from "./Sun";
-import Clouds from "./Clouds";
 import polygonLabel from "../utils/polygonLabel";
 import getVal from "../utils/geoJsonUtils";
 
@@ -121,7 +120,7 @@ function PolygonGlobe() {
       globeEl.current.controls().autoRotate = false;
       setTimeout(() => {
         globeEl.current.controls().autoRotate = true;
-      }, 5000);
+      }, 10000);
     }
   }, [selectedCountry]);
 
@@ -270,7 +269,7 @@ function PolygonGlobe() {
           if (!showData) return null;
           const color = d3.color(colorScale(getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
           const alpha = getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1];
-          color.opacity = alpha * 3; // Transparenz anpassen
+          color.opacity = alpha * 2; // Transparenz anpassen
           if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.677)"; // Weiß mit 50% Alpha für gehovtetes Land
           return feat === selectedCountry
             ? color.formatRgb()
@@ -318,7 +317,6 @@ function PolygonGlobe() {
         onPolygonClick={handleCountryClick}
         ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
       />
-      <Clouds />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />
       <style>

@@ -39,7 +39,6 @@ const fetchCountryData = async (cca2, indicator) => {
         }
     }
 
-    // Try with iso3 code if iso2 code fails
     const cca3 = countryCodes[cca2];
     if (cca3) {
         for (let year = 2023; year >= 2020; year--) {

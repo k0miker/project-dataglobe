@@ -29,7 +29,6 @@ function Input() {
     rotationSpeed, 
     maxPolygonAltitude,
     setMaxPolygonAltitude,
-    clouds, setClouds,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -85,9 +84,10 @@ function Input() {
   const SettingsContent = () => (
     <>
       <div className="p-6 relative">
-      <h1 className="mb-2 ">⚙️ Settings</h1>
+      <h1 className="mb-2 text-center text-sm">⚙️</h1>
         <InputSelect
-          label="Map Type:"
+          id="earth-groundlayer"
+          label="Earth Groundlayer:"
           value={selectedWorld}
           onChange={(e) => setSelectedWorld(e.target.value)}
           options={[
@@ -95,18 +95,17 @@ function Input() {
             ["Blue Marble", "earthMarble.png"],
             ["Night", "earthNight.jpg"],
             ["Rivers", "earthWater.png"],
-            ["Rivers B&W", "earthWaterBW.png"],
             ["Topology", "earthTopology.png"],
-            ["Continets", "earthOcean.webp"],
             ["Tectonic", "earthTectonic.jpg"],
             ["Ultra Resolution", "earthUltra.jpg"],
           ]}
-          tooltip="Select the map type to display."
+          tooltip="Select the map type to display as ground layer."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         <InputSelect
+          id="data-option"
           label="Data Option:"
           value={dataOption}
           onChange={(e) => setDataOption(e.target.value)}
@@ -118,7 +117,7 @@ function Input() {
                   ["Mortality", "mortality"],
                   ["Debt", "debt"],
                   ["Inflation", "inflation"],
-                  ["Employment Rate", "employment"],
+                  ["Unemployment Rate", "employment"],
                   ["Health Expenditure", "health"],
                   ["Economic Growth", "growth"],
                 ]
@@ -131,27 +130,29 @@ function Input() {
                 ]
               : [["Kabel", "cable"]]
           }
-          tooltip="Select the data option to display on the map."
+          tooltip="Select the data option to vizualize on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         <InputSelect
-          label="Visualization Type:"
+          id="visualization-type"
+          label="Visualization:"
           value={visualizationType}
           onChange={(e) => setVisualizationType(e.target.value)}
           options={[
-            ["Polygon", "polygon"],
+            ["Countries", "polygon"],
             ["Heatmap", "heatmap"],
             ["CableGlobe", "CableGlobe"],
           ]}
-          tooltip="Select the visualization type for the data to display on the map."
+          tooltip="Select the visualization type for the data in witch it should be displayed on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
         />
 
         {visualizationType !== "heatmap" && (
           <InputSelect
+            id="color-scheme"
             label="Color Scheme:"
             value={colorScheme}
             onChange={(e) => setColorScheme(e.target.value)}
@@ -169,6 +170,7 @@ function Input() {
         )}
 
         <InputCheckbox
+          id="show-data"
           label="Show Data:"
           checked={showData}
           onChange={(e) => setShowData(e.target.checked)}
@@ -178,6 +180,7 @@ function Input() {
         />
 
         <InputCheckbox
+          id="show-borders"
           label="Show Borders:"
           checked={showBorders}
           onChange={(e) => setShowBorders(e.target.checked)}
@@ -187,6 +190,7 @@ function Input() {
         />
 
         <InputSlider
+          id="rotation-speed"
           label="Rotation:"
           value={rotationSpeed}
           onChange={(e) => handleSliderChange(setRotationSpeed, parseFloat(e.target.value))}
@@ -200,13 +204,14 @@ function Input() {
 
         {visualizationType === "polygon" && (
           <InputSlider
-            label="Max Polygon Height:"
+            id="max-height"
+            label="Max height:"
             value={maxPolygonAltitude}
             onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
             min={0.006}
             max={0.5}
             step={0.01}
-            tooltip="Adjust the maximum height of the polygons on the map."
+            tooltip="Adjust the maximum height of the countries on the map considering the data."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
           />
@@ -215,10 +220,11 @@ function Input() {
         {visualizationType === "heatmap" && (
           <>
             <InputSlider
+              id="heatmap-altitude"
               label="Altitude:"
               value={heatmapTopAltitude}
               onChange={(e) => handleSliderChange(setHeatmapTopAltitude, parseFloat(e.target.value))}
-              min={0.3}
+              min={0.1}
               max={1.5}
               step={0.1}
               tooltip="Adjust the altitude of the heatmap on the map."
@@ -226,11 +232,12 @@ function Input() {
               hideTooltip={hideTooltip}
             />
             <InputSlider
+              id="heatmap-bandwidth"
               label="Bandwidth:"
               value={heatmapBandwidth}
               onChange={(e) => handleSliderChange(setHeatmapBandwidth, parseFloat(e.target.value))}
-              min={0.3}
-              max={1.5}
+              min={0.8}
+              max={1.8}
               step={0.1}
               tooltip="Adjust the bandwidth of the heatmap on the map."
               showTooltip={showTooltip}

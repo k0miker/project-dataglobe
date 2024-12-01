@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-const InputCheckbox = ({ label, checked, onChange, tooltip }) => {
+const InputCheckbox = ({ id, label, checked, onChange, tooltip }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <div className="mb-4 relative">
-      <label className="mb-2 font-bold text-sm flex items-center justify-end cursor-pointer">
+      <label htmlFor={id} className="mb-2 font-bold text-sm flex items-center justify-end cursor-pointer">
         <span className="mr-2 text-xs text-left w-full">{label}</span>
         <div className="relative justify-self-start ">
           <input
+            id={id}
             type="checkbox"
             checked={checked}
             onChange={onChange}
@@ -26,9 +27,9 @@ const InputCheckbox = ({ label, checked, onChange, tooltip }) => {
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
         >
-          🛈
+          <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (
-            <div className="absolute bg-glass2 text-white text-xs rounded py-1 px-2 z-50" style={{ top: '100%', left: '50%', transform: 'translateX(-50%)' }}>
+            <div className="absolute bg-glass2 text-white text-xs rounded py-1 px-2 z-50 text-center" style={{ top: '100%', left: '50%', transform: 'translateX(105px)' }}>
               {tooltip}
             </div>
           )}

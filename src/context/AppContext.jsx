@@ -12,7 +12,6 @@ export const AppProvider = ({ children }) => {
   const [rotationSpeed, setRotationSpeed] = useState(0.2);
   const [visualizationType, setVisualizationTypeState] = useState("polygon");
   const [countries, setCountries] = useState([]);
-  const [clouds, setClouds] = useState(false);
   const [geoJsonData, setGeoJsonData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [resize, setResize] = useState(false);
@@ -260,7 +259,7 @@ export const AppProvider = ({ children }) => {
       selectedWorld, setSelectedWorld, selectedCountry, setSelectedCountry, 
       dataOption, setDataOption, showData, setShowData, rotationSpeed, 
       setRotationSpeed, visualizationType, setVisualizationType, countries, 
-      clouds, setClouds, geoJsonData, gdpData, showBorders, setShowBorders, 
+       geoJsonData, gdpData, showBorders, setShowBorders, 
       colorScheme, setColorScheme, heatmapTopAltitude, setHeatmapTopAltitude, heatmapBandwidth, setHeatmapBandwidth, 
       maxPolygonAltitude, setMaxPolygonAltitude, 
       earthquakes, // Erdbebendaten im Kontext bereitstellen

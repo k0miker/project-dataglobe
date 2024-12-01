@@ -3,7 +3,6 @@ import { useAppContext } from "../context/AppContext";
 import PolygonGlobe from "./PolygonGlobe";
 import HeatmapGlobe from "./HeatmapGlobe";
 import CableGlobe from "./CableGlobe";
-import Clouds from "./Clouds";
 
 function VisualizationRenderer() {
   const { visualizationType } = useAppContext();
@@ -27,7 +26,6 @@ function VisualizationRenderer() {
       {visualizationType === "polygon" && <PolygonGlobe />}
       {visualizationType === "heatmap" && <HeatmapGlobe />}
       {(visualizationType === "cable" || visualizationType === "CableGlobe") && <CableGlobe />}
-      {isGlobeReady && <Clouds />}
     </>
   );
 }

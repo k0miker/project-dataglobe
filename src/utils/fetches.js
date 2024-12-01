@@ -124,7 +124,7 @@ export const fetchMortalityData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca2: item.cca2,
-      value: item.data && typeof item.data === 'object' ? item.data.value*.5 : null
+      value: item.data && typeof item.data === 'object' ? item.data.value*.1 : null
     })).filter(item => item.value !== null);
   } catch (error) {
     console.error("Fehler beim Abrufen der Sterblichkeitsdaten:", error);
