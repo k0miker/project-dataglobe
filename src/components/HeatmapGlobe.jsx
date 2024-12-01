@@ -9,7 +9,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData, mortalityData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData, mortalityData, debtData, inflationData, employmentData, healthData, growthData, showGrid } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -171,7 +171,7 @@ function HeatmapGlobe() {
         heatmapColorScale={(value) => colorScale(value)} // Farbskala
         showAtmosphere={true} // Atmosphäre anzeigen
         atmosphereAltitude={0.2} // Atmosphärenhöhe
-        showGraticules={true} // Längen- und Breitengrade anzeigen
+        showGraticules={showGrid} // Grid anzeigen oder ausblenden
         polygonsData={geoJsonData} // GeoJSON-Daten für Länderumrisse
         polygonCapColor={() => "rgba(0, 0, 0, 0)"} // Keine Füllfarbe
         polygonSideColor={() => "rgba(0, 0, 0, 0)"} // Keine Seitenfarbe

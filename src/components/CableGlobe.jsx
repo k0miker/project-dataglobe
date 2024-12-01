@@ -7,7 +7,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function CableGlobe() {
-  const { selectedWorld, rotationSpeed, showData, showBorders } = useAppContext();
+  const { selectedWorld, rotationSpeed, showData, showBorders, showGrid } = useAppContext();
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -138,6 +138,7 @@ function CableGlobe() {
         polygonSideColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         polygonStrokeColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
+        showGraticules={showGrid} // Grid anzeigen oder ausblenden
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />

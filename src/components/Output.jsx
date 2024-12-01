@@ -55,7 +55,7 @@ function Output() {
           <img
             src={selectedCountry.flags.png}
             alt={`Flagge von ${selectedCountry.name.common}`}
-            className="w-28 rounded-lg border-2 border-gray-200 shadow-md opacity-70 hover:opacity-100 transition-opacity duration-300"
+            className="w-28 m-auto rounded-lg border-2 border-gray-200 shadow-md opacity-70 hover:opacity-100 transition-opacity duration-300"
           />
           <h1 className="text-2xl text-center font-bold ">
             {selectedCountry.name.common}

@@ -28,6 +28,7 @@ export const AppProvider = ({ children }) => {
   const [healthData, setHealthData] = useState([]); // Neuer State für die Gesundheitsdaten
   const [growthData, setGrowthData] = useState([]); // Neuer State für die Wirtschaftswachstumsdaten
   const [loading, setLoading] = useState(true); // Neuer State für den Ladezustand
+  const [showGrid, setShowGrid] = useState(true); // Neuer State für das Anzeigen des Grids
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -271,6 +272,7 @@ export const AppProvider = ({ children }) => {
       healthData, // Gesundheitsdaten im Kontext bereitstellen
       growthData, // Wirtschaftswachstumsdaten im Kontext bereitstellen
       loading, // Ladezustand im Kontext bereitstellen
+      showGrid, setShowGrid, // Grid-Zustand im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>

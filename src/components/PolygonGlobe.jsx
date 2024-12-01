@@ -29,6 +29,7 @@ function PolygonGlobe() {
     employmentData,
     healthData,
     growthData,
+    showGrid
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
@@ -256,7 +257,7 @@ function PolygonGlobe() {
         height={dimensions.height}
         globeImageUrl={selectedWorld}
         backgroundImageUrl={background}
-        showGraticules={true}
+        showGraticules={showGrid}
         atmosphereAltitude={0.2}
         atmosphereColor={"#bee7ff"}
         polygonsData={countriesData}
@@ -277,24 +278,33 @@ function PolygonGlobe() {
             ? color.formatRgb()
             : color.formatRgb();
         }}
-        polygonSideColor={() => {
-          if (showData) return "rgba(0, 0, 0, 0.522)";
-          if (showData && showBorders) return "rgba(0, 0, 0, 0.522)";
+        polygonSideColor={(feat) => {
+          if (!showBorders) {
+            if (feat.properties.ISO_A3 === selectedCountry?.cca3 || feat === hoveredCountry) {
+              return "rgba(0, 0, 0, 0.722)"; // Side color for selected or hovered country
+            }
+            return "rgba(0, 0, 0, 0.40)"; // No side color for other countries
+          }
+          if (showData && showBorders) return "rgba(0, 0, 0, 0.4)";
+          if (showData) return "rgba(0, 0, 0, 0.012)";
           return null;
         }}
         polygonStrokeColor={(feat) => {
+          if (showBorders) return "rgba(0, 0, 0, 0.422)";
           if (
             !showBorders ||
             (!showData && feat !== hoveredCountry && feat !== selectedCountry)
-          )
+          ) {
             return "rgba(0, 0, 0, 0)";
-          if(showBorders)return "rgba(0, 0, 0, 0.522)";
-          return feat === hoveredCountry ||
-            feat.properties.ISO_A3 === selectedCountry?.cca3
-            ? "#FFFFFF"
-            : null;
+          }
+        (hoveredCountry ||
+          feat.properties.ISO_A3 === selectedCountry?.cca3)
+          ? "#FFFFFF"
+          : null;
+          if (showBorders) return "rgba(0, 0, 0, 0.822)";
         }}
         polygonAltitude={(d) => {
+          if (!showData) return 0.005;
           if (!showBorders && !showData) return -1;
           const baseAltitude = getVal(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1] * (maxPolygonAltitude - minPolygonAltitude) + minPolygonAltitude;
           if (d.properties.ISO_A3 === selectedCountry?.cca3) return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2

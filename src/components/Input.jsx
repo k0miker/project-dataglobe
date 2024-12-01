@@ -29,6 +29,8 @@ function Input() {
     rotationSpeed, 
     maxPolygonAltitude,
     setMaxPolygonAltitude,
+    showGrid,
+    setShowGrid,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -191,6 +193,16 @@ function Input() {
             hideTooltip={hideTooltip}
           />
         )}
+
+        <InputCheckbox
+          id="show-grid"
+          label="Show Grid:"
+          checked={showGrid}
+          onChange={(e) => setShowGrid(e.target.checked)}
+          tooltip="Toggle the display of the grid on the map."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
 
         <InputSlider
           id="rotation-speed"
