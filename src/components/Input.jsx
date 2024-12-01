@@ -4,7 +4,7 @@ import { fetchCountries } from "../utils/fetches";
 import InputSelect from "./Input_select";
 import InputSlider from "./Input_slider";
 import InputCheckbox from "./Input_checkbox";
-import { Tooltip as ReactTooltip } from "react-tooltip"; // Import Tooltip
+
 
 function Input() {
   // Verwendung des AppContext
@@ -84,7 +84,7 @@ function Input() {
   const SettingsContent = () => (
     <>
       <div className="p-6 relative">
-      <h1 className="mb-2 text-center text-sm">⚙️</h1>
+      <h1 className="mb-2 text-sm font-bold">⚙️ Settings</h1>
         <InputSelect
           id="earth-groundlayer"
           label="Earth Groundlayer:"
@@ -120,6 +120,7 @@ function Input() {
                   ["Unemployment Rate", "employment"],
                   ["Health Expenditure", "health"],
                   ["Economic Growth", "growth"],
+                  ["Internet-Cables", "cable"], 
                 ]
               : visualizationType === "heatmap"
               ? [
@@ -127,6 +128,7 @@ function Input() {
                   ["Volcanoes", "volcanoes"],
                   ["GDP", "gdp"],
                   ["Earthquakes", "earthquakes"], 
+                  ["Internet-Cables", "cable"], 
                 ]
               : [["Kabel", "cable"]]
           }
@@ -143,7 +145,6 @@ function Input() {
           options={[
             ["Countries", "polygon"],
             ["Heatmap", "heatmap"],
-            ["CableGlobe", "CableGlobe"],
           ]}
           tooltip="Select the visualization type for the data in witch it should be displayed on the map."
           showTooltip={showTooltip}
@@ -179,15 +180,17 @@ function Input() {
           hideTooltip={hideTooltip}
         />
 
-        <InputCheckbox
-          id="show-borders"
-          label="Show Borders:"
-          checked={showBorders}
-          onChange={(e) => setShowBorders(e.target.checked)}
-          tooltip="Toggle the display of country borders on the map."
-          showTooltip={showTooltip}
-          hideTooltip={hideTooltip}
-        />
+        {dataOption !== "cable" && (
+          <InputCheckbox
+            id="show-borders"
+            label="Show Borders:"
+            checked={showBorders}
+            onChange={(e) => setShowBorders(e.target.checked)}
+            tooltip="Toggle the display of country borders on the map."
+            showTooltip={showTooltip}
+            hideTooltip={hideTooltip}
+          />
+        )}
 
         <InputSlider
           id="rotation-speed"
@@ -202,7 +205,7 @@ function Input() {
           hideTooltip={hideTooltip}
         />
 
-        {visualizationType === "polygon" && (
+        {visualizationType === "polygon" && dataOption !== "cable" && (
           <InputSlider
             id="max-height"
             label="Max height:"
@@ -217,7 +220,7 @@ function Input() {
           />
         )}
 
-        {visualizationType === "heatmap" && (
+        {visualizationType === "heatmap" && dataOption !== "cable" && (
           <>
             <InputSlider
               id="heatmap-altitude"

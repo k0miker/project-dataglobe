@@ -4,9 +4,6 @@ import * as THREE from "three";
 const Sun = ({ scene }) => {
   useEffect(() => {
     if (scene) {
-      const textureLoader = new THREE.TextureLoader();
-      const sunTexture = textureLoader.load("/sun.jpg");
-
       const sunGeometry = new THREE.SphereGeometry(350, 32, 32);
       const sunMaterial = new THREE.MeshStandardMaterial({
         color: 0xffffff,

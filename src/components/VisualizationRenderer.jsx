@@ -5,27 +5,13 @@ import HeatmapGlobe from "./HeatmapGlobe";
 import CableGlobe from "./CableGlobe";
 
 function VisualizationRenderer() {
-  const { visualizationType } = useAppContext();
-  const [isGlobeReady, setIsGlobeReady] = useState(false);
-
-  // Überprüfen, ob das Globe-Element bereit ist
-  useEffect(() => {
-    const checkGlobeElement = () => {
-      const globeElement = document.getElementById("globeViz");
-      if (globeElement) {
-        setIsGlobeReady(true);
-      } else {
-        setTimeout(checkGlobeElement, 100); // Check again after 100ms
-      }
-    };
-    checkGlobeElement();
-  }, []);
+  const { visualizationType, dataOption } = useAppContext();
 
   return (
     <>
       {visualizationType === "polygon" && <PolygonGlobe />}
       {visualizationType === "heatmap" && <HeatmapGlobe />}
-      {(visualizationType === "cable" || visualizationType === "CableGlobe") && <CableGlobe />}
+      {dataOption === "cable" && <CableGlobe />} {/* CableGlobe nur anzeigen, wenn der Datentyp 'cable' ist */}
     </>
   );
 }

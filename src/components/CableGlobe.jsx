@@ -11,7 +11,6 @@ function CableGlobe() {
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const fetchCableData = async () => {
     try {
@@ -50,7 +49,9 @@ function CableGlobe() {
       });
 
       setCablePaths(paths);
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000); // Ladezustand um eine Sekunde verzögern
       //console.log("Cable data fetched successfully.");
     } catch (error) {
       //console.error("Error fetching cable data:", error);
@@ -102,20 +103,7 @@ function CableGlobe() {
       const [firstCoord] = coords;
       const { lat, lng } = firstCoord;
       const altitude = 1;
-      setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
       globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Kabel
-      const timeoutId = setTimeout(() => {
-        globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
-      }, 2500); // Nach 2.5 Sekunden zurückzoomen
-
-      // Clear timeout if user interacts with the globe
-      const controls = globeEl.current.controls();
-      const handleUserInteraction = () => {
-        clearTimeout(timeoutId);
-        controls.removeEventListener("start", handleUserInteraction);
-      };
-
-      controls.addEventListener("start", handleUserInteraction);
     }
   };
 
@@ -135,7 +123,7 @@ function CableGlobe() {
         ref={globeEl}
         globeImageUrl={selectedWorld}
         backgroundImageUrl={background}
-        pathsData={cablePaths}
+        pathsData={showData ? cablePaths : []}
         pathPoints="coords"
         pathPointLat={(p) => p.lat}
         pathPointLng={(p) => p.lng}

@@ -42,7 +42,7 @@ function PolygonGlobe() {
   );
   const [restCountriesData, setRestCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [animationTime, setAnimationTime] = useState(1900);
+  const [animationTime, setAnimationTime] = useState(900);
   const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
 
   const [dimensions, setDimensions] = useState({
@@ -72,7 +72,9 @@ function PolygonGlobe() {
         setLoading(true);
         const data = await fetchCountries();
         setRestCountriesData(data);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000); // Ladezustand um eine Sekunde verzögern
         // console.log("RestCountries data fetched successfully.");
       } catch (error) {
         console.error("Fehler beim Abrufen der RestCountries-Daten:", error);
@@ -120,7 +122,7 @@ function PolygonGlobe() {
       globeEl.current.controls().autoRotate = false;
       setTimeout(() => {
         globeEl.current.controls().autoRotate = true;
-      }, 10000);
+      }, 30000);
     }
   }, [selectedCountry]);
 
@@ -131,19 +133,19 @@ function PolygonGlobe() {
       const [lat, lng] = latlng;
       const altitude = 1;
       setLastCameraPosition(globeEl.current.pointOfView()); // Speichern der aktuellen Kameraposition
-      globeEl.current.pointOfView({ lat, lng, altitude }, 1500); // Zoom auf das Land
-      const timeoutId = setTimeout(() => {
-        globeEl.current.pointOfView(lastCameraPosition, 1500); // Zurück zur letzten Kameraposition
-      }, 5000); // Nach 5 Sekunden zurückzoomen
+      globeEl.current.pointOfView({ lat, lng, altitude }, 800); // Zoom auf das Land
+      //  const timeoutId = setTimeout(() => {
+      //    globeEl.current.pointOfView(lastCameraPosition, 800); // Zurück zur letzten Kameraposition
+      //  }, 15000); // zurückzoomen
 
       // Clear timeout if user interacts with the globe
-      const controls = globeEl.current.controls();
-      const handleUserInteraction = () => {
-        clearTimeout(timeoutId);
-        controls.removeEventListener("start", handleUserInteraction);
-      };
+      // const controls = globeEl.current.controls();
+      // const handleUserInteraction = () => {
+      //   clearTimeout(timeoutId);
+      //   controls.removeEventListener("start", handleUserInteraction);
+      // };
 
-      controls.addEventListener("start", handleUserInteraction);
+      // controls.addEventListener("start", handleUserInteraction);
     }
   };
 
@@ -156,7 +158,7 @@ function PolygonGlobe() {
   useEffect(
     (country) => {
       if (globeEl.current && country) {
-        const { latlng } = country; // Längen- und Breitengrad des Landes
+        const { latlng } = country; 
         const [lat, lng] = latlng;
         globeEl.current.pointOfView(
           { lat, lng, altitude: dimensions.width / 100000 },
@@ -193,7 +195,7 @@ function PolygonGlobe() {
         controls.autoRotate = false;
         setTimeout(() => {
           controls.autoRotate = true;
-        }, 5000);
+        }, 15000);
       }
     };
 
@@ -215,9 +217,9 @@ function PolygonGlobe() {
       animateCameraToCountry(country); // Animate camera to the clicked country
     }
   };
-
+// inro animation
   const simulateMaxPolygonAltitude = () => {
-    setMaxPolygonAltitude(.3);
+    setMaxPolygonAltitude(.2);
     setTimeout(() => {      
       setMaxPolygonAltitude(0.008);
     }, 2000);

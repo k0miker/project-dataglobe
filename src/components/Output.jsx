@@ -4,20 +4,13 @@ import { useAppContext } from "../context/AppContext";
 function Output() {
   const { selectedCountry } = useAppContext();
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
-  const [isExpanded, setIsExpanded] = useState(false); // State für Animation
 
-  useEffect(() => {
-    if (selectedCountry) {
-      setIsExpanded(true);
-    } else {
-      setIsExpanded(false);
-    }
-  }, [selectedCountry]);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
     const { mortalityData, geoJsonData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten, Beschäftigungsdaten, Gesundheitsdaten und Wirtschaftswachstumsdaten aus dem Kontext
-    const [isExpanded, setIsExpanded] = useState(false); // State für das Ausklappen
+
 
     if (!selectedCountry) {
       return (
@@ -57,7 +50,7 @@ function Output() {
     );
 
     return (
-      <div className="flex max-w-[250px]  flex-col justify-center items-center rounded-bl-3xl p-4">
+      <div className="flex max-w-[250px] flex-col justify-center items-center p-4">
         <div className="flex flex-col justify-center ">
           <img
             src={selectedCountry.flags.png}
@@ -70,7 +63,7 @@ function Output() {
         </div>
         <ul className="text-left mt-4 space-y-2 w-full text-sm">
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Capital:</b>{" "}
+            <b className=" underline">Capital:</b>{" "}
             <span className="text-xs p-1">
               {selectedCountry.capital
                 ? selectedCountry.capital.join(", ")
@@ -78,14 +71,14 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Region:</b> <span className="text-xs p-1">{selectedCountry.region}</span>
+            <b className=" underline">Region:</b> <span className="text-xs p-1">{selectedCountry.region}</span>
           </li>
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Population:</b>{" "}
+            <b className=" underline">Population:</b>{" "}
             <span className="text-xs p-1">{(selectedCountry.population / 1e6).toFixed(2)} million</span>
           </li>
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Area:</b>{" "}
+            <b className=" underline">Area:</b>{" "}
             <span className="text-xs p-1">
               {selectedCountry.area
                 ? `${selectedCountry.area} km²`
@@ -93,7 +86,7 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Languages:</b>{" "}
+            <b className=" underline">Languages:</b>{" "}
             <span className="text-xs p-1">
               {selectedCountry.languages
                 ? selectedCountry.languages[0]
@@ -101,7 +94,7 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className="decoration-red-800 underline">Currency:</b>{" "}
+            <b className=" underline">Currency:</b>{" "}
             <span className="text-xs p-1">
               {selectedCountry.currencies
                 ? Object.values(selectedCountry.currencies)
@@ -120,31 +113,31 @@ function Output() {
         {isExpanded && (
           <ul className="text-left mt-4 space-y-2 w-full text-sm">
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Mortality Rate:</b>{" "}
+              <b className="">Mortality Rate:</b>{" "}
               <span className="text-xs p-1">{mortalityInfo ? `${mortalityInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Economy:</b>{" "}
+              <b className=" underline">Economy:</b>{" "}
               <span className="text-xs p-1">{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <b className=" underline">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
               <span className="text-xs p-1">{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Inflation:</b>{" "}
+              <b className=" underline">Inflation:</b>{" "}
               <span className="text-xs p-1">{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Unemployment Rate:</b>{" "}
+              <b className=" underline">Unemployment Rate:</b>{" "}
               <span className="text-xs p-1">{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <b className=" underline">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
               <span className="text-xs p-1">{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className="decoration-red-800 underline">Economic Growth:</b>{" "}
+              <b className=" underline">Economic Growth:</b>{" "}
               <span className="text-xs p-1">{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
           </ul>
@@ -191,8 +184,7 @@ function Output() {
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
       <div
-        className={`hidden md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass rounded-bl-3xl shadow-lg p-2 transition-transform duration-500 
-        }`}
+        className={`hidden md:flex flex-col justify-start items-center md:absolute md:right-0 md:top-[10%] bg-glass p-2 `}
       >
         <CountryDetails />
       </div>

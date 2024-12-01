@@ -9,7 +9,7 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function HeatmapGlobe() {
-  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, setGdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData, mortalityData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext();
+  const { selectedWorld, rotationSpeed, dataOption = "population", geoJsonData, gdpData, showBorders, colorScheme, showData, heatmapTopAltitude, heatmapBandwidth, earthQuakeData, mortalityData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext();
   const globeEl = useRef();
   const [heatmapData, setHeatmapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,132 +17,6 @@ function HeatmapGlobe() {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
-  // Heatmap-data abrufen
-  const fetchHeatmapData = async () => {
-    try {
-      //console.log("Fetching heatmap data for option:", dataOption);
-      setLoading(true);
-      let data = [];
-      const cachedData = localStorage.getItem(`heatmapData_${dataOption}`);
-      if (cachedData) {
-        data = JSON.parse(cachedData);
-      } else {
-        // console.log("Selected data option:", dataOption);
-        if (dataOption === "population") {
-          const response = await fetch("/world_population.csv");
-          const csvText = await response.text();
-
-          data = d3.csvParse(csvText, ({ lat, lng, pop }) => {
-            const parsedLat = parseFloat(lat.trim());
-            const parsedLng = parseFloat(lng.trim());
-            const parsedPop = parseFloat(pop.trim());
-            if (isNaN(parsedLat) || isNaN(parsedLng) || isNaN(parsedPop) || parsedPop < 1e6) {
-              return null;
-            }
-            return {
-              lat: parsedLat,
-              lng: parsedLng,
-              value: parsedPop,
-            };
-          });
-        } else if ((dataOption === "gdp" || dataOption === "BIP") && (gdpData)) {        
-          const gdpData = await fetchGDPDataForCountries();
-          data = gdpData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: Math.max(Number((country.gdp / 5000000).toFixed(0)), 1), // Minimalwert weiter anheben
-          }));
-        } else if (dataOption === "volcanoes") {
-          data = await fetchVolcanoes();
-        } else if (dataOption === "earthquakes") {
-          //console.log("Fetching earthquake data...");
-          //console.log("Earthquake data from context:", earthQuakeData);
-          if (earthQuakeData && earthQuakeData.length > 0) {
-            data = earthQuakeData.map((quake) => ({
-              lat: quake.latitude,
-              lng: quake.longitude,
-              value: quake.magnitude * 1000000000,
-            }));
-            //console.log("Processed earthquake data:", data);
-          } else {
-            console.log("No earthquake data available.");
-          }
-        } else if (dataOption === "mortality") {
-          data = mortalityData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: country.value*10,
-          }));
-        } else if (dataOption === "debt") {
-          data = debtData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: country.value,
-          }));
-        } else if (dataOption === "inflation") {
-          data = inflationData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: Math.min(country.value, 1000) * 10,
-          }));
-        } else if (dataOption === "employment") {
-          data = employmentData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: country.value,
-          }));
-        } else if (dataOption === "health") {
-          data = healthData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: country.value,
-          }));
-        } else if (dataOption === "growth") {
-          data = growthData.map((country) => ({
-            lat: country.latitude,
-            lng: country.longitude,
-            value: country.value,
-          }));
-        }
-        localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
-      }
-
-      const validData = (data || []).filter(
-        (d) =>
-          d && !isNaN(d.lat) && !isNaN(d.lng) && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
-      );
-
-      const maxVal = d3.max(validData, (d) => d.value);
-      const normalizedData = validData.map((d) => ({
-        ...d,
-        value: d.value / maxVal, // Normalisierung
-      }));
-
-      setTimeout(() => {
-        setHeatmapData(normalizedData);
-        setLoading(false);
-        //console.log("Heatmap data fetched successfully.");
-      }, 1000); // Add delay to loading spinner
-    } catch (error) {
-      console.error("Fehler beim Abrufen der Heatmap-Daten:", error);
-      setLoading(false);
-    }
-  };
-
-  // Globus-Rotation steuern
-  useEffect(() => {
-    //console.log("Setting rotation speed:", rotationSpeed);
-    if (globeEl.current) {
-      globeEl.current.controls().autoRotate = true;
-      globeEl.current.controls().autoRotateSpeed = rotationSpeed;
-    }
-  }, [rotationSpeed]);
-
-  useEffect(() => {
-    //console.log("Fetching heatmap data for data option:", dataOption);
-    fetchHeatmapData();
-  }, [dataOption, colorScheme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -157,6 +31,111 @@ function HeatmapGlobe() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const fetchHeatmapData = async () => {
+      try {
+        setLoading(true);
+        let data = [];
+        const cachedData = localStorage.getItem(`heatmapData_${dataOption}`);
+        if (cachedData) {
+          data = JSON.parse(cachedData);
+        } else {
+          if (dataOption === "population") {
+            const response = await fetch("/world_population.csv");
+            const csvText = await response.text();
+            data = d3.csvParse(csvText, ({ lat, lng, pop }) => {
+              const parsedLat = parseFloat(lat.trim());
+              const parsedLng = parseFloat(lng.trim());
+              const parsedPop = parseFloat(pop.trim());
+              if (isNaN(parsedLat) || isNaN(parsedLng) || isNaN(parsedPop) || parsedPop < 1e6) {
+                return null;
+              }
+              return { lat: parsedLat, lng: parsedLng, value: parsedPop };
+            });
+          } else if (dataOption === "gdp" && gdpData) {
+            data = gdpData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: Math.max(Number((country.gdp / 5000000).toFixed(0)), 1),
+            }));
+          } else if (dataOption === "volcanoes") {
+            data = await fetchVolcanoes();
+          } else if (dataOption === "earthquakes" && earthQuakeData.length > 0) {
+            data = earthQuakeData.map((quake) => ({
+              lat: quake.latitude,
+              lng: quake.longitude,
+              value: quake.magnitude * 1000000000,
+            }));
+          } else if (dataOption === "mortality") {
+            data = mortalityData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: country.value * 10,
+            }));
+          } else if (dataOption === "debt") {
+            data = debtData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: country.value,
+            }));
+          } else if (dataOption === "inflation") {
+            data = inflationData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: Math.min(country.value, 1000) * 10,
+            }));
+          } else if (dataOption === "employment") {
+            data = employmentData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: country.value,
+            }));
+          } else if (dataOption === "health") {
+            data = healthData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: country.value,
+            }));
+          } else if (dataOption === "growth") {
+            data = growthData.map((country) => ({
+              lat: country.latitude,
+              lng: country.longitude,
+              value: country.value,
+            }));
+          }
+          localStorage.setItem(`heatmapData_${dataOption}`, JSON.stringify(data));
+        }
+
+        const validData = (data || []).filter(
+          (d) => d && !isNaN(d.lat) && !isNaN(d.lng) && d.lat >= -90 && d.lat <= 90 && d.lng >= -180 && d.lng <= 180
+        );
+
+        const maxVal = d3.max(validData, (d) => d.value);
+        const normalizedData = validData.map((d) => ({
+          ...d,
+          value: d.value / maxVal,
+        }));
+
+        setTimeout(() => {
+          setHeatmapData(normalizedData);
+          setLoading(false);
+        }, 2000);
+      } catch (error) {
+        console.error("Fehler beim Abrufen der Heatmap-Daten:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchHeatmapData();
+  }, [dataOption, colorScheme]);
+
+  useEffect(() => {
+    if (globeEl.current) {
+      globeEl.current.controls().autoRotate = true;
+      globeEl.current.controls().autoRotateSpeed = rotationSpeed;
+    }
+  }, [rotationSpeed]);
 
   // Farbskala
   const colorScale = useMemo(() => {

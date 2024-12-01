@@ -14,11 +14,10 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [geoJsonData, setGeoJsonData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
-  const [resize, setResize] = useState(false);
   const [showBorders, setShowBorders] = useState(false); // State für Länderumrisse
   const [colorScheme, setColorScheme] = useState("Reds");
-  const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.5);
-  const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.0);
+  const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.2);
+  const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.8);
   const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
   const [earthquakes, setEarthquakes] = useState([]); // Neuer State für die Erdbebendaten
   const [earthQuakeData, setEarthQuakeData] = useState([]);
@@ -28,15 +27,13 @@ export const AppProvider = ({ children }) => {
   const [employmentData, setEmploymentData] = useState([]); // Neuer State für die Beschäftigungsdaten
   const [healthData, setHealthData] = useState([]); // Neuer State für die Gesundheitsdaten
   const [growthData, setGrowthData] = useState([]); // Neuer State für die Wirtschaftswachstumsdaten
+  const [loading, setLoading] = useState(true); // Neuer State für den Ladezustand
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
-      setSelectedWorld("earthNight.jpg");
+      setSelectedWorld("earthDark.jpg");
       setDataOption("population");
-    } else if (type === "cable" || type === "CableGlobe") {
-      setSelectedWorld("earthDark.png");
-      setDataOption("cable");
     } else if (type === "polygon") {
       setDataOption("gdp");
     }
@@ -129,6 +126,9 @@ export const AppProvider = ({ children }) => {
       localStorage.setItem("growthData", JSON.stringify(growthData)); // Wirtschaftswachstumsdaten im lokalen Speicher speichern
 
       console.log("All data fetched successfully.");
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000); // Ladezustand um eine Sekunde verzögern
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
     }
@@ -270,6 +270,7 @@ export const AppProvider = ({ children }) => {
       employmentData, // Beschäftigungsdaten im Kontext bereitstellen
       healthData, // Gesundheitsdaten im Kontext bereitstellen
       growthData, // Wirtschaftswachstumsdaten im Kontext bereitstellen
+      loading, // Ladezustand im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>
