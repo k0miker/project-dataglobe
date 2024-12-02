@@ -50,9 +50,8 @@ function Header() {
       <i className="fixed top-7">DataGlobe</i>
         <img src="/logo.gif" alt="" className="h-14 " />
       </div>
-      <h1 className="text-xs self-end pb-3 font-bold w-1/3 block md:hidden italic ">
-        DataGlobe
-      </h1>
+    
+      
       <div className="flex  items-center justify-end relative md:w-1/3 w-[60%] text-xs md:ml-4">
         {/* Suchfeld */}
         <div className="relative">      

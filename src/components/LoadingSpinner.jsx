@@ -2,16 +2,50 @@ import React from "react";
 
 const LoadingSpinner = () => {
   return (
-
-    <div className="intro-video">
-    <video src="/intro_converted.mp4" autoPlay muted />
-    <div className="intro-text font-mono">Dataglobe</div>
-  </div>
-    
-    // <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
-    //   <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
-    // </div>
+    <div style={styles.introVideo}>
+      <video src="/intro.mp4" autoPlay muted style={styles.video} />
+      <div style={styles.introText}>Dataglobe</div>
+    </div>
   );
+};
+
+const styles = {
+  introVideo: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 1,
+    transition: "opacity 1s ease-in",
+    overflow: "hidden",
+  },
+  video: {
+    width: "100vw",
+    height: "100vh",
+    opacity: 0.4,
+    objectFit: "cover",
+  },
+  introText: {
+    position: "absolute",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0,
+    fontSize: "10vw",
+    letterSpacing: "-0.9vw",
+    fontWeight: 900,
+    color: "rgba(103, 103, 103, 0.662)",
+    fontFamily: "'Arial', sans-serif",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+  },
 };
 
 export default LoadingSpinner;

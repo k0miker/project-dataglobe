@@ -64,7 +64,7 @@ function Output() {
         </div>
         <ul className="text-left mt-2 w-full text-sm">
           <li className="flex justify-between ">
-            <b className=" text-cyan-600">Capital:</b>{" "}
+            <b className=" text-cyan-400 ">Capital:</b>{" "}
             <span className="text-xs p-1 text-gray-200">
               {selectedCountry.capital
                 ? selectedCountry.capital.join(", ")
@@ -72,14 +72,14 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className=" text-cyan-600">Region:</b> <span className="text-xs p-1 text-gray-200">{selectedCountry.region}</span>
+            <b className=" text-cyan-400 ">Region:</b> <span className="text-xs p-1 text-gray-200">{selectedCountry.region}</span>
           </li>
           <li className="flex justify-between">
-            <b className=" text-cyan-600">Population:</b>{" "}
+            <b className=" text-cyan-400 ">Population:</b>{" "}
             <span className="text-xs p-1 text-gray-200">{(selectedCountry.population / 1e6).toFixed(2)} million</span>
           </li>
           <li className="flex justify-between">
-            <b className=" text-cyan-600">Area:</b>{" "}
+            <b className=" text-cyan-400 ">Area:</b>{" "}
             <span className="text-xs p-1 text-gray-200">
               {selectedCountry.area
                 ? `${selectedCountry.area} km²`
@@ -87,7 +87,7 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className=" text-cyan-600">Languages:</b>{" "}
+            <b className=" text-cyan-400 ">Languages:</b>{" "}
             <span className="text-xs p-1 text-gray-200">
               {selectedCountry.languages
                 ? selectedCountry.languages[0]
@@ -95,7 +95,7 @@ function Output() {
             </span>
           </li>
           <li className="flex justify-between">
-            <b className=" text-cyan-600">Currency:</b>{" "}
+            <b className=" text-cyan-400 ">Currency:</b>{" "}
             <span className="text-xs p-1 text-gray-200">
               {selectedCountry.currencies
                 ? Object.values(selectedCountry.currencies)
@@ -107,38 +107,38 @@ function Output() {
         </ul>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-0 text-cyan-500 underline hover:text-cyan-600"
+          className="mt-0 text-cyan-500 underline hover:text-cyan-400 "
         >
           {isExpanded ? "Show less" : "Show more"}
         </button>
         {isExpanded && (
           <ul className="text-left w-full text-sm">
             <li className="flex justify-between">
-              <b className="text-cyan-600">Mortality Rate:</b>{" "}
+              <b className="text-cyan-400 ">Mortality Rate:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{mortalityInfo ? `${mortalityInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Economy:</b>{" "}
+              <b className=" text-cyan-400 ">Economy:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <b className=" text-cyan-400 ">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
               <span className="text-xs p-1 text-gray-200">{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Inflation:</b>{" "}
+              <b className=" text-cyan-400 ">Inflation:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Unemployment Rate:</b>{" "}
+              <b className=" text-cyan-400 ">Unemployment Rate:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
+              <b className=" text-cyan-400 ">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
               <span className="text-xs p-1 text-gray-200">{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
-              <b className=" text-cyan-600">Economic Growth:</b>{" "}
+              <b className=" text-cyan-400 ">Economic Growth:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
             </li>
           </ul>

@@ -318,6 +318,7 @@ function Input() {
     <>
       {/* Button für mobile Ansicht */}
       <button
+      label="Settings"
         onClick={() => setIsModalOpen(true)}
         className="md:hidden fixed bottom-5 left-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
       >
@@ -337,6 +338,7 @@ function Input() {
             {/* Modal Header */}
             <div className="flex justify-end items-center mb-4">
               <button
+              label="Close"
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-100 hover:text-red-700"
               >
