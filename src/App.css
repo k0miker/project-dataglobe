@@ -8,6 +8,11 @@
   --glass2: rgba(58, 57, 57, 0.704);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .bg-glass {
   background-color: var(--glass);
@@ -38,6 +43,7 @@ label {
 }
 
 li {
+  margin: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -59,7 +65,53 @@ header {
   padding: 1rem;
   background-color: var(--background);
   color: var(--accent);
+  img{
+    width: 80px;
+    height: 50px;
+  }
 }
 .outerspinner{
   background-image: li;
+}
+
+.intro-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 1s ease-in;
+  overflow: hidden;
+}
+
+.intro-video.fade-out {
+  opacity: 0;
+}
+
+.intro-video video {
+  opacity: .7;
+  object-fit: contain;
+}
+
+.intro-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  font-size: 10vw;
+  letter-spacing: -.9vw;
+  font-weight: 900;
+  color: rgba(103, 103, 103, 0.662);
+  font-family: 'Arial', sans-serif;
+  background-clip: text;
+  -webkit-background-clip: text;
 }

@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
   const [geoJsonData, setGeoJsonData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
   const [showBorders, setShowBorders] = useState(false); // State für Länderumrisse
-  const [colorScheme, setColorScheme] = useState("Reds");
+  const [colorScheme, setColorScheme] = useState("Blues");
   const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.2);
   const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.8);
   const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
@@ -29,11 +29,12 @@ export const AppProvider = ({ children }) => {
   const [growthData, setGrowthData] = useState([]); // Neuer State für die Wirtschaftswachstumsdaten
   const [loading, setLoading] = useState(true); // Neuer State für den Ladezustand
   const [showGrid, setShowGrid] = useState(true); // Neuer State für das Anzeigen des Grids
+  const [cableColorSet, setCableColorSet] = useState("default"); // Neuer Zustand für das Farbset der Kabel
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
-      setSelectedWorld("earthDark.jpg");
+      setSelectedWorld("earthDark.png");
       setDataOption("population");
     } else if (type === "polygon") {
       setDataOption("gdp");
@@ -273,6 +274,7 @@ export const AppProvider = ({ children }) => {
       growthData, // Wirtschaftswachstumsdaten im Kontext bereitstellen
       loading, // Ladezustand im Kontext bereitstellen
       showGrid, setShowGrid, // Grid-Zustand im Kontext bereitstellen
+      cableColorSet, setCableColorSet, // Hinzufügen der Zustände für das Farbset
     }}>
       {children}
     </AppContext.Provider>

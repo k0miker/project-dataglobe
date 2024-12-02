@@ -4,7 +4,7 @@ const InputSlider = ({ id, label, value, onChange, min, max, step, tooltip }) =>
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="mb-4 relative">
+    <div className="mb-2 relative">
       <label htmlFor={id} className="mb-2 font-bold text-sm flex items-center justify-between">
         {label}
         <span

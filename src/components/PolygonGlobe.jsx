@@ -29,11 +29,11 @@ function PolygonGlobe() {
     employmentData,
     healthData,
     growthData,
-    showGrid
+    showGrid,
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
-  const hoveredPolygonAltitude =  0.05; // Reduzierte Höhe für hoveredPolygonAltitude
+  const hoveredPolygonAltitude = 0.05; // Reduzierte Höhe für hoveredPolygonAltitude
 
   const globeEl = useRef(); // Referenz für den Globe
   const [countriesData, setCountriesData] = useState([]);
@@ -44,7 +44,11 @@ function PolygonGlobe() {
   const [restCountriesData, setRestCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [animationTime, setAnimationTime] = useState(900);
-  const [lastCameraPosition, setLastCameraPosition] = useState({ lat: 0, lng: 0, altitude: 2 });
+  const [lastCameraPosition, setLastCameraPosition] = useState({
+    lat: 0,
+    lng: 0,
+    altitude: 2,
+  });
 
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
@@ -73,9 +77,7 @@ function PolygonGlobe() {
         setLoading(true);
         const data = await fetchCountries();
         setRestCountriesData(data);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000); // Ladezustand um eine Sekunde verzögern
+        setLoading(false);
         // console.log("RestCountries data fetched successfully.");
       } catch (error) {
         console.error("Fehler beim Abrufen der RestCountries-Daten:", error);
@@ -89,8 +91,21 @@ function PolygonGlobe() {
   const processGeoJsonData = () => {
     // console.log("Processing GeoJSON data...");
 
-
-    const maxVal = Math.max(...geoJsonData.map(feat => getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
+    const maxVal = Math.max(
+      ...geoJsonData.map((feat) =>
+        getVal(
+          feat,
+          dataOption,
+          restCountriesData,
+          mortalityData,
+          debtData,
+          inflationData,
+          employmentData,
+          healthData,
+          growthData
+        )
+      )
+    );
     // console.log("Max Value for Data Option:", maxVal); // Log für Maximalwert
     setColorScale(() =>
       d3[`scaleSequentialSqrt`](d3[`interpolate${colorScheme}`]).domain([
@@ -104,7 +119,17 @@ function PolygonGlobe() {
 
   useEffect(() => {
     processGeoJsonData();
-  }, [dataOption, restCountriesData, geoJsonData, colorScheme, debtData, inflationData, employmentData, healthData, growthData]);
+  }, [
+    dataOption,
+    restCountriesData,
+    geoJsonData,
+    colorScheme,
+    debtData,
+    inflationData,
+    employmentData,
+    healthData,
+    growthData,
+  ]);
 
   // Rotationsgeschwindigkeit einstellen
   useEffect(() => {
@@ -112,7 +137,7 @@ function PolygonGlobe() {
     if (globeEl.current) {
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = rotationSpeed;
-      globeEl.current.lights = ([]);
+      globeEl.current.lights = [];
     }
   }, [rotationSpeed]);
 
@@ -159,7 +184,7 @@ function PolygonGlobe() {
   useEffect(
     (country) => {
       if (globeEl.current && country) {
-        const { latlng } = country; 
+        const { latlng } = country;
         const [lat, lng] = latlng;
         globeEl.current.pointOfView(
           { lat, lng, altitude: dimensions.width / 100000 },
@@ -218,13 +243,13 @@ function PolygonGlobe() {
       animateCameraToCountry(country); // Animate camera to the clicked country
     }
   };
-// inro animation
+  // inro animation
   const simulateMaxPolygonAltitude = () => {
-    setMaxPolygonAltitude(.2);
-    setTimeout(() => {      
+    setMaxPolygonAltitude(0.2);
+    setTimeout(() => {
       setMaxPolygonAltitude(0.008);
     }, 2000);
-    
+
     setTimeout(() => {
       setAnimationTime(500);
     }, 5000);
@@ -232,7 +257,7 @@ function PolygonGlobe() {
 
   useEffect(() => {
     simulateMaxPolygonAltitude();
-  }, [ dataOption]);
+  }, [dataOption]);
 
   return (
     <div
@@ -270,8 +295,33 @@ function PolygonGlobe() {
           if (!showData && feat === selectedCountry)
             return "rgba(255, 255, 255, 0.522)";
           if (!showData) return null;
-          const color = d3.color(colorScale(getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)));
-          const alpha = getVal(feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1];
+          const color = d3.color(
+            colorScale(
+              getVal(
+                feat,
+                dataOption,
+                restCountriesData,
+                mortalityData,
+                debtData,
+                inflationData,
+                employmentData,
+                healthData,
+                growthData
+              )
+            )
+          );
+          const alpha =
+            getVal(
+              feat,
+              dataOption,
+              restCountriesData,
+              mortalityData,
+              debtData,
+              inflationData,
+              employmentData,
+              healthData,
+              growthData
+            ) / colorScale.domain()[1];
           color.opacity = alpha * 2; // Transparenz anpassen
           if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.677)"; // Weiß mit 50% Alpha für gehovtetes Land
           return feat === selectedCountry
@@ -280,7 +330,10 @@ function PolygonGlobe() {
         }}
         polygonSideColor={(feat) => {
           if (!showBorders) {
-            if (feat.properties.ISO_A3 === selectedCountry?.cca3 || feat === hoveredCountry) {
+            if (
+              feat.properties.ISO_A3 === selectedCountry?.cca3 ||
+              feat === hoveredCountry
+            ) {
               return "rgba(0, 0, 0, 0.722)"; // Side color for selected or hovered country
             }
             return "rgba(0, 0, 0, 0.40)"; // No side color for other countries
@@ -297,18 +350,33 @@ function PolygonGlobe() {
           ) {
             return "rgba(0, 0, 0, 0)";
           }
-        (hoveredCountry ||
-          feat.properties.ISO_A3 === selectedCountry?.cca3)
-          ? "#FFFFFF"
-          : null;
+          hoveredCountry || feat.properties.ISO_A3 === selectedCountry?.cca3
+            ? "#FFFFFF"
+            : null;
           if (showBorders) return "rgba(0, 0, 0, 0.822)";
         }}
         polygonAltitude={(d) => {
           if (!showData) return 0.005;
           if (!showBorders && !showData) return -1;
-          const baseAltitude = getVal(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData) / colorScale.domain()[1] * (maxPolygonAltitude - minPolygonAltitude) + minPolygonAltitude;
-          if (d.properties.ISO_A3 === selectedCountry?.cca3) return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2
-          if (d === hoveredCountry && showData) return hoveredPolygonAltitude+baseAltitude; // Heben des gehovteten Landes
+          const baseAltitude =
+            (getVal(
+              d,
+              dataOption,
+              restCountriesData,
+              mortalityData,
+              debtData,
+              inflationData,
+              employmentData,
+              healthData,
+              growthData
+            ) /
+              colorScale.domain()[1]) *
+              (maxPolygonAltitude - minPolygonAltitude) +
+            minPolygonAltitude;
+          if (d.properties.ISO_A3 === selectedCountry?.cca3)
+            return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2
+          if (d === hoveredCountry && showData)
+            return hoveredPolygonAltitude + baseAltitude; // Heben des gehovteten Landes
           if (showData) return baseAltitude; // Höhe im Verhältnis zum Wert
           return minPolygonAltitude; // Standardhöhe
         }}
@@ -321,8 +389,19 @@ function PolygonGlobe() {
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
         }}
         polygonsTransitionDuration={animationTime}
-        polygonLabel={(d) => polygonLabel(d, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData)}
-        
+        polygonLabel={(d) =>
+          polygonLabel(
+            d,
+            dataOption,
+            restCountriesData,
+            mortalityData,
+            debtData,
+            inflationData,
+            employmentData,
+            healthData,
+            growthData
+          )
+        }
         onPolygonHover={(hoverD) => {
           setHoveredCountry(hoverD);
         }}

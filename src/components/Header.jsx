@@ -45,16 +45,20 @@ function Header() {
 
   return (
     <header className="flex justify-around items-center bg-glass text-white fixed top-0 left-0 right-0 z-50  md:h-[10%] h-[10%] p-4">
-      <h1 className="text-xl font-bold w-1/3 hidden md:block">DataGlobe</h1>
-      <div className="md:w-1/4 flex justify-center">
-        <img src="/logo_trans.png" alt="" className="h-14 animate-pulse" />
+      <div className="w-1/3 hidden md:block"></div>
+      <div className="md:w-1/4 flex justify-center relative">
+      <i className="fixed top-7">DataGlobe</i>
+        <img src="/logo.gif" alt="" className="h-14 " />
       </div>
-      <h1 className="text-xs self-end pb-3 font-bold w-1/3 block md:hidden italic">DataGlobe</h1>
-      <div className="flex items-center justify-end relative md:w-1/3 w-[60%] text-xs md:ml-4">
+      <h1 className="text-xs self-end pb-3 font-bold w-1/3 block md:hidden italic ">
+        DataGlobe
+      </h1>
+      <div className="flex  items-center justify-end relative md:w-1/3 w-[60%] text-xs md:ml-4">
         {/* Suchfeld */}
-        <div className="relative">
+        <div className="relative">      
           <input
             type="text"
+            title="Land suchen"
             placeholder="Land suchen..."
             value={searchTerm}
             onChange={(e) => {
@@ -67,7 +71,11 @@ function Header() {
             className="p-1 rounded border bg-transparent text-white w-full h-8 max-h-8"
           />
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
-            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <svg
+              className="fill-current h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
               <path d="M7 10l5 5 5-5H7z" />
             </svg>
           </div>
@@ -92,9 +100,9 @@ function Header() {
                 setSearchTerm(""); // Suchfeld leeren
                 setIsDropdownOpen(false);
               }}
-              className={`p-1 cursor-pointer hover:bg-cyan-800 text-xs ${
+              className={`p-1 cursor-pointer bg-transparent hover:bg-cyan-800 text-xs ${
                 country.cca3 === selectedCountry?.cca3 ? "bg-cyan-800" : ""
-              } ${index === highlightedIndex ? "bg-cyan-800" : ""}`}
+              }`}
             >
               {country.name.common}
             </li>

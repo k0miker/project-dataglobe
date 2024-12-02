@@ -4,7 +4,7 @@ const InputCheckbox = ({ id, label, checked, onChange, tooltip }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="mb-4 relative">
+    <div className="mb-2 relative">
       <label htmlFor={id} className="mb-2 font-bold text-sm flex items-center justify-end cursor-pointer">
         <span className="mr-2 text-xs text-left w-full">{label}</span>
         <div className="relative justify-self-start ">

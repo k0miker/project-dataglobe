@@ -7,10 +7,11 @@ import Moon from "./Moon";
 import Sun from "./Sun";
 
 function CableGlobe() {
-  const { selectedWorld, rotationSpeed, showData, showBorders, showGrid } = useAppContext();
+  const { selectedWorld, rotationSpeed, showData, showBorders, showGrid, cableColorSet } = useAppContext();
   const globeEl = useRef();
   const [cablePaths, setCablePaths] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const fetchCableData = async () => {
     try {
@@ -50,8 +51,11 @@ function CableGlobe() {
 
       setCablePaths(paths);
       setTimeout(() => {
-        setLoading(false);
-      }, 1000); // Ladezustand um eine Sekunde verzögern
+        setTimeout(() => {
+          setFadeOut(true);
+          setLoading(false);
+        }, 1000); // Zeit für die Ausblendung
+      }, 2000); // Video-Intro für 2 Sekunden anzeigen
       //console.log("Cable data fetched successfully.");
     } catch (error) {
       //console.error("Error fetching cable data:", error);
@@ -88,14 +92,28 @@ function CableGlobe() {
     };
   }, []);
 
-  const getRandomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+  const getColorFromSet = (set) => {
+    switch (set) {     
+      case "monochrome":
+        return ["#000000", "#333333", "#666666", "#999999", "#CCCCCC", "#FFFFFF"];
+      case "blues":
+        return ["#0000d8", "#0101b9", "#000092", "#000066", "#000033"];
+      case "reds":
+        return ["#dc0000", "#b40000", "#870000", "#530000", "#390000"];
+      case "greens":
+        return ["#00FF00", "#00CC00", "#009900", "#006600", "#003300"];
+      default:
+        return ["#000000", "#333333", "#666666", "#999999", "#CCCCCC", "#FFFFFF"];
+       
     }
-    return color;
   };
+
+  const getRandomColorFromSet = (set) => {
+    const colors = getColorFromSet(set);
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
+
+
 
   const animateCameraToCable = (cable) => {
     if (globeEl.current && cable) {
@@ -115,9 +133,7 @@ function CableGlobe() {
   return (
     <div className="w-full h-full absolute overflow-hidden">
       {loading && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <LoadingSpinner />
-        </div>
+        <LoadingSpinner />
       )}
       <Globe
         ref={globeEl}
@@ -127,7 +143,7 @@ function CableGlobe() {
         pathPoints="coords"
         pathPointLat={(p) => p.lat}
         pathPointLng={(p) => p.lng}
-        pathColor={(path) => getRandomColor()}
+        pathColor={() => getRandomColorFromSet(cableColorSet)} 
         pathLabel={(path) => path.properties.name}
         pathDashLength={0.1}
         pathDashGap={0.008}
@@ -137,8 +153,8 @@ function CableGlobe() {
         polygonCapColor={() => showData ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         polygonSideColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
         polygonStrokeColor={() => showBorders ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0)"}
-        ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
-        showGraticules={showGrid} // Grid anzeigen oder ausblenden
+        ambientLightColor={null} 
+        showGraticules={showGrid}
       />
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />

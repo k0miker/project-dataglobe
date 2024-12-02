@@ -5,7 +5,6 @@ import InputSelect from "./Input_select";
 import InputSlider from "./Input_slider";
 import InputCheckbox from "./Input_checkbox";
 
-
 function Input() {
   // Verwendung des AppContext
   const {
@@ -26,11 +25,13 @@ function Input() {
     setHeatmapTopAltitude,
     heatmapBandwidth,
     setHeatmapBandwidth,
-    rotationSpeed, 
+    rotationSpeed,
     maxPolygonAltitude,
     setMaxPolygonAltitude,
     showGrid,
     setShowGrid,
+    cableColorSet,
+    setCableColorSet, // Hinzufügen der Zustände für das Farbset
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -40,7 +41,12 @@ function Input() {
     setter(value);
   };
 
-  const [tooltip, setTooltip] = useState({ visible: false, text: "", x: 0, y: 0 });
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    text: "",
+    x: 0,
+    y: 0,
+  });
 
   const showTooltip = (text, x, y) => {
     setTooltip({ visible: true, text, x, y });
@@ -76,7 +82,12 @@ function Input() {
   const Tooltip = ({ text, x, y }) => (
     <div
       className="absolute bg-gray-700 text-white text-xs rounded py-1 px-2 z-50"
-      style={{ top: y + 10, left: x + 10, maxWidth: '200px', whiteSpace: 'normal' }}
+      style={{
+        top: y + 10,
+        left: x + 10,
+        maxWidth: "200px",
+        whiteSpace: "normal",
+      }}
     >
       {text}
     </div>
@@ -86,10 +97,10 @@ function Input() {
   const SettingsContent = () => (
     <>
       <div className="p-6 relative">
-      <h1 className="mb-2 text-sm font-bold">⚙️ Settings</h1>
+      <h1 className=" pb-4 w-full flex justify-between font-bold">Settings</h1>
         <InputSelect
           id="earth-groundlayer"
-          label="Earth Groundlayer:"
+          label="Groundlayer:"
           value={selectedWorld}
           onChange={(e) => setSelectedWorld(e.target.value)}
           options={[
@@ -122,15 +133,15 @@ function Input() {
                   ["Unemployment Rate", "employment"],
                   ["Health Expenditure", "health"],
                   ["Economic Growth", "growth"],
-                  ["Internet-Cables", "cable"], 
+                  ["Internet-Cables", "cable"],
                 ]
               : visualizationType === "heatmap"
               ? [
+                  ["GDP", "gdp"],
                   ["Population", "population"],
                   ["Volcanoes", "volcanoes"],
-                  ["GDP", "gdp"],
-                  ["Earthquakes", "earthquakes"], 
-                  ["Internet-Cables", "cable"], 
+                  ["Earthquakes", "earthquakes"],
+                  ["Internet-Cables", "cable"],
                 ]
               : [["Kabel", "cable"]]
           }
@@ -208,7 +219,9 @@ function Input() {
           id="rotation-speed"
           label="Rotation:"
           value={rotationSpeed}
-          onChange={(e) => handleSliderChange(setRotationSpeed, parseFloat(e.target.value))}
+          onChange={(e) =>
+            handleSliderChange(setRotationSpeed, parseFloat(e.target.value))
+          }
           min={0}
           max={0.5}
           step={0.01}
@@ -222,7 +235,12 @@ function Input() {
             id="max-height"
             label="Max height:"
             value={maxPolygonAltitude}
-            onChange={(e) => handleSliderChange(setMaxPolygonAltitude, parseFloat(e.target.value))}
+            onChange={(e) =>
+              handleSliderChange(
+                setMaxPolygonAltitude,
+                parseFloat(e.target.value)
+              )
+            }
             min={0.006}
             max={0.5}
             step={0.01}
@@ -238,7 +256,12 @@ function Input() {
               id="heatmap-altitude"
               label="Altitude:"
               value={heatmapTopAltitude}
-              onChange={(e) => handleSliderChange(setHeatmapTopAltitude, parseFloat(e.target.value))}
+              onChange={(e) =>
+                handleSliderChange(
+                  setHeatmapTopAltitude,
+                  parseFloat(e.target.value)
+                )
+              }
               min={0.1}
               max={1.5}
               step={0.1}
@@ -250,7 +273,12 @@ function Input() {
               id="heatmap-bandwidth"
               label="Bandwidth:"
               value={heatmapBandwidth}
-              onChange={(e) => handleSliderChange(setHeatmapBandwidth, parseFloat(e.target.value))}
+              onChange={(e) =>
+                handleSliderChange(
+                  setHeatmapBandwidth,
+                  parseFloat(e.target.value)
+                )
+              }
               min={0.8}
               max={1.8}
               step={0.1}
@@ -260,8 +288,29 @@ function Input() {
             />
           </>
         )}
+
+        <InputSelect
+          id="cable-color-set"
+          label="Cable Color Set:"
+          value={cableColorSet}
+          onChange={(e) => setCableColorSet(e.target.value)}
+          options={[
+            ["Default", "default"],
+            ["Rainbow", "rainbow"],
+            ["Monochrome", "monochrome"],
+            ["Blues", "blues"],
+            ["Reds", "reds"],
+            ["Greens", "greens"],
+          ]}
+          tooltip="Select the color set for the cables."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
       </div>
-      {tooltip.visible && <Tooltip text={tooltip.text} x={tooltip.x} y={tooltip.y} />}
+      {tooltip.visible && (
+        <Tooltip text={tooltip.text} x={tooltip.x} y={tooltip.y} />
+      )}
     </>
   );
 
@@ -270,7 +319,7 @@ function Input() {
       {/* Button für mobile Ansicht */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="md:hidden fixed bottom-5 left-5 bg-glass text-white p-4 rounded-full shadow-lg z-50"
+        className="md:hidden fixed bottom-5 left-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
       >
         ⚙️ Settings
       </button>
@@ -286,13 +335,12 @@ function Input() {
             onClick={(e) => e.stopPropagation()} // Verhindern des Schließens beim Klicken innerhalb des Modals
           >
             {/* Modal Header */}
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">Settings</h2>
+            <div className="flex justify-end items-center mb-4">
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-100 hover:text-red-700"
               >
-                ✖ 
+                ✖
               </button>
             </div>
 
@@ -303,7 +351,7 @@ function Input() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden h-full md:flex flex-col max-w-auto absolute  items-between left-0 z-50 top-[10%] bg-glass shadow-lg">
+      <div className="hidden h-full md:flex flex-col max-w-[180px] absolute  items-between left-0  duration-500 z-50 top-[10%] bg-glass shadow-lg">
         <SettingsContent />
       </div>
     </>

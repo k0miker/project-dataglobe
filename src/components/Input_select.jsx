@@ -4,8 +4,8 @@ const InputSelect = ({ id, label, value, onChange, options, tooltip }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="mb-4 relative">
-      <label htmlFor={id} className="mb-2 font-bold text-sm flex items-center justify-between">
+    <div className="mb-2 relative">
+      <label htmlFor={id} className="flex justify-between mb-2 text-sm font-medium  text-gray-900 dark:text-white">
         {label}
         <span
           className="ml-2 cursor-pointer"
@@ -24,7 +24,7 @@ const InputSelect = ({ id, label, value, onChange, options, tooltip }) => {
         id={id}
         value={value}
         onChange={onChange}
-        className="p-2 rounded w-full bg-transparent text-xs border border-gray-300"
+        className="bg-gray-50 border border-gray-300 text-gray-50 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-transparent dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         {options.map(([name, val]) => (
           <option key={val} value={val}>
