@@ -164,7 +164,7 @@ function Input() {
           hideTooltip={hideTooltip}
         />
 
-        {visualizationType !== "heatmap" && (
+        {(visualizationType !== "heatmap" && dataOption!=="cable")   && (
           <InputSelect
             id="color-scheme"
             label="Color Scheme:"
@@ -288,7 +288,7 @@ function Input() {
             />
           </>
         )}
-
+        {dataOption === "cable" && (
         <InputSelect
           id="cable-color-set"
           label="Cable Color Set:"
@@ -305,7 +305,7 @@ function Input() {
           tooltip="Select the color set for the cables."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
-        />
+        />)}
 
       </div>
       {tooltip.visible && (

@@ -14,22 +14,22 @@ export const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [geoJsonData, setGeoJsonData] = useState([]);
   const [gdpData, setGdpData] = useState([]);
-  const [showBorders, setShowBorders] = useState(false); // State für Länderumrisse
+  const [showBorders, setShowBorders] = useState(false); 
   const [colorScheme, setColorScheme] = useState("Blues");
   const [heatmapTopAltitude, setHeatmapTopAltitude] = useState(0.2);
   const [heatmapBandwidth, setHeatmapBandwidth] = useState(1.8);
   const [maxPolygonAltitude, setMaxPolygonAltitude] = useState(0.008);
-  const [earthquakes, setEarthquakes] = useState([]); // Neuer State für die Erdbebendaten
+  const [earthquakes, setEarthquakes] = useState([]); 
   const [earthQuakeData, setEarthQuakeData] = useState([]);
-  const [mortalityData, setMortalityData] = useState([]); // Neuer State für die Sterblichkeitsdaten
-  const [debtData, setDebtData] = useState([]); // Neuer State für die Schuldendaten
-  const [inflationData, setInflationData] = useState([]); // Neuer State für die Inflationsdaten
-  const [employmentData, setEmploymentData] = useState([]); // Neuer State für die Beschäftigungsdaten
-  const [healthData, setHealthData] = useState([]); // Neuer State für die Gesundheitsdaten
-  const [growthData, setGrowthData] = useState([]); // Neuer State für die Wirtschaftswachstumsdaten
-  const [loading, setLoading] = useState(true); // Neuer State für den Ladezustand
-  const [showGrid, setShowGrid] = useState(true); // Neuer State für das Anzeigen des Grids
-  const [cableColorSet, setCableColorSet] = useState("default"); // Neuer Zustand für das Farbset der Kabel
+  const [mortalityData, setMortalityData] = useState([]); 
+  const [debtData, setDebtData] = useState([]); 
+  const [inflationData, setInflationData] = useState([]); 
+  const [employmentData, setEmploymentData] = useState([]);
+  const [healthData, setHealthData] = useState([]); 
+  const [growthData, setGrowthData] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  const [showGrid, setShowGrid] = useState(true);
+  const [cableColorSet, setCableColorSet] = useState("default"); 
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -83,12 +83,12 @@ export const AppProvider = ({ children }) => {
         fetchCountries(),
         fetchLocationData(),
         fetchGDPDataForCountries(),
-        fetchMortalityData(), // Sterblichkeitsdaten abrufen
-        fetchDebtData(), // Schuldendaten abrufen
-        fetchInflationData(), // Inflationsdaten abrufen
-        fetchEmploymentData(), // Beschäftigungsdaten abrufen
-        fetchHealthData(), // Gesundheitsdaten abrufen
-        fetchGrowthData(), // Wirtschaftswachstumsdaten abrufen
+        fetchMortalityData(), 
+        fetchDebtData(), 
+        fetchInflationData(), 
+        fetchEmploymentData(), 
+        fetchHealthData(), 
+        fetchGrowthData(), 
       ]);
 
       const filteredGeoJsonData = geoJsonData.features.filter(
@@ -104,28 +104,21 @@ export const AppProvider = ({ children }) => {
 
       setCountries(countriesData);
       setGdpData(gdpData);
-      
-      const earthquakes = await fetchEarthQuakes(); // Erdbebendaten abrufen
-      setEarthquakes(earthquakes); // Erdbebendaten setzen
-      localStorage.setItem("earthquakes", JSON.stringify(earthquakes)); // Erdbebendaten im lokalen Speicher speichern
-      
-      setMortalityData(mortalityData); // Sterblichkeitsdaten setzen
-      localStorage.setItem("mortalityData", JSON.stringify(mortalityData)); // Sterblichkeitsdaten im lokalen Speicher speichern
-      
-      setDebtData(debtData); // Schuldendaten setzen
-      localStorage.setItem("debtData", JSON.stringify(debtData)); // Schuldendaten im lokalen Speicher speichern
-
-      setInflationData(inflationData); // Inflationsdaten setzen
-      localStorage.setItem("inflationData", JSON.stringify(inflationData)); // Inflationsdaten im lokalen Speicher speichern
-
-      setEmploymentData(employmentData); // Beschäftigungsdaten setzen
-      localStorage.setItem("employmentData", JSON.stringify(employmentData)); // Beschäftigungsdaten im lokalen Speicher speichern
-
-      setHealthData(healthData); // Gesundheitsdaten setzen
-      localStorage.setItem("healthData", JSON.stringify(healthData)); // Gesundheitsdaten im lokalen Speicher speichern
-
-      setGrowthData(growthData); // Wirtschaftswachstumsdaten setzen
-      localStorage.setItem("growthData", JSON.stringify(growthData)); // Wirtschaftswachstumsdaten im lokalen Speicher speichern
+      const earthquakes = await fetchEarthQuakes();
+      setEarthquakes(earthquakes);
+      localStorage.setItem("earthquakes", JSON.stringify(earthquakes));      
+      setMortalityData(mortalityData);
+      localStorage.setItem("mortalityData", JSON.stringify(mortalityData));      
+      setDebtData(debtData);
+      localStorage.setItem("debtData", JSON.stringify(debtData));
+      setInflationData(inflationData);
+      localStorage.setItem("inflationData", JSON.stringify(inflationData));
+      setEmploymentData(employmentData);
+      localStorage.setItem("employmentData", JSON.stringify(employmentData));
+      setHealthData(healthData);
+      localStorage.setItem("healthData", JSON.stringify(healthData));
+      setGrowthData(growthData);
+      localStorage.setItem("growthData", JSON.stringify(growthData));
 
       console.log("All data fetched successfully.");
       setTimeout(() => {
