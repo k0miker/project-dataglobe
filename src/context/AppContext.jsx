@@ -30,6 +30,7 @@ export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true); 
   const [showGrid, setShowGrid] = useState(true);
   const [cableColorSet, setCableColorSet] = useState("default"); 
+  const [clouds, setClouds] = useState(false);
 
   // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
   const setVisualizationType = (type) => {
@@ -268,6 +269,7 @@ export const AppProvider = ({ children }) => {
       loading, // Ladezustand im Kontext bereitstellen
       showGrid, setShowGrid, // Grid-Zustand im Kontext bereitstellen
       cableColorSet, setCableColorSet, // Hinzufügen der Zustände für das Farbset
+      clouds, setClouds,
     }}>
       {children}
     </AppContext.Provider>

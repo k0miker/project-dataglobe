@@ -24,7 +24,7 @@ const InputSelect = ({ id, label, value, onChange, options, tooltip }) => {
         id={id}
         value={value}
         onChange={onChange}
-        className="bg-gray-50 border border-gray-300 text-gray-50 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full bg-transparent dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="bg-gray-50 p-1 border border-gray-300 text-gray-50 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full bg-transparent dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         {options.map(([name, val]) => (
           <option key={val} value={val}>

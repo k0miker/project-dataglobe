@@ -32,6 +32,7 @@ function Input() {
     setShowGrid,
     cableColorSet,
     setCableColorSet, // Hinzufügen der Zustände für das Farbset
+    clouds, setClouds,
   } = useAppContext();
 
   const [countries, setCountries] = useState([]);
@@ -215,6 +216,16 @@ function Input() {
           hideTooltip={hideTooltip}
         />
 
+        <InputCheckbox
+          id="show-clouds"
+          label="Show Clouds:"
+          checked={clouds}
+          onChange={(e) => setClouds(e.target.checked)}
+          tooltip="Toggle the display of clouds on the map."
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+        />
+
         <InputSlider
           id="rotation-speed"
           label="Rotation:"
@@ -353,7 +364,7 @@ function Input() {
       )}
 
       {/* Sidebar für Desktop- und Tablet-Ansicht */}
-      <div className="hidden h-full md:flex flex-col max-w-[180px] absolute  items-between left-0  duration-500 z-50 top-[10%] bg-glass shadow-lg">
+      <div className="hidden h-full md:flex flex-col max-w-[180px] absolute  overflow-y-auto items-between left-0  duration-500 z-50 top-[10%] bg-glass shadow-lg">
         <SettingsContent />
       </div>
     </>

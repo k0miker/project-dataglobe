@@ -2,7 +2,7 @@ import React from "react";
 
 const LoadingSpinner = () => {
   return (
-    <div style={styles.introVideo}>
+    <div style={styles.spinnerVideo}>
       <video src="/intro.mp4" autoPlay muted style={styles.video} />
       <div style={styles.introText}>Dataglobe</div>
     </div>
@@ -10,24 +10,31 @@ const LoadingSpinner = () => {
 };
 
 const styles = {
-  introVideo: {
-    position: "fixed",
-    top: 0,
+  spinnerVideo: {
+    position: "relative",
     left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
     width: "100vw",
     height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    zIndex: 1,
     transition: "opacity 1s ease-in",
     overflow: "hidden",
   },
   video: {
+
+    position: "relative",
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
     width: "100vw",
-    height: "100vh",
+    height: "80vh",
     opacity: 0.4,
-    objectFit: "cover",
+    objectFit: "contain",
   },
   introText: {
     position: "absolute",
@@ -43,8 +50,10 @@ const styles = {
     fontWeight: 900,
     color: "rgba(103, 103, 103, 0.662)",
     fontFamily: "'Arial', sans-serif",
-    backgroundClip: "text",
-    WebkitBackgroundClip: "text",
+    // backgroundClip: "text",
+    // WebkitBackgroundClip: "text",    
+    pointerEvents: "none", 
+    userSelect: "none", 
   },
 };
 

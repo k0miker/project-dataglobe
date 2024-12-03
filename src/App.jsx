@@ -21,8 +21,8 @@ function App() {
   return (
     <AppProvider>
       {showIntro ? (
-        <div className={`intro-video ${fadeOut ? 'fade-out' : ''}`}>
-          <video src="/intro.mp4" autoPlay muted />
+        <div className={`intro-video absolute left-0 top-0 w-screen h-screen object-cover ${fadeOut ? 'fade-out' : ''}`}>
+          <video src="/intro.mp4" autoPlay muted className="opacity-40 w-screen h-auto " />
           <div className="intro-text font-mono">Dataglobe</div>
         </div>
       ) : (

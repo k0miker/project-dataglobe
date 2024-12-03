@@ -9,6 +9,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import Sun from "./Sun";
 import polygonLabel from "../utils/polygonLabel";
 import getVal from "../utils/geoJsonUtils";
+import Clouds from "./Clouds";
 
 function PolygonGlobe() {
   const {
@@ -30,6 +31,7 @@ function PolygonGlobe() {
     healthData,
     growthData,
     showGrid,
+    clouds,
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
@@ -408,6 +410,7 @@ function PolygonGlobe() {
         onPolygonClick={handleCountryClick}
         ambientLightColor={null} // Entfernen des Standard-Ambient-Lights
       />
+      {clouds && <Clouds globeEl={globeEl} />}
       <Moon scene={globeEl.current?.scene()} />
       <Sun scene={globeEl.current?.scene()} />
       <style>
