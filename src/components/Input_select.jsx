@@ -11,6 +11,7 @@ const InputSelect = ({ id, label, value, onChange, options, tooltip }) => {
           className="ml-2 cursor-pointer"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
+          onClick={() => setShowTooltip(!showTooltip)}
         >
           <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (

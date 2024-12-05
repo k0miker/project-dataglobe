@@ -35,7 +35,7 @@ function Input() {
     clouds, setClouds,
   } = useAppContext();
 
-  const [countries, setCountries] = useState([]);
+  const [, setCountries] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
 
   const handleSliderChange = (setter, value) => {
@@ -116,6 +116,7 @@ function Input() {
           tooltip="Select the map type to display as ground layer."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Select the map type to display as ground layer.", e.clientX, e.clientY)}
         />
 
         <InputSelect
@@ -149,6 +150,7 @@ function Input() {
           tooltip="Select the data option to vizualize on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Select the data option to vizualize on the map.", e.clientX, e.clientY)}
         />
 
         <InputSelect
@@ -163,6 +165,7 @@ function Input() {
           tooltip="Select the visualization type for the data in witch it should be displayed on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Select the visualization type for the data in witch it should be displayed on the map.", e.clientX, e.clientY)}
         />
 
         {(visualizationType !== "heatmap" && dataOption!=="cable")   && (
@@ -181,6 +184,7 @@ function Input() {
             tooltip="Select the color scheme for the visualization."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
+            onClick={(e) => showTooltip("Select the color scheme for the visualization.", e.clientX, e.clientY)}
           />
         )}
 
@@ -192,6 +196,7 @@ function Input() {
           tooltip="Toggle the display of data on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Toggle the display of data on the map.", e.clientX, e.clientY)}
         />
 
         {dataOption !== "cable" && (
@@ -203,6 +208,7 @@ function Input() {
             tooltip="Toggle the display of country borders on the map."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
+            onClick={(e) => showTooltip("Toggle the display of country borders on the map.", e.clientX, e.clientY)}
           />
         )}
 
@@ -214,6 +220,7 @@ function Input() {
           tooltip="Toggle the display of the grid on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Toggle the display of the grid on the map.", e.clientX, e.clientY)}
         />
 
         <InputCheckbox
@@ -224,6 +231,7 @@ function Input() {
           tooltip="Toggle the display of clouds on the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Toggle the display of clouds on the map.", e.clientX, e.clientY)}
         />
 
         <InputSlider
@@ -239,6 +247,7 @@ function Input() {
           tooltip="Adjust the rotation speed of the map."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Adjust the rotation speed of the map.", e.clientX, e.clientY)}
         />
 
         {visualizationType === "polygon" && dataOption !== "cable" && (
@@ -258,6 +267,7 @@ function Input() {
             tooltip="Adjust the maximum height of the countries on the map considering the data."
             showTooltip={showTooltip}
             hideTooltip={hideTooltip}
+            onClick={(e) => showTooltip("Adjust the maximum height of the countries on the map considering the data.", e.clientX, e.clientY)}
           />
         )}
 
@@ -279,6 +289,7 @@ function Input() {
               tooltip="Adjust the altitude of the heatmap on the map."
               showTooltip={showTooltip}
               hideTooltip={hideTooltip}
+              onClick={(e) => showTooltip("Adjust the altitude of the heatmap on the map.", e.clientX, e.clientY)}
             />
             <InputSlider
               id="heatmap-bandwidth"
@@ -296,6 +307,7 @@ function Input() {
               tooltip="Adjust the bandwidth of the heatmap on the map."
               showTooltip={showTooltip}
               hideTooltip={hideTooltip}
+              onClick={(e) => showTooltip("Adjust the bandwidth of the heatmap on the map.", e.clientX, e.clientY)}
             />
           </>
         )}
@@ -316,6 +328,7 @@ function Input() {
           tooltip="Select the color set for the cables."
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
+          onClick={(e) => showTooltip("Select the color set for the cables.", e.clientX, e.clientY)}
         />)}
 
       </div>

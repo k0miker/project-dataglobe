@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const outputFilePath = path.join(__dirname, 'sterblichkeit_ext.json');
-const newDataFilePath = path.join(__dirname, 'schulden.json'); // Beispiel für eine neue Datenquelle
+const newDataFilePath = path.join(__dirname, 'schulden.json'); 
 
 const rl = readline.createInterface({
     input: process.stdin,

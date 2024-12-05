@@ -11,6 +11,7 @@ const InputSlider = ({ id, label, value, onChange, min, max, step, tooltip }) =>
           className="ml-2 cursor-pointer relative hover:text-red-600"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
+          onClick={() => setShowTooltip(!showTooltip)}
         >
           <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (

@@ -26,6 +26,7 @@ const InputCheckbox = ({ id, label, checked, onChange, tooltip }) => {
           className="ml-2 cursor-pointer"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
+          onClick={() => setShowTooltip(!showTooltip)}
         >
           <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (
