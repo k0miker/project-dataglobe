@@ -30,9 +30,9 @@ const InputCheckbox = ({ id, label, checked, onChange, tooltip }) => {
         >
           <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (
-            <div className="absolute bg-glass2 text-white text-xs rounded py-1 px-2 z-50 text-center" style={{ top: '100%', left: '50%', transform: 'translateX(105px)' }}>
-              {tooltip}
-            </div>
+            <div className="absolute bg-glass2 text-white text-xs rounded py-1 px-2 z-50 text-center" style={{ top: '100%', left: '50%', transform: 'translateX(-50%) translateY(-200%)' }}>
+            {tooltip}
+          </div>
           )}
         </span>
       </label>
