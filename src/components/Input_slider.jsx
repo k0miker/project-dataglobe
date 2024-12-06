@@ -15,7 +15,7 @@ const InputSlider = ({ id, label, value, onChange, min, max, step, tooltip }) =>
         >
           <span className="text-xs font-thin hover:text-red-600">🛈</span>
           {showTooltip && (
-            <div className="absolute bg-glass2 text-white text-xs rounded p-4 z-50 text-center" style={{ top: '100%', left: '50%', transform: 'translateX(-100%) translateY(-100%)' }}>
+            <div className="absolute bg-glass2 text-white text-xs rounded p-4 z-50 text-center" style={{ top: '100%', left: '50%', transform: 'translateX(-110%) translateY(-100%)' }}>
               {tooltip}
             </div>
           )}
