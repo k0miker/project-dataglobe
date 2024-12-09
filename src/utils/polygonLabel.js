@@ -22,7 +22,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
         (country) => country.cca2 === d.ISO_A2
       );
       if (country) {
-        label += `Mortality Rate: <br /><i>${country.value}%</i>`;
+        label += `Mortality Rate: <br /><i>${country.value.toFixed(2)}%</i>`;
       } else {
         label += `Mortality Rate: <br /><i>No data</i>`;
       }
