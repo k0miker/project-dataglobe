@@ -127,6 +127,9 @@ function HeatmapGlobe() {
       }
     };
 
+    // Neuen Zustand beim Daten-Typ-Wechsel setzen:
+    setLoading(true);
+    setHeatmapData([]);
     fetchHeatmapData();
   }, [dataOption, colorScheme]);
 
@@ -144,7 +147,7 @@ function HeatmapGlobe() {
   }, [colorScheme]);
 
   return (
-    <div className="w-full h-full absolute overflow-hidden">
+    <div className="">
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <LoadingSpinner />

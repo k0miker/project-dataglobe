@@ -32,7 +32,7 @@ export const AppProvider = ({ children }) => {
   const [cableColorSet, setCableColorSet] = useState("default"); 
   const [clouds, setClouds] = useState(false);
 
-  // Visualisierungstyp ändern und Weltkarte entsprechend anpassen
+  
   const setVisualizationType = (type) => {
     if (type === "heatmap") {
       setSelectedWorld("earthDark.png");
