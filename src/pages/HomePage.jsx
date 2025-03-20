@@ -4,6 +4,7 @@ import Output from "../components/Output";
 import VisualizationRenderer from "../components/VisualizationRenderer";
 import Header from "../components/Header";
 import CableGlobe from "../components/CableGlobe";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
         <VisualizationRenderer />
       </div>
       <Output />
+      <Footer />
     </div>
   );
 }

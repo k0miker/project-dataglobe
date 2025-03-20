@@ -3,6 +3,7 @@ import { AppProvider } from "./context/AppContext";
 import './App.css';
 import './index.css';
 import HomePage from "./pages/HomePage";
+import ErrorBoundary from "./components/ErrorBoundary"; // hinzugefügt
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -26,7 +27,9 @@ function App() {
           <div className="intro-text font-mono">Dataglobe</div>
         </div>
       ) : (
-        <HomePage className='flex justify-between w-screen h-screen ' />
+        <ErrorBoundary>
+          <HomePage className='flex justify-between w-screen h-screen ' />
+        </ErrorBoundary>
       )}
     </AppProvider>
   );
