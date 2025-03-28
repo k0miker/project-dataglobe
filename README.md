@@ -1,6 +1,6 @@
 ### Description
 
-(DataGlobe)[http://dataglobe.netlify.app]
+[DataGlobe](http://dataglobe.netlify.app)
 The Dataglobe project is a platform for visualizing and analyzing global data. The goal of the project is to enable users to explore complex datasets in an intuitive and interactive way. The platform offers various tools and features to filter, compare, and visualize data.
 
 #### Key Features
