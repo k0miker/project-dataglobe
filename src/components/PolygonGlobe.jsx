@@ -12,7 +12,11 @@ import getVal from "../utils/geoJsonUtils";
 import Clouds from "./Clouds";
 
 // Helper to resolve ISO code for France/Norway workaround
-const getIso = (feat) => feat?.properties?.ISO_A3 && feat.properties.ISO_A3 !== "-99" ? feat.properties.ISO_A3 : feat?.properties?.ADM0_A3;
+const getIso = (feat) => {
+  if (!feat?.properties) return null;
+  if (feat.properties.ISO_A3 === "FR") return "FRA";
+  return feat.properties.ISO_A3 && feat.properties.ISO_A3 !== "-99" ? feat.properties.ISO_A3 : feat.properties.ADM0_A3;
+};
 
 function PolygonGlobe() {
   const {
