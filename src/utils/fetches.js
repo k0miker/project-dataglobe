@@ -110,7 +110,7 @@ export const fetchVolcanoes = async () => {
 
 export const fetchMortalityData = async () => {
   try {
-    const response = await fetch("/sterblichkeit.json");
+    const response = await fetch(`/sterblichkeit.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
@@ -136,7 +136,7 @@ export const fetchMortalityData = async () => {
 
 export const fetchDebtData = async () => {
   try {
-    const response = await fetch("/schulden.json");
+    const response = await fetch(`/schulden.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
@@ -153,7 +153,7 @@ export const fetchDebtData = async () => {
 
 export const fetchInflationData = async () => {
   try {
-    const response = await fetch("/inflation.json");
+    const response = await fetch(`/inflation.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
@@ -170,7 +170,7 @@ export const fetchInflationData = async () => {
 
 export const fetchEmploymentData = async () => {
   try {
-    const response = await fetch("/employment.json");
+    const response = await fetch(`/employment.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
@@ -187,7 +187,7 @@ export const fetchEmploymentData = async () => {
 
 export const fetchHealthData = async () => {
   try {
-    const response = await fetch("/health.json");
+    const response = await fetch(`/health.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
@@ -204,7 +204,7 @@ export const fetchHealthData = async () => {
 
 export const fetchGrowthData = async () => {
   try {
-    const response = await fetch("/wachstum.json");
+    const response = await fetch(`/wachstum.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }

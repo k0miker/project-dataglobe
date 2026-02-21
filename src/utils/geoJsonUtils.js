@@ -2,7 +2,7 @@ import { useAppContext } from '../context/AppContext';
 
 const getVal = (feat, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData, currentYear) => {
     // Resolve ISO code: Fallback to ADM0_A3 if ISO_A3 is invalid or "-99" (e.g. France, Norway)
-    const isoCode = feat.properties.ISO_A3 === "FR" ? "FRA" : (feat.properties.ISO_A3 && feat.properties.ISO_A3 !== "-99"
+    const isoCode = feat.properties.ISO_A3 === "FR" ? "FRA" : feat.properties.ADM0_A3 === "KOS" ? "UNK" : feat.properties.ADM0_A3 === "CYN" ? "CYP" : feat.properties.ADM0_A3 === "SOL" ? "SOM" : (feat.properties.ISO_A3 && feat.properties.ISO_A3 !== "-99"
       ? feat.properties.ISO_A3
       : feat.properties.ADM0_A3);
 

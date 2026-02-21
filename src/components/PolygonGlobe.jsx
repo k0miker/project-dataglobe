@@ -15,6 +15,9 @@ import Clouds from "./Clouds";
 const getIso = (feat) => {
   if (!feat?.properties) return null;
   if (feat.properties.ISO_A3 === "FR") return "FRA";
+  if (feat.properties.ADM0_A3 === "KOS") return "UNK"; // Kosovo in restcountriesData is UNK
+  if (feat.properties.ADM0_A3 === "CYN") return "CYP"; // N. Cyprus mapped to Cyprus
+  if (feat.properties.ADM0_A3 === "SOL") return "SOM"; // Somaliland mapped to Somalia
   return feat.properties.ISO_A3 && feat.properties.ISO_A3 !== "-99" ? feat.properties.ISO_A3 : feat.properties.ADM0_A3;
 };
 

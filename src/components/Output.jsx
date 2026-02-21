@@ -1,6 +1,37 @@
 import React, { useState, useEffect } from "react";
 import { useAppContext } from "../context/AppContext";
 
+const Sparkline = ({ data, currentYear, color = "#06b6d4" }) => {
+  if (!data || Object.keys(data).length === 0) return null;
+
+  const years = Object.keys(data).map(Number).sort((a, b) => a - b);
+  if (years.length < 2) return null;
+
+  const values = years.map(y => data[y]);
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  
+  const width = 80;
+  const height = 20;
+  
+  const getX = (year) => ((year - years[0]) / (years[years.length - 1] - years[0])) * width;
+  const getY = (val) => height - ((val - minVal) / (maxVal - minVal || 1)) * height;
+
+  const points = years.map(y => `${getX(y)},${getY(data[y])}`).join(" ");
+  
+  const currentX = getX(currentYear);
+  const currentY = data[currentYear] !== undefined ? getY(data[currentYear]) : null;
+
+  return (
+    <svg width={width} height={height} className="overflow-visible ml-2 mt-1">
+      <polyline fill="none" stroke={color} strokeWidth="1.5" points={points} opacity="0.5" />
+      {currentY !== null && (
+        <circle cx={currentX} cy={currentY} r="3" fill={color} />
+      )}
+    </svg>
+  );
+};
+
 function Output() {
   const { selectedCountry } = useAppContext();
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
@@ -51,7 +82,7 @@ function Output() {
 
     return (
       // UI-Inhalt für Länderinformationen
-      <div className="flex md:max-w-[280px]  flex-col items-center m-auto  p-4">
+      <div className="flex md:max-w-[340px]  flex-col items-center m-auto  p-4">
         <div className="flex flex-col justify-center ">
           <img
             src={selectedCountry.flags.png}
@@ -113,33 +144,51 @@ function Output() {
         </button>
         {isExpanded && (
           <ul className="text-left w-full text-sm">
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className="text-cyan-400 ">Mortality Rate:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{mortalityInfo && mortalityInfo.data && mortalityInfo.data[currentYear] !== undefined ? `${mortalityInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{mortalityInfo && mortalityInfo.data && mortalityInfo.data[currentYear] !== undefined ? `${mortalityInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {mortalityInfo && <Sparkline data={mortalityInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Economy:</b>{" "}
               <span className="text-xs p-1 text-gray-200">{geoJsonCountry ? geoJsonCountry.properties.ECONOMY : "No data"}</span>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
-              <span className="text-xs p-1 text-gray-200">{debtInfo && debtInfo.data && debtInfo.data[currentYear] !== undefined ? `${debtInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{debtInfo && debtInfo.data && debtInfo.data[currentYear] !== undefined ? `${debtInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {debtInfo && <Sparkline data={debtInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Inflation:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{inflationInfo && inflationInfo.data && inflationInfo.data[currentYear] !== undefined ? `${inflationInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{inflationInfo && inflationInfo.data && inflationInfo.data[currentYear] !== undefined ? `${inflationInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {inflationInfo && <Sparkline data={inflationInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Unemployment Rate:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{employmentInfo && employmentInfo.data && employmentInfo.data[currentYear] !== undefined ? `${employmentInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{employmentInfo && employmentInfo.data && employmentInfo.data[currentYear] !== undefined ? `${employmentInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {employmentInfo && <Sparkline data={employmentInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
-              <span className="text-xs p-1 text-gray-200">{healthInfo && healthInfo.data && healthInfo.data[currentYear] !== undefined ? `${healthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{healthInfo && healthInfo.data && healthInfo.data[currentYear] !== undefined ? `${healthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {healthInfo && <Sparkline data={healthInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
-            <li className="flex justify-between">
+            <li className="flex justify-between items-center">
               <b className=" text-cyan-400 ">Economic Growth:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{growthInfo && growthInfo.data && growthInfo.data[currentYear] !== undefined ? `${growthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+              <div className="flex items-center">
+                <span className="text-xs p-1 text-gray-200">{growthInfo && growthInfo.data && growthInfo.data[currentYear] !== undefined ? `${growthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
+                {growthInfo && <Sparkline data={growthInfo.data} currentYear={currentYear} />}
+              </div>
             </li>
           </ul>
         )}
@@ -152,7 +201,7 @@ function Output() {
       {/* Button für mobile Ansicht */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="md:hidden fixed bottom-5 right-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
+        className="md:hidden fixed bottom-20 right-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
       >
         🌍 Country Info
       </button>

@@ -2,7 +2,7 @@ import { useAppContext } from '../context/AppContext';
 
 const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalityData, debtData, inflationData, employmentData, healthData, growthData, currentYear) => {
     // Resolve ISO code: Fallback to ADM0_A3 if ISO_A3 is invalid or "-99" (e.g. France, Norway)
-    const isoCode = d.ISO_A3 === "FR" ? "FRA" : (d.ISO_A3 && d.ISO_A3 !== "-99"
+    const isoCode = d.ISO_A3 === "FR" ? "FRA" : d.ADM0_A3 === "KOS" ? "UNK" : d.ADM0_A3 === "CYN" ? "CYP" : d.ADM0_A3 === "SOL" ? "SOM" : (d.ISO_A3 && d.ISO_A3 !== "-99"
       ? d.ISO_A3
       : d.ADM0_A3);
 

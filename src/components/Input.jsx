@@ -38,6 +38,23 @@ function Input() {
 
   const [, setCountries] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // State für Modal
+  const [isPlaying, setIsPlaying] = useState(false); // State für Play-Button
+
+  useEffect(() => {
+    let interval;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentYear((prevYear) => {
+          if (prevYear >= 2026) {
+            setIsPlaying(false);
+            return prevYear;
+          }
+          return prevYear + 1;
+        });
+      }, 500); // 500ms pro Jahr
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, setCurrentYear]);
 
   const handleSliderChange = (setter, value) => {
     setter(value);
@@ -345,7 +362,7 @@ function Input() {
       <button
       label="Settings"
         onClick={() => setIsModalOpen(true)}
-        className="md:hidden fixed bottom-5 left-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
+        className="md:hidden fixed bottom-20 left-5 bg-glass text-xs text-white p-4 rounded-full shadow-lg z-50"
       >
         ⚙️ Settings
       </button>
@@ -383,18 +400,35 @@ function Input() {
       </div>
 
       {visualizationType === 'polygon' && (dataOption === 'mortality' || dataOption === 'debt' || dataOption === 'inflation' || dataOption === 'employment' || dataOption === 'health' || dataOption === 'growth') && (
-        <div className="fixed bottom-16 left-1/2 transform -translate-x-1/2 bg-glass p-4 rounded-xl flex flex-col items-center gap-2 z-50 w-3/4 max-w-lg">
+        <div className="fixed bottom-36 md:bottom-16 left-1/2 transform -translate-x-1/2 bg-glass p-4 rounded-xl flex flex-col items-center gap-2 z-50 w-3/4 max-w-lg">
           <label className="text-white text-sm font-bold">Year: {currentYear}</label>
-          <input 
-            type="range" 
-            min="1960" 
-            max="2026" 
-            step="1" 
-            value={currentYear} 
-            onChange={(e) => setCurrentYear(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
-          />
-          <div className="flex justify-between w-full text-xs text-gray-400">
+          <div className="flex items-center gap-4 w-full">
+            <button 
+              onClick={() => {
+                if (currentYear >= 2026 && !isPlaying) {
+                  setCurrentYear(1960);
+                }
+                setIsPlaying(!isPlaying);
+              }} 
+              className="text-white bg-cyan-600 hover:bg-cyan-500 rounded-full w-8 h-8 flex items-center justify-center shadow-md transition-colors"
+              title={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? "⏸" : "▶"}
+            </button>
+            <input 
+              type="range" 
+              min="1960" 
+              max="2026" 
+              step="1" 
+              value={currentYear} 
+              onChange={(e) => {
+                setIsPlaying(false);
+                setCurrentYear(parseInt(e.target.value));
+              }}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+            />
+          </div>
+          <div className="flex justify-between w-full text-xs text-gray-400 pl-12">
             <span>1960</span>
             <span>2026</span>
           </div>
