@@ -119,10 +119,15 @@ export const fetchMortalityData = async () => {
       throw new TypeError("Received non-JSON response");
     }
     const data = await response.json();
-    return data.map(item => ({
-      cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value*.1 : null
-    })).filter(item => item.value !== null);
+    return data.map(item => {
+      const processedData = {};
+      if (item.data && typeof item.data === 'object') {
+        for (const year in item.data) {
+          processedData[year] = item.data[year] * 0.1;
+        }
+      }
+      return { cca3: item.cca3, data: processedData };
+    });
   } catch (error) {
     console.error("Fehler beim Abrufen der Sterblichkeitsdaten:", error);
     throw error;
@@ -138,8 +143,8 @@ export const fetchDebtData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value : null
-    })).filter(item => item.value !== null);
+      data: item.data && typeof item.data === 'object' ? item.data : {}
+    }));
   } catch (error) {
     console.error("Fehler beim Abrufen der Schuldendaten:", error);
     throw error;
@@ -155,8 +160,8 @@ export const fetchInflationData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value : null
-    })).filter(item => item.value !== null);
+      data: item.data && typeof item.data === 'object' ? item.data : {}
+    }));
   } catch (error) {
     console.error("Fehler beim Abrufen der Inflationsdaten:", error);
     throw error;
@@ -172,8 +177,8 @@ export const fetchEmploymentData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value : null
-    })).filter(item => item.value !== null);
+      data: item.data && typeof item.data === 'object' ? item.data : {}
+    }));
   } catch (error) {
     console.error("Fehler beim Abrufen der Beschäftigungsdaten:", error);
     throw error;
@@ -189,8 +194,8 @@ export const fetchHealthData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value : null
-    })).filter(item => item.value !== null);
+      data: item.data && typeof item.data === 'object' ? item.data : {}
+    }));
   } catch (error) {
     console.error("Fehler beim Abrufen der Gesundheitsdaten:", error);
     throw error;
@@ -206,8 +211,8 @@ export const fetchGrowthData = async () => {
     const data = await response.json();
     return data.map(item => ({
       cca3: item.cca3, 
-      value: item.data && typeof item.data === 'object' ? item.data.value : null
-    })).filter(item => item.value !== null);
+      data: item.data && typeof item.data === 'object' ? item.data : {}
+    }));
   } catch (error) {
     console.error("Fehler beim Abrufen der Wirtschaftswachstumsdaten:", error);
     throw error;

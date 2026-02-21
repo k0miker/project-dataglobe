@@ -33,6 +33,7 @@ function Input() {
     cableColorSet,
     setCableColorSet, // Hinzufügen der Zustände für das Farbset
     clouds, setClouds,
+    currentYear, setCurrentYear,
   } = useAppContext();
 
   const [, setCountries] = useState([]);
@@ -380,6 +381,25 @@ function Input() {
       <div className="hidden h-full md:flex flex-col max-w-[180px] absolute  overflow-y-auto items-between left-0  duration-500 z-50 top-[10%] bg-glass shadow-lg">
         <SettingsContent />
       </div>
+
+      {visualizationType === 'polygon' && (dataOption === 'mortality' || dataOption === 'debt' || dataOption === 'inflation' || dataOption === 'employment' || dataOption === 'health' || dataOption === 'growth') && (
+        <div className="fixed bottom-16 left-1/2 transform -translate-x-1/2 bg-glass p-4 rounded-xl flex flex-col items-center gap-2 z-50 w-3/4 max-w-lg">
+          <label className="text-white text-sm font-bold">Year: {currentYear}</label>
+          <input 
+            type="range" 
+            min="1960" 
+            max="2026" 
+            step="1" 
+            value={currentYear} 
+            onChange={(e) => setCurrentYear(parseInt(e.target.value))}
+            className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+          />
+          <div className="flex justify-between w-full text-xs text-gray-400">
+            <span>1960</span>
+            <span>2026</span>
+          </div>
+        </div>
+      )}
     </>
   );
 }

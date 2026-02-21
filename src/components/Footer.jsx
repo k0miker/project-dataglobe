@@ -30,7 +30,7 @@ const Footer = () => {
               <p>Colin Blome<br />Buten Porten 4<br />49584 Fürstenau</p>
               <p className="mt-2"><strong>Kontakt:</strong></p>
               <p>E-Mail: <a className="text-cyan-400 hover:underline" href="mailto:info@colinblome.dev">info@colinblome.dev</a></p>
-              
+              <p>Portfolio: <a className="text-cyan-400 hover:underline" href="https://colinblome.dev">colinblome.dev</a></p>
               <h3 className="text-lg font-bold mt-6 mb-2 text-cyan-400">Datenschutz</h3>
               <p>Diese Webseite speichert keine personenbezogenen Daten und verwendet kein Tracking (wie Google Analytics).</p>
               <p>Zur Optimierung der Ladezeiten werden abgerufene API-Daten (z.B. Geodaten, Statistiken) lokal in Ihrem Browser (Local Storage) zwischengespeichert. Diese Daten sind rein technischer Natur und lassen keinen Rückschluss auf Ihre Person zu.</p>

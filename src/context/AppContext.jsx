@@ -31,6 +31,7 @@ export const AppProvider = ({ children }) => {
   const [showGrid, setShowGrid] = useState(true);
   const [cableColorSet, setCableColorSet] = useState("default"); 
   const [clouds, setClouds] = useState(false);
+  const [currentYear, setCurrentYear] = useState(2022); // Neues State für das Jahr
 
   
   const setVisualizationType = (type) => {
@@ -270,6 +271,7 @@ export const AppProvider = ({ children }) => {
       showGrid, setShowGrid, // Grid-Zustand im Kontext bereitstellen
       cableColorSet, setCableColorSet, // Hinzufügen der Zustände für das Farbset
       clouds, setClouds,
+      currentYear, setCurrentYear, // Jahr-Zustand im Kontext bereitstellen
     }}>
       {children}
     </AppContext.Provider>

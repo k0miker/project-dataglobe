@@ -9,7 +9,7 @@ function Output() {
 
   // UI-Inhalt für Länderinformationen
   const CountryDetails = () => {
-    const { mortalityData, geoJsonData, debtData, inflationData, employmentData, healthData, growthData } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten, Beschäftigungsdaten, Gesundheitsdaten und Wirtschaftswachstumsdaten aus dem Kontext
+    const { mortalityData, geoJsonData, debtData, inflationData, employmentData, healthData, growthData, currentYear } = useAppContext(); // Sterblichkeitsdaten, GeoJSON-Daten, Schuldendaten, Inflationsdaten, Beschäftigungsdaten, Gesundheitsdaten und Wirtschaftswachstumsdaten aus dem Kontext
 
 
     if (!selectedCountry) {
@@ -26,7 +26,7 @@ function Output() {
     );
 
     const geoJsonCountry = geoJsonData.find(
-      (country) => country.properties.ISO_A3 === selectedCountry.cca3
+      (country) => (country.properties.ISO_A3 === selectedCountry.cca3) || (country.properties.ADM0_A3 === selectedCountry.cca3)
     );
 
     const debtInfo = debtData.find(
@@ -115,7 +115,7 @@ function Output() {
           <ul className="text-left w-full text-sm">
             <li className="flex justify-between">
               <b className="text-cyan-400 ">Mortality Rate:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{mortalityInfo ? `${mortalityInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{mortalityInfo && mortalityInfo.data && mortalityInfo.data[currentYear] !== undefined ? `${mortalityInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Economy:</b>{" "}
@@ -123,23 +123,23 @@ function Output() {
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Debt <i className="text-[10px]">(% of GDP):</i></b>{" "}
-              <span className="text-xs p-1 text-gray-200">{debtInfo ? `${debtInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{debtInfo && debtInfo.data && debtInfo.data[currentYear] !== undefined ? `${debtInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Inflation:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{inflationInfo ? `${inflationInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{inflationInfo && inflationInfo.data && inflationInfo.data[currentYear] !== undefined ? `${inflationInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Unemployment Rate:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{employmentInfo ? `${employmentInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{employmentInfo && employmentInfo.data && employmentInfo.data[currentYear] !== undefined ? `${employmentInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Health Expenditure <br /> <i className="text-[10px]">(% of GDP):</i></b>{" "}
-              <span className="text-xs p-1 text-gray-200">{healthInfo ? `${healthInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{healthInfo && healthInfo.data && healthInfo.data[currentYear] !== undefined ? `${healthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
             <li className="flex justify-between">
               <b className=" text-cyan-400 ">Economic Growth:</b>{" "}
-              <span className="text-xs p-1 text-gray-200">{growthInfo ? `${growthInfo.value.toFixed(2)}%` : "No data"}</span>
+              <span className="text-xs p-1 text-gray-200">{growthInfo && growthInfo.data && growthInfo.data[currentYear] !== undefined ? `${growthInfo.data[currentYear].toFixed(2)}%` : "No data"}</span>
             </li>
           </ul>
         )}

@@ -11,6 +11,9 @@ import polygonLabel from "../utils/polygonLabel";
 import getVal from "../utils/geoJsonUtils";
 import Clouds from "./Clouds";
 
+// Helper to resolve ISO code for France/Norway workaround
+const getIso = (feat) => feat?.properties?.ISO_A3 && feat.properties.ISO_A3 !== "-99" ? feat.properties.ISO_A3 : feat?.properties?.ADM0_A3;
+
 function PolygonGlobe() {
   const {
     selectedWorld,
@@ -32,6 +35,7 @@ function PolygonGlobe() {
     growthData,
     showGrid,
     clouds,
+    currentYear,
   } = useAppContext();
 
   const minPolygonAltitude = 0.008; // Fester Wert für minPolygonAltitude
@@ -104,7 +108,8 @@ function PolygonGlobe() {
           inflationData,
           employmentData,
           healthData,
-          growthData
+          growthData,
+          currentYear
         )
       )
     );
@@ -131,6 +136,7 @@ function PolygonGlobe() {
     employmentData,
     healthData,
     growthData,
+    currentYear,
   ]);
 
   // Rotationsgeschwindigkeit einstellen
@@ -149,7 +155,9 @@ function PolygonGlobe() {
     if (selectedCountry && globeEl.current) {
       globeEl.current.controls().autoRotate = false;
       setTimeout(() => {
-        globeEl.current.controls().autoRotate = true;
+        if (globeEl.current) {
+          globeEl.current.controls().autoRotate = true;
+        }
       }, 30000);
     }
   }, [selectedCountry]);
@@ -236,7 +244,7 @@ function PolygonGlobe() {
   const handleCountryClick = (clickedCountry, event) => {
     event.stopPropagation(); // Prevent deselecting when clicking on a country
     const country = restCountriesData.find(
-      (country) => country.cca3 === clickedCountry.properties.ISO_A3
+      (country) => country.cca3 === getIso(clickedCountry)
     );
     if (country) {
       setSelectedCountry((prevCountry) =>
@@ -308,7 +316,8 @@ function PolygonGlobe() {
                 inflationData,
                 employmentData,
                 healthData,
-                growthData
+                growthData,
+                currentYear
               )
             )
           );
@@ -322,7 +331,8 @@ function PolygonGlobe() {
               inflationData,
               employmentData,
               healthData,
-              growthData
+              growthData,
+              currentYear
             ) / colorScale.domain()[1];
           color.opacity = alpha * 2; // Transparenz anpassen
           if (feat === hoveredCountry) return "rgba(255, 255, 255, 0.677)"; // Weiß mit 50% Alpha für gehovtetes Land
@@ -333,7 +343,7 @@ function PolygonGlobe() {
         polygonSideColor={(feat) => {
           if (!showBorders) {
             if (
-              feat.properties.ISO_A3 === selectedCountry?.cca3 ||
+              getIso(feat) === selectedCountry?.cca3 ||
               feat === hoveredCountry
             ) {
               return "rgba(0, 0, 0, 0.722)"; // Side color for selected or hovered country
@@ -352,7 +362,7 @@ function PolygonGlobe() {
           ) {
             return "rgba(0, 0, 0, 0)";
           }
-          hoveredCountry || feat.properties.ISO_A3 === selectedCountry?.cca3
+          hoveredCountry || getIso(feat) === selectedCountry?.cca3
             ? "#FFFFFF"
             : null;
           if (showBorders) return "rgba(0, 0, 0, 0.822)";
@@ -370,12 +380,13 @@ function PolygonGlobe() {
               inflationData,
               employmentData,
               healthData,
-              growthData
+              growthData,
+              currentYear
             ) /
               colorScale.domain()[1]) *
               (maxPolygonAltitude - minPolygonAltitude) +
             minPolygonAltitude;
-          if (d.properties.ISO_A3 === selectedCountry?.cca3)
+          if (getIso(d) === selectedCountry?.cca3)
             return baseAltitude + 0.1; // Erhöhe die Höhe des ausgewählten Landes um 0.2
           if (d === hoveredCountry && showData)
             return hoveredPolygonAltitude + baseAltitude; // Heben des gehovteten Landes
@@ -383,9 +394,9 @@ function PolygonGlobe() {
           return minPolygonAltitude; // Standardhöhe
         }}
         polygonStrokeAltitude={(d) => {
-          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
+          if (getIso(d) === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
           if (d === hoveredCountry && showData) return 0.1; // Heben der Umrandung des gehovteten Landes
-          if (d.properties.ISO_A3 === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
+          if (getIso(d) === selectedCountry?.cca3) return 0.1; // Heben der Umrandung des ausgewählten Landes
           if (d === hoveredCountry && showData) return 0.1; // Heben der Umrandung des gehovteten Landes
           if (showBorders && !showData) return 1; // Höhe der Umrandung
           return showData ? 0.01 : -0.008; // Keine Höhe, wenn showData aus ist
@@ -401,7 +412,8 @@ function PolygonGlobe() {
             inflationData,
             employmentData,
             healthData,
-            growthData
+            growthData,
+            currentYear
           )
         }
         onPolygonHover={(hoverD) => {
