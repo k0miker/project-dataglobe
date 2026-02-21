@@ -1,3753 +1,1829 @@
 [
-    {
-      "cca2": "AD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AD",
-          "value": "Andorra"
-        },
-        "countryiso3code": "AND",
-        "date": "2021",
-        "value": 8.33449364,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AE",
-          "value": "United Arab Emirates"
-        },
-        "countryiso3code": "ARE",
-        "date": "2021",
-        "value": 5.30695152,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AF",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AF",
-          "value": "Afghanistan"
-        },
-        "countryiso3code": "AFG",
-        "date": "2021",
-        "value": 21.82794952,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AG",
-          "value": "Antigua and Barbuda"
-        },
-        "countryiso3code": "ATG",
-        "date": "2021",
-        "value": 5.85133028,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AL",
-          "value": "Albania"
-        },
-        "countryiso3code": "ALB",
-        "date": "2021",
-        "value": 7.26731825,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AM",
-          "value": "Armenia"
-        },
-        "countryiso3code": "ARM",
-        "date": "2021",
-        "value": 12.34,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AO",
-          "value": "Angola"
-        },
-        "countryiso3code": "AGO",
-        "date": "2021",
-        "value": 2.96010613,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AR",
-          "value": "Argentina"
-        },
-        "countryiso3code": "ARG",
-        "date": "2021",
-        "value": 9.70880699,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AT",
-          "value": "Austria"
-        },
-        "countryiso3code": "AUT",
-        "date": "2021",
-        "value": 12.1,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AU",
-          "value": "Australia"
-        },
-        "countryiso3code": "AUS",
-        "date": "2021",
-        "value": 10.54363918,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "AW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "AZ",
-          "value": "Azerbaijan"
-        },
-        "countryiso3code": "AZE",
-        "date": "2021",
-        "value": 4.7,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BA",
-          "value": "Bosnia and Herzegovina"
-        },
-        "countryiso3code": "BIH",
-        "date": "2021",
-        "value": 9.56,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BB",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BB",
-          "value": "Barbados"
-        },
-        "countryiso3code": "BRB",
-        "date": "2021",
-        "value": 8.09043312,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BD",
-          "value": "Bangladesh"
-        },
-        "countryiso3code": "BGD",
-        "date": "2021",
-        "value": 2.36492991,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BE",
-          "value": "Belgium"
-        },
-        "countryiso3code": "BEL",
-        "date": "2021",
-        "value": 11.04290771,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BF",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BF",
-          "value": "Burkina Faso"
-        },
-        "countryiso3code": "BFA",
-        "date": "2021",
-        "value": 6.37691164,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BG",
-          "value": "Bulgaria"
-        },
-        "countryiso3code": "BGR",
-        "date": "2021",
-        "value": 8.56,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BH",
-          "value": "Bahrain"
-        },
-        "countryiso3code": "BHR",
-        "date": "2021",
-        "value": 4.26834059,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BI",
-          "value": "Burundi"
-        },
-        "countryiso3code": "BDI",
-        "date": "2021",
-        "value": 9.10190964,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BJ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BJ",
-          "value": "Benin"
-        },
-        "countryiso3code": "BEN",
-        "date": "2021",
-        "value": 2.58129549,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BN",
-          "value": "Brunei Darussalam"
-        },
-        "countryiso3code": "BRN",
-        "date": "2021",
-        "value": 2.20486665,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BO",
-          "value": "Bolivia"
-        },
-        "countryiso3code": "BOL",
-        "date": "2021",
-        "value": 8.15972805,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BR",
-          "value": "Brazil"
-        },
-        "countryiso3code": "BRA",
-        "date": "2021",
-        "value": 9.89072323,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BS",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BS",
-          "value": "Bahamas, The"
-        },
-        "countryiso3code": "BHS",
-        "date": "2021",
-        "value": 7.13872051,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BT",
-          "value": "Bhutan"
-        },
-        "countryiso3code": "BTN",
-        "date": "2021",
-        "value": 3.84550023,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BW",
-          "value": "Botswana"
-        },
-        "countryiso3code": "BWA",
-        "date": "2021",
-        "value": 6.30929565,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BY",
-          "value": "Belarus"
-        },
-        "countryiso3code": "BLR",
-        "date": "2021",
-        "value": 6.57,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "BZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "BZ",
-          "value": "Belize"
-        },
-        "countryiso3code": "BLZ",
-        "date": "2021",
-        "value": 4.98043823,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CA",
-          "value": "Canada"
-        },
-        "countryiso3code": "CAN",
-        "date": "2022",
-        "value": 11.15471363,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CD",
-          "value": "Congo, Dem. Rep."
-        },
-        "countryiso3code": "COD",
-        "date": "2021",
-        "value": 3.7859261,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CF",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CF",
-          "value": "Central African Republic"
-        },
-        "countryiso3code": "CAF",
-        "date": "2021",
-        "value": 9.06853294,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CG",
-          "value": "Congo, Rep."
-        },
-        "countryiso3code": "COG",
-        "date": "2021",
-        "value": 3.87537813,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CH",
-          "value": "Switzerland"
-        },
-        "countryiso3code": "CHE",
-        "date": "2021",
-        "value": 11.80107975,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CI",
-          "value": "Cote d'Ivoire"
-        },
-        "countryiso3code": "CIV",
-        "date": "2021",
-        "value": 3.13269377,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CL",
-          "value": "Chile"
-        },
-        "countryiso3code": "CHL",
-        "date": "2022",
-        "value": 9.00162983,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CM",
-          "value": "Cameroon"
-        },
-        "countryiso3code": "CMR",
-        "date": "2021",
-        "value": 3.82407379,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CN",
-          "value": "China"
-        },
-        "countryiso3code": "CHN",
-        "date": "2021",
-        "value": 5.38360548,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CO",
-          "value": "Colombia"
-        },
-        "countryiso3code": "COL",
-        "date": "2021",
-        "value": 9.01772404,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CR",
-          "value": "Costa Rica"
-        },
-        "countryiso3code": "CRI",
-        "date": "2021",
-        "value": 7.56881428,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CU",
-          "value": "Cuba"
-        },
-        "countryiso3code": "CUB",
-        "date": "2021",
-        "value": 13.78727818,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CV",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CV",
-          "value": "Cabo Verde"
-        },
-        "countryiso3code": "CPV",
-        "date": "2021",
-        "value": 6.90378904,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CX",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CY",
-          "value": "Cyprus"
-        },
-        "countryiso3code": "CYP",
-        "date": "2021",
-        "value": 9.43,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "CZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "CZ",
-          "value": "Czechia"
-        },
-        "countryiso3code": "CZE",
-        "date": "2021",
-        "value": 9.4887867,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "DE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "DE",
-          "value": "Germany"
-        },
-        "countryiso3code": "DEU",
-        "date": "2022",
-        "value": 12.65471077,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "DJ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "DJ",
-          "value": "Djibouti"
-        },
-        "countryiso3code": "DJI",
-        "date": "2021",
-        "value": 2.87667227,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "DK",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "DK",
-          "value": "Denmark"
-        },
-        "countryiso3code": "DNK",
-        "date": "2022",
-        "value": 9.5,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "DN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "DO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "DO",
-          "value": "Dominican Republic"
-        },
-        "countryiso3code": "DOM",
-        "date": "2021",
-        "value": 4.91815567,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "DZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "DZ",
-          "value": "Algeria"
-        },
-        "countryiso3code": "DZA",
-        "date": "2021",
-        "value": 5.5283432,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "EC",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "EC",
-          "value": "Ecuador"
-        },
-        "countryiso3code": "ECU",
-        "date": "2021",
-        "value": 8.28661728,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "EE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "EE",
-          "value": "Estonia"
-        },
-        "countryiso3code": "EST",
-        "date": "2022",
-        "value": 6.94306278,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "EG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "EG",
-          "value": "Egypt, Arab Rep."
-        },
-        "countryiso3code": "EGY",
-        "date": "2021",
-        "value": 4.60955143,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "EH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ER",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ER",
-          "value": "Eritrea"
-        },
-        "countryiso3code": "ERI",
-        "date": "2021",
-        "value": 4.15077114,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ES",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ES",
-          "value": "Spain"
-        },
-        "countryiso3code": "ESP",
-        "date": "2021",
-        "value": 10.74003887,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ET",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ET",
-          "value": "Ethiopia"
-        },
-        "countryiso3code": "ETH",
-        "date": "2021",
-        "value": 3.20824432,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "FI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "FI",
-          "value": "Finland"
-        },
-        "countryiso3code": "FIN",
-        "date": "2021",
-        "value": 10.25,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "FJ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "FJ",
-          "value": "Fiji"
-        },
-        "countryiso3code": "FJI",
-        "date": "2021",
-        "value": 5.38085365,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "FK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "FM",
-          "value": "Micronesia, Fed. Sts."
-        },
-        "countryiso3code": "FSM",
-        "date": "2021",
-        "value": 10.96059132,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "FO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "FR",
-          "value": "France"
-        },
-        "countryiso3code": "FRA",
-        "date": "2021",
-        "value": 12.30787277,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GA",
-          "value": "Gabon"
-        },
-        "countryiso3code": "GAB",
-        "date": "2021",
-        "value": 2.70633149,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GB",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GB",
-          "value": "United Kingdom"
-        },
-        "countryiso3code": "GBR",
-        "date": "2022",
-        "value": 11.34454918,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GD",
-          "value": "Grenada"
-        },
-        "countryiso3code": "GRD",
-        "date": "2021",
-        "value": 5.6984539,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GE",
-          "value": "Georgia"
-        },
-        "countryiso3code": "GEO",
-        "date": "2022",
-        "value": 7.37,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GH",
-          "value": "Ghana"
-        },
-        "countryiso3code": "GHA",
-        "date": "2021",
-        "value": 4.15176868,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GM",
-          "value": "Gambia, The"
-        },
-        "countryiso3code": "GMB",
-        "date": "2021",
-        "value": 3.18962693,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GN",
-          "value": "Guinea"
-        },
-        "countryiso3code": "GIN",
-        "date": "2021",
-        "value": 3.75556707,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GQ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GQ",
-          "value": "Equatorial Guinea"
-        },
-        "countryiso3code": "GNQ",
-        "date": "2021",
-        "value": 3.40450907,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GR",
-          "value": "Greece"
-        },
-        "countryiso3code": "GRC",
-        "date": "2021",
-        "value": 9.17298794,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GT",
-          "value": "Guatemala"
-        },
-        "countryiso3code": "GTM",
-        "date": "2021",
-        "value": 6.9008255,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GW",
-          "value": "Guinea-Bissau"
-        },
-        "countryiso3code": "GNB",
-        "date": "2021",
-        "value": 8.2233429,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "GY",
-          "value": "Guyana"
-        },
-        "countryiso3code": "GUY",
-        "date": "2021",
-        "value": 4.94385052,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "GZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "HN",
-          "value": "Honduras"
-        },
-        "countryiso3code": "HND",
-        "date": "2021",
-        "value": 9.16101742,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "HR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "HR",
-          "value": "Croatia"
-        },
-        "countryiso3code": "HRV",
-        "date": "2021",
-        "value": 8.1,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "HT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "HT",
-          "value": "Haiti"
-        },
-        "countryiso3code": "HTI",
-        "date": "2021",
-        "value": 3.47919273,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "HU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "HU",
-          "value": "Hungary"
-        },
-        "countryiso3code": "HUN",
-        "date": "2021",
-        "value": 7.38,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ID",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ID",
-          "value": "Indonesia"
-        },
-        "countryiso3code": "IDN",
-        "date": "2021",
-        "value": 3.70636249,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IE",
-          "value": "Ireland"
-        },
-        "countryiso3code": "IRL",
-        "date": "2022",
-        "value": 6.07060957,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IL",
-          "value": "Israel"
-        },
-        "countryiso3code": "ISR",
-        "date": "2021",
-        "value": 7.9,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IN",
-          "value": "India"
-        },
-        "countryiso3code": "IND",
-        "date": "2021",
-        "value": 3.28,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IQ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IQ",
-          "value": "Iraq"
-        },
-        "countryiso3code": "IRQ",
-        "date": "2021",
-        "value": 5.24727583,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IR",
-          "value": "Iran, Islamic Rep."
-        },
-        "countryiso3code": "IRN",
-        "date": "2021",
-        "value": 5.77013779,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IS",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IS",
-          "value": "Iceland"
-        },
-        "countryiso3code": "ISL",
-        "date": "2022",
-        "value": 8.57,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "IT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "IT",
-          "value": "Italy"
-        },
-        "countryiso3code": "ITA",
-        "date": "2022",
-        "value": 9,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "JE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "JM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "JM",
-          "value": "Jamaica"
-        },
-        "countryiso3code": "JAM",
-        "date": "2021",
-        "value": 7.18521214,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "JO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "JO",
-          "value": "Jordan"
-        },
-        "countryiso3code": "JOR",
-        "date": "2021",
-        "value": 7.28875065,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "JP",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "JP",
-          "value": "Japan"
-        },
-        "countryiso3code": "JPN",
-        "date": "2021",
-        "value": 10.82,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KE",
-          "value": "Kenya"
-        },
-        "countryiso3code": "KEN",
-        "date": "2021",
-        "value": 4.54763126,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KG",
-          "value": "Kyrgyz Republic"
-        },
-        "countryiso3code": "KGZ",
-        "date": "2021",
-        "value": 5.44,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KH",
-          "value": "Cambodia"
-        },
-        "countryiso3code": "KHM",
-        "date": "2021",
-        "value": 7.53223085,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KI",
-          "value": "Kiribati"
-        },
-        "countryiso3code": "KIR",
-        "date": "2021",
-        "value": 14.81,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KM",
-          "value": "Comoros"
-        },
-        "countryiso3code": "COM",
-        "date": "2021",
-        "value": 6.33513117,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KN",
-          "value": "St. Kitts and Nevis"
-        },
-        "countryiso3code": "KNA",
-        "date": "2021",
-        "value": 6.1634655,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KR",
-          "value": "Korea, Rep."
-        },
-        "countryiso3code": "KOR",
-        "date": "2022",
-        "value": 9.72047997,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KW",
-          "value": "Kuwait"
-        },
-        "countryiso3code": "KWT",
-        "date": "2021",
-        "value": 5.78120756,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "KY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "KZ",
-          "value": "Kazakhstan"
-        },
-        "countryiso3code": "KAZ",
-        "date": "2021",
-        "value": 3.92,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LA",
-          "value": "Lao PDR"
-        },
-        "countryiso3code": "LAO",
-        "date": "2021",
-        "value": 2.74392009,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LB",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LB",
-          "value": "Lebanon"
-        },
-        "countryiso3code": "LBN",
-        "date": "2021",
-        "value": 10.06154442,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LC",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LC",
-          "value": "St. Lucia"
-        },
-        "countryiso3code": "LCA",
-        "date": "2021",
-        "value": 6.2111187,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LK",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LK",
-          "value": "Sri Lanka"
-        },
-        "countryiso3code": "LKA",
-        "date": "2021",
-        "value": 4.07,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LR",
-          "value": "Liberia"
-        },
-        "countryiso3code": "LBR",
-        "date": "2021",
-        "value": 16.6163311,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LS",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LS",
-          "value": "Lesotho"
-        },
-        "countryiso3code": "LSO",
-        "date": "2021",
-        "value": 10.21370411,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LT",
-          "value": "Lithuania"
-        },
-        "countryiso3code": "LTU",
-        "date": "2022",
-        "value": 7.46,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LU",
-          "value": "Luxembourg"
-        },
-        "countryiso3code": "LUX",
-        "date": "2022",
-        "value": 5.46,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LV",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "LV",
-          "value": "Latvia"
-        },
-        "countryiso3code": "LVA",
-        "date": "2021",
-        "value": 9.04,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "LY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MA",
-          "value": "Morocco"
-        },
-        "countryiso3code": "MAR",
-        "date": "2021",
-        "value": 5.73834944,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MC",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MC",
-          "value": "Monaco"
-        },
-        "countryiso3code": "MCO",
-        "date": "2021",
-        "value": 3.68486166,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MD",
-          "value": "Moldova"
-        },
-        "countryiso3code": "MDA",
-        "date": "2021",
-        "value": 7.75,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ME",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ME",
-          "value": "Montenegro"
-        },
-        "countryiso3code": "MNE",
-        "date": "2021",
-        "value": 10.55,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MG",
-          "value": "Madagascar"
-        },
-        "countryiso3code": "MDG",
-        "date": "2021",
-        "value": 3.5045228,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MH",
-          "value": "Marshall Islands"
-        },
-        "countryiso3code": "MHL",
-        "date": "2021",
-        "value": 12.54863834,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MK",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MK",
-          "value": "North Macedonia"
-        },
-        "countryiso3code": "MKD",
-        "date": "2021",
-        "value": 8.52,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ML",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ML",
-          "value": "Mali"
-        },
-        "countryiso3code": "MLI",
-        "date": "2021",
-        "value": 4.47341442,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MM",
-          "value": "Myanmar"
-        },
-        "countryiso3code": "MMR",
-        "date": "2021",
-        "value": 5.63,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MN",
-          "value": "Mongolia"
-        },
-        "countryiso3code": "MNG",
-        "date": "2021",
-        "value": 6.911304,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MR",
-          "value": "Mauritania"
-        },
-        "countryiso3code": "MRT",
-        "date": "2021",
-        "value": 4.12218571,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MT",
-          "value": "Malta"
-        },
-        "countryiso3code": "MLT",
-        "date": "2021",
-        "value": 10.58,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MU",
-          "value": "Mauritius"
-        },
-        "countryiso3code": "MUS",
-        "date": "2021",
-        "value": 6.39258909,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MV",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MV",
-          "value": "Maldives"
-        },
-        "countryiso3code": "MDV",
-        "date": "2021",
-        "value": 10.03,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MW",
-          "value": "Malawi"
-        },
-        "countryiso3code": "MWI",
-        "date": "2021",
-        "value": 7.41194487,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MX",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MX",
-          "value": "Mexico"
-        },
-        "countryiso3code": "MEX",
-        "date": "2021",
-        "value": 6.07868719,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MY",
-          "value": "Malaysia"
-        },
-        "countryiso3code": "MYS",
-        "date": "2021",
-        "value": 4.38380671,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "MZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "MZ",
-          "value": "Mozambique"
-        },
-        "countryiso3code": "MOZ",
-        "date": "2021",
-        "value": 9.05218315,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NA",
-          "value": "Namibia"
-        },
-        "countryiso3code": "NAM",
-        "date": "2021",
-        "value": 9.38092136,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NE",
-          "value": "Niger"
-        },
-        "countryiso3code": "NER",
-        "date": "2021",
-        "value": 5.81452751,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NG",
-          "value": "Nigeria"
-        },
-        "countryiso3code": "NGA",
-        "date": "2021",
-        "value": 4.07625723,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NI",
-          "value": "Nicaragua"
-        },
-        "countryiso3code": "NIC",
-        "date": "2021",
-        "value": 9.68343163,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NL",
-          "value": "Netherlands"
-        },
-        "countryiso3code": "NLD",
-        "date": "2021",
-        "value": 11.29,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NO",
-          "value": "Norway"
-        },
-        "countryiso3code": "NOR",
-        "date": "2022",
-        "value": 8.14,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NP",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NP",
-          "value": "Nepal"
-        },
-        "countryiso3code": "NPL",
-        "date": "2021",
-        "value": 5.42,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NR",
-          "value": "Nauru"
-        },
-        "countryiso3code": "NRU",
-        "date": "2021",
-        "value": 13.06414223,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "NU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "NZ",
-          "value": "New Zealand"
-        },
-        "countryiso3code": "NZL",
-        "date": "2021",
-        "value": 10.04858398,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "OM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "OM",
-          "value": "Oman"
-        },
-        "countryiso3code": "OMN",
-        "date": "2021",
-        "value": 4.37028217,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PA",
-          "value": "Panama"
-        },
-        "countryiso3code": "PAN",
-        "date": "2021",
-        "value": 9.68179989,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PE",
-          "value": "Peru"
-        },
-        "countryiso3code": "PER",
-        "date": "2021",
-        "value": 6.15173197,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PG",
-          "value": "Papua New Guinea"
-        },
-        "countryiso3code": "PNG",
-        "date": "2021",
-        "value": 2.32032132,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PH",
-          "value": "Philippines"
-        },
-        "countryiso3code": "PHL",
-        "date": "2022",
-        "value": 5.1,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PK",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PK",
-          "value": "Pakistan"
-        },
-        "countryiso3code": "PAK",
-        "date": "2021",
-        "value": 2.91131568,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PL",
-          "value": "Poland"
-        },
-        "countryiso3code": "POL",
-        "date": "2022",
-        "value": 6.68,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PT",
-          "value": "Portugal"
-        },
-        "countryiso3code": "PRT",
-        "date": "2022",
-        "value": 10.62,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PW",
-          "value": "Palau"
-        },
-        "countryiso3code": "PLW",
-        "date": "2021",
-        "value": 16.38419533,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "PY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "PY",
-          "value": "Paraguay"
-        },
-        "countryiso3code": "PRY",
-        "date": "2021",
-        "value": 8.03277016,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "QA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "QA",
-          "value": "Qatar"
-        },
-        "countryiso3code": "QAT",
-        "date": "2021",
-        "value": 2.89366841,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "RE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "RO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "RO",
-          "value": "Romania"
-        },
-        "countryiso3code": "ROU",
-        "date": "2021",
-        "value": 6.48,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "RS",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "RS",
-          "value": "Serbia"
-        },
-        "countryiso3code": "SRB",
-        "date": "2021",
-        "value": 10.0125246,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "RU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "RU",
-          "value": "Russian Federation"
-        },
-        "countryiso3code": "RUS",
-        "date": "2021",
-        "value": 7.39,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "RW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "RW",
-          "value": "Rwanda"
-        },
-        "countryiso3code": "RWA",
-        "date": "2021",
-        "value": 7.32305002,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SA",
-          "value": "Saudi Arabia"
-        },
-        "countryiso3code": "SAU",
-        "date": "2021",
-        "value": 5.96836901,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SB",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SB",
-          "value": "Solomon Islands"
-        },
-        "countryiso3code": "SLB",
-        "date": "2021",
-        "value": 4.76345396,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SC",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SC",
-          "value": "Seychelles"
-        },
-        "countryiso3code": "SYC",
-        "date": "2021",
-        "value": 5.25937986,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SD",
-          "value": "Sudan"
-        },
-        "countryiso3code": "SDN",
-        "date": "2021",
-        "value": 2.83633852,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SE",
-          "value": "Sweden"
-        },
-        "countryiso3code": "SWE",
-        "date": "2022",
-        "value": 10.67,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SG",
-          "value": "Singapore"
-        },
-        "countryiso3code": "SGP",
-        "date": "2021",
-        "value": 5.56525183,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SI",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SI",
-          "value": "Slovenia"
-        },
-        "countryiso3code": "SVN",
-        "date": "2022",
-        "value": 8.85,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SK",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SK",
-          "value": "Slovak Republic"
-        },
-        "countryiso3code": "SVK",
-        "date": "2021",
-        "value": 7.75,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SL",
-          "value": "Sierra Leone"
-        },
-        "countryiso3code": "SLE",
-        "date": "2021",
-        "value": 8.55334282,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SM",
-          "value": "San Marino"
-        },
-        "countryiso3code": "SMR",
-        "date": "2021",
-        "value": 7.97527838,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SN",
-          "value": "Senegal"
-        },
-        "countryiso3code": "SEN",
-        "date": "2021",
-        "value": 4.35098124,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SR",
-          "value": "Suriname"
-        },
-        "countryiso3code": "SUR",
-        "date": "2021",
-        "value": 5.6838975,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ST",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ST",
-          "value": "Sao Tome and Principe"
-        },
-        "countryiso3code": "STP",
-        "date": "2021",
-        "value": 7.82528496,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SV",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SV",
-          "value": "El Salvador"
-        },
-        "countryiso3code": "SLV",
-        "date": "2021",
-        "value": 9.71643353,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "SY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "SZ",
-          "value": "Eswatini"
-        },
-        "countryiso3code": "SWZ",
-        "date": "2021",
-        "value": 7.03582335,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TD",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TD",
-          "value": "Chad"
-        },
-        "countryiso3code": "TCD",
-        "date": "2021",
-        "value": 5.19022274,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TG",
-          "value": "Togo"
-        },
-        "countryiso3code": "TGO",
-        "date": "2021",
-        "value": 5.55532026,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TH",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TH",
-          "value": "Thailand"
-        },
-        "countryiso3code": "THA",
-        "date": "2021",
-        "value": 5.16038752,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TJ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TJ",
-          "value": "Tajikistan"
-        },
-        "countryiso3code": "TJK",
-        "date": "2021",
-        "value": 8.01,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TL",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TL",
-          "value": "Timor-Leste"
-        },
-        "countryiso3code": "TLS",
-        "date": "2021",
-        "value": 11.43839264,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TM",
-          "value": "Turkmenistan"
-        },
-        "countryiso3code": "TKM",
-        "date": "2021",
-        "value": 5.56931353,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TN",
-          "value": "Tunisia"
-        },
-        "countryiso3code": "TUN",
-        "date": "2021",
-        "value": 6.97273922,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TO",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TO",
-          "value": "Tonga"
-        },
-        "countryiso3code": "TON",
-        "date": "2021",
-        "value": 6.27256584,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TR",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TR",
-          "value": "Turkiye"
-        },
-        "countryiso3code": "TUR",
-        "date": "2021",
-        "value": 4.57,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TT",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TT",
-          "value": "Trinidad and Tobago"
-        },
-        "countryiso3code": "TTO",
-        "date": "2021",
-        "value": 7.0194726,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TV",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TV",
-          "value": "Tuvalu"
-        },
-        "countryiso3code": "TUV",
-        "date": "2021",
-        "value": 19.96582222,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "TW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "TZ",
-          "value": "Tanzania"
-        },
-        "countryiso3code": "TZA",
-        "date": "2021",
-        "value": 3.36136484,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "UA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "UA",
-          "value": "Ukraine"
-        },
-        "countryiso3code": "UKR",
-        "date": "2021",
-        "value": 8.01,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "UG",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "UG",
-          "value": "Uganda"
-        },
-        "countryiso3code": "UGA",
-        "date": "2021",
-        "value": 4.67196703,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "US",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "US",
-          "value": "United States"
-        },
-        "countryiso3code": "USA",
-        "date": "2022",
-        "value": 16.57115173,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "UY",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "UY",
-          "value": "Uruguay"
-        },
-        "countryiso3code": "URY",
-        "date": "2021",
-        "value": 9.3592062,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "UZ",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "UZ",
-          "value": "Uzbekistan"
-        },
-        "countryiso3code": "UZB",
-        "date": "2021",
-        "value": 7.74,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "VA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VC",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "VC",
-          "value": "St. Vincent and the Grenadines"
-        },
-        "countryiso3code": "VCT",
-        "date": "2021",
-        "value": 5.36252117,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "VE",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "VE",
-          "value": "Venezuela, RB"
-        },
-        "countryiso3code": "VEN",
-        "date": "2021",
-        "value": 4.03775549,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "VG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VN",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "VN",
-          "value": "Viet Nam"
-        },
-        "countryiso3code": "VNM",
-        "date": "2021",
-        "value": 4.59346437,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "VU",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "VU",
-          "value": "Vanuatu"
-        },
-        "countryiso3code": "VUT",
-        "date": "2021",
-        "value": 4.3733778,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "WF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "WS",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "WS",
-          "value": "Samoa"
-        },
-        "countryiso3code": "WSM",
-        "date": "2021",
-        "value": 6.80313492,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "XK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "YE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "YT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ZA",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ZA",
-          "value": "South Africa"
-        },
-        "countryiso3code": "ZAF",
-        "date": "2021",
-        "value": 8.27309132,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ZM",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ZM",
-          "value": "Zambia"
-        },
-        "countryiso3code": "ZMB",
-        "date": "2021",
-        "value": 6.62416458,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
-    },
-    {
-      "cca2": "ZW",
-      "data": {
-        "indicator": {
-          "id": "SH.XPD.CHEX.GD.ZS",
-          "value": "Current health expenditure (% of GDP)"
-        },
-        "country": {
-          "id": "ZW",
-          "value": "Zimbabwe"
-        },
-        "countryiso3code": "ZWE",
-        "date": "2021",
-        "value": 2.78975058,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 2
-      }
+  {
+    "cca2": "AF",
+    "cca3": "AFE",
+    "data": {
+      "value": 64.4870195456608
     }
-  ]
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFW",
+    "data": {
+      "value": 57.9878133945189
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARB",
+    "data": {
+      "value": 71.8760955992222
+    }
+  },
+  {
+    "cca2": "CS",
+    "cca3": "CSS",
+    "data": {
+      "value": 72.8322921090607
+    }
+  },
+  {
+    "cca2": "CE",
+    "cca3": "CEB",
+    "data": {
+      "value": 76.6522987292583
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAR",
+    "data": {
+      "value": 71.4304552508694
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAS",
+    "data": {
+      "value": 76.6767167147452
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAP",
+    "data": {
+      "value": 75.9325409436903
+    }
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEA",
+    "data": {
+      "value": 75.9610347461336
+    }
+  },
+  {
+    "cca2": "EM",
+    "cca3": "EMU",
+    "data": {
+      "value": 81.6232025628471
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECS",
+    "data": {
+      "value": 77.8344787151258
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECA",
+    "data": {
+      "value": 74.5731684190474
+    }
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEC",
+    "data": {
+      "value": 74.1883654842503
+    }
+  },
+  {
+    "cca2": "EU",
+    "cca3": "EUU",
+    "data": {
+      "value": 80.7135056290876
+    }
+  },
+  {
+    "cca2": "FC",
+    "cca3": "FCS",
+    "data": {
+      "value": 62.702271566254
+    }
+  },
+  {
+    "cca2": "HP",
+    "cca3": "HPC",
+    "data": {
+      "value": 63.8404458555462
+    }
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBD",
+    "data": {
+      "value": 74.2512624750087
+    }
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBT",
+    "data": {
+      "value": 71.677581962506
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDB",
+    "data": {
+      "value": 62.1288641416852
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDX",
+    "data": {
+      "value": 66.3600605315493
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDA",
+    "data": {
+      "value": 64.8822902939527
+    }
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTE",
+    "data": {
+      "value": 76.9543256667468
+    }
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCN",
+    "data": {
+      "value": 74.6472095421659
+    }
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAC",
+    "data": {
+      "value": 74.4897262626475
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLA",
+    "data": {
+      "value": 74.5684293540859
+    }
+  },
+  {
+    "cca2": "LD",
+    "cca3": "LDC",
+    "data": {
+      "value": 65.7631857632163
+    }
+  },
+  {
+    "cca2": "LM",
+    "cca3": "LMY",
+    "data": {
+      "value": 71.6849231239061
+    }
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEA",
+    "data": {
+      "value": 71.6918319737772
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNA",
+    "data": {
+      "value": 71.0055315443397
+    }
+  },
+  {
+    "cca2": "TM",
+    "cca3": "TMN",
+    "data": {
+      "value": 70.965432550888
+    }
+  },
+  {
+    "cca2": "MI",
+    "cca3": "MIC",
+    "data": {
+      "value": 72.5172020330295
+    }
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAC",
+    "data": {
+      "value": 77.8327679594239
+    }
+  },
+  {
+    "cca2": "OE",
+    "cca3": "OED",
+    "data": {
+      "value": 79.5212545784247
+    }
+  },
+  {
+    "cca2": "OS",
+    "cca3": "OSS",
+    "data": {
+      "value": 72.9049248661262
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSS",
+    "data": {
+      "value": 69.1004348993561
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PST",
+    "data": {
+      "value": 80.1977878300116
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRE",
+    "data": {
+      "value": 61.3832880029503
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SST",
+    "data": {
+      "value": 72.3794678577605
+    }
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAS",
+    "data": {
+      "value": 72.0115731308447
+    }
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSA",
+    "data": {
+      "value": 72.0115731308447
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSF",
+    "data": {
+      "value": 61.8571795894802
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSA",
+    "data": {
+      "value": 61.2833535992957
+    }
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSS",
+    "data": {
+      "value": 61.8571795894802
+    }
+  },
+  {
+    "cca2": "WL",
+    "cca3": "WLD",
+    "data": {
+      "value": 72.9682902550636
+    }
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFG",
+    "data": {
+      "value": 65.617
+    }
+  },
+  {
+    "cca2": "AL",
+    "cca3": "ALB",
+    "data": {
+      "value": 78.769
+    }
+  },
+  {
+    "cca2": "DZ",
+    "cca3": "DZA",
+    "data": {
+      "value": 76.129
+    }
+  },
+  {
+    "cca2": "AS",
+    "cca3": "ASM",
+    "data": {
+      "value": 72.752
+    }
+  },
+  {
+    "cca2": "AN",
+    "cca3": "AND",
+    "data": {
+      "value": 84.016
+    }
+  },
+  {
+    "cca2": "AG",
+    "cca3": "AGO",
+    "data": {
+      "value": 64.246
+    }
+  },
+  {
+    "cca2": "AT",
+    "cca3": "ATG",
+    "data": {
+      "value": 77.483
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARG",
+    "data": {
+      "value": 75.806
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARM",
+    "data": {
+      "value": 74.7658536585366
+    }
+  },
+  {
+    "cca2": "AB",
+    "cca3": "ABW",
+    "data": {
+      "value": 76.226
+    }
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUS",
+    "data": {
+      "value": 83.2
+    }
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUT",
+    "data": {
+      "value": 81.2951219512195
+    }
+  },
+  {
+    "cca2": "AZ",
+    "cca3": "AZE",
+    "data": {
+      "value": 74.125
+    }
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHS",
+    "data": {
+      "value": 74.491
+    }
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHR",
+    "data": {
+      "value": 80.992
+    }
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGD",
+    "data": {
+      "value": 74.265
+    }
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRB",
+    "data": {
+      "value": 75.676
+    }
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLR",
+    "data": {
+      "value": 74.1033658536585
+    }
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEL",
+    "data": {
+      "value": 81.7487804878049
+    }
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLZ",
+    "data": {
+      "value": 72.19
+    }
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEN",
+    "data": {
+      "value": 60.475
+    }
+  },
+  {
+    "cca2": "BM",
+    "cca3": "BMU",
+    "data": {
+      "value": 82.062
+    }
+  },
+  {
+    "cca2": "BT",
+    "cca3": "BTN",
+    "data": {
+      "value": 72.754
+    }
+  },
+  {
+    "cca2": "BO",
+    "cca3": "BOL",
+    "data": {
+      "value": 67.434
+    }
+  },
+  {
+    "cca2": "BI",
+    "cca3": "BIH",
+    "data": {
+      "value": 76.777
+    }
+  },
+  {
+    "cca2": "BW",
+    "cca3": "BWA",
+    "data": {
+      "value": 68.749
+    }
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRA",
+    "data": {
+      "value": 74.872
+    }
+  },
+  {
+    "cca2": "VG",
+    "cca3": "VGB",
+    "data": {
+      "value": 77.177
+    }
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRN",
+    "data": {
+      "value": 72.917
+    }
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGR",
+    "data": {
+      "value": 74.1609756097561
+    }
+  },
+  {
+    "cca2": "BF",
+    "cca3": "BFA",
+    "data": {
+      "value": 60.7
+    }
+  },
+  {
+    "cca2": "BD",
+    "cca3": "BDI",
+    "data": {
+      "value": 62.882
+    }
+  },
+  {
+    "cca2": "CP",
+    "cca3": "CPV",
+    "data": {
+      "value": 75.907
+    }
+  },
+  {
+    "cca2": "KH",
+    "cca3": "KHM",
+    "data": {
+      "value": 70.528
+    }
+  },
+  {
+    "cca2": "CM",
+    "cca3": "CMR",
+    "data": {
+      "value": 62.443
+    }
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAN",
+    "data": {
+      "value": 81.2453658536585
+    }
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYM",
+    "data": {
+      "value": 79.984
+    }
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAF",
+    "data": {
+      "value": 18.818
+    }
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCD",
+    "data": {
+      "value": 54.528
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHI",
+    "data": {
+      "value": 81
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHL",
+    "data": {
+      "value": 79.176
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHN",
+    "data": {
+      "value": 78.202
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COL",
+    "data": {
+      "value": 76.508
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COM",
+    "data": {
+      "value": 66.481
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COD",
+    "data": {
+      "value": 60.979
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COG",
+    "data": {
+      "value": 65
+    }
+  },
+  {
+    "cca2": "CR",
+    "cca3": "CRI",
+    "data": {
+      "value": 79.316
+    }
+  },
+  {
+    "cca2": "CI",
+    "cca3": "CIV",
+    "data": {
+      "value": 61.562
+    }
+  },
+  {
+    "cca2": "HR",
+    "cca3": "HRV",
+    "data": {
+      "value": 77.5756097560976
+    }
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUB",
+    "data": {
+      "value": 77.629
+    }
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUW",
+    "data": {
+      "value": 76.729
+    }
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYP",
+    "data": {
+      "value": 80.434
+    }
+  },
+  {
+    "cca2": "CZ",
+    "cca3": "CZE",
+    "data": {
+      "value": 78.9292682926829
+    }
+  },
+  {
+    "cca2": "DN",
+    "cca3": "DNK",
+    "data": {
+      "value": 81.3048780487805
+    }
+  },
+  {
+    "cca2": "DJ",
+    "cca3": "DJI",
+    "data": {
+      "value": 65.54
+    }
+  },
+  {
+    "cca2": "DM",
+    "cca3": "DMA",
+    "data": {
+      "value": 71.081
+    }
+  },
+  {
+    "cca2": "DO",
+    "cca3": "DOM",
+    "data": {
+      "value": 74.211
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECU",
+    "data": {
+      "value": 76.577
+    }
+  },
+  {
+    "cca2": "EG",
+    "cca3": "EGY",
+    "data": {
+      "value": 71.01
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLV",
+    "data": {
+      "value": 71.969
+    }
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNQ",
+    "data": {
+      "value": 63.355
+    }
+  },
+  {
+    "cca2": "ER",
+    "cca3": "ERI",
+    "data": {
+      "value": 67.789
+    }
+  },
+  {
+    "cca2": "ES",
+    "cca3": "EST",
+    "data": {
+      "value": 77.8439024390244
+    }
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWZ",
+    "data": {
+      "value": 63.028
+    }
+  },
+  {
+    "cca2": "ET",
+    "cca3": "ETH",
+    "data": {
+      "value": 66.897
+    }
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRO",
+    "data": {
+      "value": 82.9439024390244
+    }
+  },
+  {
+    "cca2": "FJ",
+    "cca3": "FJI",
+    "data": {
+      "value": 67.148
+    }
+  },
+  {
+    "cca2": "FI",
+    "cca3": "FIN",
+    "data": {
+      "value": 81.1878048780488
+    }
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRA",
+    "data": {
+      "value": 82.1292682926829
+    }
+  },
+  {
+    "cca2": "PY",
+    "cca3": "PYF",
+    "data": {
+      "value": 83.859
+    }
+  },
+  {
+    "cca2": "GA",
+    "cca3": "GAB",
+    "data": {
+      "value": 67.713
+    }
+  },
+  {
+    "cca2": "GM",
+    "cca3": "GMB",
+    "data": {
+      "value": 64.859
+    }
+  },
+  {
+    "cca2": "GE",
+    "cca3": "GEO",
+    "data": {
+      "value": 74.141
+    }
+  },
+  {
+    "cca2": "DE",
+    "cca3": "DEU",
+    "data": {
+      "value": 80.6080487804878
+    }
+  },
+  {
+    "cca2": "GH",
+    "cca3": "GHA",
+    "data": {
+      "value": 65.246
+    }
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIB",
+    "data": {
+      "value": 83.517
+    }
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRC",
+    "data": {
+      "value": 80.7878048780488
+    }
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRL",
+    "data": {
+      "value": 71.5404878048781
+    }
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRD",
+    "data": {
+      "value": 75.151
+    }
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUM",
+    "data": {
+      "value": 77.102
+    }
+  },
+  {
+    "cca2": "GT",
+    "cca3": "GTM",
+    "data": {
+      "value": 71.206
+    }
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIN",
+    "data": {
+      "value": 60.432
+    }
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNB",
+    "data": {
+      "value": 63.605
+    }
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUY",
+    "data": {
+      "value": 69.888
+    }
+  },
+  {
+    "cca2": "HT",
+    "cca3": "HTI",
+    "data": {
+      "value": 63.948
+    }
+  },
+  {
+    "cca2": "HN",
+    "cca3": "HND",
+    "data": {
+      "value": 72.715
+    }
+  },
+  {
+    "cca2": "HK",
+    "cca3": "HKG",
+    "data": {
+      "value": 83.6609756097561
+    }
+  },
+  {
+    "cca2": "HU",
+    "cca3": "HUN",
+    "data": {
+      "value": 75.8682926829268
+    }
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISL",
+    "data": {
+      "value": 82.119512195122
+    }
+  },
+  {
+    "cca2": "IN",
+    "cca3": "IND",
+    "data": {
+      "value": 71.698
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDN",
+    "data": {
+      "value": 70.925
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRN",
+    "data": {
+      "value": 76.799
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRQ",
+    "data": {
+      "value": 72.037
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRL",
+    "data": {
+      "value": 82.509756097561
+    }
+  },
+  {
+    "cca2": "IM",
+    "cca3": "IMN",
+    "data": {
+      "value": 80.956
+    }
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISR",
+    "data": {
+      "value": 82.7
+    }
+  },
+  {
+    "cca2": "IT",
+    "cca3": "ITA",
+    "data": {
+      "value": 82.7
+    }
+  },
+  {
+    "cca2": "JA",
+    "cca3": "JAM",
+    "data": {
+      "value": 71.481
+    }
+  },
+  {
+    "cca2": "JP",
+    "cca3": "JPN",
+    "data": {
+      "value": 83.9963414634146
+    }
+  },
+  {
+    "cca2": "JO",
+    "cca3": "JOR",
+    "data": {
+      "value": 77.088
+    }
+  },
+  {
+    "cca2": "KA",
+    "cca3": "KAZ",
+    "data": {
+      "value": 73.503
+    }
+  },
+  {
+    "cca2": "KE",
+    "cca3": "KEN",
+    "data": {
+      "value": 63.549
+    }
+  },
+  {
+    "cca2": "KI",
+    "cca3": "KIR",
+    "data": {
+      "value": 66.269
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRK",
+    "data": {
+      "value": 73.641
+    }
+  },
+  {
+    "cca2": "KO",
+    "cca3": "KOR",
+    "data": {
+      "value": 82.6804878048781
+    }
+  },
+  {
+    "cca2": "XK",
+    "cca3": "XKX",
+    "data": {
+      "value": 77.623
+    }
+  },
+  {
+    "cca2": "KW",
+    "cca3": "KWT",
+    "data": {
+      "value": 80.5878048780488
+    }
+  },
+  {
+    "cca2": "KG",
+    "cca3": "KGZ",
+    "data": {
+      "value": 72.0487804878049
+    }
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAO",
+    "data": {
+      "value": 68.715
+    }
+  },
+  {
+    "cca2": "LV",
+    "cca3": "LVA",
+    "data": {
+      "value": 74.2780487804878
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBN",
+    "data": {
+      "value": 78.003
+    }
+  },
+  {
+    "cca2": "LS",
+    "cca3": "LSO",
+    "data": {
+      "value": 56.812
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBR",
+    "data": {
+      "value": 61.934
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBY",
+    "data": {
+      "value": 74.462
+    }
+  },
+  {
+    "cca2": "LI",
+    "cca3": "LIE",
+    "data": {
+      "value": 84.1219512195122
+    }
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTU",
+    "data": {
+      "value": 75.6439024390244
+    }
+  },
+  {
+    "cca2": "LU",
+    "cca3": "LUX",
+    "data": {
+      "value": 82.9463414634147
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAC",
+    "data": {
+      "value": 83.0804878048781
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDG",
+    "data": {
+      "value": 63.068
+    }
+  },
+  {
+    "cca2": "MW",
+    "cca3": "MWI",
+    "data": {
+      "value": 66.037
+    }
+  },
+  {
+    "cca2": "MY",
+    "cca3": "MYS",
+    "data": {
+      "value": 75.444
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDV",
+    "data": {
+      "value": 80.76
+    }
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLI",
+    "data": {
+      "value": 60.035
+    }
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLT",
+    "data": {
+      "value": 82.4487804878049
+    }
+  },
+  {
+    "cca2": "MH",
+    "cca3": "MHL",
+    "data": {
+      "value": 66.725
+    }
+  },
+  {
+    "cca2": "MR",
+    "cca3": "MRT",
+    "data": {
+      "value": 68.281
+    }
+  },
+  {
+    "cca2": "MU",
+    "cca3": "MUS",
+    "data": {
+      "value": 73.5146341463415
+    }
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEX",
+    "data": {
+      "value": 73.973
+    }
+  },
+  {
+    "cca2": "FS",
+    "cca3": "FSM",
+    "data": {
+      "value": 66.961
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDA",
+    "data": {
+      "value": 71.546
+    }
+  },
+  {
+    "cca2": "MC",
+    "cca3": "MCO",
+    "data": {
+      "value": 85.746
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNG",
+    "data": {
+      "value": 71.9007317073171
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNE",
+    "data": {
+      "value": 76.1878048780488
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAR",
+    "data": {
+      "value": 75.161
+    }
+  },
+  {
+    "cca2": "MO",
+    "cca3": "MOZ",
+    "data": {
+      "value": 63.011
+    }
+  },
+  {
+    "cca2": "MM",
+    "cca3": "MMR",
+    "data": {
+      "value": 66.506
+    }
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAM",
+    "data": {
+      "value": 64.19
+    }
+  },
+  {
+    "cca2": "NR",
+    "cca3": "NRU",
+    "data": {
+      "value": 61.93
+    }
+  },
+  {
+    "cca2": "NP",
+    "cca3": "NPL",
+    "data": {
+      "value": 70.087
+    }
+  },
+  {
+    "cca2": "NL",
+    "cca3": "NLD",
+    "data": {
+      "value": 81.6146341463415
+    }
+  },
+  {
+    "cca2": "NC",
+    "cca3": "NCL",
+    "data": {
+      "value": 77.698
+    }
+  },
+  {
+    "cca2": "NZ",
+    "cca3": "NZL",
+    "data": {
+      "value": 81.9585365853658
+    }
+  },
+  {
+    "cca2": "NI",
+    "cca3": "NIC",
+    "data": {
+      "value": 74.463
+    }
+  },
+  {
+    "cca2": "NE",
+    "cca3": "NER",
+    "data": {
+      "value": 60.398
+    }
+  },
+  {
+    "cca2": "NG",
+    "cca3": "NGA",
+    "data": {
+      "value": 54.079
+    }
+  },
+  {
+    "cca2": "MK",
+    "cca3": "MKD",
+    "data": {
+      "value": 74.4248780487805
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNP",
+    "data": {
+      "value": 78.531
+    }
+  },
+  {
+    "cca2": "NO",
+    "cca3": "NOR",
+    "data": {
+      "value": 82.509756097561
+    }
+  },
+  {
+    "cca2": "OM",
+    "cca3": "OMN",
+    "data": {
+      "value": 77.911
+    }
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAK",
+    "data": {
+      "value": 67.417
+    }
+  },
+  {
+    "cca2": "PL",
+    "cca3": "PLW",
+    "data": {
+      "value": 68.922
+    }
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAN",
+    "data": {
+      "value": 79.324
+    }
+  },
+  {
+    "cca2": "PN",
+    "cca3": "PNG",
+    "data": {
+      "value": 65.274
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRY",
+    "data": {
+      "value": 72.319
+    }
+  },
+  {
+    "cca2": "PE",
+    "cca3": "PER",
+    "data": {
+      "value": 76.834
+    }
+  },
+  {
+    "cca2": "PH",
+    "cca3": "PHL",
+    "data": {
+      "value": 69.472
+    }
+  },
+  {
+    "cca2": "PO",
+    "cca3": "POL",
+    "data": {
+      "value": 77.1560975609756
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRT",
+    "data": {
+      "value": 81.6317073170732
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRI",
+    "data": {
+      "value": 79.427
+    }
+  },
+  {
+    "cca2": "QA",
+    "cca3": "QAT",
+    "data": {
+      "value": 81.857
+    }
+  },
+  {
+    "cca2": "RO",
+    "cca3": "ROU",
+    "data": {
+      "value": 75.1536585365854
+    }
+  },
+  {
+    "cca2": "RU",
+    "cca3": "RUS",
+    "data": {
+      "value": 72.5456097560976
+    }
+  },
+  {
+    "cca2": "RW",
+    "cca3": "RWA",
+    "data": {
+      "value": 67.528
+    }
+  },
+  {
+    "cca2": "WS",
+    "cca3": "WSM",
+    "data": {
+      "value": 71.55
+    }
+  },
+  {
+    "cca2": "SM",
+    "cca3": "SMR",
+    "data": {
+      "value": 85.708
+    }
+  },
+  {
+    "cca2": "ST",
+    "cca3": "STP",
+    "data": {
+      "value": 69.237
+    }
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAU",
+    "data": {
+      "value": 77.31
+    }
+  },
+  {
+    "cca2": "SE",
+    "cca3": "SEN",
+    "data": {
+      "value": 67.788
+    }
+  },
+  {
+    "cca2": "SR",
+    "cca3": "SRB",
+    "data": {
+      "value": 75.2365853658537
+    }
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYC",
+    "data": {
+      "value": 73.7024390243903
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLE",
+    "data": {
+      "value": 61.275
+    }
+  },
+  {
+    "cca2": "SG",
+    "cca3": "SGP",
+    "data": {
+      "value": 82.8951219512195
+    }
+  },
+  {
+    "cca2": "SX",
+    "cca3": "SXM",
+    "data": {
+      "value": 76.18
+    }
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVK",
+    "data": {
+      "value": 76.9658536585366
+    }
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVN",
+    "data": {
+      "value": 81.2829268292683
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLB",
+    "data": {
+      "value": 70.409
+    }
+  },
+  {
+    "cca2": "SO",
+    "cca3": "SOM",
+    "data": {
+      "value": 53.931
+    }
+  },
+  {
+    "cca2": "ZA",
+    "cca3": "ZAF",
+    "data": {
+      "value": 65.454
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSD",
+    "data": {
+      "value": 57.203
+    }
+  },
+  {
+    "cca2": "ES",
+    "cca3": "ESP",
+    "data": {
+      "value": 83.1341463414634
+    }
+  },
+  {
+    "cca2": "LK",
+    "cca3": "LKA",
+    "data": {
+      "value": 77.3
+    }
+  },
+  {
+    "cca2": "KN",
+    "cca3": "KNA",
+    "data": {
+      "value": 70.313
+    }
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCA",
+    "data": {
+      "value": 72.67
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAF",
+    "data": {
+      "value": 80.236
+    }
+  },
+  {
+    "cca2": "VC",
+    "cca3": "VCT",
+    "data": {
+      "value": 71.191
+    }
+  },
+  {
+    "cca2": "SD",
+    "cca3": "SDN",
+    "data": {
+      "value": 65.695
+    }
+  },
+  {
+    "cca2": "SU",
+    "cca3": "SUR",
+    "data": {
+      "value": 73.254
+    }
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWE",
+    "data": {
+      "value": 83.0585365853659
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHE",
+    "data": {
+      "value": 83.6048780487805
+    }
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYR",
+    "data": {
+      "value": 72.79
+    }
+  },
+  {
+    "cca2": "TJ",
+    "cca3": "TJK",
+    "data": {
+      "value": 71.562
+    }
+  },
+  {
+    "cca2": "TZ",
+    "cca3": "TZA",
+    "data": {
+      "value": 66.879
+    }
+  },
+  {
+    "cca2": "TH",
+    "cca3": "THA",
+    "data": {
+      "value": 75.291
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLS",
+    "data": {
+      "value": 67.368
+    }
+  },
+  {
+    "cca2": "TG",
+    "cca3": "TGO",
+    "data": {
+      "value": 62.29
+    }
+  },
+  {
+    "cca2": "TO",
+    "cca3": "TON",
+    "data": {
+      "value": 72.635
+    }
+  },
+  {
+    "cca2": "TT",
+    "cca3": "TTO",
+    "data": {
+      "value": 73.331
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUN",
+    "data": {
+      "value": 76.05
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUR",
+    "data": {
+      "value": 77.591
+    }
+  },
+  {
+    "cca2": "TK",
+    "cca3": "TKM",
+    "data": {
+      "value": 69.913
+    }
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCA",
+    "data": {
+      "value": 77.918
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUV",
+    "data": {
+      "value": 66.852
+    }
+  },
+  {
+    "cca2": "UG",
+    "cca3": "UGA",
+    "data": {
+      "value": 67.675
+    }
+  },
+  {
+    "cca2": "UK",
+    "cca3": "UKR",
+    "data": {
+      "value": 72.658
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARE",
+    "data": {
+      "value": 80.487
+    }
+  },
+  {
+    "cca2": "GB",
+    "cca3": "GBR",
+    "data": {
+      "value": 81.0112195121951
+    }
+  },
+  {
+    "cca2": "US",
+    "cca3": "USA",
+    "data": {
+      "value": 77.4341463414634
+    }
+  },
+  {
+    "cca2": "UR",
+    "cca3": "URY",
+    "data": {
+      "value": 76.468
+    }
+  },
+  {
+    "cca2": "UZ",
+    "cca3": "UZB",
+    "data": {
+      "value": 72.147
+    }
+  },
+  {
+    "cca2": "VU",
+    "cca3": "VUT",
+    "data": {
+      "value": 71.302
+    }
+  },
+  {
+    "cca2": "VE",
+    "cca3": "VEN",
+    "data": {
+      "value": 72.566
+    }
+  },
+  {
+    "cca2": "VN",
+    "cca3": "VNM",
+    "data": {
+      "value": 74.502
+    }
+  },
+  {
+    "cca2": "VI",
+    "cca3": "VIR",
+    "data": {
+      "value": 80.319512195122
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSE",
+    "data": {
+      "value": 76.662
+    }
+  },
+  {
+    "cca2": "YE",
+    "cca3": "YEM",
+    "data": {
+      "value": 67.952
+    }
+  },
+  {
+    "cca2": "ZM",
+    "cca3": "ZMB",
+    "data": {
+      "value": 65.279
+    }
+  },
+  {
+    "cca2": "ZW",
+    "cca3": "ZWE",
+    "data": {
+      "value": 62.36
+    }
+  }
+]

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // Länder abrufen und sortieren
 export const fetchCountries = async () => {
   try {
@@ -68,21 +66,20 @@ export const fetchGDPDataForCountries = async () => {
 
 export const fetchEarthQuakes = async () => {
   try {
-    //console.log("Fetching earthquake data...");
-    const response = await fetch("/earthQuakeData.json");
+    // Live-Daten vom USGS (United States Geological Survey)
+    // Holt alle Erdbeben der letzten 30 Tage mit Magnitude > 2.5
+    const response = await fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson");
     if (!response.ok) {
       throw new Error("Network response was not ok: " + response.statusText);
     }
     const earthQuakes = await response.json();
-   // console.log("Earthquake data fetched successfully.", earthQuakes);
 
-    const mappedData = earthQuakes.map((quake) => ({
-      magnitude: Number((quake.magnitude * 1000000000).toFixed(2)),
-      latitude: Number(quake.latitude.toFixed(2)),
-      longitude: Number(quake.longitude.toFixed(2)),
+    // USGS GeoJSON Format umwandeln in das Format, das der Globus erwartet
+    const mappedData = earthQuakes.features.map((quake) => ({
+      magnitude: Number((quake.properties.mag * 1000000000).toFixed(2)),
+      latitude: Number(quake.geometry.coordinates[1].toFixed(2)),
+      longitude: Number(quake.geometry.coordinates[0].toFixed(2)),
     }));
-
-    // console.log("Mapped Earthquake Data:", mappedData); 
     
     return mappedData;
   } catch (error) {
@@ -123,7 +120,7 @@ export const fetchMortalityData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value*.1 : null
     })).filter(item => item.value !== null);
   } catch (error) {
@@ -140,7 +137,7 @@ export const fetchDebtData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value : null
     })).filter(item => item.value !== null);
   } catch (error) {
@@ -157,7 +154,7 @@ export const fetchInflationData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value : null
     })).filter(item => item.value !== null);
   } catch (error) {
@@ -174,7 +171,7 @@ export const fetchEmploymentData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value : null
     })).filter(item => item.value !== null);
   } catch (error) {
@@ -191,7 +188,7 @@ export const fetchHealthData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value : null
     })).filter(item => item.value !== null);
   } catch (error) {
@@ -208,7 +205,7 @@ export const fetchGrowthData = async () => {
     }
     const data = await response.json();
     return data.map(item => ({
-      cca2: item.cca2,
+      cca3: item.cca3, 
       value: item.data && typeof item.data === 'object' ? item.data.value : null
     })).filter(item => item.value !== null);
   } catch (error) {

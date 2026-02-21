@@ -1,4053 +1,1813 @@
 [
-    {
-      "cca2": "AD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AD",
-          "value": "Andorra"
-        },
-        "countryiso3code": "AND",
-        "date": "2023",
-        "value": 1.44418423106947,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AE",
-          "value": "United Arab Emirates"
-        },
-        "countryiso3code": "ARE",
-        "date": "2023",
-        "value": 3.40385720609487,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AF",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AF",
-          "value": "Afghanistan"
-        },
-        "countryiso3code": "AFG",
-        "date": "2022",
-        "value": -6.24017199240269,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AG",
-          "value": "Antigua and Barbuda"
-        },
-        "countryiso3code": "ATG",
-        "date": "2023",
-        "value": 3.86201218730389,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AL",
-          "value": "Albania"
-        },
-        "countryiso3code": "ALB",
-        "date": "2023",
-        "value": 3.43914949919611,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AM",
-          "value": "Armenia"
-        },
-        "countryiso3code": "ARM",
-        "date": "2023",
-        "value": 8.7,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AO",
-          "value": "Angola"
-        },
-        "countryiso3code": "AGO",
-        "date": "2023",
-        "value": 0.856000934845724,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AR",
-          "value": "Argentina"
-        },
-        "countryiso3code": "ARG",
-        "date": "2023",
-        "value": -1.55050153620256,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AS",
-          "value": "American Samoa"
-        },
-        "countryiso3code": "ASM",
-        "date": "2022",
-        "value": 1.73501577287065,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AT",
-          "value": "Austria"
-        },
-        "countryiso3code": "AUT",
-        "date": "2023",
-        "value": -0.828815088963225,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AU",
-          "value": "Australia"
-        },
-        "countryiso3code": "AUS",
-        "date": "2023",
-        "value": 3.01698810357014,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AW",
-          "value": "Aruba"
-        },
-        "countryiso3code": "ABW",
-        "date": "2022",
-        "value": 10.45831735343,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "AZ",
-          "value": "Azerbaijan"
-        },
-        "countryiso3code": "AZE",
-        "date": "2023",
-        "value": 1.12397432709641,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BA",
-          "value": "Bosnia and Herzegovina"
-        },
-        "countryiso3code": "BIH",
-        "date": "2023",
-        "value": 1.6762234691309,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BB",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BB",
-          "value": "Barbados"
-        },
-        "countryiso3code": "BRB",
-        "date": "2023",
-        "value": 4.51648965902731,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BD",
-          "value": "Bangladesh"
-        },
-        "countryiso3code": "BGD",
-        "date": "2023",
-        "value": 5.77511237007889,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BE",
-          "value": "Belgium"
-        },
-        "countryiso3code": "BEL",
-        "date": "2023",
-        "value": 1.36505523054922,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BF",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BF",
-          "value": "Burkina Faso"
-        },
-        "countryiso3code": "BFA",
-        "date": "2023",
-        "value": 2.96018001322078,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BG",
-          "value": "Bulgaria"
-        },
-        "countryiso3code": "BGR",
-        "date": "2023",
-        "value": 1.84638956019879,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BH",
-          "value": "Bahrain"
-        },
-        "countryiso3code": "BHR",
-        "date": "2023",
-        "value": 2.48146533907759,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BI",
-          "value": "Burundi"
-        },
-        "countryiso3code": "BDI",
-        "date": "2023",
-        "value": 2.70000059705133,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BJ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BJ",
-          "value": "Benin"
-        },
-        "countryiso3code": "BEN",
-        "date": "2023",
-        "value": 6.35282160914288,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BM",
-          "value": "Bermuda"
-        },
-        "countryiso3code": "BMU",
-        "date": "2022",
-        "value": 6.43113399633694,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BN",
-          "value": "Brunei Darussalam"
-        },
-        "countryiso3code": "BRN",
-        "date": "2023",
-        "value": 1.40706822925519,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BO",
-          "value": "Bolivia"
-        },
-        "countryiso3code": "BOL",
-        "date": "2023",
-        "value": 2.44347191830776,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BR",
-          "value": "Brazil"
-        },
-        "countryiso3code": "BRA",
-        "date": "2023",
-        "value": 2.90848048667777,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BS",
-          "value": "Bahamas, The"
-        },
-        "countryiso3code": "BHS",
-        "date": "2023",
-        "value": 2.63905598075102,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BT",
-          "value": "Bhutan"
-        },
-        "countryiso3code": "BTN",
-        "date": "2022",
-        "value": 5.21386783786224,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BW",
-          "value": "Botswana"
-        },
-        "countryiso3code": "BWA",
-        "date": "2023",
-        "value": 2.73091904554352,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BY",
-          "value": "Belarus"
-        },
-        "countryiso3code": "BLR",
-        "date": "2023",
-        "value": 3.88624214456901,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "BZ",
-          "value": "Belize"
-        },
-        "countryiso3code": "BLZ",
-        "date": "2023",
-        "value": 4.5416322077583,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CA",
-          "value": "Canada"
-        },
-        "countryiso3code": "CAN",
-        "date": "2023",
-        "value": 1.06599445256434,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CD",
-          "value": "Congo, Dem. Rep."
-        },
-        "countryiso3code": "COD",
-        "date": "2023",
-        "value": 8.56086250908719,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CF",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CF",
-          "value": "Central African Republic"
-        },
-        "countryiso3code": "CAF",
-        "date": "2023",
-        "value": 0.870251450842758,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CG",
-          "value": "Congo, Rep."
-        },
-        "countryiso3code": "COG",
-        "date": "2023",
-        "value": 1.90686426346754,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CH",
-          "value": "Switzerland"
-        },
-        "countryiso3code": "CHE",
-        "date": "2023",
-        "value": 0.716066868695833,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CI",
-          "value": "Cote d'Ivoire"
-        },
-        "countryiso3code": "CIV",
-        "date": "2023",
-        "value": 6.53593302046529,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CL",
-          "value": "Chile"
-        },
-        "countryiso3code": "CHL",
-        "date": "2023",
-        "value": 0.218780666901552,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CM",
-          "value": "Cameroon"
-        },
-        "countryiso3code": "CMR",
-        "date": "2023",
-        "value": 3.99338950938622,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CN",
-          "value": "China"
-        },
-        "countryiso3code": "CHN",
-        "date": "2023",
-        "value": 5.19999999987174,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CO",
-          "value": "Colombia"
-        },
-        "countryiso3code": "COL",
-        "date": "2023",
-        "value": 0.612181322079849,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CR",
-          "value": "Costa Rica"
-        },
-        "countryiso3code": "CRI",
-        "date": "2023",
-        "value": 5.11192183224598,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CU",
-          "value": "Cuba"
-        },
-        "countryiso3code": "CUB",
-        "date": "2022",
-        "value": 1.77485399483382,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CV",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CV",
-          "value": "Cabo Verde"
-        },
-        "countryiso3code": "CPV",
-        "date": "2023",
-        "value": 5.14913485822454,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CX",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CY",
-          "value": "Cyprus"
-        },
-        "countryiso3code": "CYP",
-        "date": "2023",
-        "value": 2.46693496487094,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "CZ",
-          "value": "Czechia"
-        },
-        "countryiso3code": "CZE",
-        "date": "2023",
-        "value": -0.311479452106369,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "DE",
-          "value": "Germany"
-        },
-        "countryiso3code": "DEU",
-        "date": "2023",
-        "value": -0.304934575740816,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DJ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "DJ",
-          "value": "Djibouti"
-        },
-        "countryiso3code": "DJI",
-        "date": "2023",
-        "value": 6.67664964361434,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "DK",
-          "value": "Denmark"
-        },
-        "countryiso3code": "DNK",
-        "date": "2023",
-        "value": 1.88961038591202,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "DO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "DO",
-          "value": "Dominican Republic"
-        },
-        "countryiso3code": "DOM",
-        "date": "2023",
-        "value": 2.36061568723294,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "DZ",
-          "value": "Algeria"
-        },
-        "countryiso3code": "DZA",
-        "date": "2023",
-        "value": 4.10000000000679,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "EC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "EC",
-          "value": "Ecuador"
-        },
-        "countryiso3code": "ECU",
-        "date": "2023",
-        "value": 2.35521790742197,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "EE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "EE",
-          "value": "Estonia"
-        },
-        "countryiso3code": "EST",
-        "date": "2023",
-        "value": -3.00559012612986,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "EG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "EG",
-          "value": "Egypt, Arab Rep."
-        },
-        "countryiso3code": "EGY",
-        "date": "2023",
-        "value": 3.75900541919032,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "EH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ER",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ES",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ES",
-          "value": "Spain"
-        },
-        "countryiso3code": "ESP",
-        "date": "2023",
-        "value": 2.50329435985475,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ET",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ET",
-          "value": "Ethiopia"
-        },
-        "countryiso3code": "ETH",
-        "date": "2023",
-        "value": 6.49813464238613,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "FI",
-          "value": "Finland"
-        },
-        "countryiso3code": "FIN",
-        "date": "2023",
-        "value": -1.03537569285423,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FJ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "FJ",
-          "value": "Fiji"
-        },
-        "countryiso3code": "FJI",
-        "date": "2023",
-        "value": 8.02640862453754,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "FM",
-          "value": "Micronesia, Fed. Sts."
-        },
-        "countryiso3code": "FSM",
-        "date": "2023",
-        "value": 0.784313725490193,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "FO",
-          "value": "Faroe Islands"
-        },
-        "countryiso3code": "FRO",
-        "date": "2022",
-        "value": 5.39848038908718,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "FR",
-          "value": "France"
-        },
-        "countryiso3code": "FRA",
-        "date": "2023",
-        "value": 0.703718546620237,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GA",
-          "value": "Gabon"
-        },
-        "countryiso3code": "GAB",
-        "date": "2023",
-        "value": 2.26323208768638,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GB",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GB",
-          "value": "United Kingdom"
-        },
-        "countryiso3code": "GBR",
-        "date": "2023",
-        "value": 0.104017849159277,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GD",
-          "value": "Grenada"
-        },
-        "countryiso3code": "GRD",
-        "date": "2023",
-        "value": 4.80928689883935,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GE",
-          "value": "Georgia"
-        },
-        "countryiso3code": "GEO",
-        "date": "2023",
-        "value": 7.47447909383303,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GH",
-          "value": "Ghana"
-        },
-        "countryiso3code": "GHA",
-        "date": "2023",
-        "value": 2.94478583082221,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GL",
-          "value": "Greenland"
-        },
-        "countryiso3code": "GRL",
-        "date": "2021",
-        "value": 1.29021048770599,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GM",
-          "value": "Gambia, The"
-        },
-        "countryiso3code": "GMB",
-        "date": "2023",
-        "value": 5.29599663840045,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GN",
-          "value": "Guinea"
-        },
-        "countryiso3code": "GIN",
-        "date": "2023",
-        "value": 7.06196002940651,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GQ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GQ",
-          "value": "Equatorial Guinea"
-        },
-        "countryiso3code": "GNQ",
-        "date": "2023",
-        "value": -5.69158346431034,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GR",
-          "value": "Greece"
-        },
-        "countryiso3code": "GRC",
-        "date": "2023",
-        "value": 2.01152094343999,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GT",
-          "value": "Guatemala"
-        },
-        "countryiso3code": "GTM",
-        "date": "2023",
-        "value": 3.48448472740903,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GU",
-          "value": "Guam"
-        },
-        "countryiso3code": "GUM",
-        "date": "2022",
-        "value": 5.09986426216793,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GW",
-          "value": "Guinea-Bissau"
-        },
-        "countryiso3code": "GNB",
-        "date": "2023",
-        "value": 4.24828229733396,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "GY",
-          "value": "Guyana"
-        },
-        "countryiso3code": "GUY",
-        "date": "2023",
-        "value": 33.0168829873529,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PS",
-          "value": "West Bank and Gaza"
-        },
-        "countryiso3code": "PSE",
-        "date": "2023",
-        "value": -5.50879437160218,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "HK",
-          "value": "Hong Kong SAR, China"
-        },
-        "countryiso3code": "HKG",
-        "date": "2023",
-        "value": 3.21505497011667,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "HN",
-          "value": "Honduras"
-        },
-        "countryiso3code": "HND",
-        "date": "2023",
-        "value": 3.58260362632656,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "HR",
-          "value": "Croatia"
-        },
-        "countryiso3code": "HRV",
-        "date": "2023",
-        "value": 3.06087128780983,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "HT",
-          "value": "Haiti"
-        },
-        "countryiso3code": "HTI",
-        "date": "2023",
-        "value": -1.86388420254838,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "HU",
-          "value": "Hungary"
-        },
-        "countryiso3code": "HUN",
-        "date": "2023",
-        "value": -0.907685956140242,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ID",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ID",
-          "value": "Indonesia"
-        },
-        "countryiso3code": "IDN",
-        "date": "2023",
-        "value": 5.04810577067288,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IE",
-          "value": "Ireland"
-        },
-        "countryiso3code": "IRL",
-        "date": "2023",
-        "value": -3.1987859599287,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IL",
-          "value": "Israel"
-        },
-        "countryiso3code": "ISR",
-        "date": "2023",
-        "value": 1.99703998799328,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IM",
-          "value": "Isle of Man"
-        },
-        "countryiso3code": "IMN",
-        "date": "2021",
-        "value": 3.83783666558899,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IN",
-          "value": "India"
-        },
-        "countryiso3code": "IND",
-        "date": "2023",
-        "value": 7.58397112433558,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IQ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IQ",
-          "value": "Iraq"
-        },
-        "countryiso3code": "IRQ",
-        "date": "2023",
-        "value": -2.93555773971221,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IR",
-          "value": "Iran, Islamic Rep."
-        },
-        "countryiso3code": "IRN",
-        "date": "2023",
-        "value": 4.9521631690814,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IS",
-          "value": "Iceland"
-        },
-        "countryiso3code": "ISL",
-        "date": "2023",
-        "value": 4.06379899045474,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "IT",
-          "value": "Italy"
-        },
-        "countryiso3code": "ITA",
-        "date": "2023",
-        "value": 0.920692213760276,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "JM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "JM",
-          "value": "Jamaica"
-        },
-        "countryiso3code": "JAM",
-        "date": "2023",
-        "value": 2.20006147233049,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "JO",
-          "value": "Jordan"
-        },
-        "countryiso3code": "JOR",
-        "date": "2023",
-        "value": 2.61548743021307,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JP",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "JP",
-          "value": "Japan"
-        },
-        "countryiso3code": "JPN",
-        "date": "2023",
-        "value": 1.92305553064716,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KE",
-          "value": "Kenya"
-        },
-        "countryiso3code": "KEN",
-        "date": "2023",
-        "value": 5.42581615130304,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KG",
-          "value": "Kyrgyz Republic"
-        },
-        "countryiso3code": "KGZ",
-        "date": "2023",
-        "value": 6.15139183716032,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KH",
-          "value": "Cambodia"
-        },
-        "countryiso3code": "KHM",
-        "date": "2023",
-        "value": 5.39999999995442,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KI",
-          "value": "Kiribati"
-        },
-        "countryiso3code": "KIR",
-        "date": "2023",
-        "value": 4.28571428571429,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KM",
-          "value": "Comoros"
-        },
-        "countryiso3code": "COM",
-        "date": "2023",
-        "value": 2.70109357862837,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KN",
-          "value": "St. Kitts and Nevis"
-        },
-        "countryiso3code": "KNA",
-        "date": "2023",
-        "value": 3.43115229343,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KR",
-          "value": "Korea, Rep."
-        },
-        "countryiso3code": "KOR",
-        "date": "2023",
-        "value": 1.35673324311098,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KW",
-          "value": "Kuwait"
-        },
-        "countryiso3code": "KWT",
-        "date": "2023",
-        "value": -2.23009346286686,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KY",
-          "value": "Cayman Islands"
-        },
-        "countryiso3code": "CYM",
-        "date": "2022",
-        "value": 5.15632991974057,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "KZ",
-          "value": "Kazakhstan"
-        },
-        "countryiso3code": "KAZ",
-        "date": "2023",
-        "value": 5.09999999973641,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LA",
-          "value": "Lao PDR"
-        },
-        "countryiso3code": "LAO",
-        "date": "2023",
-        "value": 3.74568140158232,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LB",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LB",
-          "value": "Lebanon"
-        },
-        "countryiso3code": "LBN",
-        "date": "2022",
-        "value": -0.621678970663112,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LC",
-          "value": "St. Lucia"
-        },
-        "countryiso3code": "LCA",
-        "date": "2023",
-        "value": 3.19000999999997,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LK",
-          "value": "Sri Lanka"
-        },
-        "countryiso3code": "LKA",
-        "date": "2023",
-        "value": -2.29804511164436,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LR",
-          "value": "Liberia"
-        },
-        "countryiso3code": "LBR",
-        "date": "2023",
-        "value": 4.71102538380681,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LS",
-          "value": "Lesotho"
-        },
-        "countryiso3code": "LSO",
-        "date": "2023",
-        "value": 0.898149777798736,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LT",
-          "value": "Lithuania"
-        },
-        "countryiso3code": "LTU",
-        "date": "2023",
-        "value": -0.336086244470295,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LU",
-          "value": "Luxembourg"
-        },
-        "countryiso3code": "LUX",
-        "date": "2023",
-        "value": -1.09572361576994,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LV",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LV",
-          "value": "Latvia"
-        },
-        "countryiso3code": "LVA",
-        "date": "2023",
-        "value": -0.2825395584007,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "LY",
-          "value": "Libya"
-        },
-        "countryiso3code": "LBY",
-        "date": "2023",
-        "value": -1.67258994589184,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MA",
-          "value": "Morocco"
-        },
-        "countryiso3code": "MAR",
-        "date": "2023",
-        "value": 3.17794683511849,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MC",
-          "value": "Monaco"
-        },
-        "countryiso3code": "MCO",
-        "date": "2022",
-        "value": 11.0968262747971,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MD",
-          "value": "Moldova"
-        },
-        "countryiso3code": "MDA",
-        "date": "2023",
-        "value": 0.78324270969388,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ME",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ME",
-          "value": "Montenegro"
-        },
-        "countryiso3code": "MNE",
-        "date": "2023",
-        "value": 5.98190321595602,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MG",
-          "value": "Madagascar"
-        },
-        "countryiso3code": "MDG",
-        "date": "2023",
-        "value": 3.9853710126696,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MH",
-          "value": "Marshall Islands"
-        },
-        "countryiso3code": "MHL",
-        "date": "2023",
-        "value": 3.22599899400625,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MK",
-          "value": "North Macedonia"
-        },
-        "countryiso3code": "MKD",
-        "date": "2023",
-        "value": 1.0274151354263,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ML",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ML",
-          "value": "Mali"
-        },
-        "countryiso3code": "MLI",
-        "date": "2023",
-        "value": 5.23657752778519,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MM",
-          "value": "Myanmar"
-        },
-        "countryiso3code": "MMR",
-        "date": "2023",
-        "value": 1.00223834289773,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MN",
-          "value": "Mongolia"
-        },
-        "countryiso3code": "MNG",
-        "date": "2023",
-        "value": 7.02299187499851,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MO",
-          "value": "Macao SAR, China"
-        },
-        "countryiso3code": "MAC",
-        "date": "2023",
-        "value": 80.5342159956893,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MP",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MP",
-          "value": "Northern Mariana Islands"
-        },
-        "countryiso3code": "MNP",
-        "date": "2020",
-        "value": -29.6808510638298,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MR",
-          "value": "Mauritania"
-        },
-        "countryiso3code": "MRT",
-        "date": "2023",
-        "value": 3.38355519096352,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MT",
-          "value": "Malta"
-        },
-        "countryiso3code": "MLT",
-        "date": "2023",
-        "value": 5.61392778297829,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MU",
-          "value": "Mauritius"
-        },
-        "countryiso3code": "MUS",
-        "date": "2023",
-        "value": 6.95228798595431,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MV",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MV",
-          "value": "Maldives"
-        },
-        "countryiso3code": "MDV",
-        "date": "2023",
-        "value": 3.97279584640151,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MW",
-          "value": "Malawi"
-        },
-        "countryiso3code": "MWI",
-        "date": "2023",
-        "value": 1.53964171231864,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MX",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MX",
-          "value": "Mexico"
-        },
-        "countryiso3code": "MEX",
-        "date": "2023",
-        "value": 3.22873675559163,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MY",
-          "value": "Malaysia"
-        },
-        "countryiso3code": "MYS",
-        "date": "2023",
-        "value": 3.68028218563347,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "MZ",
-          "value": "Mozambique"
-        },
-        "countryiso3code": "MOZ",
-        "date": "2023",
-        "value": 5.00002417303148,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NA",
-          "value": "Namibia"
-        },
-        "countryiso3code": "NAM",
-        "date": "2023",
-        "value": 4.1599857377939,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NC",
-          "value": "New Caledonia"
-        },
-        "countryiso3code": "NCL",
-        "date": "2022",
-        "value": 3.49999999631376,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NE",
-          "value": "Niger"
-        },
-        "countryiso3code": "NER",
-        "date": "2023",
-        "value": 2.49999999999999,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NG",
-          "value": "Nigeria"
-        },
-        "countryiso3code": "NGA",
-        "date": "2023",
-        "value": 2.86021499108364,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NI",
-          "value": "Nicaragua"
-        },
-        "countryiso3code": "NIC",
-        "date": "2023",
-        "value": 4.56973233333842,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NL",
-          "value": "Netherlands"
-        },
-        "countryiso3code": "NLD",
-        "date": "2023",
-        "value": 0.116008634532122,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NO",
-          "value": "Norway"
-        },
-        "countryiso3code": "NOR",
-        "date": "2023",
-        "value": 0.514118226595343,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NP",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NP",
-          "value": "Nepal"
-        },
-        "countryiso3code": "NPL",
-        "date": "2023",
-        "value": 1.95254463264347,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NR",
-          "value": "Nauru"
-        },
-        "countryiso3code": "NRU",
-        "date": "2023",
-        "value": 0.704225352112744,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "NZ",
-          "value": "New Zealand"
-        },
-        "countryiso3code": "NZL",
-        "date": "2023",
-        "value": 0.632242361629224,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "OM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "OM",
-          "value": "Oman"
-        },
-        "countryiso3code": "OMN",
-        "date": "2023",
-        "value": 1.29999999999998,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PA",
-          "value": "Panama"
-        },
-        "countryiso3code": "PAN",
-        "date": "2023",
-        "value": 7.31677741654941,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PE",
-          "value": "Peru"
-        },
-        "countryiso3code": "PER",
-        "date": "2023",
-        "value": -0.55018230632048,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PF",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PF",
-          "value": "French Polynesia"
-        },
-        "countryiso3code": "PYF",
-        "date": "2022",
-        "value": 4.46607459000271,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PG",
-          "value": "Papua New Guinea"
-        },
-        "countryiso3code": "PNG",
-        "date": "2023",
-        "value": 2.68101048379781,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PH",
-          "value": "Philippines"
-        },
-        "countryiso3code": "PHL",
-        "date": "2023",
-        "value": 5.54585117087767,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PK",
-          "value": "Pakistan"
-        },
-        "countryiso3code": "PAK",
-        "date": "2023",
-        "value": -0.00485526939898762,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PL",
-          "value": "Poland"
-        },
-        "countryiso3code": "POL",
-        "date": "2023",
-        "value": 0.160586011025046,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PR",
-          "value": "Puerto Rico"
-        },
-        "countryiso3code": "PRI",
-        "date": "2023",
-        "value": 0.563519426800866,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PS",
-          "value": "West Bank and Gaza"
-        },
-        "countryiso3code": "PSE",
-        "date": "2023",
-        "value": -5.50879437160218,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PT",
-          "value": "Portugal"
-        },
-        "countryiso3code": "PRT",
-        "date": "2023",
-        "value": 2.26125478073125,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PW",
-          "value": "Palau"
-        },
-        "countryiso3code": "PLW",
-        "date": "2023",
-        "value": 0.448430493273634,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "PY",
-          "value": "Paraguay"
-        },
-        "countryiso3code": "PRY",
-        "date": "2023",
-        "value": 4.71412407945468,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "QA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "QA",
-          "value": "Qatar"
-        },
-        "countryiso3code": "QAT",
-        "date": "2022",
-        "value": 4.20887124812552,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "RO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "RO",
-          "value": "Romania"
-        },
-        "countryiso3code": "ROU",
-        "date": "2023",
-        "value": 2.14847699574527,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "RS",
-          "value": "Serbia"
-        },
-        "countryiso3code": "SRB",
-        "date": "2023",
-        "value": 2.52779333573876,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "RU",
-          "value": "Russian Federation"
-        },
-        "countryiso3code": "RUS",
-        "date": "2023",
-        "value": 3.60000000000001,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "RW",
-          "value": "Rwanda"
-        },
-        "countryiso3code": "RWA",
-        "date": "2023",
-        "value": 8.24128696506683,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SA",
-          "value": "Saudi Arabia"
-        },
-        "countryiso3code": "SAU",
-        "date": "2023",
-        "value": -0.754914810584665,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SB",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SB",
-          "value": "Solomon Islands"
-        },
-        "countryiso3code": "SLB",
-        "date": "2023",
-        "value": 2.95008536339103,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SC",
-          "value": "Seychelles"
-        },
-        "countryiso3code": "SYC",
-        "date": "2023",
-        "value": 3.16171435490999,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SD",
-          "value": "Sudan"
-        },
-        "countryiso3code": "SDN",
-        "date": "2023",
-        "value": -12.0467791968043,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SE",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SE",
-          "value": "Sweden"
-        },
-        "countryiso3code": "SWE",
-        "date": "2023",
-        "value": -0.196170994604543,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SG",
-          "value": "Singapore"
-        },
-        "countryiso3code": "SGP",
-        "date": "2023",
-        "value": 1.07503175095101,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SI",
-          "value": "Slovenia"
-        },
-        "countryiso3code": "SVN",
-        "date": "2023",
-        "value": 1.58689938286867,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SK",
-          "value": "Slovak Republic"
-        },
-        "countryiso3code": "SVK",
-        "date": "2023",
-        "value": 1.59645497115139,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SL",
-          "value": "Sierra Leone"
-        },
-        "countryiso3code": "SLE",
-        "date": "2023",
-        "value": 3.43082135607435,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SM",
-          "value": "San Marino"
-        },
-        "countryiso3code": "SMR",
-        "date": "2021",
-        "value": 8.46307184428878,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SN",
-          "value": "Senegal"
-        },
-        "countryiso3code": "SEN",
-        "date": "2023",
-        "value": 3.69999636052071,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SO",
-          "value": "Somalia"
-        },
-        "countryiso3code": "SOM",
-        "date": "2023",
-        "value": 3.1029619961507,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SR",
-          "value": "Suriname"
-        },
-        "countryiso3code": "SUR",
-        "date": "2023",
-        "value": 2.07545911217966,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ST",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ST",
-          "value": "Sao Tome and Principe"
-        },
-        "countryiso3code": "STP",
-        "date": "2023",
-        "value": -0.4744429516048,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SV",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SV",
-          "value": "El Salvador"
-        },
-        "countryiso3code": "SLV",
-        "date": "2023",
-        "value": 3.51097706608982,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SY",
-          "value": "Syrian Arab Republic"
-        },
-        "countryiso3code": "SYR",
-        "date": "2021",
-        "value": 1.29973808951831,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "SZ",
-          "value": "Eswatini"
-        },
-        "countryiso3code": "SWZ",
-        "date": "2023",
-        "value": 4.84232085252165,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TC",
-          "value": "Turks and Caicos Islands"
-        },
-        "countryiso3code": "TCA",
-        "date": "2023",
-        "value": 1.19999674543642,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TD",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TD",
-          "value": "Chad"
-        },
-        "countryiso3code": "TCD",
-        "date": "2023",
-        "value": 4.12231962001739,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TG",
-          "value": "Togo"
-        },
-        "countryiso3code": "TGO",
-        "date": "2023",
-        "value": 6.40792215636242,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TH",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TH",
-          "value": "Thailand"
-        },
-        "countryiso3code": "THA",
-        "date": "2023",
-        "value": 1.88281746066315,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TJ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TJ",
-          "value": "Tajikistan"
-        },
-        "countryiso3code": "TJK",
-        "date": "2023",
-        "value": 8.29999921651935,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TL",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TL",
-          "value": "Timor-Leste"
-        },
-        "countryiso3code": "TLS",
-        "date": "2023",
-        "value": -14.358356988559,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TM",
-          "value": "Turkmenistan"
-        },
-        "countryiso3code": "TKM",
-        "date": "2023",
-        "value": 6.29999999999993,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TN",
-          "value": "Tunisia"
-        },
-        "countryiso3code": "TUN",
-        "date": "2023",
-        "value": 0.423648407741425,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TO",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TO",
-          "value": "Tonga"
-        },
-        "countryiso3code": "TON",
-        "date": "2022",
-        "value": -2.0115205630506,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TR",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TR",
-          "value": "Turkiye"
-        },
-        "countryiso3code": "TUR",
-        "date": "2023",
-        "value": 4.5168665079849,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TT",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TT",
-          "value": "Trinidad and Tobago"
-        },
-        "countryiso3code": "TTO",
-        "date": "2023",
-        "value": 2.10324544981324,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TV",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TV",
-          "value": "Tuvalu"
-        },
-        "countryiso3code": "TUV",
-        "date": "2023",
-        "value": 3.85280919517032,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "TZ",
-          "value": "Tanzania"
-        },
-        "countryiso3code": "TZA",
-        "date": "2023",
-        "value": 5.18805639154843,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "UA",
-          "value": "Ukraine"
-        },
-        "countryiso3code": "UKR",
-        "date": "2023",
-        "value": 5.3,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UG",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "UG",
-          "value": "Uganda"
-        },
-        "countryiso3code": "UGA",
-        "date": "2023",
-        "value": 5.23187410562045,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "US",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "US",
-          "value": "United States"
-        },
-        "countryiso3code": "USA",
-        "date": "2023",
-        "value": 2.54270029878489,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UY",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "UY",
-          "value": "Uruguay"
-        },
-        "countryiso3code": "URY",
-        "date": "2023",
-        "value": 0.3674751756175,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UZ",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "UZ",
-          "value": "Uzbekistan"
-        },
-        "countryiso3code": "UZB",
-        "date": "2023",
-        "value": 5.98897580604036,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "VA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VC",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "VC",
-          "value": "St. Vincent and the Grenadines"
-        },
-        "countryiso3code": "VCT",
-        "date": "2023",
-        "value": 6.01610914506236,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "VE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VI",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "VI",
-          "value": "Virgin Islands (U.S.)"
-        },
-        "countryiso3code": "VIR",
-        "date": "2021",
-        "value": 2.85420416559528,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "VN",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "VN",
-          "value": "Viet Nam"
-        },
-        "countryiso3code": "VNM",
-        "date": "2023",
-        "value": 5.04643073618749,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "VU",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "VU",
-          "value": "Vanuatu"
-        },
-        "countryiso3code": "VUT",
-        "date": "2023",
-        "value": 2.21294177094788,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "WF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "WS",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "WS",
-          "value": "Samoa"
-        },
-        "countryiso3code": "WSM",
-        "date": "2023",
-        "value": 7.99198264387498,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "XK",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "XK",
-          "value": "Kosovo"
-        },
-        "countryiso3code": "XKX",
-        "date": "2023",
-        "value": 3.3378946993315,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "YE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "YT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ZA",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ZA",
-          "value": "South Africa"
-        },
-        "countryiso3code": "ZAF",
-        "date": "2023",
-        "value": 0.601662303103254,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ZM",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ZM",
-          "value": "Zambia"
-        },
-        "countryiso3code": "ZMB",
-        "date": "2023",
-        "value": 5.83247413510912,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ZW",
-      "data": {
-        "indicator": {
-          "id": "NY.GDP.MKTP.KD.ZG",
-          "value": "GDP growth (annual %)"
-        },
-        "country": {
-          "id": "ZW",
-          "value": "Zimbabwe"
-        },
-        "countryiso3code": "ZWE",
-        "date": "2023",
-        "value": 4.95578170349711,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
+  {
+    "cca2": "AF",
+    "cca3": "AFE",
+    "data": {
+      "value": 3.72271692296214
     }
-  ]
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFW",
+    "data": {
+      "value": 4.47279468511532
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARB",
+    "data": {
+      "value": 7.00775934349392
+    }
+  },
+  {
+    "cca2": "CS",
+    "cca3": "CSS",
+    "data": {
+      "value": 14.8851030062619
+    }
+  },
+  {
+    "cca2": "CE",
+    "cca3": "CEB",
+    "data": {
+      "value": 4.04227221314891
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAR",
+    "data": {
+      "value": 6.02119005770159
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAS",
+    "data": {
+      "value": 2.9996184966993
+    }
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAP",
+    "data": {
+      "value": 3.54811147025219
+    }
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEA",
+    "data": {
+      "value": 3.54808390633295
+    }
+  },
+  {
+    "cca2": "EM",
+    "cca3": "EMU",
+    "data": {
+      "value": 3.6592192433758
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECS",
+    "data": {
+      "value": 3.39087777130349
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECA",
+    "data": {
+      "value": 3.07901753477167
+    }
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEC",
+    "data": {
+      "value": 1.95197902081506
+    }
+  },
+  {
+    "cca2": "EU",
+    "cca3": "EUU",
+    "data": {
+      "value": 3.56155233245134
+    }
+  },
+  {
+    "cca2": "FC",
+    "cca3": "FCS",
+    "data": {
+      "value": 1.62071663646515
+    }
+  },
+  {
+    "cca2": "HP",
+    "cca3": "HPC",
+    "data": {
+      "value": 4.87387497765388
+    }
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBD",
+    "data": {
+      "value": 3.77001425774095
+    }
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBT",
+    "data": {
+      "value": 3.82613307769597
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDB",
+    "data": {
+      "value": 4.79819828416285
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDX",
+    "data": {
+      "value": 4.30600397002799
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDA",
+    "data": {
+      "value": 4.54563835706816
+    }
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTE",
+    "data": {
+      "value": 3.28700376545592
+    }
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCN",
+    "data": {
+      "value": 4.08489707535256
+    }
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAC",
+    "data": {
+      "value": 3.94705326197962
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLA",
+    "data": {
+      "value": 4.11782588294029
+    }
+  },
+  {
+    "cca2": "LD",
+    "cca3": "LDC",
+    "data": {
+      "value": 4.75099901471464
+    }
+  },
+  {
+    "cca2": "LM",
+    "cca3": "LMY",
+    "data": {
+      "value": 3.99985001578578
+    }
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEA",
+    "data": {
+      "value": 6.4465289217368
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNA",
+    "data": {
+      "value": 4.32972249891917
+    }
+  },
+  {
+    "cca2": "TM",
+    "cca3": "TMN",
+    "data": {
+      "value": 4.33155082949985
+    }
+  },
+  {
+    "cca2": "MI",
+    "cca3": "MIC",
+    "data": {
+      "value": 4.00728998415607
+    }
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAC",
+    "data": {
+      "value": 2.64058278650343
+    }
+  },
+  {
+    "cca2": "OE",
+    "cca3": "OED",
+    "data": {
+      "value": 3.09501591343316
+    }
+  },
+  {
+    "cca2": "OS",
+    "cca3": "OSS",
+    "data": {
+      "value": 4.35703581894087
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSS",
+    "data": {
+      "value": 8.46598449677872
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PST",
+    "data": {
+      "value": 2.79274034092423
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRE",
+    "data": {
+      "value": 4.67657631651602
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SST",
+    "data": {
+      "value": 7.43586182979632
+    }
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAS",
+    "data": {
+      "value": 7.10115392630797
+    }
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSA",
+    "data": {
+      "value": 7.10115392630797
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSF",
+    "data": {
+      "value": 4.06140756050381
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSA",
+    "data": {
+      "value": 3.98372703715641
+    }
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSS",
+    "data": {
+      "value": 4.0614075605038
+    }
+  },
+  {
+    "cca2": "WL",
+    "cca3": "WLD",
+    "data": {
+      "value": 3.40305483746891
+    }
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFG",
+    "data": {
+      "value": -6.24017199240269
+    }
+  },
+  {
+    "cca2": "AL",
+    "cca3": "ALB",
+    "data": {
+      "value": 4.8268006234359
+    }
+  },
+  {
+    "cca2": "DZ",
+    "cca3": "DZA",
+    "data": {
+      "value": 3.60000000094915
+    }
+  },
+  {
+    "cca2": "AS",
+    "cca3": "ASM",
+    "data": {
+      "value": 1.73501577287065
+    }
+  },
+  {
+    "cca2": "AN",
+    "cca3": "AND",
+    "data": {
+      "value": 9.56461225648184
+    }
+  },
+  {
+    "cca2": "AG",
+    "cca3": "AGO",
+    "data": {
+      "value": 4.21600258475137
+    }
+  },
+  {
+    "cca2": "AT",
+    "cca3": "ATG",
+    "data": {
+      "value": 9.10780623385958
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARG",
+    "data": {
+      "value": 6.02074537534855
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARM",
+    "data": {
+      "value": 12.5999999997766
+    }
+  },
+  {
+    "cca2": "AB",
+    "cca3": "ABW",
+    "data": {
+      "value": 10.6364309604414
+    }
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUS",
+    "data": {
+      "value": 4.25304559238732
+    }
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUT",
+    "data": {
+      "value": 5.33096379400371
+    }
+  },
+  {
+    "cca2": "AZ",
+    "cca3": "AZE",
+    "data": {
+      "value": 4.71468033247649
+    }
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHS",
+    "data": {
+      "value": 10.8779009410268
+    }
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHR",
+    "data": {
+      "value": 6.18016125475185
+    }
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGD",
+    "data": {
+      "value": 7.09982877575158
+    }
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRB",
+    "data": {
+      "value": 17.2264626793379
+    }
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLR",
+    "data": {
+      "value": -4.65839591328999
+    }
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEL",
+    "data": {
+      "value": 3.9562379757933
+    }
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLZ",
+    "data": {
+      "value": 9.25051329530994
+    }
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEN",
+    "data": {
+      "value": 6.25294705373625
+    }
+  },
+  {
+    "cca2": "BM",
+    "cca3": "BMU",
+    "data": {
+      "value": 6.47622571186707
+    }
+  },
+  {
+    "cca2": "BT",
+    "cca3": "BTN",
+    "data": {
+      "value": 5.21386783786224
+    }
+  },
+  {
+    "cca2": "BO",
+    "cca3": "BOL",
+    "data": {
+      "value": 3.74741781241461
+    }
+  },
+  {
+    "cca2": "BI",
+    "cca3": "BIH",
+    "data": {
+      "value": 4.22681333390325
+    }
+  },
+  {
+    "cca2": "BW",
+    "cca3": "BWA",
+    "data": {
+      "value": 5.48601706446772
+    }
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRA",
+    "data": {
+      "value": 3.01669435408112
+    }
+  },
+  {
+    "cca2": "VG",
+    "cca3": "VGB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRN",
+    "data": {
+      "value": -1.62833154515108
+    }
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGR",
+    "data": {
+      "value": 4.0838640915123
+    }
+  },
+  {
+    "cca2": "BF",
+    "cca3": "BFA",
+    "data": {
+      "value": 1.62673258211919
+    }
+  },
+  {
+    "cca2": "BD",
+    "cca3": "BDI",
+    "data": {
+      "value": 2.31770122223331
+    }
+  },
+  {
+    "cca2": "CP",
+    "cca3": "CPV",
+    "data": {
+      "value": 15.843675684642
+    }
+  },
+  {
+    "cca2": "KH",
+    "cca3": "KHM",
+    "data": {
+      "value": 5.12990110773977
+    }
+  },
+  {
+    "cca2": "CM",
+    "cca3": "CMR",
+    "data": {
+      "value": 3.7367840056412
+    }
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAN",
+    "data": {
+      "value": 4.18903628100851
+    }
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYM",
+    "data": {
+      "value": 5.77566708028824
+    }
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAF",
+    "data": {
+      "value": 0.453901876447787
+    }
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCD",
+    "data": {
+      "value": 4.12969897676332
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHI",
+    "data": {
+      "value": 5.34196140375869
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHL",
+    "data": {
+      "value": 2.15399356192458
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHN",
+    "data": {
+      "value": 3.1341888719577
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COL",
+    "data": {
+      "value": 7.32827729427979
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COM",
+    "data": {
+      "value": 2.60301031927843
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COD",
+    "data": {
+      "value": 9.31116944064918
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COG",
+    "data": {
+      "value": 1.47535613247133
+    }
+  },
+  {
+    "cca2": "CR",
+    "cca3": "CRI",
+    "data": {
+      "value": 4.55149177958398
+    }
+  },
+  {
+    "cca2": "CI",
+    "cca3": "CIV",
+    "data": {
+      "value": 6.39988362720531
+    }
+  },
+  {
+    "cca2": "HR",
+    "cca3": "HRV",
+    "data": {
+      "value": 7.29445343642668
+    }
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUB",
+    "data": {
+      "value": 1.77465227724316
+    }
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUW",
+    "data": {
+      "value": 6.90599999999999
+    }
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYP",
+    "data": {
+      "value": 8.27372597293814
+    }
+  },
+  {
+    "cca2": "CZ",
+    "cca3": "CZE",
+    "data": {
+      "value": 2.8471706583814
+    }
+  },
+  {
+    "cca2": "DN",
+    "cca3": "DNK",
+    "data": {
+      "value": 0.443832614908331
+    }
+  },
+  {
+    "cca2": "DJ",
+    "cca3": "DJI",
+    "data": {
+      "value": 5.16653702854374
+    }
+  },
+  {
+    "cca2": "DM",
+    "cca3": "DMA",
+    "data": {
+      "value": 10.3968076616121
+    }
+  },
+  {
+    "cca2": "DO",
+    "cca3": "DOM",
+    "data": {
+      "value": 5.23795652902595
+    }
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECU",
+    "data": {
+      "value": 5.86842354862311
+    }
+  },
+  {
+    "cca2": "EG",
+    "cca3": "EGY",
+    "data": {
+      "value": 6.58784560886967
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLV",
+    "data": {
+      "value": 2.95461516549889
+    }
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNQ",
+    "data": {
+      "value": 3.22350831658598
+    }
+  },
+  {
+    "cca2": "ER",
+    "cca3": "ERI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ES",
+    "cca3": "EST",
+    "data": {
+      "value": -1.22616966587796
+    }
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWZ",
+    "data": {
+      "value": 0.386070835562705
+    }
+  },
+  {
+    "cca2": "ET",
+    "cca3": "ETH",
+    "data": {
+      "value": 5.32175988403378
+    }
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRO",
+    "data": {
+      "value": 3.86099981669155
+    }
+  },
+  {
+    "cca2": "FJ",
+    "cca3": "FJI",
+    "data": {
+      "value": 17.7451269773594
+    }
+  },
+  {
+    "cca2": "FI",
+    "cca3": "FIN",
+    "data": {
+      "value": 0.763041912763526
+    }
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRA",
+    "data": {
+      "value": 2.71676264185913
+    }
+  },
+  {
+    "cca2": "PY",
+    "cca3": "PYF",
+    "data": {
+      "value": 2.9373470716322
+    }
+  },
+  {
+    "cca2": "GA",
+    "cca3": "GAB",
+    "data": {
+      "value": 3.03761449530657
+    }
+  },
+  {
+    "cca2": "GM",
+    "cca3": "GMB",
+    "data": {
+      "value": 5.49299823010114
+    }
+  },
+  {
+    "cca2": "GE",
+    "cca3": "GEO",
+    "data": {
+      "value": 10.9585321385624
+    }
+  },
+  {
+    "cca2": "DE",
+    "cca3": "DEU",
+    "data": {
+      "value": 1.8092581243061
+    }
+  },
+  {
+    "cca2": "GH",
+    "cca3": "GHA",
+    "data": {
+      "value": 3.80484980952164
+    }
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRC",
+    "data": {
+      "value": 5.52198580589408
+    }
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRL",
+    "data": {
+      "value": 2.00455580865604
+    }
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRD",
+    "data": {
+      "value": 7.31023806981959
+    }
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUM",
+    "data": {
+      "value": 5.09986426216793
+    }
+  },
+  {
+    "cca2": "GT",
+    "cca3": "GTM",
+    "data": {
+      "value": 4.18451817243695
+    }
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIN",
+    "data": {
+      "value": 3.97240784200721
+    }
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNB",
+    "data": {
+      "value": 5.52987253058352
+    }
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUY",
+    "data": {
+      "value": 63.3346343654855
+    }
+  },
+  {
+    "cca2": "HT",
+    "cca3": "HTI",
+    "data": {
+      "value": -1.68198396897978
+    }
+  },
+  {
+    "cca2": "HN",
+    "cca3": "HND",
+    "data": {
+      "value": 4.14356194013767
+    }
+  },
+  {
+    "cca2": "HK",
+    "cca3": "HKG",
+    "data": {
+      "value": -3.68378414495199
+    }
+  },
+  {
+    "cca2": "HU",
+    "cca3": "HUN",
+    "data": {
+      "value": 4.15238057779229
+    }
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISL",
+    "data": {
+      "value": 8.82069395623492
+    }
+  },
+  {
+    "cca2": "IN",
+    "cca3": "IND",
+    "data": {
+      "value": 7.60936497768895
+    }
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDN",
+    "data": {
+      "value": 5.30719722664799
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRN",
+    "data": {
+      "value": 4.35281087521344
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRQ",
+    "data": {
+      "value": 7.95904804992662
+    }
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRL",
+    "data": {
+      "value": 7.51113888415304
+    }
+  },
+  {
+    "cca2": "IM",
+    "cca3": "IMN",
+    "data": {
+      "value": -4.16539345213232
+    }
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISR",
+    "data": {
+      "value": 6.26326343841286
+    }
+  },
+  {
+    "cca2": "IT",
+    "cca3": "ITA",
+    "data": {
+      "value": 4.82117669913565
+    }
+  },
+  {
+    "cca2": "JA",
+    "cca3": "JAM",
+    "data": {
+      "value": 6.43930323656186
+    }
+  },
+  {
+    "cca2": "JP",
+    "cca3": "JPN",
+    "data": {
+      "value": 0.941998775483285
+    }
+  },
+  {
+    "cca2": "JO",
+    "cca3": "JOR",
+    "data": {
+      "value": 2.64743514912058
+    }
+  },
+  {
+    "cca2": "KA",
+    "cca3": "KAZ",
+    "data": {
+      "value": 3.19999999970734
+    }
+  },
+  {
+    "cca2": "KE",
+    "cca3": "KEN",
+    "data": {
+      "value": 4.85998104287999
+    }
+  },
+  {
+    "cca2": "KI",
+    "cca3": "KIR",
+    "data": {
+      "value": 4.56632593100372
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KO",
+    "cca3": "KOR",
+    "data": {
+      "value": 2.72756456708991
+    }
+  },
+  {
+    "cca2": "XK",
+    "cca3": "XKX",
+    "data": {
+      "value": 4.27849895827543
+    }
+  },
+  {
+    "cca2": "KW",
+    "cca3": "KWT",
+    "data": {
+      "value": 6.75866711966617
+    }
+  },
+  {
+    "cca2": "KG",
+    "cca3": "KGZ",
+    "data": {
+      "value": 8.96750520041391
+    }
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAO",
+    "data": {
+      "value": 2.70742652643155
+    }
+  },
+  {
+    "cca2": "LV",
+    "cca3": "LVA",
+    "data": {
+      "value": 1.90853419029801
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBN",
+    "data": {
+      "value": -0.621678970663112
+    }
+  },
+  {
+    "cca2": "LS",
+    "cca3": "LSO",
+    "data": {
+      "value": 2.38778020186284
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBR",
+    "data": {
+      "value": 4.80810517290655
+    }
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBY",
+    "data": {
+      "value": -8.29981811198795
+    }
+  },
+  {
+    "cca2": "LI",
+    "cca3": "LIE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTU",
+    "data": {
+      "value": 2.53752574011534
+    }
+  },
+  {
+    "cca2": "LU",
+    "cca3": "LUX",
+    "data": {
+      "value": -1.0974168968152
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAC",
+    "data": {
+      "value": -18.956941494497
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDG",
+    "data": {
+      "value": 4.15609778386296
+    }
+  },
+  {
+    "cca2": "MW",
+    "cca3": "MWI",
+    "data": {
+      "value": 0.921115069005936
+    }
+  },
+  {
+    "cca2": "MY",
+    "cca3": "MYS",
+    "data": {
+      "value": 9.03173723044451
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDV",
+    "data": {
+      "value": 13.8260895184139
+    }
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLI",
+    "data": {
+      "value": 3.70319027595568
+    }
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLT",
+    "data": {
+      "value": 2.48309993837792
+    }
+  },
+  {
+    "cca2": "MH",
+    "cca3": "MHL",
+    "data": {
+      "value": -0.700563926576777
+    }
+  },
+  {
+    "cca2": "MR",
+    "cca3": "MRT",
+    "data": {
+      "value": 6.79600500489967
+    }
+  },
+  {
+    "cca2": "MU",
+    "cca3": "MUS",
+    "data": {
+      "value": 8.69306675264066
+    }
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEX",
+    "data": {
+      "value": 3.70975709163623
+    }
+  },
+  {
+    "cca2": "FS",
+    "cca3": "FSM",
+    "data": {
+      "value": -2.90588999868474
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDA",
+    "data": {
+      "value": -4.6000000255323
+    }
+  },
+  {
+    "cca2": "MC",
+    "cca3": "MCO",
+    "data": {
+      "value": 11.2662955198601
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNG",
+    "data": {
+      "value": 5.0327096366527
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNE",
+    "data": {
+      "value": 7.73954689516201
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAR",
+    "data": {
+      "value": 1.81269242194809
+    }
+  },
+  {
+    "cca2": "MO",
+    "cca3": "MOZ",
+    "data": {
+      "value": 4.36445074432608
+    }
+  },
+  {
+    "cca2": "MM",
+    "cca3": "MMR",
+    "data": {
+      "value": 4.0374934360085
+    }
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAM",
+    "data": {
+      "value": 5.3987247803654
+    }
+  },
+  {
+    "cca2": "NR",
+    "cca3": "NRU",
+    "data": {
+      "value": 2.87769784172609
+    }
+  },
+  {
+    "cca2": "NP",
+    "cca3": "NPL",
+    "data": {
+      "value": 5.6313145568451
+    }
+  },
+  {
+    "cca2": "NL",
+    "cca3": "NLD",
+    "data": {
+      "value": 5.00723455159611
+    }
+  },
+  {
+    "cca2": "NC",
+    "cca3": "NCL",
+    "data": {
+      "value": 3.50000000000006
+    }
+  },
+  {
+    "cca2": "NZ",
+    "cca3": "NZL",
+    "data": {
+      "value": 3.49638686458842
+    }
+  },
+  {
+    "cca2": "NI",
+    "cca3": "NIC",
+    "data": {
+      "value": 3.55029945613975
+    }
+  },
+  {
+    "cca2": "NE",
+    "cca3": "NER",
+    "data": {
+      "value": 11.9000000000277
+    }
+  },
+  {
+    "cca2": "NG",
+    "cca3": "NGA",
+    "data": {
+      "value": 4.31882949523192
+    }
+  },
+  {
+    "cca2": "MK",
+    "cca3": "MKD",
+    "data": {
+      "value": 2.75888415332967
+    }
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNP",
+    "data": {
+      "value": 16.6427546628408
+    }
+  },
+  {
+    "cca2": "NO",
+    "cca3": "NOR",
+    "data": {
+      "value": 3.24622860260932
+    }
+  },
+  {
+    "cca2": "OM",
+    "cca3": "OMN",
+    "data": {
+      "value": 7.98570728354278
+    }
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAK",
+    "data": {
+      "value": 4.7781068690358
+    }
+  },
+  {
+    "cca2": "PL",
+    "cca3": "PLW",
+    "data": {
+      "value": 1.51267904038146
+    }
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAN",
+    "data": {
+      "value": 11.0385475261766
+    }
+  },
+  {
+    "cca2": "PN",
+    "cca3": "PNG",
+    "data": {
+      "value": 5.70758404238197
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRY",
+    "data": {
+      "value": 0.176038366149214
+    }
+  },
+  {
+    "cca2": "PE",
+    "cca3": "PER",
+    "data": {
+      "value": 2.8090335533015
+    }
+  },
+  {
+    "cca2": "PH",
+    "cca3": "PHL",
+    "data": {
+      "value": 7.58098212785563
+    }
+  },
+  {
+    "cca2": "PO",
+    "cca3": "POL",
+    "data": {
+      "value": 5.25545697386036
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRT",
+    "data": {
+      "value": 6.98584137580278
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRI",
+    "data": {
+      "value": 2.95709565499587
+    }
+  },
+  {
+    "cca2": "QA",
+    "cca3": "QAT",
+    "data": {
+      "value": 4.18497018544697
+    }
+  },
+  {
+    "cca2": "RO",
+    "cca3": "ROU",
+    "data": {
+      "value": 4.18771305104109
+    }
+  },
+  {
+    "cca2": "RU",
+    "cca3": "RUS",
+    "data": {
+      "value": -1.43588213859842
+    }
+  },
+  {
+    "cca2": "RW",
+    "cca3": "RWA",
+    "data": {
+      "value": 8.16120720872912
+    }
+  },
+  {
+    "cca2": "WS",
+    "cca3": "WSM",
+    "data": {
+      "value": 2.26705055249026
+    }
+  },
+  {
+    "cca2": "SM",
+    "cca3": "SMR",
+    "data": {
+      "value": 7.89844145767604
+    }
+  },
+  {
+    "cca2": "ST",
+    "cca3": "STP",
+    "data": {
+      "value": 0.168698492216564
+    }
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAU",
+    "data": {
+      "value": 12.0005874752929
+    }
+  },
+  {
+    "cca2": "SE",
+    "cca3": "SEN",
+    "data": {
+      "value": 3.85043193735768
+    }
+  },
+  {
+    "cca2": "SR",
+    "cca3": "SRB",
+    "data": {
+      "value": 2.70347705543654
+    }
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYC",
+    "data": {
+      "value": 12.7104688902836
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLE",
+    "data": {
+      "value": 5.3135546141915
+    }
+  },
+  {
+    "cca2": "SG",
+    "cca3": "SGP",
+    "data": {
+      "value": 4.10800021897151
+    }
+  },
+  {
+    "cca2": "SX",
+    "cca3": "SXM",
+    "data": {
+      "value": 13.9
+    }
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVK",
+    "data": {
+      "value": 0.544591632137454
+    }
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVN",
+    "data": {
+      "value": 2.66850555542486
+    }
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLB",
+    "data": {
+      "value": -2.58448361755723
+    }
+  },
+  {
+    "cca2": "SO",
+    "cca3": "SOM",
+    "data": {
+      "value": 2.71821202053759
+    }
+  },
+  {
+    "cca2": "ZA",
+    "cca3": "ZAF",
+    "data": {
+      "value": 2.05813661692193
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ES",
+    "cca3": "ESP",
+    "data": {
+      "value": 6.37031712129601
+    }
+  },
+  {
+    "cca2": "LK",
+    "cca3": "LKA",
+    "data": {
+      "value": -7.34919301306745
+    }
+  },
+  {
+    "cca2": "KN",
+    "cca3": "KNA",
+    "data": {
+      "value": 10.4804941546807
+    }
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCA",
+    "data": {
+      "value": 20.3884431828414
+    }
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAF",
+    "data": "data not available"
+  },
+  {
+    "cca2": "VC",
+    "cca3": "VCT",
+    "data": {
+      "value": 3.1108330034352
+    }
+  },
+  {
+    "cca2": "SD",
+    "cca3": "SDN",
+    "data": {
+      "value": -0.957816591119183
+    }
+  },
+  {
+    "cca2": "SU",
+    "cca3": "SUR",
+    "data": {
+      "value": 2.40622235601218
+    }
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWE",
+    "data": {
+      "value": 1.25543620445816
+    }
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHE",
+    "data": {
+      "value": 3.04406102969423
+    }
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYR",
+    "data": {
+      "value": 0.732781301861365
+    }
+  },
+  {
+    "cca2": "TJ",
+    "cca3": "TJK",
+    "data": {
+      "value": 8.00000033846364
+    }
+  },
+  {
+    "cca2": "TZ",
+    "cca3": "TZA",
+    "data": {
+      "value": 4.56600576430955
+    }
+  },
+  {
+    "cca2": "TH",
+    "cca3": "THA",
+    "data": {
+      "value": 2.58037874709827
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLS",
+    "data": {
+      "value": -20.5224785561874
+    }
+  },
+  {
+    "cca2": "TG",
+    "cca3": "TGO",
+    "data": {
+      "value": 6.29443692019429
+    }
+  },
+  {
+    "cca2": "TO",
+    "cca3": "TON",
+    "data": {
+      "value": -2.12854452405193
+    }
+  },
+  {
+    "cca2": "TT",
+    "cca3": "TTO",
+    "data": {
+      "value": 0.86126082651883
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUN",
+    "data": {
+      "value": 2.75228761004381
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUR",
+    "data": {
+      "value": 5.44122511322401
+    }
+  },
+  {
+    "cca2": "TK",
+    "cca3": "TKM",
+    "data": {
+      "value": 6.19999993621698
+    }
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCA",
+    "data": {
+      "value": 14.0871234168153
+    }
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUV",
+    "data": {
+      "value": 0.677309361438304
+    }
+  },
+  {
+    "cca2": "UG",
+    "cca3": "UGA",
+    "data": {
+      "value": 4.58802192181773
+    }
+  },
+  {
+    "cca2": "UK",
+    "cca3": "UKR",
+    "data": {
+      "value": -28.7585842155085
+    }
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARE",
+    "data": {
+      "value": 7.51448425801082
+    }
+  },
+  {
+    "cca2": "GB",
+    "cca3": "GBR",
+    "data": {
+      "value": 5.14970388522993
+    }
+  },
+  {
+    "cca2": "US",
+    "cca3": "USA",
+    "data": {
+      "value": 2.51237531986017
+    }
+  },
+  {
+    "cca2": "UR",
+    "cca3": "URY",
+    "data": {
+      "value": 4.48622703072073
+    }
+  },
+  {
+    "cca2": "UZ",
+    "cca3": "UZB",
+    "data": {
+      "value": 6.00134232203442
+    }
+  },
+  {
+    "cca2": "VU",
+    "cca3": "VUT",
+    "data": {
+      "value": 5.18622862422562
+    }
+  },
+  {
+    "cca2": "VE",
+    "cca3": "VEN",
+    "data": {
+      "value": 8.00091310654791
+    }
+  },
+  {
+    "cca2": "VN",
+    "cca3": "VNM",
+    "data": {
+      "value": 8.53750046755788
+    }
+  },
+  {
+    "cca2": "VI",
+    "cca3": "VIR",
+    "data": {
+      "value": -1.31123206333498
+    }
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSE",
+    "data": {
+      "value": 4.08276027347105
+    }
+  },
+  {
+    "cca2": "YE",
+    "cca3": "YEM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ZM",
+    "cca3": "ZMB",
+    "data": {
+      "value": 5.21122360356247
+    }
+  },
+  {
+    "cca2": "ZW",
+    "cca3": "ZWE",
+    "data": {
+      "value": 6.13926327570213
+    }
+  }
+]

@@ -1,2193 +1,1397 @@
 [
-    {
-      "cca2": "AD",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AL",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "AL",
-          "value": "Albania"
-        },
-        "countryiso3code": "ALB",
-        "date": "2021",
-        "value": 82.1135986168626,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AM",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "AM",
-          "value": "Armenia"
-        },
-        "countryiso3code": "ARM",
-        "date": "2022",
-        "value": 46.5518986672351,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "AT",
-          "value": "Austria"
-        },
-        "countryiso3code": "AUT",
-        "date": "2022",
-        "value": 75.0511764249729,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AU",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "AU",
-          "value": "Australia"
-        },
-        "countryiso3code": "AUS",
-        "date": "2022",
-        "value": 57.9747482128782,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "AW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "AZ",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "AZ",
-          "value": "Azerbaijan"
-        },
-        "countryiso3code": "AZE",
-        "date": "2021",
-        "value": 16.8684980773192,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BA",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BA",
-          "value": "Bosnia and Herzegovina"
-        },
-        "countryiso3code": "BIH",
-        "date": "2022",
-        "value": 39.9273079688229,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BB",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BD",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BE",
-          "value": "Belgium"
-        },
-        "countryiso3code": "BEL",
-        "date": "2022",
-        "value": 94.0394321446935,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BF",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BF",
-          "value": "Burkina Faso"
-        },
-        "countryiso3code": "BFA",
-        "date": "2022",
-        "value": 62.5256094250825,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BG",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BG",
-          "value": "Bulgaria"
-        },
-        "countryiso3code": "BGR",
-        "date": "2022",
-        "value": 30.2989573096495,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BH",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BH",
-          "value": "Bahrain"
-        },
-        "countryiso3code": "BHR",
-        "date": "2020",
-        "value": 115.517115830258,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BR",
-          "value": "Brazil"
-        },
-        "countryiso3code": "BRA",
-        "date": "2022",
-        "value": 79.1023218878495,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BS",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BS",
-          "value": "Bahamas, The"
-        },
-        "countryiso3code": "BHS",
-        "date": "2022",
-        "value": 82.1595539606932,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BT",
-          "value": "Bhutan"
-        },
-        "countryiso3code": "BTN",
-        "date": "2020",
-        "value": 111.007897266318,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "BW",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BW",
-          "value": "Botswana"
-        },
-        "countryiso3code": "BWA",
-        "date": "2020",
-        "value": 19.6160814562101,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BY",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "BY",
-          "value": "Belarus"
-        },
-        "countryiso3code": "BLR",
-        "date": "2020",
-        "value": 38.5890332685462,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "BZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CA",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CA",
-          "value": "Canada"
-        },
-        "countryiso3code": "CAN",
-        "date": "2022",
-        "value": 56.0929929346043,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CD",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CD",
-          "value": "Congo, Dem. Rep."
-        },
-        "countryiso3code": "COD",
-        "date": "2022",
-        "value": 15.9896968122357,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CH",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CH",
-          "value": "Switzerland"
-        },
-        "countryiso3code": "CHE",
-        "date": "2022",
-        "value": 18.1544953419673,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CO",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CO",
-          "value": "Colombia"
-        },
-        "countryiso3code": "COL",
-        "date": "2022",
-        "value": 69.8732040763918,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CR",
-          "value": "Costa Rica"
-        },
-        "countryiso3code": "CRI",
-        "date": "2022",
-        "value": 71.1115764129093,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CX",
-      "data": "data not available"
-    },
-    {
-      "cca2": "CY",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CY",
-          "value": "Cyprus"
-        },
-        "countryiso3code": "CYP",
-        "date": "2022",
-        "value": 125.922291824171,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "CZ",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "CZ",
-          "value": "Czechia"
-        },
-        "countryiso3code": "CZE",
-        "date": "2022",
-        "value": 46.8228201396193,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "DE",
-          "value": "Germany"
-        },
-        "countryiso3code": "DEU",
-        "date": "2022",
-        "value": 44.5288265352184,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "DK",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "DK",
-          "value": "Denmark"
-        },
-        "countryiso3code": "DNK",
-        "date": "2022",
-        "value": 26.369311889906,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "DN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "DO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "DZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "EC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "EE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "EE",
-          "value": "Estonia"
-        },
-        "countryiso3code": "EST",
-        "date": "2022",
-        "value": 25.2010912512376,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "EG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "EH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ER",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ES",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "ES",
-          "value": "Spain"
-        },
-        "countryiso3code": "ESP",
-        "date": "2022",
-        "value": 104.789911636384,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ET",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FI",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "FI",
-          "value": "Finland"
-        },
-        "countryiso3code": "FIN",
-        "date": "2022",
-        "value": 60.7870385935813,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FM",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "FM",
-          "value": "Micronesia, Fed. Sts."
-        },
-        "countryiso3code": "FSM",
-        "date": "2020",
-        "value": 27.8630142473118,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "FO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "FR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "FR",
-          "value": "France"
-        },
-        "countryiso3code": "FRA",
-        "date": "2022",
-        "value": 98.6605241499728,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GB",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "GB",
-          "value": "United Kingdom"
-        },
-        "countryiso3code": "GBR",
-        "date": "2022",
-        "value": 142.283042050199,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GD",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "GE",
-          "value": "Georgia"
-        },
-        "countryiso3code": "GEO",
-        "date": "2022",
-        "value": 42.9693933571232,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "GR",
-          "value": "Greece"
-        },
-        "countryiso3code": "GRC",
-        "date": "2022",
-        "value": 203.285809241076,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "GS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "GZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "HR",
-          "value": "Croatia"
-        },
-        "countryiso3code": "HRV",
-        "date": "2022",
-        "value": 82.0797963923764,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "HT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "HU",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "HU",
-          "value": "Hungary"
-        },
-        "countryiso3code": "HUN",
-        "date": "2022",
-        "value": 75.4685645471767,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ID",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "ID",
-          "value": "Indonesia"
-        },
-        "countryiso3code": "IDN",
-        "date": "2022",
-        "value": 45.5407232589531,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "IE",
-          "value": "Ireland"
-        },
-        "countryiso3code": "IRL",
-        "date": "2022",
-        "value": 46.7142417204892,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "IS",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "IS",
-          "value": "Iceland"
-        },
-        "countryiso3code": "ISL",
-        "date": "2022",
-        "value": 87.5178164059194,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "IT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "IT",
-          "value": "Italy"
-        },
-        "countryiso3code": "ITA",
-        "date": "2022",
-        "value": 139.002411702437,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "JM",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "JM",
-          "value": "Jamaica"
-        },
-        "countryiso3code": "JAM",
-        "date": "2020",
-        "value": 106.282373001667,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JO",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "JO",
-          "value": "Jordan"
-        },
-        "countryiso3code": "JOR",
-        "date": "2022",
-        "value": 101.139705961004,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "JP",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "JP",
-          "value": "Japan"
-        },
-        "countryiso3code": "JPN",
-        "date": "2022",
-        "value": 216.213375459903,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KG",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "KG",
-          "value": "Kyrgyz Republic"
-        },
-        "countryiso3code": "KGZ",
-        "date": "2022",
-        "value": 50.0562432561485,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "KR",
-          "value": "Korea, Rep."
-        },
-        "countryiso3code": "KOR",
-        "date": "2022",
-        "value": 51.1791323198157,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "KW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "KZ",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "KZ",
-          "value": "Kazakhstan"
-        },
-        "countryiso3code": "KAZ",
-        "date": "2021",
-        "value": 22.4120405815457,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LB",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "LS",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "LS",
-          "value": "Lesotho"
-        },
-        "countryiso3code": "LSO",
-        "date": "2020",
-        "value": 2.99324359587455,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "LT",
-          "value": "Lithuania"
-        },
-        "countryiso3code": "LTU",
-        "date": "2022",
-        "value": 36.0484851112684,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LU",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "LU",
-          "value": "Luxembourg"
-        },
-        "countryiso3code": "LUX",
-        "date": "2022",
-        "value": 26.2348785615705,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LV",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "LV",
-          "value": "Latvia"
-        },
-        "countryiso3code": "LVA",
-        "date": "2022",
-        "value": 73.8741281352749,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "LY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MD",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MD",
-          "value": "Moldova"
-        },
-        "countryiso3code": "MDA",
-        "date": "2022",
-        "value": 34.5213178653949,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ME",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ML",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MN",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MN",
-          "value": "Mongolia"
-        },
-        "countryiso3code": "MNG",
-        "date": "2021",
-        "value": 66.9231097170798,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MP",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MQ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MT",
-          "value": "Malta"
-        },
-        "countryiso3code": "MLT",
-        "date": "2022",
-        "value": 59.1069565712335,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "MW",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MW",
-          "value": "Malawi"
-        },
-        "countryiso3code": "MWI",
-        "date": "2022",
-        "value": 52.6332414580372,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MX",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MX",
-          "value": "Mexico"
-        },
-        "countryiso3code": "MEX",
-        "date": "2022",
-        "value": 43.2083049969807,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MY",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MY",
-          "value": "Malaysia"
-        },
-        "countryiso3code": "MYS",
-        "date": "2022",
-        "value": 60.2666404179702,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "MZ",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "MZ",
-          "value": "Mozambique"
-        },
-        "countryiso3code": "MOZ",
-        "date": "2022",
-        "value": 78.619725628407,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NL",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "NL",
-          "value": "Netherlands"
-        },
-        "countryiso3code": "NLD",
-        "date": "2022",
-        "value": 53.6715389614928,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NO",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "NO",
-          "value": "Norway"
-        },
-        "countryiso3code": "NOR",
-        "date": "2022",
-        "value": 28.7124990583705,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NP",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "NP",
-          "value": "Nepal"
-        },
-        "countryiso3code": "NPL",
-        "date": "2021",
-        "value": 39.9222686422289,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "NR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NU",
-      "data": "data not available"
-    },
-    {
-      "cca2": "NZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "OM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "PE",
-          "value": "Peru"
-        },
-        "countryiso3code": "PER",
-        "date": "2021",
-        "value": 34.854576014351,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PG",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "PG",
-          "value": "Papua New Guinea"
-        },
-        "countryiso3code": "PNG",
-        "date": "2022",
-        "value": 48.2553884027402,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PL",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "PL",
-          "value": "Poland"
-        },
-        "countryiso3code": "POL",
-        "date": "2022",
-        "value": 50.1481072903,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PT",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "PT",
-          "value": "Portugal"
-        },
-        "countryiso3code": "PRT",
-        "date": "2022",
-        "value": 119.395321819713,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "PW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "PY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "QA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "RE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "RO",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "RO",
-          "value": "Romania"
-        },
-        "countryiso3code": "ROU",
-        "date": "2022",
-        "value": 50.4529689825221,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "RU",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "RU",
-          "value": "Russian Federation"
-        },
-        "countryiso3code": "RUS",
-        "date": "2022",
-        "value": 17.5820985394065,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "RW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SB",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SB",
-          "value": "Solomon Islands"
-        },
-        "countryiso3code": "SLB",
-        "date": "2022",
-        "value": 15.3931660730361,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SD",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SE",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SE",
-          "value": "Sweden"
-        },
-        "countryiso3code": "SWE",
-        "date": "2022",
-        "value": 36.25306055328,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SG",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SG",
-          "value": "Singapore"
-        },
-        "countryiso3code": "SGP",
-        "date": "2022",
-        "value": 157.363109274773,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SI",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SI",
-          "value": "Slovenia"
-        },
-        "countryiso3code": "SVN",
-        "date": "2022",
-        "value": 71.8619401626324,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SK",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SK",
-          "value": "Slovak Republic"
-        },
-        "countryiso3code": "SVK",
-        "date": "2022",
-        "value": 64.5071321483903,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SM",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SM",
-          "value": "San Marino"
-        },
-        "countryiso3code": "SMR",
-        "date": "2021",
-        "value": 94.9745357645128,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SO",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SR",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ST",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SV",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SV",
-          "value": "El Salvador"
-        },
-        "countryiso3code": "SLV",
-        "date": "2021",
-        "value": 65.9777145308668,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "SY",
-      "data": "data not available"
-    },
-    {
-      "cca2": "SZ",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "SZ",
-          "value": "Eswatini"
-        },
-        "countryiso3code": "SWZ",
-        "date": "2021",
-        "value": 35.4016656411589,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TD",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TH",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TJ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TL",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TM",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TO",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "TO",
-          "value": "Tonga"
-        },
-        "countryiso3code": "TON",
-        "date": "2020",
-        "value": 45.0157756761004,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TR",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "TR",
-          "value": "Turkiye"
-        },
-        "countryiso3code": "TUR",
-        "date": "2022",
-        "value": 36.0900778500171,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "TT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TV",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TW",
-      "data": "data not available"
-    },
-    {
-      "cca2": "TZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "UA",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "UA",
-          "value": "Ukraine"
-        },
-        "countryiso3code": "UKR",
-        "date": "2020",
-        "value": 57.0842008078586,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UG",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "UG",
-          "value": "Uganda"
-        },
-        "countryiso3code": "UGA",
-        "date": "2022",
-        "value": 53.890283064004,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "US",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "US",
-          "value": "United States"
-        },
-        "countryiso3code": "USA",
-        "date": "2022",
-        "value": 110.385331665016,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UY",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "UY",
-          "value": "Uruguay"
-        },
-        "countryiso3code": "URY",
-        "date": "2020",
-        "value": 62.3840106227135,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "UZ",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VA",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VC",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VG",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VI",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VN",
-      "data": "data not available"
-    },
-    {
-      "cca2": "VU",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "VU",
-          "value": "Vanuatu"
-        },
-        "countryiso3code": "VUT",
-        "date": "2021",
-        "value": 87.0720898262884,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "WF",
-      "data": "data not available"
-    },
-    {
-      "cca2": "WS",
-      "data": "data not available"
-    },
-    {
-      "cca2": "XK",
-      "data": "data not available"
-    },
-    {
-      "cca2": "YE",
-      "data": "data not available"
-    },
-    {
-      "cca2": "YT",
-      "data": "data not available"
-    },
-    {
-      "cca2": "ZA",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "ZA",
-          "value": "South Africa"
-        },
-        "countryiso3code": "ZAF",
-        "date": "2022",
-        "value": 73.0031701177656,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ZM",
-      "data": {
-        "indicator": {
-          "id": "GC.DOD.TOTL.GD.ZS",
-          "value": "Central government debt, total (% of GDP)"
-        },
-        "country": {
-          "id": "ZM",
-          "value": "Zambia"
-        },
-        "countryiso3code": "ZMB",
-        "date": "2021",
-        "value": 71.4111761686383,
-        "unit": "",
-        "obs_status": "",
-        "decimal": 1
-      }
-    },
-    {
-      "cca2": "ZW",
-      "data": "data not available"
+  {
+    "cca2": "AF",
+    "cca3": "AFE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFW",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CS",
+    "cca3": "CSS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CE",
+    "cca3": "CEB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EA",
+    "cca3": "EAP",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EM",
+    "cca3": "EMU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECA",
+    "data": {
+      "value": 33.3873489432114
     }
-  ]
+  },
+  {
+    "cca2": "TE",
+    "cca3": "TEC",
+    "data": {
+      "value": 25.090940841168
+    }
+  },
+  {
+    "cca2": "EU",
+    "cca3": "EUU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "FC",
+    "cca3": "FCS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HP",
+    "cca3": "HPC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IB",
+    "cca3": "IBT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDX",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAC",
+    "data": {
+      "value": 66.4556421157692
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLA",
+    "data": {
+      "value": 66.2817586207011
+    }
+  },
+  {
+    "cca2": "LD",
+    "cca3": "LDC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LM",
+    "cca3": "LMY",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TM",
+    "cca3": "TMN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MI",
+    "cca3": "MIC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAC",
+    "data": {
+      "value": 110.071944642092
+    }
+  },
+  {
+    "cca2": "OE",
+    "cca3": "OED",
+    "data": "data not available"
+  },
+  {
+    "cca2": "OS",
+    "cca3": "OSS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PST",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SST",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSF",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TS",
+    "cca3": "TSS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "WL",
+    "cca3": "WLD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AF",
+    "cca3": "AFG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AL",
+    "cca3": "ALB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "DZ",
+    "cca3": "DZA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AS",
+    "cca3": "ASM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AN",
+    "cca3": "AND",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AG",
+    "cca3": "AGO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AT",
+    "cca3": "ATG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARM",
+    "data": {
+      "value": 46.5518225515757
+    }
+  },
+  {
+    "cca2": "AB",
+    "cca3": "ABW",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUS",
+    "data": {
+      "value": 57.8834285733848
+    }
+  },
+  {
+    "cca2": "AU",
+    "cca3": "AUT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AZ",
+    "cca3": "AZE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHS",
+    "data": {
+      "value": 77.6639776783144
+    }
+  },
+  {
+    "cca2": "BH",
+    "cca3": "BHR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BL",
+    "cca3": "BLZ",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BE",
+    "cca3": "BEN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BM",
+    "cca3": "BMU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BT",
+    "cca3": "BTN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BO",
+    "cca3": "BOL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BI",
+    "cca3": "BIH",
+    "data": {
+      "value": 41.743510524303
+    }
+  },
+  {
+    "cca2": "BW",
+    "cca3": "BWA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRA",
+    "data": {
+      "value": 79.1023218876878
+    }
+  },
+  {
+    "cca2": "VG",
+    "cca3": "VGB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BR",
+    "cca3": "BRN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BG",
+    "cca3": "BGR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "BF",
+    "cca3": "BFA",
+    "data": {
+      "value": 63.1897248083414
+    }
+  },
+  {
+    "cca2": "BD",
+    "cca3": "BDI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CP",
+    "cca3": "CPV",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KH",
+    "cca3": "KHM",
+    "data": {
+      "value": 27.4923946833641
+    }
+  },
+  {
+    "cca2": "CM",
+    "cca3": "CMR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAN",
+    "data": {
+      "value": 59.9440184640855
+    }
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CA",
+    "cca3": "CAF",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COL",
+    "data": {
+      "value": 70.2611600056829
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COD",
+    "data": {
+      "value": 14.9405246182608
+    }
+  },
+  {
+    "cca2": "CO",
+    "cca3": "COG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CR",
+    "cca3": "CRI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CI",
+    "cca3": "CIV",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HR",
+    "cca3": "HRV",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CU",
+    "cca3": "CUW",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CY",
+    "cca3": "CYP",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CZ",
+    "cca3": "CZE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "DN",
+    "cca3": "DNK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "DJ",
+    "cca3": "DJI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "DM",
+    "cca3": "DMA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "DO",
+    "cca3": "DOM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EC",
+    "cca3": "ECU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "EG",
+    "cca3": "EGY",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLV",
+    "data": {
+      "value": 74.0361190983906
+    }
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNQ",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ER",
+    "cca3": "ERI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ES",
+    "cca3": "EST",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWZ",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ET",
+    "cca3": "ETH",
+    "data": "data not available"
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "FJ",
+    "cca3": "FJI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "FI",
+    "cca3": "FIN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "FR",
+    "cca3": "FRA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PY",
+    "cca3": "PYF",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GA",
+    "cca3": "GAB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GM",
+    "cca3": "GMB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GE",
+    "cca3": "GEO",
+    "data": {
+      "value": 42.9693933571232
+    }
+  },
+  {
+    "cca2": "DE",
+    "cca3": "DEU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GH",
+    "cca3": "GHA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GR",
+    "cca3": "GRD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GT",
+    "cca3": "GTM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GI",
+    "cca3": "GIN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GN",
+    "cca3": "GNB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GU",
+    "cca3": "GUY",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HT",
+    "cca3": "HTI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HN",
+    "cca3": "HND",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HK",
+    "cca3": "HKG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "HU",
+    "cca3": "HUN",
+    "data": {
+      "value": 75.527467420073
+    }
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISL",
+    "data": {
+      "value": 85.119675075089
+    }
+  },
+  {
+    "cca2": "IN",
+    "cca3": "IND",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ID",
+    "cca3": "IDN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRQ",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IR",
+    "cca3": "IRL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IM",
+    "cca3": "IMN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IS",
+    "cca3": "ISR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "IT",
+    "cca3": "ITA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "JA",
+    "cca3": "JAM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "JP",
+    "cca3": "JPN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "JO",
+    "cca3": "JOR",
+    "data": {
+      "value": 100.908283146258
+    }
+  },
+  {
+    "cca2": "KA",
+    "cca3": "KAZ",
+    "data": {
+      "value": 21.3547830092174
+    }
+  },
+  {
+    "cca2": "KE",
+    "cca3": "KEN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KI",
+    "cca3": "KIR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KO",
+    "cca3": "KOR",
+    "data": {
+      "value": 47.6110641211319
+    }
+  },
+  {
+    "cca2": "XK",
+    "cca3": "XKX",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KW",
+    "cca3": "KWT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KG",
+    "cca3": "KGZ",
+    "data": {
+      "value": 47.085480540382
+    }
+  },
+  {
+    "cca2": "LA",
+    "cca3": "LAO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LV",
+    "cca3": "LVA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LS",
+    "cca3": "LSO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LB",
+    "cca3": "LBY",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LI",
+    "cca3": "LIE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LT",
+    "cca3": "LTU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LU",
+    "cca3": "LUX",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MW",
+    "cca3": "MWI",
+    "data": {
+      "value": 55.5992119991912
+    }
+  },
+  {
+    "cca2": "MY",
+    "cca3": "MYS",
+    "data": {
+      "value": 60.1479261322487
+    }
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDV",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ML",
+    "cca3": "MLT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MH",
+    "cca3": "MHL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MR",
+    "cca3": "MRT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MU",
+    "cca3": "MUS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ME",
+    "cca3": "MEX",
+    "data": {
+      "value": 43.9694401399305
+    }
+  },
+  {
+    "cca2": "FS",
+    "cca3": "FSM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MD",
+    "cca3": "MDA",
+    "data": {
+      "value": 34.4860323998862
+    }
+  },
+  {
+    "cca2": "MC",
+    "cca3": "MCO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNG",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MO",
+    "cca3": "MOZ",
+    "data": {
+      "value": 76.6350609536734
+    }
+  },
+  {
+    "cca2": "MM",
+    "cca3": "MMR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NA",
+    "cca3": "NAM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NR",
+    "cca3": "NRU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NP",
+    "cca3": "NPL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NL",
+    "cca3": "NLD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NC",
+    "cca3": "NCL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NZ",
+    "cca3": "NZL",
+    "data": {
+      "value": 53.9594714921364
+    }
+  },
+  {
+    "cca2": "NI",
+    "cca3": "NIC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NE",
+    "cca3": "NER",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NG",
+    "cca3": "NGA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MK",
+    "cca3": "MKD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MN",
+    "cca3": "MNP",
+    "data": "data not available"
+  },
+  {
+    "cca2": "NO",
+    "cca3": "NOR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "OM",
+    "cca3": "OMN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PL",
+    "cca3": "PLW",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PA",
+    "cca3": "PAN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PN",
+    "cca3": "PNG",
+    "data": {
+      "value": 48.1888180987368
+    }
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRY",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PE",
+    "cca3": "PER",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PH",
+    "cca3": "PHL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PO",
+    "cca3": "POL",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PR",
+    "cca3": "PRI",
+    "data": "data not available"
+  },
+  {
+    "cca2": "QA",
+    "cca3": "QAT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "RO",
+    "cca3": "ROU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "RU",
+    "cca3": "RUS",
+    "data": {
+      "value": 19.2884758032917
+    }
+  },
+  {
+    "cca2": "RW",
+    "cca3": "RWA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "WS",
+    "cca3": "WSM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SM",
+    "cca3": "SMR",
+    "data": {
+      "value": 103.153573480276
+    }
+  },
+  {
+    "cca2": "ST",
+    "cca3": "STP",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SA",
+    "cca3": "SAU",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SE",
+    "cca3": "SEN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SR",
+    "cca3": "SRB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYC",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SG",
+    "cca3": "SGP",
+    "data": {
+      "value": 154.10364293744
+    }
+  },
+  {
+    "cca2": "SX",
+    "cca3": "SXM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SV",
+    "cca3": "SVN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SL",
+    "cca3": "SLB",
+    "data": {
+      "value": 16.439440971058
+    }
+  },
+  {
+    "cca2": "SO",
+    "cca3": "SOM",
+    "data": {
+      "value": 0.00161662140085104
+    }
+  },
+  {
+    "cca2": "ZA",
+    "cca3": "ZAF",
+    "data": {
+      "value": 76.2054429487374
+    }
+  },
+  {
+    "cca2": "SS",
+    "cca3": "SSD",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ES",
+    "cca3": "ESP",
+    "data": {
+      "value": 109.040623157974
+    }
+  },
+  {
+    "cca2": "LK",
+    "cca3": "LKA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "KN",
+    "cca3": "KNA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "LC",
+    "cca3": "LCA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "MA",
+    "cca3": "MAF",
+    "data": "data not available"
+  },
+  {
+    "cca2": "VC",
+    "cca3": "VCT",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SD",
+    "cca3": "SDN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SU",
+    "cca3": "SUR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "SW",
+    "cca3": "SWE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "CH",
+    "cca3": "CHE",
+    "data": {
+      "value": 17.5861857589033
+    }
+  },
+  {
+    "cca2": "SY",
+    "cca3": "SYR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TJ",
+    "cca3": "TJK",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TZ",
+    "cca3": "TZA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TH",
+    "cca3": "THA",
+    "data": {
+      "value": 60.349920189306
+    }
+  },
+  {
+    "cca2": "TL",
+    "cca3": "TLS",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TG",
+    "cca3": "TGO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TO",
+    "cca3": "TON",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TT",
+    "cca3": "TTO",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUR",
+    "data": {
+      "value": 35.3300843747051
+    }
+  },
+  {
+    "cca2": "TK",
+    "cca3": "TKM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TC",
+    "cca3": "TCA",
+    "data": "data not available"
+  },
+  {
+    "cca2": "TU",
+    "cca3": "TUV",
+    "data": "data not available"
+  },
+  {
+    "cca2": "UG",
+    "cca3": "UGA",
+    "data": {
+      "value": 53.890283062847
+    }
+  },
+  {
+    "cca2": "UK",
+    "cca3": "UKR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "AR",
+    "cca3": "ARE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "GB",
+    "cca3": "GBR",
+    "data": {
+      "value": 138.215904304967
+    }
+  },
+  {
+    "cca2": "US",
+    "cca3": "USA",
+    "data": {
+      "value": 114.751249288826
+    }
+  },
+  {
+    "cca2": "UR",
+    "cca3": "URY",
+    "data": {
+      "value": 54.2372595164662
+    }
+  },
+  {
+    "cca2": "UZ",
+    "cca3": "UZB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "VU",
+    "cca3": "VUT",
+    "data": {
+      "value": 79.7735452170055
+    }
+  },
+  {
+    "cca2": "VE",
+    "cca3": "VEN",
+    "data": "data not available"
+  },
+  {
+    "cca2": "VN",
+    "cca3": "VNM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "VI",
+    "cca3": "VIR",
+    "data": "data not available"
+  },
+  {
+    "cca2": "PS",
+    "cca3": "PSE",
+    "data": "data not available"
+  },
+  {
+    "cca2": "YE",
+    "cca3": "YEM",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ZM",
+    "cca3": "ZMB",
+    "data": "data not available"
+  },
+  {
+    "cca2": "ZW",
+    "cca3": "ZWE",
+    "data": "data not available"
+  }
+]

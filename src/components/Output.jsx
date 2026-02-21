@@ -22,31 +22,31 @@ function Output() {
     }
 
     const mortalityInfo = mortalityData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     const geoJsonCountry = geoJsonData.find(
-      (country) => country.properties.ISO_A2 === selectedCountry.cca2
+      (country) => country.properties.ISO_A3 === selectedCountry.cca3
     );
 
     const debtInfo = debtData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     const inflationInfo = inflationData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     const employmentInfo = employmentData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     const healthInfo = healthData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     const growthInfo = growthData.find(
-      (country) => country.cca2 === selectedCountry.cca2
+      (country) => country.cca3 === selectedCountry.cca3
     );
 
     return (

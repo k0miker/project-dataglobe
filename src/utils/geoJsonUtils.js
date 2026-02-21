@@ -14,42 +14,42 @@ const getVal = (feat, dataOption, restCountriesData, mortalityData, debtData, in
       }
     } else if (dataOption === "mortality") {
       const country = mortalityData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return country.value;
       }
     } else if (dataOption === "debt") {
       const country = debtData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return country.value;
       }
     } else if (dataOption === "inflation") {
       const country = inflationData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return Math.min(country.value, 1000)*10;
       }
     } else if (dataOption === "employment") {
       const country = employmentData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return country.value;
       }
     } else if (dataOption === "health") {
       const country = healthData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return country.value;
       }
     } else if (dataOption === "growth") {
       const country = growthData.find(
-        (country) => country.cca2 === feat.properties.ISO_A2
+        (country) => country.cca3 === feat.properties.ISO_A3
       );
       if (country) {
         return country.value;

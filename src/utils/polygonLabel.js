@@ -19,7 +19,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "mortality") {
       const country = mortalityData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Mortality Rate: <br /><i>${country.value.toFixed(2)}%</i>`;
@@ -28,7 +28,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "debt") {
       const country = debtData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Debt (% of GDP): <br /><i>${country.value.toFixed(2)}%</i>`;
@@ -37,7 +37,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "inflation") {
       const country = inflationData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Inflation since 2010: <br /><i>${country.value.toFixed(2)}%</i>`;
@@ -46,7 +46,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "employment") {
       const country = employmentData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Employment Rate: <br /><i>${country.value.toFixed(2)}%</i>`;
@@ -55,7 +55,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "health") {
       const country = healthData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Health Expenditure (% of GDP): <br /><i>${country.value.toFixed(2)}%</i>`;
@@ -64,7 +64,7 @@ const polygonLabel = ({ properties: d }, dataOption, restCountriesData, mortalit
       }
     } else if (dataOption === "growth") {
       const country = growthData.find(
-        (country) => country.cca2 === d.ISO_A2
+        (country) => country.cca3 === d.ISO_A3
       );
       if (country) {
         label += `Economic Growth: <br /><i>${country.value.toFixed(2)}%</i>`;
